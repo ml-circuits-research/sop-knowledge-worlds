@@ -1,4 +1,4 @@
-# k.layouts/shards/outlines-cc0-1-0: 35 outlines as arrangement paths (block 09:50 item F): apple, arrow, bird, bottle, butterfly, car, castle, circle, cloud, cross, cup, diamond, fish, flower, heart, hexagon, house, moon, octagon, oval, parallelogram, pentagon, rectangle, rhombus, ring, rocket, semicircle, snowman, square, star, sun, trapezium, tree, triangle, umbrella; each an ordered closed path of points in the 0 to 100 frame, clockwise from the topmost point, the shapes of k.shapes by their geometry and the hand-written drawings traced. Derived by tools/outlines-core.mjs.
+# k.layouts/shards/outlines-cc0-1-0: 36 outlines as arrangement paths (block 09:50 item F): apple, arrow, bird, bottle, butterfly, car, castle, circle, cloud, cross, cup, diamond, fish, flower, heart, hexagon, house, irregular, moon, octagon, oval, parallelogram, pentagon, rectangle, rhombus, ring, rocket, semicircle, snowman, square, star, sun, trapezium, tree, triangle, umbrella; each an ordered closed path of points in the 0 to 100 frame, clockwise from the topmost point, the shapes of k.shapes by their geometry and the hand-written drawings traced. Derived by tools/outlines-core.mjs.
 # sources: hand-core 1 (the geometry of the shapes, and the drawings it traces)
 # license: CC0-1.0
 # script: tools/outlines-core.mjs
@@ -313,6 +313,24 @@
 @k.layouts.outline.house.9 k.layouts.outline_point outline=house n=9 x=20 y=95 core.source="hand-core 1"
 @k.layouts.outline.house.10 k.layouts.outline_point outline=house n=10 x=20 y=45 core.source="hand-core 1"
 @k.layouts.outline.house.11 k.layouts.outline_point outline=house n=11 x=13 y=44 core.source="hand-core 1"
+# irregular
+@k.layouts.outline.irregular k.layouts.outline name=irregular from=k.shapes.shape shape=irregular points=16 tolerance=0 core.source="hand-core 1"
+@k.layouts.outline.irregular.1 k.layouts.outline_point outline=irregular n=1 x=50 y=14 core.source="hand-core 1"
+@k.layouts.outline.irregular.2 k.layouts.outline_point outline=irregular n=2 x=64.5 y=21.9 core.source="hand-core 1"
+@k.layouts.outline.irregular.3 k.layouts.outline_point outline=irregular n=3 x=80.4 y=25.7 core.source="hand-core 1"
+@k.layouts.outline.irregular.4 k.layouts.outline_point outline=irregular n=4 x=82.3 y=39.3 core.source="hand-core 1"
+@k.layouts.outline.irregular.5 k.layouts.outline_point outline=irregular n=5 x=91 y=50 core.source="hand-core 1"
+@k.layouts.outline.irregular.6 k.layouts.outline_point outline=irregular n=6 x=92.5 y=64.1 core.source="hand-core 1"
+@k.layouts.outline.irregular.7 k.layouts.outline_point outline=irregular n=7 x=77.6 y=72.1 core.source="hand-core 1"
+@k.layouts.outline.irregular.8 k.layouts.outline_point outline=irregular n=8 x=62.6 y=74.4 core.source="hand-core 1"
+@k.layouts.outline.irregular.9 k.layouts.outline_point outline=irregular n=9 x=50 y=83.6 core.source="hand-core 1"
+@k.layouts.outline.irregular.10 k.layouts.outline_point outline=irregular n=10 x=32 y=84.7 core.source="hand-core 1"
+@k.layouts.outline.irregular.11 k.layouts.outline_point outline=irregular n=11 x=24.5 y=70.4 core.source="hand-core 1"
+@k.layouts.outline.irregular.12 k.layouts.outline_point outline=irregular n=12 x=13 y=62.2 core.source="hand-core 1"
+@k.layouts.outline.irregular.13 k.layouts.outline_point outline=irregular n=13 x=6 y=50 core.source="hand-core 1"
+@k.layouts.outline.irregular.14 k.layouts.outline_point outline=irregular n=14 x=18.6 y=39.6 core.source="hand-core 1"
+@k.layouts.outline.irregular.15 k.layouts.outline_point outline=irregular n=15 x=22.4 y=27.9 core.source="hand-core 1"
+@k.layouts.outline.irregular.16 k.layouts.outline_point outline=irregular n=16 x=33.5 y=18.2 core.source="hand-core 1"
 # moon
 @k.layouts.outline.moon k.layouts.outline name=moon from=k.objects.object drawing=moon points=12 tolerance=1.5 core.source="hand-core 1"
 @k.layouts.outline.moon.1 k.layouts.outline_point outline=moon n=1 x=58 y=11 core.source="hand-core 1"

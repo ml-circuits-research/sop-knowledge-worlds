@@ -33,7 +33,8 @@ test('Q47: the published canon of plain places every part where the hand drew it
   assert.ok(Buffer.byteLength(text) < 1400, `${Buffer.byteLength(text)} bytes`);
   // The facts load in k.faces, and are the canon the drawing follows: its anchors to within a hundredth of a unit.
   const w = fullWorld('k.faces', scanWorlds());
-  const f = w.ofType('k.faces.canon');
+  // The style figure (a whole person, tools/figures-core.mjs) has a canon with no face proportions.
+  const f = w.ofType('k.faces.canon').filter((x) => x.attrs.eye_line);
   assert.equal(f.length, 1);
   assert.equal(f[0].attrs.style[0], 'plain');
   const c = readCanon(text);

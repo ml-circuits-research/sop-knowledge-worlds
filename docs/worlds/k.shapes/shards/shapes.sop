@@ -1,4 +1,4 @@
-# k.shapes/shards/shapes: 37 shapes (circle, oval, semicircle, triangle, square, rectangle, diamond, parallelogram, trapezium, pentagon, hexagon, octagon, polygon, star, heart, crescent, cross, arrow, dot, ring, drop, cloud shape, line, arc, zigzag, wavy line, spiral, sphere, hemisphere, egg shape, cube, cuboid, cylinder, cone, pyramid, prism, torus): flat, solid or a line; sides and corners, or faces, edges and corners; round or not; things that typically have the shape; and other names of the shapes.
+# k.shapes/shards/shapes: 38 shapes (circle, oval, semicircle, triangle, square, rectangle, diamond, parallelogram, trapezium, pentagon, hexagon, octagon, polygon, star, heart, crescent, cross, arrow, dot, ring, drop, irregular, cloud shape, line, arc, zigzag, wavy line, spiral, sphere, hemisphere, egg shape, cube, cuboid, cylinder, cone, pyramid, prism, torus): flat, solid or a line; sides and corners, or faces, edges and corners; round or not; things that typically have the shape; and other names of the shapes.
 # sources: hand-core 1 (hand-written in this repository: tools/colours-shapes-core.mjs)
 # license: CC0-1.0
 # script: tools/colours-shapes-core.mjs
@@ -24,6 +24,7 @@
 @k.shapes.shape.dot k.shapes.shape name=dot kind=flat sides=0 corners=0 round=true symmetric=true thing=button core.source="hand-core 1"
 @k.shapes.shape.ring k.shapes.shape name=ring kind=flat sides=0 corners=0 round=true symmetric=true thing=ring thing=doughnut thing=tire thing=bagel thing=wheel core.source="hand-core 1"
 @k.shapes.shape.drop k.shapes.shape name=drop kind=flat sides=0 corners=1 round=true symmetric=true thing=droplet thing=pear thing=balloon thing="light bulb" core.source="hand-core 1"
+@k.shapes.shape.irregular k.shapes.shape name=irregular kind=flat round=true thing=pond thing=lake thing=puddle thing=island thing=cloud core.source="hand-core 1"
 @k.shapes.shape.cloud_shape k.shapes.shape name="cloud shape" kind=flat sides=0 corners=0 round=true thing=cloud thing=sheep thing=tree thing=broccoli core.source="hand-core 1"
 @k.shapes.shape.line k.shapes.shape name=line kind=line round=false thing=pencil thing=pole thing=rope thing=ladder core.source="hand-core 1"
 @k.shapes.shape.arc k.shapes.shape name=arc kind=line round=true thing=rainbow thing=bridge thing="horseshoe magnet" core.source="hand-core 1"
@@ -63,6 +64,7 @@
 @k.shapes.word.shape.dot core.word text=dots text=point text=points text=spot text=spots means=dot of=k.shapes.shape.name core.source="hand-core 1"
 @k.shapes.word.shape.ring core.word text=rings text=hoop text=loop text=annulus means=ring of=k.shapes.shape.name core.source="hand-core 1"
 @k.shapes.word.shape.drop core.word text=drops text=teardrop text="tear shape" means=drop of=k.shapes.shape.name core.source="hand-core 1"
+@k.shapes.word.shape.irregular core.word text="irregular shape" text=blob text="uneven shape" text="wobbly shape" text="natural shape" means=irregular of=k.shapes.shape.name core.source="hand-core 1"
 @k.shapes.word.shape.cloud_shape core.word text=cloud-shaped text="fluffy shape" text="bumpy outline" means="cloud shape" of=k.shapes.shape.name core.source="hand-core 1"
 @k.shapes.word.shape.line core.word text=lines text="straight line" text=stroke means=line of=k.shapes.shape.name core.source="hand-core 1"
 @k.shapes.word.shape.arc core.word text=arcs text=curve text=bow text=bend text=curves text="curved line" means=arc of=k.shapes.shape.name core.source="hand-core 1"

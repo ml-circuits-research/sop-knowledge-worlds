@@ -124,9 +124,9 @@
 
 # landscape
 @k.layouts.layout.landscape k.layouts.layout name=landscape kind=fixed about="An outdoor view: the sky above the ground, far things on the horizon, water lying in the ground, small things in front." usual_for="an outdoor scene" usual_for="a farm" usual_for="a beach" usual_for="a village" usual_for="a view of the countryside" core.source="hand-core 1"
-@k.layouts.slot.landscape.sky k.layouts.slot layout=landscape name=sky count=one holds=sun holds=moon holds=cloud holds=star holds=bird holds=rainbow holds=plane arranged=scatter x=0 y=0 w=100 h=50 core.source="hand-core 1"
+@k.layouts.slot.landscape.sky k.layouts.slot layout=landscape name=sky count=one holds=sun holds=moon holds=cloud holds=star holds=bird holds=rainbow holds=plane fills=sky arranged=scatter x=0 y=0 w=100 h=50 core.source="hand-core 1"
 @k.layouts.slot.landscape.far k.layouts.slot layout=landscape name=far count=many optional=true holds=mountain holds=hill holds=forest holds="far house" arranged=row x=0 y=32 w=100 h=20 core.source="hand-core 1"
-@k.layouts.slot.landscape.ground k.layouts.slot layout=landscape name=ground count=one holds=tree holds=house holds=animal holds=person holds=road holds=fence x=0 y=50 w=100 h=50 core.source="hand-core 1"
+@k.layouts.slot.landscape.ground k.layouts.slot layout=landscape name=ground count=one holds=tree holds=house holds=animal holds=person holds=road holds=fence fills=ground fills=land fills=sand x=0 y=50 w=100 h=50 core.source="hand-core 1"
 @k.layouts.slot.landscape.water k.layouts.slot layout=landscape name=water count=one optional=true holds=pond holds=lake holds=river holds=boat holds=duck x=10 y=62 w=45 h=22 core.source="hand-core 1"
 @k.layouts.slot.landscape.foreground k.layouts.slot layout=landscape name=foreground count=many optional=true holds=flower holds=grass holds=stone holds="small animal" arranged=row x=0 y=86 w=100 h=14 core.source="hand-core 1"
 @k.layouts.relation.landscape.sky.above.ground k.layouts.relation layout=landscape a=sky rel=above b=ground core.source="hand-core 1"

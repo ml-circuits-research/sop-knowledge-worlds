@@ -34,7 +34,7 @@
 @k.kinds.relation.k.procedures.condition.fact k.kinds.relation type=k.procedures.condition key=fact subject=condition object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.procedures.condition.thing k.kinds.relation type=k.procedures.condition key=thing subject=condition object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.procedures.condition.other k.kinds.relation type=k.procedures.condition key=other subject=condition object=word object_type=k.words.sense found=value core.source="hand-core 1"
-@k.kinds.relation.k.procedures.condition.attribute k.kinds.relation type=k.procedures.condition key=attribute subject=condition object=thing object_type=k.body.part object_sense="body part" found=value core.source="hand-core 1"
+@k.kinds.relation.k.procedures.condition.attribute k.kinds.relation type=k.procedures.condition key=attribute subject=condition object=thing object_type=k.parts.name found=value core.source="hand-core 1"
 @k.kinds.relation.k.procedures.condition.value k.kinds.relation type=k.procedures.condition key=value subject=condition object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.procedures.goal.method k.kinds.relation type=k.procedures.goal key=method subject=goal object=thing object_type=k.procedures.method found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.procedures.goal.role k.kinds.relation type=k.procedures.goal key=role subject=goal object=word object_type=k.words.sense found=value core.source="hand-core 1"

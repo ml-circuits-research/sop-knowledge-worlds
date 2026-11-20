@@ -9,9 +9,9 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **267** in 43 worlds; distinct values 11382, meeting a target 11323 (99.5 %), open 59
+- declared joins: **271** in 44 worlds; distinct values 11428, meeting a target 11368 (99.5 %), open 60
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **51**; left undeclared on purpose: 5; keys with an enum, never suggested: 46
+- undeclared keys whose values the value share joins to a type: **61**; left undeclared on purpose: 5; keys with an enum, never suggested: 50
 
 ## Declared joins
 
@@ -91,10 +91,12 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.faces | `k.faces.expression.goal.expression` | `k.faces.expression` | name | 5 | 5 |  |
 | k.faces | `k.faces.expression.goal.slot` | `k.faces.slot` | name | 3 | 3 |  |
 | k.faces | `k.faces.feature.scale` | `k.values.scale` | name | 2 | 2 |  |
-| k.faces | `k.faces.part.slot` | `k.faces.slot` | name | 18 | 18 |  |
+| k.faces | `k.faces.frame.drawing` | `k.objects.object` | name | 1 | 1 |  |
+| k.faces | `k.faces.frame.style` | `k.faces.canon` | style | 1 | 1 |  |
+| k.faces | `k.faces.part.slot` | `k.faces.slot` | name | 23 | 23 |  |
 | k.faces | `k.faces.preset.clothes` | `k.colours.colour` | name | 10 | 10 |  |
-| k.faces | `k.faces.preset.style` | `k.faces.canon` | style | 1 | 1 |  |
-| k.faces | `k.faces.variant.slot` | `k.faces.slot` | name | 18 | 18 |  |
+| k.faces | `k.faces.preset.style` | `k.faces.canon` | style | 2 | 2 |  |
+| k.faces | `k.faces.variant.slot` | `k.faces.slot` | name | 23 | 23 |  |
 | k.feelings | `k.feelings.feeling.expression` | `k.faces.expression` | name | 5 | 5 |  |
 | k.feelings | `k.feelings.feeling.opposite` | `k.feelings.feeling` | name | 11 | 11 |  |
 | k.food | `k.food.food.drawing` | `k.objects.object` | name | 155 | 155 |  |
@@ -130,8 +132,8 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.interest | `k.interest.feature.measure` | `k.interest.measure` | name | 20 | 20 |  |
 | k.interest | `k.interest.feature.source` | `k.interest.source` | name | 23 | 23 |  |
 | k.layouts | `k.layouts.outline.drawing` | `k.objects.object` | name | 33 | 33 |  |
-| k.layouts | `k.layouts.outline.shape` | `k.shapes.shape` | name | 17 | 17 |  |
-| k.layouts | `k.layouts.outline_point.outline` | `k.layouts.outline` | name | 50 | 50 |  |
+| k.layouts | `k.layouts.outline.shape` | `k.shapes.shape` | name | 18 | 18 |  |
+| k.layouts | `k.layouts.outline_point.outline` | `k.layouts.outline` | name | 51 | 51 |  |
 | k.layouts | `k.layouts.relation.layout` | `k.layouts.layout` | name | 19 | 19 |  |
 | k.layouts | `k.layouts.slot.arranged` | `k.layouts.layout` | name | 2 | 2 |  |
 | k.layouts | `k.layouts.slot.layout` | `k.layouts.layout` | name | 19 | 19 |  |
@@ -162,9 +164,10 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.music | `k.music.scale.note` | `k.music.note` | name | 24 | 24 |  |
 | k.music | `k.music.scale.tonic` | `k.music.note` | name | 18 | 18 |  |
 | k.objects | `k.objects.keyword.of` | `k.objects.object` | name | 1509 | 1509 |  |
-| k.objects | `k.objects.part.of` | `k.objects.object` | name | 2212 | 2212 |  |
+| k.objects | `k.objects.part.of` | `k.objects.object` | name | 2216 | 2216 |  |
 | k.objects | `k.objects.skeleton.of` | `k.objects.object` | name | 0 | 0 |  |
-| k.objects | `k.objects.stand_in.drawing` | `k.objects.object` | name | 169 | 169 |  |
+| k.objects | `k.objects.stand_in.drawing` | `k.objects.object` | name | 170 | 170 |  |
+| k.parts | `k.parts.name.slot` | `k.faces.slot` | name | 19 | 19 |  |
 | k.people | `k.people.kind.drawing` | `k.objects.object` | name | 1 | 1 |  |
 | k.people | `k.people.kind.face` | `k.faces.preset` | name | 8 | 8 |  |
 | k.people | `k.people.role.drawing` | `k.objects.object` | name | 1 | 1 |  |
@@ -192,7 +195,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.scenes | `k.scenes.scene.time` | `k.time.part_of_day` | name | 4 | 4 |  |
 | k.shapes | `k.shapes.shape.face` | `k.shapes.shape` | name | 4 | 4 |  |
 | k.shapes | `k.shapes.shape.flat` | `k.shapes.shape` | name | 7 | 7 |  |
-| k.shapes | `k.shapes.shape.thing` | `k.objects.object` | name | 104 | 98 | `"gift box"`, `"horseshoe magnet"`, `"pizza slice"`, `chessboard`, `honeycomb`, `tv` |
+| k.shapes | `k.shapes.shape.thing` | `k.objects.object` | name | 107 | 100 | `"gift box"`, `"horseshoe magnet"`, `"pizza slice"`, `chessboard`, `honeycomb`, `puddle`, … (7) |
 | k.space | `k.space.body.drawing` | `k.objects.object` | name | 13 | 13 |  |
 | k.space | `k.space.body.in` | `k.space.body` | name | 1 | 1 |  |
 | k.space | `k.space.body.kind` | `k.space.kind` | name | 6 | 6 |  |
@@ -237,6 +240,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.wearables | `k.wearables.wearable.covers` | `k.wearables.place` | name | 10 | 10 |  |
 | k.wearables | `k.wearables.wearable.drawing` | `k.objects.object` | name | 91 | 91 |  |
 | k.wearables | `k.wearables.wearable.face_slot` | `k.faces.slot` | name | 4 | 4 |  |
+| k.wearables | `k.wearables.wearable.figure_slot` | `k.faces.slot` | name | 4 | 4 |  |
 | k.wearables | `k.wearables.wearable.worn_on` | `k.wearables.place` | name | 14 | 14 |  |
 | w.calendar | `w.calendar.calendar.week_starts` | `k.time.weekday` | name | 0 | 0 |  |
 | w.calendar | `w.calendar.calendar.zone` | `k.time.zone` | name | 0 | 0 |  |
@@ -301,37 +305,45 @@ whose slot has an enum is never suggested here (see the last section).
 
 | world | type.key | class | candidates | by | values | meet |
 | --- | --- | --- | --- | --- | ---: | ---: |
-| k.actions | `k.actions.action.who` | thing | `k.scenes.thing`, `k.attributes.thing` | name | 102 | 75 |
+| k.actions | `k.actions.action.who` | thing | `k.scenes.thing`, `k.attributes.thing`, `k.objects.object` | name | 102 | 75 |
 | k.actions | `k.actions.action.object` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 272 | 154 |
 | k.animals | `k.animals.animal.eats` | thing | `k.scenes.thing`, `k.attributes.drawn`, `k.objects.object` | name | 89 | 22 |
 | k.attributes | `k.attributes.range.kind` | kind | `k.attributes.kind` | name | 24 | 14 |
-| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3549 | 2346 |
+| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3553 | 2346 |
 | k.attributes | `k.attributes.typical.of` | thing | `k.attributes.kind` | name | 36 | 18 |
+| k.commonsense | `k.commonsense.lives.at` | place | `k.objects.object` | name | 3 | 2 |
 | k.commonsense | `k.commonsense.thing.at` | place | `k.commonsense.lives`, `k.attributes.thing` | in | 42 | 32 |
 | k.expect | `k.expect.make.layout` | group | `k.layouts.layout` | name | 10 | 7 |
 | k.expect | `k.expect.part.part` | thing | `k.scenes.thing` | name | 632 | 599 |
 | k.expect | `k.expect.part.shape` | value | `k.shapes.shape` | name | 11 | 6 |
 | k.expect | `k.expect.part.slot` | thing | `k.body.part` | name | 8 | 3 |
-| k.faces | `k.faces.canon.name` | thing | `k.faces.canon` | style | 1 | 1 |
+| k.faces | `k.faces.canon.name` | thing | `k.faces.canon` | style | 2 | 2 |
 | k.faces | `k.faces.colour.name` | value | `k.colours.colour` | name | 21 | 14 |
 | k.faces | `k.faces.expression.eyes` | thing | `k.feelings.feeling` | name | 4 | 2 |
 | k.faces | `k.faces.preset.hat` | thing | `k.scenes.thing` | name | 5 | 5 |
 | k.faces | `k.faces.preset.shoulders` | thing | `k.wearables.wearable` | name | 8 | 4 |
+| k.faces | `k.faces.preset.top` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 4 | 4 |
+| k.faces | `k.faces.preset.bottom` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 4 | 4 |
+| k.faces | `k.faces.preset.shoes` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 3 | 2 |
+| k.faces | `k.faces.preset.coat` | thing | `k.attributes.drawn`, `k.attributes.number`, `k.attributes.thing` | name | 2 | 2 |
 | k.faces | `k.faces.preset.skin` | value | `k.colours.colour` | name | 9 | 5 |
 | k.faces | `k.faces.preset.hair_colour` | value | `k.colours.basic`, `k.colours.colour` | name | 9 | 7 |
 | k.faces | `k.faces.preset.eye_colour` | value | `k.colours.basic`, `k.colours.colour` | name | 7 | 6 |
-| k.faces | `k.faces.slot.name` | thing | `k.body.part` | name | 18 | 4 |
+| k.faces | `k.faces.slot.name` | thing | `k.parts.name` | name | 23 | 14 |
 | k.feelings | `k.feelings.feeling.eyebrows` | thing | `k.faces.expression` | name | 4 | 2 |
 | k.feelings | `k.feelings.feeling.looks_like` | thing | `k.faces.expression` | name | 3 | 2 |
 | k.food | `k.food.food.comes_from` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 36 | 22 |
 | k.food | `k.food.food.made_of` | thing | `k.objects.object`, `k.scenes.thing`, `k.attributes.drawn` | name | 70 | 46 |
-| k.layouts | `k.layouts.anchor.holds` | thing | `k.scenes.thing` | name | 173 | 129 |
-| k.layouts | `k.layouts.anchor.on` | thing | `k.attributes.thing`, `k.scenes.thing` | name | 15 | 9 |
+| k.layouts | `k.layouts.anchor.holds` | thing | `k.scenes.thing`, `k.objects.object` | name | 173 | 129 |
+| k.layouts | `k.layouts.anchor.on` | thing | `k.attributes.drawn`, `k.objects.object`, `k.attributes.thing` | name | 15 | 10 |
 | k.layouts | `k.layouts.joins.a` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 143 | 81 |
 | k.layouts | `k.layouts.joins.b` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 98 | 71 |
 | k.layouts | `k.layouts.slot.holds` | thing | `k.attributes.thing`, `k.scenes.thing`, `k.attributes.drawn` | name | 84 | 48 |
+| k.layouts | `k.layouts.slot.fills` | thing | `k.attributes.drawn`, `k.objects.object` | name | 4 | 4 |
 | k.motion | `k.motion.rule.during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
 | k.motion | `k.motion.rule.not_during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
+| k.parts | `k.parts.called.part` | thing | `k.parts.name` | name | 66 | 66 |
+| k.parts | `k.parts.name.of` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 23 | 22 |
 | k.people | `k.people.kind.is_a` | kind | `k.faces.preset` | name | 4 | 3 |
 | k.people | `k.people.kind.kind_of` | kind | `k.faces.preset` | name | 5 | 3 |
 | k.people | `k.people.role.moustache` | thing | `k.attributes.drawn`, `k.attributes.number`, `k.objects.object` | name | 4 | 2 |
@@ -339,19 +351,21 @@ whose slot has an enum is never suggested here (see the last section).
 | k.people | `k.people.role.is_a` | kind | `k.people.kind` | name | 2 | 2 |
 | k.people | `k.people.role.kind_of` | kind | `k.people.kind` | name | 2 | 2 |
 | k.procedures | `k.procedures.binding.value` | act | `k.actions.action` | name | 1 | 1 |
-| k.procedures | `k.procedures.condition.attribute` | thing | `k.body.part` | name | 10 | 1 |
+| k.procedures | `k.procedures.condition.attribute` | thing | `k.parts.name` | name | 10 | 7 |
 | k.procedures | `k.procedures.goal.value` | thing | `k.genres.genre` | name | 9 | 5 |
 | k.procedures | `k.procedures.goal.kind` | kind | `k.actions.act` | name | 1 | 1 |
 | k.procedures | `k.procedures.match.differs` | thing | `k.story.element` | name | 8 | 4 |
-| k.scenes | `k.scenes.scene.ground` | thing | `k.attributes.thing`, `k.scenes.thing` | name | 15 | 7 |
+| k.scenes | `k.scenes.scene.ground` | thing | `k.attributes.thing`, `k.objects.object`, `k.scenes.thing` | name | 15 | 7 |
 | k.scenes | `k.scenes.thing.on` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 23 | 19 |
 | k.shapes | `k.shapes.shape.is_a` | kind | `k.shapes.shape` | name | 5 | 5 |
 | k.shapes | `k.shapes.shape.kind_of` | kind | `k.shapes.shape` | name | 5 | 5 |
 | k.space | `k.space.kind.material` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 11 | 2 |
 | k.space | `k.space.kind.orbits` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 2 | 2 |
+| k.space | `k.space.kind.has` | thing | `k.parts.name` | name | 1 | 1 |
 | k.time | `k.time.stage.name` | thing | `k.attributes.thing` | name | 15 | 8 |
 | k.time | `k.time.stage.is` | thing | `k.attributes.thing` | name | 15 | 8 |
 | k.wearables | `k.wearables.wearable.face` | thing | `k.scenes.thing` | name | 36 | 18 |
+| k.wearables | `k.wearables.wearable.figure` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 14 | 12 |
 
 ## Left undeclared on purpose
 
@@ -385,8 +399,10 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.expect | `k.expect.make.extent` | 5 | 1 | 1 | `k.expect.scale` |
 | k.expect | `k.expect.make.varies` | 7 | 7 | 3 | `k.attributes.attribute` |
 | k.expect | `k.expect.part.needed` | 1 | 1 | 1 | `k.values.reply` |
+| k.expect | `k.expect.part.where` | 7 | 7 | 4 | `k.objects.object` |
 | k.faces | `k.faces.colour.of` | 4 | 4 | 2 | `k.body.part` |
 | k.faces | `k.faces.preset.kind` | 3 | 3 | 2 | `k.faces.preset` |
+| k.faces | `k.faces.preset.age` | 4 | 4 | 2 | `k.attributes.thing`, `k.faces.preset`, `k.people.kind` |
 | k.faces | `k.faces.variant.shape` | 5 | 5 | 3 | `k.layouts.outline`, `k.shapes.shape` |
 | k.food | `k.food.food.kind` | 18 | 18 | 9 | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
 | k.food | `k.food.food.grows_on` | 5 | 5 | 4 | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` |
@@ -401,8 +417,10 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.people | `k.people.given_name.context` | 1 | 1 | 1 | `k.attributes.drawn`, `k.attributes.kind`, `k.attributes.number` |
 | k.people | `k.people.kind.age` | 4 | 4 | 2 | `k.attributes.thing`, `k.faces.preset`, `k.people.kind` |
 | k.procedures | `k.procedures.howto_step.branch` | 2 | 2 | 2 | `k.values.reply` |
+| k.scenes | `k.scenes.has.where` | 7 | 7 | 4 | `k.objects.object` |
 | k.scenes | `k.scenes.has.side` | 3 | 3 | 3 | `k.values.position` |
 | k.scenes | `k.scenes.scene.kind` | 4 | 4 | 2 | `k.scenes.scene` |
+| k.scenes | `k.scenes.thing.place` | 5 | 5 | 3 | `k.objects.object` |
 | k.scenes | `k.scenes.thing.size` | 5 | 5 | 3 | `k.expect.scale` |
 | k.space | `k.space.body.size` | 4 | 4 | 2 | `k.expect.scale` |
 | k.time | `k.time.during.hemisphere` | 2 | 2 | 2 | `k.values.direction` |

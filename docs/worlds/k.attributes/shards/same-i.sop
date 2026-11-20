@@ -1,4 +1,4 @@
-# k.attributes/shards/same-i: one name, one thing: for 47 names that start with "i" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
+# k.attributes/shards/same-i: one name, one thing: for 48 names that start with "i" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -43,6 +43,7 @@
 @k.attributes.same.iris.body_part k.attributes.same name=iris sense="body part" only=true in=k.attributes.drawn in=k.body.part in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.iron.thing k.attributes.same name=iron sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ironing_board.thing k.attributes.same name="ironing board" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.irregular.shape k.attributes.same name=irregular sense=shape only=true in=k.shapes.shape by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.island.thing k.attributes.same name=island sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.isle.thing k.attributes.same name=isle sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.israel.place k.attributes.same name=israel sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"

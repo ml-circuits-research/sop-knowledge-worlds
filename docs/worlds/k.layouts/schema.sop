@@ -20,7 +20,8 @@
 @k.layouts.layout.usual_for core.slot of=k.layouts.layout key=usual_for many=true required=true kind=string core.source="hand-core 1"
 
 # A place of an arrangement. `count` is `one` thing or `many`; `pair=true` says that the place is there twice, once
-# on each side of the middle line (the eyes of a face); `optional=true` that it may stay empty; `holds` names what
+# on each side of the middle line (the eyes of a face); `optional=true` that it may stay empty; `fills` (many) names the kinds drawn as the whole slot (the
+# ground of a landscape: ground, land, sand; its sky: sky), sized and placed as the slot's box; `holds` names what
 # usually goes there (many); `role` names explicitly assigned structural roles it accepts; `arranged` names the arrangement of the things inside the place, where they have one
 # (each row of a grid is a `row`); `x`, `y`, `w`, `h` are the usual box of the place in the frame of the whole
 # arrangement, 0 to 100, x to the right and y down, where the arrangement has usual places (the sky of a landscape
@@ -33,6 +34,7 @@
 @k.layouts.slot.pair core.slot of=k.layouts.slot key=pair kind=boolean core.source="hand-core 1"
 @k.layouts.slot.optional core.slot of=k.layouts.slot key=optional kind=boolean core.source="hand-core 1"
 @k.layouts.slot.holds core.slot of=k.layouts.slot key=holds many=true kind=atom kind=string core.source="hand-core 1"
+@k.layouts.slot.fills core.slot of=k.layouts.slot key=fills many=true kind=atom kind=string core.source="hand-core 1"
 @k.layouts.slot.arranged core.slot of=k.layouts.slot key=arranged kind=atom kind=string type=k.layouts.layout by=name core.source="hand-core 1"
 @k.layouts.slot.x core.slot of=k.layouts.slot key=x kind=number min=0 max=100 core.source="hand-core 1"
 @k.layouts.slot.y core.slot of=k.layouts.slot key=y kind=number min=0 max=100 core.source="hand-core 1"

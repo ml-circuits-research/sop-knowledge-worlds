@@ -10,6 +10,10 @@
 # An object on the page. `code` is the identifier tools and people use ("o1"); `drawing` names a k.objects object or a
 # basic shape; `x` and `y` are its centre in page units, `size` its larger extent; `width` and `height`, when
 # given, override the shape's own proportions. `colour` paints the parts that take a colour; `z` orders drawing.
+# `look` (many): the w.face faces the object is drawn with, over its drawing: a person's face (style plain, on the part
+# that bears a face: its head) and its figure (style figure: its body and clothes, k.faces.frame), or a face put on a
+# thing (eyes on the sun's disc). `seed`: the number a host picks a look by when nothing asks for one (two people of
+# one kind look different; a "different" one takes another seed); when absent, the host uses `z`.
 @w.drawing.object core.type of=w.drawing.object extends=std.schema.thing closed=true core.source="hand-core 1"
 @w.drawing.object.code core.slot of=w.drawing.object key=code required=true kind=atom kind=string core.source="hand-core 1"
 @w.drawing.object.drawing core.slot of=w.drawing.object key=drawing required=true kind=atom kind=string core.source="hand-core 1"
@@ -22,6 +26,8 @@
 @w.drawing.object.label core.slot of=w.drawing.object key=label kind=string core.source="hand-core 1"
 @w.drawing.object.name core.slot of=w.drawing.object key=name kind=string core.source="hand-core 1"
 @w.drawing.object.z core.slot of=w.drawing.object key=z kind=integer core.source="hand-core 1"
+@w.drawing.object.look core.slot of=w.drawing.object key=look type=w.face.face many=true core.source="hand-core 1"
+@w.drawing.object.seed core.slot of=w.drawing.object key=seed kind=integer core.source="hand-core 1"
 
 # A group keeps objects together under one code.
 @w.drawing.group core.type of=w.drawing.group extends=std.schema.thing closed=true core.source="hand-core 1"
@@ -30,7 +36,10 @@
 @w.drawing.group.label core.slot of=w.drawing.group key=label kind=string core.source="hand-core 1"
 
 # An edited part of an object: the part at `index` (in the order its kind draws them) recoloured, moved,
-# resized or removed.
+# resized, reshaped or removed. `shape` draws the part with another outline in its box: a basic shape of k.shapes
+# (circle, oval, rectangle, triangle) or an outline of k.layouts (irregular, wavy, star). A part the drawing does not
+# have is added with `drawing` (the k.objects drawing it draws, at an index after the drawing's own parts) and
+# `anchor` (the k.layouts anchor of the object's kind it sits at: a chimney on the roof).
 @w.drawing.part core.type of=w.drawing.part extends=std.schema.thing closed=true core.source="hand-core 1"
 @w.drawing.part.object core.slot of=w.drawing.part key=object required=true type=w.drawing.object core.source="hand-core 1"
 @w.drawing.part.index core.slot of=w.drawing.part key=index required=true kind=integer min=0 core.source="hand-core 1"
@@ -40,6 +49,9 @@
 @w.drawing.part.width core.slot of=w.drawing.part key=width kind=number min=0 core.source="hand-core 1"
 @w.drawing.part.height core.slot of=w.drawing.part key=height kind=number min=0 core.source="hand-core 1"
 @w.drawing.part.removed core.slot of=w.drawing.part key=removed kind=boolean core.source="hand-core 1"
+@w.drawing.part.shape core.slot of=w.drawing.part key=shape kind=atom kind=string core.source="hand-core 1"
+@w.drawing.part.drawing core.slot of=w.drawing.part key=drawing kind=atom kind=string core.source="hand-core 1"
+@w.drawing.part.anchor core.slot of=w.drawing.part key=anchor kind=atom kind=string core.source="hand-core 1"
 
 # One thing of each kind per code; one edit per part of an object.
 @w.drawing.code.first std.schema.thing kind=?kind code=?code

@@ -1237,6 +1237,246 @@
    }
   },
   {
+   "style": "figure",
+   "slot": "body",
+   "name": "bare",
+   "file": "variant-figure-body-bare.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "body"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "bottom",
+   "name": "jeans",
+   "file": "variant-figure-bottom-jeans.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "long"
+    ],
+    "kind": [
+     "jeans"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "bottom",
+   "name": "shorts",
+   "file": "variant-figure-bottom-shorts.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "short"
+    ],
+    "kind": [
+     "shorts"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "bottom",
+   "name": "skirt",
+   "file": "variant-figure-bottom-skirt.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "medium"
+    ],
+    "kind": [
+     "skirt"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "bottom",
+   "name": "trousers",
+   "file": "variant-figure-bottom-trousers.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "long"
+    ],
+    "kind": [
+     "trousers"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "coat",
+   "name": "coat",
+   "file": "variant-figure-coat-coat.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "long"
+    ],
+    "feel": [
+     "thick"
+    ],
+    "kind": [
+     "coat"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "coat",
+   "name": "jacket",
+   "file": "variant-figure-coat-jacket.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "short"
+    ],
+    "kind": [
+     "jacket"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "shoes",
+   "name": "boots",
+   "file": "variant-figure-shoes-boots.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "long"
+    ],
+    "kind": [
+     "boots"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "shoes",
+   "name": "shoes",
+   "file": "variant-figure-shoes-shoes.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "shoes"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "shoes",
+   "name": "trainers",
+   "file": "variant-figure-shoes-trainers.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "trainers"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "top",
+   "name": "dress",
+   "file": "variant-figure-top-dress.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "long"
+    ],
+    "kind": [
+     "dress"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "top",
+   "name": "jumper",
+   "file": "variant-figure-top-jumper.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "long"
+    ],
+    "feel": [
+     "thick"
+    ],
+    "kind": [
+     "jumper"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "top",
+   "name": "shirt",
+   "file": "variant-figure-top-shirt.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "long"
+    ],
+    "kind": [
+     "shirt"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "top",
+   "name": "t-shirt",
+   "file": "variant-figure-top-t-shirt.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "short"
+    ],
+    "kind": [
+     "t-shirt"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "top",
+   "name": "tank top",
+   "file": "variant-figure-top-tank_top.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "short"
+    ],
+    "feel": [
+     "thin"
+    ],
+    "kind": [
+     "tank top"
+    ]
+   }
+  },
+  {
    "style": "micah",
    "slot": "beard",
    "name": "micah beard",
@@ -7697,6 +7937,61 @@
  ],
  "presets": [
   {
+   "name": "baby clothes",
+   "style": "figure",
+   "file": "preset-baby_clothes.svg"
+  },
+  {
+   "name": "boy clothes",
+   "style": "figure",
+   "file": "preset-boy_clothes.svg"
+  },
+  {
+   "name": "boy in jeans",
+   "style": "figure",
+   "file": "preset-boy_in_jeans.svg"
+  },
+  {
+   "name": "girl clothes",
+   "style": "figure",
+   "file": "preset-girl_clothes.svg"
+  },
+  {
+   "name": "girl in a skirt",
+   "style": "figure",
+   "file": "preset-girl_in_a_skirt.svg"
+  },
+  {
+   "name": "man clothes",
+   "style": "figure",
+   "file": "preset-man_clothes.svg"
+  },
+  {
+   "name": "man in a jacket",
+   "style": "figure",
+   "file": "preset-man_in_a_jacket.svg"
+  },
+  {
+   "name": "woman clothes",
+   "style": "figure",
+   "file": "preset-woman_clothes.svg"
+  },
+  {
+   "name": "woman in jeans",
+   "style": "figure",
+   "file": "preset-woman_in_jeans.svg"
+  },
+  {
+   "name": "old man clothes",
+   "style": "figure",
+   "file": "preset-old_man_clothes.svg"
+  },
+  {
+   "name": "old woman clothes",
+   "style": "figure",
+   "file": "preset-old_woman_clothes.svg"
+  },
+  {
    "name": "baby",
    "style": "plain",
    "file": "preset-baby.svg"
@@ -8124,6 +8419,66 @@
    "file": "random-cutouts-12.svg",
    "seed": 12,
    "style": "cutouts"
+  },
+  {
+   "file": "random-figure-01.svg",
+   "seed": 1,
+   "style": "figure"
+  },
+  {
+   "file": "random-figure-02.svg",
+   "seed": 2,
+   "style": "figure"
+  },
+  {
+   "file": "random-figure-03.svg",
+   "seed": 3,
+   "style": "figure"
+  },
+  {
+   "file": "random-figure-04.svg",
+   "seed": 4,
+   "style": "figure"
+  },
+  {
+   "file": "random-figure-05.svg",
+   "seed": 5,
+   "style": "figure"
+  },
+  {
+   "file": "random-figure-06.svg",
+   "seed": 6,
+   "style": "figure"
+  },
+  {
+   "file": "random-figure-07.svg",
+   "seed": 7,
+   "style": "figure"
+  },
+  {
+   "file": "random-figure-08.svg",
+   "seed": 8,
+   "style": "figure"
+  },
+  {
+   "file": "random-figure-09.svg",
+   "seed": 9,
+   "style": "figure"
+  },
+  {
+   "file": "random-figure-10.svg",
+   "seed": 10,
+   "style": "figure"
+  },
+  {
+   "file": "random-figure-11.svg",
+   "seed": 11,
+   "style": "figure"
+  },
+  {
+   "file": "random-figure-12.svg",
+   "seed": 12,
+   "style": "figure"
   },
   {
    "file": "random-micah-01.svg",

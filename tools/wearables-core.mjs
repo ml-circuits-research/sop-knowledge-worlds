@@ -146,6 +146,15 @@ export const WEARABLES = [
   W('watch', 'device', 'wrist', '', 'over', false, 'watch', undefined, 'telling the time', 'wristwatch, watches, smartwatch'),
 ];
 
+// The variant of the style `figure` of k.faces (a whole person's clothes) that shows a wearable on a drawn person, and
+// its slot: what is worn over everything (a coat) in the slot coat, other tops and whole-body clothes in top, what is
+// worn on the legs in bottom, footwear in shoes.
+export const FIGURE = { shirt: 'shirt', 't-shirt': 't-shirt', blouse: 'shirt', vest: 'tank top', jumper: 'jumper', sweatshirt: 'jumper', hoodie: 'jumper', cardigan: 'jacket',
+  jacket: 'jacket', coat: 'coat', raincoat: 'coat', 'lab coat': 'coat', dress: 'dress', nightgown: 'dress', sari: 'dress', trousers: 'trousers', jeans: 'jeans', shorts: 'shorts',
+  skirt: 'skirt', 'swimming trunks': 'shorts', shoes: 'shoes', sandals: 'shoes', slippers: 'shoes', 'high-heeled shoes': 'shoes', 'ballet shoes': 'shoes', boots: 'boots',
+  'wellington boots': 'boots', 'hiking boots': 'boots', trainers: 'trainers' };
+const FIGURE_SLOT = (w) => (w.kind === 'coat' || w.name === 'cardigan' ? 'coat' : w.kind === 'bottom' ? 'bottom' : w.kind === 'footwear' ? 'shoes' : 'top');
+
 // The k.faces slot that draws a wearable: by its kind, or the slot of its place.
 const FACE_SLOT = (w) => (w.kind === 'headwear' ? 'hat' : w.kind === 'eyewear' ? 'glasses' : w.name === 'earrings' ? 'earrings' : 'shoulders');
 
@@ -154,12 +163,12 @@ export function wearableShards() {
     ['x', x], ['y', y], ['w', w], ['h', h], ['pair', pair ? 'true' : undefined], ['named', 'model']], SRC));
   const placeWords = PLACES.map((p) => wire(`k.wearables.word.place.${seg(p[0])}`, 'core.word', [...list(p[6]).map((t) => ['text', t]), ['means', p[0]], ['of', 'k.wearables.place.name']], SRC));
   const lines = WEARABLES.map((w) => wire(`k.wearables.wearable.${seg(w.name)}`, 'k.wearables.wearable', [['name', w.name], ['kind', w.kind], ['worn_on', w.on], ...w.covers.map((c) => ['covers', c]), ['layer', w.layer],
-    ['pair', w.pair ? 'true' : undefined], ['drawing', w.drawing], ['face_slot', w.face ? FACE_SLOT(w) : undefined], ['face', w.face], ...w.wornFor.map((f) => ['worn_for', f])], SRC));
+    ['pair', w.pair ? 'true' : undefined], ['drawing', w.drawing], ['face_slot', w.face ? FACE_SLOT(w) : undefined], ['face', w.face], ['figure_slot', FIGURE[w.name] ? FIGURE_SLOT(w) : undefined], ['figure', FIGURE[w.name]], ...w.wornFor.map((f) => ['worn_for', f])], SRC));
   const words = WEARABLES.filter((w) => w.words.length).map((w) => wire(`k.wearables.word.wearable.${seg(w.name)}`, 'core.word', [...w.words.map((t) => ['text', t]), ['means', w.name], ['of', 'k.wearables.wearable.name']], SRC));
   const head = (id, about) => header({ id: `k.wearables/shards/${id}`, about, sources: ['hand-core 1 (hand-written in this repository: tools/wearables-core.mjs)'], license: 'CC0-1.0', script: 'tools/wearables-core.mjs' });
   return {
     'places.sop': `${head('places', `the ${PLACES.length} places on the body where things are worn (${PLACES.map((p) => p[0]).join(', ')}): the box of each on the drawing "person" of k.objects, the k.faces slot that draws what is worn there, and the k.body part.`)}\n${places.join('\n')}\n\n# Words.\n${placeWords.join('\n')}\n`,
-    'wearables.sop': `${head('wearables', `${WEARABLES.length} things people wear: where each is worn, what else it covers, its layer, whether it is a pair, its drawing in k.objects, its variant in k.faces, what it is worn for; and other words for them.`)}\n${lines.join('\n')}\n\n# Words.\n${words.join('\n')}\n`,
+    'wearables.sop': `${head('wearables', `${WEARABLES.length} things people wear: where each is worn, what else it covers, its layer, whether it is a pair, its drawing in k.objects, its variant in k.faces (on a face, and on a whole drawn person: style figure), what it is worn for; and other words for them.`)}\n${lines.join('\n')}\n\n# Words.\n${words.join('\n')}\n`,
   };
 }
 

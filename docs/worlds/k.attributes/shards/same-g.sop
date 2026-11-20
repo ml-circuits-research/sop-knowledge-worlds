@@ -1,4 +1,4 @@
-# k.attributes/shards/same-g: one name, one thing: for 134 names that start with "g" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-g: one name, one thing: for 135 names that start with "g" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -120,6 +120,7 @@
 @k.attributes.same.grizzly_bear.animal k.attributes.same name="grizzly bear" sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grog.thing k.attributes.same name=grog sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grotto.thing k.attributes.same name=grotto sense=thing only=true in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.ground.thing k.attributes.same name=ground sense=thing only=true in=k.attributes.drawn in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.groundhog.animal k.attributes.same name=groundhog sense=animal only=false in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.groundhog.place k.attributes.same name=groundhog sense=place only=false in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.guacamole.food k.attributes.same name=guacamole sense=food only=true in=k.food.food in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"

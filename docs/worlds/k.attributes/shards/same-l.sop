@@ -1,4 +1,4 @@
-# k.attributes/shards/same-l: one name, one thing: for 128 names that start with "l" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (10 facts of such names here).
+# k.attributes/shards/same-l: one name, one thing: for 129 names that start with "l" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (10 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -20,6 +20,7 @@
 @k.attributes.same.lamp_post.thing k.attributes.same name="lamp post" sense=thing only=true in=k.objects.stand_in in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.lampshade.thing k.attributes.same name=lampshade sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.lance.thing k.attributes.same name=lance sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.land.thing k.attributes.same name=land sense=thing only=true in=k.attributes.drawn in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.landline.thing k.attributes.same name=landline sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.landslide.thing k.attributes.same name=landslide sense=thing only=true in=k.attributes.drawn in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.lane.thing k.attributes.same name=lane sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"

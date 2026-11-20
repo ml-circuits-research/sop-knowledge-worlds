@@ -27,7 +27,7 @@
 @k.kinds.relation.k.space.body.named k.kinds.relation type=k.space.body key=named subject=body subject_sense="body in space" object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.space.kind.material k.kinds.relation type=k.space.kind key=material subject=kind subject_sense="body in space" object=thing object_type=k.attributes.drawn object_type=k.attributes.thing object_type=k.objects.object found=value core.source="hand-core 1"
 @k.kinds.relation.k.space.kind.orbits k.kinds.relation type=k.space.kind key=orbits subject=kind subject_sense="body in space" object=thing object_type=k.attributes.drawn object_type=k.attributes.thing object_type=k.objects.object found=value core.source="hand-core 1"
-@k.kinds.relation.k.space.kind.has k.kinds.relation type=k.space.kind key=has subject=kind subject_sense="body in space" object=word object_type=k.words.sense found=value core.source="hand-core 1"
+@k.kinds.relation.k.space.kind.has k.kinds.relation type=k.space.kind key=has subject=kind subject_sense="body in space" object=thing object_type=k.parts.name found=value core.source="hand-core 1"
 @k.kinds.relation.k.space.kind.does k.kinds.relation type=k.space.kind key=does subject=kind subject_sense="body in space" object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.space.kind.drawing k.kinds.relation type=k.space.kind key=drawing subject=kind subject_sense="body in space" object=thing object_type=k.objects.object found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.space.kind.about k.kinds.relation type=k.space.kind key=about subject=kind subject_sense="body in space" object=text found=schema core.source="hand-core 1"

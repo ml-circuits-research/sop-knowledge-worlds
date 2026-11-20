@@ -1,5 +1,5 @@
 {
- "version": "92e18ddffbdb",
+ "version": "33ad1f89f532",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -2442,8 +2442,8 @@
     {
      "id": "k.attributes/shards/drawn-hand",
      "path": "k.attributes/shards/drawn-hand.sop",
-     "wires": 328,
-     "bytes": 46377,
+     "wires": 332,
+     "bytes": 46878,
      "keys": [
       "airport",
       "alley",
@@ -2565,6 +2565,7 @@
       "grave",
       "greenhouse",
       "grinder",
+      "ground",
       "gun",
       "handkerchief",
       "harmonica",
@@ -2600,6 +2601,7 @@
       "ladder",
       "lake",
       "lance",
+      "land",
       "lane",
       "leash",
       "leech",
@@ -2692,6 +2694,7 @@
       "saddle",
       "salmon",
       "salsa",
+      "sand",
       "sandcastle",
       "sauce",
       "scalpel",
@@ -2712,6 +2715,7 @@
       "shrine",
       "sidewalk",
       "skate",
+      "sky",
       "slab",
       "snowman",
       "sock",
@@ -4702,8 +4706,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1341,
-     "bytes": 260402,
+     "wires": 1358,
+     "bytes": 263600,
      "keys": [
       "a",
       "about",
@@ -4748,8 +4752,10 @@
       "below",
       "binding",
       "blocks",
+      "body",
       "body_part",
       "botanically",
+      "bottom",
       "branch",
       "brow_above",
       "by",
@@ -4772,6 +4778,7 @@
       "class",
       "clearance",
       "clothes",
+      "coat",
       "code",
       "code2",
       "colour",
@@ -4862,6 +4869,8 @@
       "family",
       "feature",
       "feel",
+      "figure",
+      "figure_slot",
       "filler",
       "fills",
       "finding",
@@ -4905,6 +4914,7 @@
       "hedging",
       "height_about",
       "hemisphere",
+      "hides",
       "high",
       "history",
       "hold_max",
@@ -4982,6 +4992,7 @@
       "k.faces.expression",
       "k.faces.expression.goal",
       "k.faces.feature",
+      "k.faces.frame",
       "k.faces.part",
       "k.faces.point",
       "k.faces.preset",
@@ -5052,6 +5063,7 @@
       "k.objects.stand_in",
       "k.parts.called",
       "k.parts.inherited",
+      "k.parts.name",
       "k.parts.usual",
       "k.parts.whole",
       "k.people.given_name",
@@ -5314,6 +5326,7 @@
       "shade",
       "shape",
       "sharps",
+      "shoes",
       "shoulders",
       "shown_in",
       "side",
@@ -5366,6 +5379,7 @@
       "tone",
       "tonic",
       "tool",
+      "top",
       "topic",
       "tried_by",
       "type",
@@ -7970,8 +7984,8 @@
     {
      "id": "k.attributes/shards/same-g",
      "path": "k.attributes/shards/same-g.sop",
-     "wires": 137,
-     "bytes": 27603,
+     "wires": 138,
+     "bytes": 27777,
      "keys": [
       "animal",
       "body in space",
@@ -8094,6 +8108,7 @@
       "grizzly bear",
       "grog",
       "grotto",
+      "ground",
       "groundhog",
       "guacamole",
       "guatemala",
@@ -8313,8 +8328,8 @@
     {
      "id": "k.attributes/shards/same-i",
      "path": "k.attributes/shards/same-i.sop",
-     "wires": 47,
-     "bytes": 9189,
+     "wires": 48,
+     "bytes": 9345,
      "keys": [
       "animal",
       "body in space",
@@ -8361,6 +8376,7 @@
       "iris",
       "iron",
       "ironing board",
+      "irregular",
       "island",
       "isle",
       "israel",
@@ -8370,6 +8386,7 @@
       "ivy",
       "place",
       "plant",
+      "shape",
       "thing"
      ],
      "sources": [
@@ -8523,8 +8540,8 @@
     {
      "id": "k.attributes/shards/same-l",
      "path": "k.attributes/shards/same-l.sop",
-     "wires": 133,
-     "bytes": 27568,
+     "wires": 134,
+     "bytes": 27738,
      "keys": [
       "animal",
       "body part",
@@ -8548,6 +8565,7 @@
       "lamp post",
       "lampshade",
       "lance",
+      "land",
       "landline",
       "landslide",
       "lane",
@@ -9127,8 +9145,8 @@
     {
      "id": "k.attributes/shards/same-p",
      "path": "k.attributes/shards/same-p.sop",
-     "wires": 319,
-     "bytes": 65015,
+     "wires": 320,
+     "bytes": 65175,
      "keys": [
       "animal",
       "body in space",
@@ -9237,6 +9255,7 @@
       "pendant",
       "pendulum",
       "penguin",
+      "peninsula",
       "penitentiary",
       "pentagon",
       "pepper",
@@ -9653,8 +9672,8 @@
     {
      "id": "k.attributes/shards/same-s",
      "path": "k.attributes/shards/same-s.sop",
-     "wires": 441,
-     "bytes": 91408,
+     "wires": 442,
+     "bytes": 91652,
      "keys": [
       "animal",
       "body in space",
@@ -14012,7 +14031,7 @@
      "id": "k.diagrams/shards/topics-wordnet-3-0",
      "path": "k.diagrams/shards/topics-wordnet-3-0.sop",
      "wires": 1655,
-     "bytes": 270092,
+     "bytes": 270093,
      "keys": [],
      "sources": [
       "wordnet-3.1"
@@ -14946,6 +14965,7 @@
     "k.faces.expression",
     "k.faces.expression.goal",
     "k.faces.feature",
+    "k.faces.frame",
     "k.faces.part",
     "k.faces.point",
     "k.faces.preset",
@@ -14970,6 +14990,10 @@
     ],
     "k.faces.feature": [
      "key"
+    ],
+    "k.faces.frame": [
+     "drawing",
+     "style"
     ],
     "k.faces.part": [
      "of",
@@ -15318,6 +15342,157 @@
      "keys": [
       "length",
       "size"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/figure-body",
+     "path": "k.faces/shards/figure-body.sop",
+     "wires": 25,
+     "bytes": 4004,
+     "keys": [
+      "bare",
+      "body",
+      "left_arm",
+      "left_hand",
+      "left_leg",
+      "neck",
+      "right_arm",
+      "right_hand",
+      "right_leg",
+      "torso"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/figure-bottom",
+     "path": "k.faces/shards/figure-bottom.sop",
+     "wires": 45,
+     "bytes": 7660,
+     "keys": [
+      "bottom",
+      "jeans",
+      "left_leg",
+      "right_leg",
+      "seam",
+      "shorts",
+      "skirt",
+      "trousers",
+      "waist"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/figure-coat",
+     "path": "k.faces/shards/figure-coat.sop",
+     "wires": 34,
+     "bytes": 5407,
+     "keys": [
+      "coat",
+      "jacket",
+      "left_side",
+      "right_side"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/figure-presets",
+     "path": "k.faces/shards/figure-presets.sop",
+     "wires": 11,
+     "bytes": 3119,
+     "keys": [
+      "baby clothes",
+      "boy clothes",
+      "boy in jeans",
+      "girl clothes",
+      "girl in a skirt",
+      "man clothes",
+      "man in a jacket",
+      "old man clothes",
+      "old woman clothes",
+      "woman clothes",
+      "woman in jeans"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/figure-shoes",
+     "path": "k.faces/shards/figure-shoes.sop",
+     "wires": 27,
+     "bytes": 4735,
+     "keys": [
+      "boots",
+      "left_boot",
+      "left_shoe",
+      "left_stripe",
+      "right_boot",
+      "right_shoe",
+      "right_stripe",
+      "shoes",
+      "trainers"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/figure-slots",
+     "path": "k.faces/shards/figure-slots.sop",
+     "wires": 7,
+     "bytes": 1648,
+     "keys": [
+      "body",
+      "bottom",
+      "coat",
+      "figure",
+      "person",
+      "shoes",
+      "top"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/figure-top",
+     "path": "k.faces/shards/figure-top.sop",
+     "wires": 72,
+     "bytes": 10004,
+     "keys": [
+      "buttons",
+      "collar",
+      "dress",
+      "hem",
+      "jumper",
+      "shirt",
+      "t-shirt",
+      "tank top",
+      "top",
+      "waist"
      ],
      "sources": [
       "hand-core-1"
@@ -16745,7 +16920,7 @@
      "id": "k.faces/shards/presets",
      "path": "k.faces/shards/presets.sop",
      "wires": 33,
-     "bytes": 7382,
+     "bytes": 7597,
      "keys": [
       "alien",
       "angry",
@@ -33984,7 +34159,7 @@
      "id": "k.kinds/shards/relations-actions",
      "path": "k.kinds/shards/relations-actions.sop",
      "wires": 44,
-     "bytes": 8259,
+     "bytes": 8288,
      "keys": [
       "about",
       "act",
@@ -34253,7 +34428,7 @@
      "id": "k.kinds/shards/relations-commonsense",
      "path": "k.kinds/shards/relations-commonsense.sop",
      "wires": 15,
-     "bytes": 3137,
+     "bytes": 3140,
      "keys": [
       "at",
       "can",
@@ -34374,7 +34549,7 @@
      "id": "k.kinds/shards/relations-expect",
      "path": "k.kinds/shards/relations-expect.sop",
      "wires": 37,
-     "bytes": 6588,
+     "bytes": 6616,
      "keys": [
       "about",
       "count_factor",
@@ -34418,16 +34593,20 @@
     {
      "id": "k.kinds/shards/relations-faces",
      "path": "k.kinds/shards/relations-faces.sop",
-     "wires": 84,
-     "bytes": 14908,
+     "wires": 95,
+     "bytes": 17122,
      "keys": [
       "about",
       "age",
       "beard",
+      "body",
+      "bottom",
       "brow_above",
       "cheeks",
       "clothes",
+      "coat",
       "colour",
+      "drawing",
       "earrings",
       "ears",
       "expression",
@@ -34445,11 +34624,13 @@
       "hair_front",
       "hat",
       "head",
+      "hides",
       "k.faces.canon",
       "k.faces.colour",
       "k.faces.expression",
       "k.faces.expression.goal",
       "k.faces.feature",
+      "k.faces.frame",
       "k.faces.part",
       "k.faces.point",
       "k.faces.preset",
@@ -34478,14 +34659,17 @@
       "property",
       "rgb",
       "scale",
+      "sex",
       "shade",
       "shape",
+      "shoes",
       "shoulders",
       "size",
       "skin",
       "slot",
       "style",
       "tint",
+      "top",
       "value",
       "w",
       "x",
@@ -34733,8 +34917,8 @@
     {
      "id": "k.kinds/shards/relations-layouts",
      "path": "k.kinds/shards/relations-layouts.sop",
-     "wires": 45,
-     "bytes": 8281,
+     "wires": 46,
+     "bytes": 8553,
      "keys": [
       "a",
       "about",
@@ -34743,6 +34927,7 @@
       "b",
       "count",
       "drawing",
+      "fills",
       "from",
       "h",
       "holds",
@@ -34947,8 +35132,8 @@
     {
      "id": "k.kinds/shards/relations-parts",
      "path": "k.kinds/shards/relations-parts.sop",
-     "wires": 11,
-     "bytes": 2274,
+     "wires": 13,
+     "bytes": 2692,
      "keys": [
       "also",
       "from",
@@ -34956,11 +35141,14 @@
       "has",
       "k.parts.called",
       "k.parts.inherited",
+      "k.parts.name",
       "k.parts.usual",
       "k.parts.whole",
       "named",
+      "of",
       "part",
       "plain",
+      "slot",
       "steps"
      ],
      "sources": [
@@ -35014,7 +35202,7 @@
      "id": "k.kinds/shards/relations-procedures",
      "path": "k.kinds/shards/relations-procedures.sop",
      "wires": 77,
-     "bytes": 14163,
+     "bytes": 14139,
      "keys": [
       "about",
       "act",
@@ -35085,7 +35273,7 @@
      "id": "k.kinds/shards/relations-scenes",
      "path": "k.kinds/shards/relations-scenes.sop",
      "wires": 19,
-     "bytes": 3907,
+     "bytes": 3992,
      "keys": [
       "count",
       "drawing",
@@ -35449,8 +35637,8 @@
     {
      "id": "k.kinds/shards/relations-wearables",
      "path": "k.kinds/shards/relations-wearables.sop",
-     "wires": 18,
-     "bytes": 3963,
+     "wires": 20,
+     "bytes": 4489,
      "keys": [
       "about",
       "body_part",
@@ -35458,6 +35646,8 @@
       "drawing",
       "face",
       "face_slot",
+      "figure",
+      "figure_slot",
       "h",
       "k.wearables.place",
       "k.wearables.wearable",
@@ -37074,8 +37264,8 @@
     {
      "id": "k.kinds/shards/wordnet-1",
      "path": "k.kinds/shards/wordnet-1.sop",
-     "wires": 1222,
-     "bytes": 211705,
+     "wires": 1223,
+     "bytes": 211865,
      "keys": [
       "aardvark",
       "acarine",
@@ -38041,6 +38231,7 @@
       "grinder",
       "grizzly bear",
       "grocery store",
+      "ground",
       "groundhog",
       "guacamole",
       "guide",
@@ -38659,7 +38850,7 @@
      "id": "k.kinds/shards/wordnet-2",
      "path": "k.kinds/shards/wordnet-2.sop",
      "wires": 1214,
-     "bytes": 209860,
+     "bytes": 209873,
      "keys": [
       "absorbent material",
       "acarine",
@@ -40826,7 +41017,7 @@
      "id": "k.layouts/shards/layouts",
      "path": "k.layouts/shards/layouts.sop",
      "wires": 186,
-     "bytes": 33280,
+     "bytes": 33325,
      "keys": [
       "above",
       "aligned_column",
@@ -40953,8 +41144,8 @@
     {
      "id": "k.layouts/shards/outlines-cc0-1-0",
      "path": "k.layouts/shards/outlines-cc0-1-0.sop",
-     "wires": 520,
-     "bytes": 58094,
+     "wires": 537,
+     "bytes": 60130,
      "keys": [
       "apple",
       "arrow",
@@ -40973,6 +41164,7 @@
       "heart",
       "hexagon",
       "house",
+      "irregular",
       "moon",
       "octagon",
       "oval",
@@ -42291,6 +42483,24 @@
       "sugar",
       "tomato",
       "whiskey"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/ground",
+     "path": "k.objects/shards/ground.sop",
+     "wires": 8,
+     "bytes": 1447,
+     "keys": [
+      "ground",
+      "land",
+      "sand",
+      "sky",
+      "surface"
      ],
      "sources": [
       "hand-core-1"
@@ -51821,11 +52031,10 @@
     {
      "id": "k.objects/shards/stand-ins-kinds",
      "path": "k.objects/shards/stand-ins-kinds.sop",
-     "wires": 13,
-     "bytes": 3119,
+     "wires": 12,
+     "bytes": 2931,
      "keys": [
       "buzzard",
-      "cape",
       "cloak",
       "condor",
       "gingerbread",
@@ -51847,8 +52056,8 @@
     {
      "id": "k.objects/shards/stand-ins-wordnet",
      "path": "k.objects/shards/stand-ins-wordnet.sop",
-     "wires": 181,
-     "bytes": 19239,
+     "wires": 183,
+     "bytes": 19447,
      "keys": [
       "abbey",
       "ale",
@@ -51890,6 +52099,7 @@
       "cabana",
       "cafe",
       "cane",
+      "cape",
       "cappuccino",
       "caramel",
       "cardigan",
@@ -51981,6 +52191,7 @@
       "pavilion",
       "pawnshop",
       "pebble",
+      "peninsula",
       "pepperoni",
       "pew",
       "pharmacy",
@@ -53342,6 +53553,7 @@
    "exports": [
     "k.parts.called",
     "k.parts.inherited",
+    "k.parts.name",
     "k.parts.usual",
     "k.parts.whole"
    ],
@@ -53353,6 +53565,9 @@
     ],
     "k.parts.inherited": [
      "from",
+     "name"
+    ],
+    "k.parts.name": [
      "name"
     ],
     "k.parts.usual": [
@@ -54053,6 +54268,93 @@
       "wordnet-3.1"
      ],
      "license": "WordNet-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.parts/shards/names",
+     "path": "k.parts/shards/names.sop",
+     "wires": 131,
+     "bytes": 13059,
+     "keys": [
+      "apples",
+      "arms",
+      "balloon",
+      "bands",
+      "beak",
+      "beard",
+      "body",
+      "center",
+      "cheeks",
+      "chimney",
+      "clouds",
+      "collar",
+      "crown",
+      "disc",
+      "door",
+      "earrings",
+      "ears",
+      "eye",
+      "eyebrows",
+      "eyes",
+      "fin",
+      "fins",
+      "flag",
+      "flame",
+      "glasses",
+      "grass",
+      "hair",
+      "hat",
+      "head",
+      "hubcaps",
+      "hull",
+      "jacket",
+      "knob",
+      "knot",
+      "leaves",
+      "legs",
+      "lights",
+      "mast",
+      "moon",
+      "moustache",
+      "neck",
+      "nose",
+      "pants",
+      "petals",
+      "porthole",
+      "puffs",
+      "rays",
+      "ripples",
+      "rock",
+      "roof",
+      "rows",
+      "sail",
+      "scales",
+      "shine",
+      "shirt",
+      "shoes",
+      "smile",
+      "snout",
+      "snow",
+      "stem",
+      "string",
+      "stripes",
+      "surface",
+      "tail",
+      "tongue",
+      "trunk",
+      "walls",
+      "water",
+      "waves",
+      "wheels",
+      "whiskers",
+      "window",
+      "windows",
+      "wing"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
      "warnings": []
     },
     {
@@ -55021,8 +55323,8 @@
     {
      "id": "k.parts/shards/words",
      "path": "k.parts/shards/words.sop",
-     "wires": 15,
-     "bytes": 2244,
+     "wires": 19,
+     "bytes": 2667,
      "keys": [],
      "sources": [
       "hand-core-1"
@@ -62728,8 +63030,8 @@
     {
      "id": "k.shapes/shards/shapes",
      "path": "k.shapes/shards/shapes.sop",
-     "wires": 74,
-     "bytes": 13219,
+     "wires": 76,
+     "bytes": 13593,
      "keys": [
       "arc",
       "arrow",
@@ -62748,6 +63050,7 @@
       "heart",
       "hemisphere",
       "hexagon",
+      "irregular",
       "line",
       "octagon",
       "oval",
@@ -64928,7 +65231,7 @@
      "id": "k.wearables/shards/wearables",
      "path": "k.wearables/shards/wearables.sop",
      "wires": 206,
-     "bytes": 34055,
+     "bytes": 35006,
      "keys": [
       "apron",
       "armor",
@@ -95432,7 +95735,7 @@
      "id": "w.lang.en/shards/shape-frames",
      "path": "w.lang.en/shards/shape-frames.sop",
      "wires": 66,
-     "bytes": 14565,
+     "bytes": 14630,
      "keys": [],
      "sources": [
       "hand-core-1"
@@ -97121,7 +97424,9 @@
       "colour",
       "label",
       "name",
-      "z"
+      "z",
+      "look",
+      "seed"
      ],
      "words": [
       "object",
@@ -97164,7 +97469,10 @@
       "dy",
       "width",
       "height",
-      "removed"
+      "removed",
+      "shape",
+      "drawing",
+      "anchor"
      ],
      "words": [
       "part",
@@ -97173,8 +97481,8 @@
      ]
     }
    ],
-   "wires": 39,
-   "bytes": 5284,
+   "wires": 44,
+   "bytes": 6694,
    "sources": [
     "hand-core-1"
    ],
@@ -97650,10 +97958,142 @@
       "accessory",
       "accessories"
      ]
+    },
+    {
+     "type": "w.face.body",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "body",
+      "bare body"
+     ]
+    },
+    {
+     "type": "w.face.top",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "t-shirt",
+      "t-shirts",
+      "jumper",
+      "jumpers",
+      "sweater",
+      "dress",
+      "dresses",
+      "blouse",
+      "tank top"
+     ]
+    },
+    {
+     "type": "w.face.bottom",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "trousers",
+      "pants",
+      "jeans",
+      "shorts",
+      "skirt",
+      "skirts"
+     ]
+    },
+    {
+     "type": "w.face.shoes",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "shoes",
+      "shoe",
+      "boots",
+      "boot",
+      "trainers",
+      "sneakers"
+     ]
+    },
+    {
+     "type": "w.face.coat",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "jacket",
+      "jackets",
+      "coat",
+      "coats"
+     ]
     }
    ],
-   "wires": 101,
-   "bytes": 14640,
+   "wires": 121,
+   "bytes": 17458,
    "sources": [
     "hand-core-1"
    ],

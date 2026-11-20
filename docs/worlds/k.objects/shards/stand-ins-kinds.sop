@@ -1,12 +1,10 @@
-# k.objects/shards/stand-ins-kinds: 13 common things with no drawing at all, drawn by the drawing of their kind (a stand-in: the host says "drawn as a ..."), the parent one step up in k.kinds that a world of the catalog states by name (k.attributes kind, k.animals, k.food, k.wearables). Written by tools/stand-ins-kinds.mjs.
+# k.objects/shards/stand-ins-kinds: 12 common things with no drawing at all, drawn by the drawing of their kind (a stand-in: the host says "drawn as a ..."), the parent one step up in k.kinds that a world of the catalog states by name (k.attributes kind, k.animals, k.food, k.wearables). Written by tools/stand-ins-kinds.mjs.
 # sources: hand-core 1 (the kind facts of the hand-written worlds, read through k.kinds.parent)
 # license: CC0-1.0
 # script: tools/stand-ins-kinds.mjs
 
 # buzzard (a New World vulture that is common in South America and Central America and the southern United States): a kind of bird, by k.animals.animal
 @k.objects.kinds.buzzard k.objects.stand_in name=buzzard drawing=bird core.source="hand-core 1"
-# cape (a strip of land projecting into a body of water): a kind of coat, by k.wearables.wearable
-@k.objects.kinds.cape k.objects.stand_in name=cape drawing=coat core.source="hand-core 1"
 # cloak (anything that covers or conceals): a kind of coat, by k.wearables.wearable
 @k.objects.kinds.cloak k.objects.stand_in name=cloak drawing=coat core.source="hand-core 1"
 # condor (the largest flying birds in the western hemisphere): a kind of bird, by k.animals.animal

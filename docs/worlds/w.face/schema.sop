@@ -9,10 +9,11 @@
 # needs: sopworld with std.schema and std.acts (tools/sopworld/VERSION, 0.30.0 or later)
 
 @w.face.schema core.use world=std.schema core.source="hand-core 1"
-@w.face core.module name=w.face version=1 exports=face exports=part exports=hair_back exports=shoulders exports=clothes exports=neck exports=ears exports=head exports=cheeks exports=beard exports=mouth exports=moustache exports=nose exports=eyes exports=eyebrows exports=glasses exports=hair_front exports=earrings exports=hat exports=accessories exports=slot core.source="hand-core 1"
+@w.face core.module name=w.face version=1 exports=face exports=part exports=hair_back exports=shoulders exports=clothes exports=neck exports=ears exports=head exports=cheeks exports=beard exports=mouth exports=moustache exports=nose exports=eyes exports=eyebrows exports=glasses exports=hair_front exports=earrings exports=hat exports=accessories exports=body exports=top exports=bottom exports=shoes exports=coat exports=slot core.source="hand-core 1"
 @w.face.world std.schema.world name=w.face doc="a drawn face: parts with their variant, colour, size and place, and an expression" core.source="hand-core 1"
 
-# A face. `name` what it is called; `style` the style of k.faces its parts are drawn in (`k.faces.slot.style`:
+# A face. A whole person drawn on a drawing has two: its face (style plain, drawn on the head) and its figure (style
+# figure: the body and the clothes, drawn in the frame of the drawing person; k.faces.frame). `name` what it is called; `style` the style of k.faces its parts are drawn in (`k.faces.slot.style`:
 # plain, micah, pixel-art ...; a face does not mix styles); `preset` the k.faces preset it started from (child,
 # robot, queen); `skin`, `hair_colour`, `eye_colour`, `clothes` the names of k.faces colours of that use (the keys of
 # `k.faces.preset`, so a preset is copied key for key); the parts take their colour from these by their `tint` in
@@ -65,11 +66,18 @@
 @w.face.earrings core.type of=w.face.earrings extends=w.face.part closed=true core.source="hand-core 1"
 @w.face.hat core.type of=w.face.hat extends=w.face.part closed=true core.source="hand-core 1"
 @w.face.accessories core.type of=w.face.accessories extends=w.face.part closed=true core.source="hand-core 1"
+# The kinds of part of the style `figure` (k.faces: a whole person's body and clothes, in the frame of the drawing
+# person): the bare body, and what is worn on the legs, on the feet, on the upper body and over everything.
+@w.face.body core.type of=w.face.body extends=w.face.part closed=true core.source="hand-core 1"
+@w.face.top core.type of=w.face.top extends=w.face.part closed=true core.source="hand-core 1"
+@w.face.bottom core.type of=w.face.bottom extends=w.face.part closed=true core.source="hand-core 1"
+@w.face.shoes core.type of=w.face.shoes extends=w.face.part closed=true core.source="hand-core 1"
+@w.face.coat core.type of=w.face.coat extends=w.face.part closed=true core.source="hand-core 1"
 
 # The kinds and the acts. A face is made, changed (its colours, style, expression), copied, asked about and removed;
 # a part is made (added to the face), removed (taken off), changed (variant, colour, size), placed (moved), picked
 # and asked about. A face has one part of each kind (a deny: a second hat is refused; to change the hat, change its
-# variant). At most 10 faces and 10 parts of each kind.
+# variant). At most 200 faces and 200 parts of each kind (a drawing has a face and a figure for each person on it).
 @w.face.kind.face std.schema.kind of=w.face.face world=w.face acts=make acts=remove acts=change acts=copy acts=pick acts=ask core.source="hand-core 1"
 @w.face.kind.hair_back std.schema.kind of=w.face.hair_back world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
 @w.face.kind.shoulders std.schema.kind of=w.face.shoulders world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
@@ -89,36 +97,47 @@
 @w.face.kind.earrings std.schema.kind of=w.face.earrings world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
 @w.face.kind.hat std.schema.kind of=w.face.hat world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
 @w.face.kind.accessories std.schema.kind of=w.face.accessories world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
+@w.face.kind.body std.schema.kind of=w.face.body world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
+@w.face.kind.top std.schema.kind of=w.face.top world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
+@w.face.kind.bottom std.schema.kind of=w.face.bottom world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
+@w.face.kind.shoes std.schema.kind of=w.face.shoes world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
+@w.face.kind.coat std.schema.kind of=w.face.coat world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
 @w.face.one.first w.face.part kind=?kind face=?face
 @w.face.one.second w.face.part kind=?kind face=?face
 @w.face.one.other core.check fn=neq args=$w.face.one.first args=$w.face.one.second
 @w.face.one core.deny when=$w.face.one.first when=$w.face.one.second if=$w.face.one.other why="A face has one part of each kind: this face has a ?kind already." core.source="hand-core 1"
-@w.face.limit.face std.schema.limit of=w.face.face max=10 core.source="hand-core 1"
-@w.face.limit.hair_back std.schema.limit of=w.face.hair_back max=10 core.source="hand-core 1"
-@w.face.limit.shoulders std.schema.limit of=w.face.shoulders max=10 core.source="hand-core 1"
-@w.face.limit.clothes std.schema.limit of=w.face.clothes max=10 core.source="hand-core 1"
-@w.face.limit.neck std.schema.limit of=w.face.neck max=10 core.source="hand-core 1"
-@w.face.limit.ears std.schema.limit of=w.face.ears max=10 core.source="hand-core 1"
-@w.face.limit.head std.schema.limit of=w.face.head max=10 core.source="hand-core 1"
-@w.face.limit.cheeks std.schema.limit of=w.face.cheeks max=10 core.source="hand-core 1"
-@w.face.limit.beard std.schema.limit of=w.face.beard max=10 core.source="hand-core 1"
-@w.face.limit.mouth std.schema.limit of=w.face.mouth max=10 core.source="hand-core 1"
-@w.face.limit.moustache std.schema.limit of=w.face.moustache max=10 core.source="hand-core 1"
-@w.face.limit.nose std.schema.limit of=w.face.nose max=10 core.source="hand-core 1"
-@w.face.limit.eyes std.schema.limit of=w.face.eyes max=10 core.source="hand-core 1"
-@w.face.limit.eyebrows std.schema.limit of=w.face.eyebrows max=10 core.source="hand-core 1"
-@w.face.limit.glasses std.schema.limit of=w.face.glasses max=10 core.source="hand-core 1"
-@w.face.limit.hair_front std.schema.limit of=w.face.hair_front max=10 core.source="hand-core 1"
-@w.face.limit.earrings std.schema.limit of=w.face.earrings max=10 core.source="hand-core 1"
-@w.face.limit.hat std.schema.limit of=w.face.hat max=10 core.source="hand-core 1"
-@w.face.limit.accessories std.schema.limit of=w.face.accessories max=10 core.source="hand-core 1"
+@w.face.limit.face std.schema.limit of=w.face.face max=200 core.source="hand-core 1"
+@w.face.limit.hair_back std.schema.limit of=w.face.hair_back max=200 core.source="hand-core 1"
+@w.face.limit.shoulders std.schema.limit of=w.face.shoulders max=200 core.source="hand-core 1"
+@w.face.limit.clothes std.schema.limit of=w.face.clothes max=200 core.source="hand-core 1"
+@w.face.limit.neck std.schema.limit of=w.face.neck max=200 core.source="hand-core 1"
+@w.face.limit.ears std.schema.limit of=w.face.ears max=200 core.source="hand-core 1"
+@w.face.limit.head std.schema.limit of=w.face.head max=200 core.source="hand-core 1"
+@w.face.limit.cheeks std.schema.limit of=w.face.cheeks max=200 core.source="hand-core 1"
+@w.face.limit.beard std.schema.limit of=w.face.beard max=200 core.source="hand-core 1"
+@w.face.limit.mouth std.schema.limit of=w.face.mouth max=200 core.source="hand-core 1"
+@w.face.limit.moustache std.schema.limit of=w.face.moustache max=200 core.source="hand-core 1"
+@w.face.limit.nose std.schema.limit of=w.face.nose max=200 core.source="hand-core 1"
+@w.face.limit.eyes std.schema.limit of=w.face.eyes max=200 core.source="hand-core 1"
+@w.face.limit.eyebrows std.schema.limit of=w.face.eyebrows max=200 core.source="hand-core 1"
+@w.face.limit.glasses std.schema.limit of=w.face.glasses max=200 core.source="hand-core 1"
+@w.face.limit.hair_front std.schema.limit of=w.face.hair_front max=200 core.source="hand-core 1"
+@w.face.limit.earrings std.schema.limit of=w.face.earrings max=200 core.source="hand-core 1"
+@w.face.limit.hat std.schema.limit of=w.face.hat max=200 core.source="hand-core 1"
+@w.face.limit.accessories std.schema.limit of=w.face.accessories max=200 core.source="hand-core 1"
+@w.face.limit.body std.schema.limit of=w.face.body max=200 core.source="hand-core 1"
+@w.face.limit.top std.schema.limit of=w.face.top max=200 core.source="hand-core 1"
+@w.face.limit.bottom std.schema.limit of=w.face.bottom max=200 core.source="hand-core 1"
+@w.face.limit.shoes std.schema.limit of=w.face.shoes max=200 core.source="hand-core 1"
+@w.face.limit.coat std.schema.limit of=w.face.coat max=200 core.source="hand-core 1"
 
 # Which k.faces slot each kind of part draws: an explicit join, so a rule that reads a part's variant
 # from k.faces matches the slot by a declared fact, not by the spelling of the type name.
 @w.face.slot.type core.type of=w.face.slot closed=true core.source="hand-core 1"
 @w.face.slot.part core.slot of=w.face.slot key=part kind=atom core.source="hand-core 1"
 @w.face.slot.slot core.slot of=w.face.slot key=slot kind=atom core.source="hand-core 1"
-# `group`: the kinds of part a person names together as one thing ("her hair": the back hair and the front hair);
+# `group`: the kinds of part a person names together as one thing ("her hair": the back hair and the front hair; "his
+# clothes": what a figure wears on the upper body, the legs and the feet, and over them);
 # a feature of the group (its length) is the feature of its parts together.
 @w.face.slot.group core.slot of=w.face.slot key=group kind=atom core.source="hand-core 1"
 @w.face.slot.hair_back w.face.slot part=w.face.hair_back slot=hair_back group=hair core.source="hand-core 1"
@@ -139,5 +158,10 @@
 @w.face.slot.earrings w.face.slot part=w.face.earrings slot=earrings core.source="hand-core 1"
 @w.face.slot.hat w.face.slot part=w.face.hat slot=hat core.source="hand-core 1"
 @w.face.slot.accessories w.face.slot part=w.face.accessories slot=accessories core.source="hand-core 1"
+@w.face.slot.body w.face.slot part=w.face.body slot=body core.source="hand-core 1"
+@w.face.slot.top w.face.slot part=w.face.top slot=top group=clothes core.source="hand-core 1"
+@w.face.slot.bottom w.face.slot part=w.face.bottom slot=bottom group=clothes core.source="hand-core 1"
+@w.face.slot.shoes w.face.slot part=w.face.shoes slot=shoes group=clothes core.source="hand-core 1"
+@w.face.slot.coat w.face.slot part=w.face.coat slot=coat group=clothes core.source="hand-core 1"
 
 # Words: for the world (how a host finds it by name), its kinds and its keys.

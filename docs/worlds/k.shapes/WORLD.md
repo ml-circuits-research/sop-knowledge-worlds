@@ -1,6 +1,6 @@
 # k.shapes
 
-<!--n:facts:k.shapes.shape-->39<!--/n--> shapes: flat shapes, lines and solids, with their sides and corners (or faces, edges and corners), whether they
+<!--n:facts:k.shapes.shape-->40<!--/n--> shapes: flat shapes, lines and solids, with their sides and corners (or faces, edges and corners), whether they
 are round, and things that typically have the shape. Hand-written (`hand-core 1`, CC0-1.0).
 
 ## What it knows

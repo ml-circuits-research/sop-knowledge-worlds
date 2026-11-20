@@ -21,10 +21,10 @@ is made only in the sense kept.
 | Common things | 1,500 | |
 | with a drawing of that name | 780 | 52.0% |
 | without, but a WordNet synonym has a drawing | 71 | 4.7% |
-| without, but the direct hypernym has a drawing | 181 | 12.1% |
+| without, but the direct hypernym has a drawing | 183 | 12.2% |
 | without, but it is another word of an object (hand-written) | 33 | 2.2% |
 | without, but a stand-in written by hand has a drawing | 79 | 5.3% |
-| with no drawing at all | 356 | 23.7% |
+| with no drawing at all | 354 | 23.6% |
 
 ## The 720 words without a drawing of their name, most frequent first
 
@@ -72,7 +72,7 @@ gloss is WordNet's, for the sense kept.
 | 327 | dock |  | an enclosure in a court of law where the defendant sits during the trial |
 | 329 | runway | hand stand-in road | a bar or pair of parallel bars of rolled steel making the railway along which railroad cars or other vehicles can roll |
 | 336 | pony | hypernym horse | a range horse of the western United States |
-| 338 | cape |  | a strip of land projecting into a body of water |
+| 338 | cape | hypernym ground | a strip of land projecting into a body of water |
 | 349 | morgue | hypernym building | a building (or room) where dead bodies are kept before burial or cremation |
 | 352 | balcony |  | an upper floor projecting from the rear over the main floor in an auditorium |
 | 355 | cottage | hypernym house | a small house with a single story |
@@ -255,7 +255,7 @@ gloss is WordNet's, for the sense kept.
 | 828 | pollen |  | the fine spores that contain male gametes and that are borne by an anther in a flowering plant |
 | 829 | penitentiary | hand synonym prison | a correctional institution for those convicted of major crimes |
 | 831 | mound |  | (baseball) the slight elevation on which the pitcher stands |
-| 832 | peninsula |  | a large mass of land projecting into a body of water |
+| 832 | peninsula | hypernym ground | a large mass of land projecting into a body of water |
 | 834 | stallion | hand stand-in horse | uncastrated adult male horse |
 | 835 | bulldog | hand stand-in dog | a sturdy thickset short-haired breed with a large head and strong undershot lower jaw |
 | 837 | taro | hypernym root (drawing "roots") | edible starchy tuberous root of taro plants |

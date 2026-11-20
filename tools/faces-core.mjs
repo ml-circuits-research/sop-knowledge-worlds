@@ -351,6 +351,11 @@ export const PRESETS = [
 ];
 // the kind of being a preset shows (psys2 Q31: "human", "person", "robot" reach the presets by kind); human when not listed
 export const PRESET_KIND = { robot: 'robot', alien: 'alien' };
+// the ages and sexes of people a preset suits (k.people.kind age, sex): a host drawing a boy picks among the presets
+// that suit a male child; a preset with none (a robot, a clown, a queen) suits no kind of person in particular
+export const PRESET_FOR = { baby: [['baby'], ['female', 'male']], child: [['child'], ['female', 'male']], girl: [['child'], ['female']], boy: [['child'], ['male']],
+  woman: [['adult'], ['female']], man: [['adult'], ['male']], 'old woman': [['old'], ['female']], 'old man': [['old'], ['male']], 'bearded man': [['adult'], ['male']],
+  'woman with curly hair': [['adult'], ['female']] };
 
 // name -> the keys it switches
 export const EXPRESSIONS = [
@@ -482,7 +487,7 @@ export function coreShards({ slots: drawnSlots = SLOTS, variants: drawnVariants 
   files['colours.sop'] = `${head('colours', 'named colours for skin, hair, eyes and clothes, each with a darker shade for lines; natural=true for the colours people have.')}\n${
     COLOURS.map(([of, name, rgb, shade, natural]) => wire(`k.faces.colours.${of}.${seg(name)}`, 'k.faces.colour', [['of', of], ['name', name], ['rgb', { string: rgb }], ['shade', { string: shade }], ['natural', String(natural)]], SRC)).join('\n')}\n`;
   files['presets.sop'] = `${head('presets', `named faces of the style \`${STYLE}\` (one variant per slot, and the four colours) and the expressions (the variants of mouth, eyebrows and eyes a face switches to).`)}\n${
-    PRESETS.map(([name, slots, [skinName, hairName, eyesName, clothesName]]) => wire(`k.faces.${STYLE}.preset.${seg(name)}`, 'k.faces.preset', [['name', name], ['style', STYLE], ['kind', PRESET_KIND[name] ?? 'human'], ...SLOTS.map(([s]) => [s, slots[s]]), ['skin', skinName], ['hair_colour', hairName], ['eye_colour', eyesName], ['clothes', clothesName]], SRC)).join('\n')}\n\n${
+    PRESETS.map(([name, slots, [skinName, hairName, eyesName, clothesName]]) => wire(`k.faces.${STYLE}.preset.${seg(name)}`, 'k.faces.preset', [['name', name], ['style', STYLE], ['kind', PRESET_KIND[name] ?? 'human'], ...(PRESET_FOR[name]?.[0] ?? []).map((a) => ['age', a]), ...(PRESET_FOR[name]?.[1] ?? []).map((x) => ['sex', x]), ...SLOTS.map(([s]) => [s, slots[s]]), ['skin', skinName], ['hair_colour', hairName], ['eye_colour', eyesName], ['clothes', clothesName]], SRC)).join('\n')}\n\n${
     EXPRESSIONS.map(([name, keys]) => wire(`k.faces.${STYLE}.expression.${seg(name)}`, 'k.faces.expression', [['name', name], ['style', STYLE], ...Object.entries(keys)], SRC)).join('\n')}\n${EXPRESSION_GOALS.map(([expression,slot,property,value],n)=>wire(`k.faces.${STYLE}.expression_goal.${n+1}`,'k.faces.expression.goal',[['expression',expression],['slot',slot],['property',property],['value',value]],SRC)).join('\n')}\n`;
   for (const [slot, box, , mirror] of slots) {
     files[`${STYLE}-${slot.replace(/_/g, '-')}.sop`] = `${head(`${STYLE}-${slot.replace(/_/g, '-')}`, `the variants of the slot \`${slot}\` in the style \`${STYLE}\`${mirror ? ' (the side on the viewer\'s left; the other side is its mirror image)' : ''}: features, and parts with a primitive shape, a box in the frame of the face, a draw order and colours; points for lines and polygons.`)}\n${

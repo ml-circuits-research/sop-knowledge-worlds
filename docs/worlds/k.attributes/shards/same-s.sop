@@ -1,4 +1,4 @@
-# k.attributes/shards/same-s: one name, one thing: for 431 names that start with "s" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (18 facts of such names here).
+# k.attributes/shards/same-s: one name, one thing: for 431 names that start with "s" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (20 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -33,7 +33,8 @@
 @k.attributes.same.salt.food k.attributes.same name=salt sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.salt_mill.food k.attributes.same name="salt mill" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.salvador.place k.attributes.same name=salvador sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.sand.colour k.attributes.same name=sand sense=colour only=true in=k.attributes.thing in=k.colours.colour by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.sand.colour k.attributes.same name=sand sense=colour only=false in=k.colours.colour unsure=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.sand.thing k.attributes.same name=sand sense=thing only=false in=k.attributes.drawn in=k.objects.object unsure=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.sandal.thing k.attributes.same name=sandal sense=thing only=true in=k.attributes.number by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.sandals.clothing k.attributes.same name=sandals sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
 @k.attributes.same.sandbox.thing k.attributes.same name=sandbox sense=thing only=true in=k.objects.stand_in in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
@@ -208,7 +209,7 @@
 @k.attributes.same.skis.thing k.attributes.same name=skis sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.skull.body_part k.attributes.same name=skull sense="body part" only=true in=k.attributes.thing in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.skunk.animal k.attributes.same name=skunk sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.thing in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.sky.thing k.attributes.same name=sky sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.sky.thing k.attributes.same name=sky sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.skylight.thing k.attributes.same name=skylight sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.skyscraper.thing k.attributes.same name=skyscraper sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.slab.thing k.attributes.same name=slab sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"

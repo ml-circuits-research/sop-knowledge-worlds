@@ -9,9 +9,9 @@ the place of the dog).
 ## Drawings
 
 - a drawing of its own name: 780 (52%)
-- no drawing, but a synonym or a stand-in with one: 364 (24%)
-- neither: 356 (24%)
-- the most frequent with neither: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail, mustard
+- no drawing, but a synonym or a stand-in with one: 366 (24%)
+- neither: 354 (24%)
+- the most frequent with neither: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail, mustard, bunk
 
 ## Attributes
 
@@ -21,11 +21,11 @@ the place of the dog).
 | size | 810 (54%) | 338 (23%) | 352 (23%) | `k.scenes.thing` (size) |
 | colour (usual colour of the thing) | 320 (21%) | 61 (4%) | 1119 (75%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
 | colour (the usual one, or said to be any colour) | 407 (27%) | 101 (7%) | 992 (66%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
-| colour the thing is drawn in | 753 (50%) | 390 (26%) | 357 (24%) | `k.attributes.drawn` (drawn_colour) |
-| colour of the parts of a drawing | 754 (50%) | 390 (26%) | 356 (24%) | `k.objects.part` (colour) |
+| colour the thing is drawn in | 753 (50%) | 392 (26%) | 355 (24%) | `k.attributes.drawn` (drawn_colour) |
+| colour of the parts of a drawing | 754 (50%) | 392 (26%) | 354 (24%) | `k.objects.part` (colour) |
 | parts (WordNet, own or inherited) | 541 (36%) | 62 (4%) | 897 (60%) | `k.parts.whole` (has), `k.parts.inherited` (has) |
 | parts (WordNet, or usual parts in plain words) | 970 (65%) | 49 (3%) | 481 (32%) | `k.parts.whole` (has), `k.parts.inherited` (has), `k.parts.usual` (has) |
-| parts (named parts of a drawing) | 645 (43%) | 330 (22%) | 525 (35%) | `k.objects.part` (name) |
+| parts (named parts of a drawing) | 645 (43%) | 332 (22%) | 523 (35%) | `k.objects.part` (name) |
 | parts or joins between kinds | 64 (4%) | 79 (5%) | 1357 (90%) | `k.layouts.joins` (a) |
 | anchor (where another thing sits) | 133 (9%) | 105 (7%) | 1262 (84%) | `k.layouts.anchor` (kind) |
 | material | 376 (25%) | 109 (7%) | 1015 (68%) | `k.attributes.thing` (material) |
@@ -52,14 +52,14 @@ How many of the common things are a word of the vocabulary index that leads to a
 |---|---:|
 | `k.actions` | 22 (1%) |
 | `k.animals` | 166 (11%) |
-| `k.attributes` | 1306 (87%) |
+| `k.attributes` | 1307 (87%) |
 | `k.body` | 4 (0%) |
 | `k.charts` | 1 (0%) |
 | `k.colours` | 73 (5%) |
 | `k.commonsense` | 189 (13%) |
 | `k.diagrams` | 3 (0%) |
 | `k.expect` | 291 (19%) |
-| `k.faces` | 49 (3%) |
+| `k.faces` | 51 (3%) |
 | `k.food` | 147 (10%) |
 | `k.genres` | 1 (0%) |
 | `k.geo` | 22 (1%) |
@@ -67,12 +67,12 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.layouts` | 221 (15%) |
 | `k.motion` | 1 (0%) |
 | `k.music` | 3 (0%) |
-| `k.objects` | 1218 (81%) |
-| `k.parts` | 977 (65%) |
+| `k.objects` | 1219 (81%) |
+| `k.parts` | 985 (66%) |
 | `k.people` | 17 (1%) |
 | `k.procedures` | 3 (0%) |
 | `k.scenes` | 822 (55%) |
-| `k.shapes` | 66 (4%) |
+| `k.shapes` | 67 (4%) |
 | `k.space` | 9 (1%) |
 | `k.spatial2d` | 1 (0%) |
 | `k.story` | 4 (0%) |
@@ -84,8 +84,8 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `w.diagram` | 2 (0%) |
 | `w.dialogue` | 3 (0%) |
 | `w.document` | 2 (0%) |
-| `w.drawing` | 2 (0%) |
-| `w.face` | 7 (0%) |
+| `w.drawing` | 3 (0%) |
+| `w.face` | 16 (1%) |
 | `w.lang.en` | 82 (5%) |
 | `w.list` | 1 (0%) |
 | `w.map` | 3 (0%) |
@@ -106,8 +106,8 @@ the place where a thing is worn belong to some kinds of things only (no list for
 - **size**: wing, grass, mall, needle, root, jewelry, aircraft, vault, barrel, reed, dock, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker
 - **colour (usual colour of the thing)**: house, world, car, door, person, bed, dog, hospital, picture, building, ship, hotel, bag, station, ball, key, boat, fish, star, prison, stick, bank, window, wall, store, jail, cat, shop, wine, island
 - **colour (the usual one, or said to be any colour)**: house, world, person, bed, dog, hospital, picture, building, ship, hotel, station, key, fish, star, prison, stick, bank, window, wall, store, jail, cat, shop, wine, island, plane, beer, computer, planet, bus
-- **colour the thing is drawn in**: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail, mustard
-- **colour of the parts of a drawing**: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail, mustard
+- **colour the thing is drawn in**: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail, mustard, bunk
+- **colour of the parts of a drawing**: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail, mustard, bunk
 - **parts (WordNet, own or inherited)**: honey, street, coffee, picture, bag, station, rock, ball, star, stick, bank, tea, jail, wine, island, beer, moon, suit, hole, stone, pants, beach, cup, tape, milk, cake, meat, photo, bullet, pool
 - **parts (WordNet, or usual parts in plain words)**: honey, coffee, rock, ball, star, stick, bank, tea, wine, beer, moon, hole, stone, tape, milk, meat, photo, bullet, path, sugar, horn, chocolate, soup, candy, champagne, rice, juice, valley, wire, dish
 - **parts (named parts of a drawing)**: honey, hotel, rock, window, engine, photo, coat, pocket, toilet, bath, chocolate, piano, candy, wheel, wire, belt, dish, sandwich, butter, grass, beef, chip, bug, photograph, necklace, motor, steak, brick, mall, weed

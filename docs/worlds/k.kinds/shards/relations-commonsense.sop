@@ -3,7 +3,7 @@
 # license: CC0-1.0
 # script: tools/relations-core.mjs
 
-@k.kinds.relation.k.commonsense.lives.at k.kinds.relation type=k.commonsense.lives key=at subject=lives object=place object_type=k.words.sense found=value core.source="hand-core 1"
+@k.kinds.relation.k.commonsense.lives.at k.kinds.relation type=k.commonsense.lives key=at subject=lives object=place object_type=k.objects.object found=value core.source="hand-core 1"
 @k.kinds.relation.k.commonsense.placed.thing k.kinds.relation type=k.commonsense.placed key=thing subject=placed object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.commonsense.placed.at k.kinds.relation type=k.commonsense.placed key=at subject=placed object=place found=value core.source="hand-core 1"
 @k.kinds.relation.k.commonsense.placed.scene k.kinds.relation type=k.commonsense.placed key=scene subject=placed object=word found=value core.source="hand-core 1"

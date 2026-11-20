@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (419 of 1341 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (423 of 1358 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -384,6 +384,13 @@
 @k.attributes.narration.k.faces.preset.hat k.attributes.narration type=k.faces.preset key=hat narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.preset.earrings k.attributes.narration type=k.faces.preset key=earrings narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.preset.shoulders k.attributes.narration type=k.faces.preset key=shoulders narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.preset.body k.attributes.narration type=k.faces.preset key=body narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.preset.top k.attributes.narration type=k.faces.preset key=top narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.preset.bottom k.attributes.narration type=k.faces.preset key=bottom narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.preset.shoes k.attributes.narration type=k.faces.preset key=shoes narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.preset.coat k.attributes.narration type=k.faces.preset key=coat narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.preset.age k.attributes.narration type=k.faces.preset key=age narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.preset.sex k.attributes.narration type=k.faces.preset key=sex narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.preset.skin k.attributes.narration type=k.faces.preset key=skin narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.preset.hair_colour k.attributes.narration type=k.faces.preset key=hair_colour narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.preset.eye_colour k.attributes.narration type=k.faces.preset key=eye_colour narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
@@ -408,6 +415,10 @@
 @k.attributes.narration.k.faces.canon.eye_gap k.attributes.narration type=k.faces.canon key=eye_gap narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.canon.brow_above k.attributes.narration type=k.faces.canon key=brow_above narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.canon.about k.attributes.narration type=k.faces.canon key=about narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.frame.style k.attributes.narration type=k.faces.frame key=style narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.frame.drawing k.attributes.narration type=k.faces.frame key=drawing narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.frame.hides k.attributes.narration type=k.faces.frame key=hides narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.frame.about k.attributes.narration type=k.faces.frame key=about narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.feelings.feeling.name k.attributes.narration type=k.feelings.feeling key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
 @k.attributes.narration.k.feelings.feeling.tone k.attributes.narration type=k.feelings.feeling key=tone narrate=yes salience=0.5 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.feelings.feeling.expression k.attributes.narration type=k.feelings.feeling key=expression narrate=yes salience=0.4 form=relation basis=measured core.source="hand-core 1"
@@ -684,6 +695,7 @@
 @k.attributes.narration.k.layouts.slot.pair k.attributes.narration type=k.layouts.slot key=pair narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
 @k.attributes.narration.k.layouts.slot.optional k.attributes.narration type=k.layouts.slot key=optional narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
 @k.attributes.narration.k.layouts.slot.holds k.attributes.narration type=k.layouts.slot key=holds narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
+@k.attributes.narration.k.layouts.slot.fills k.attributes.narration type=k.layouts.slot key=fills narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
 @k.attributes.narration.k.layouts.slot.arranged k.attributes.narration type=k.layouts.slot key=arranged narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
 @k.attributes.narration.k.layouts.slot.x k.attributes.narration type=k.layouts.slot key=x narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
 @k.attributes.narration.k.layouts.slot.y k.attributes.narration type=k.layouts.slot key=y narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
@@ -850,6 +862,9 @@
 @k.attributes.narration.k.parts.called.of k.attributes.narration type=k.parts.called key=of narrate=no salience=0 why="part of the subject of a fact of several keys (red and yellow give orange)" core.source="hand-core 1"
 @k.attributes.narration.k.parts.called.part k.attributes.narration type=k.parts.called key=part narrate=no salience=0 why="part of the subject of a fact of several keys (red and yellow give orange)" core.source="hand-core 1"
 @k.attributes.narration.k.parts.called.also k.attributes.narration type=k.parts.called key=also narrate=yes salience=0.43 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.parts.name.name k.attributes.narration type=k.parts.name key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
+@k.attributes.narration.k.parts.name.of k.attributes.narration type=k.parts.name key=of narrate=yes salience=0.27 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.parts.name.slot k.attributes.narration type=k.parts.name key=slot narrate=yes salience=0.07 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.people.kind.age k.attributes.narration type=k.people.kind key=age narrate=yes salience=0.8 form=relation basis=typical core.source="hand-core 1"
 @k.attributes.narration.k.people.kind.sex k.attributes.narration type=k.people.kind key=sex narrate=yes salience=0.38 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.people.kind.height_about k.attributes.narration type=k.people.kind key=height_about narrate=yes salience=0.6 form=measure basis=measured core.source="hand-core 1"
@@ -1327,6 +1342,8 @@
 @k.attributes.narration.k.wearables.wearable.drawing k.attributes.narration type=k.wearables.wearable key=drawing narrate=no salience=0 why="a join to a drawing, a sense or another catalog entry" core.source="hand-core 1"
 @k.attributes.narration.k.wearables.wearable.face_slot k.attributes.narration type=k.wearables.wearable key=face_slot narrate=no salience=0 why="a join to a drawing, a sense or another catalog entry" core.source="hand-core 1"
 @k.attributes.narration.k.wearables.wearable.face k.attributes.narration type=k.wearables.wearable key=face narrate=no salience=0 why="a join to a drawing, a sense or another catalog entry" core.source="hand-core 1"
+@k.attributes.narration.k.wearables.wearable.figure_slot k.attributes.narration type=k.wearables.wearable key=figure_slot narrate=yes salience=0.08 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.wearables.wearable.figure k.attributes.narration type=k.wearables.wearable key=figure narrate=yes salience=0.08 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.wearables.wearable.worn_for k.attributes.narration type=k.wearables.wearable key=worn_for narrate=yes salience=0.25 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.words.sense.word k.attributes.narration type=k.words.sense key=word narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
 @k.attributes.narration.k.words.sense.pos k.attributes.narration type=k.words.sense key=pos narrate=yes salience=0.3 form=relation basis=measured core.source="hand-core 1"

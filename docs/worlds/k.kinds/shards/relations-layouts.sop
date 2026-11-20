@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-layouts: the keys of the types of k.layouts read as relations: 45 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-layouts: the keys of the types of k.layouts read as relations: 46 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -10,8 +10,8 @@
 @k.kinds.relation.k.layouts.anchor.w k.kinds.relation type=k.layouts.anchor key=w subject=thing object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.layouts.anchor.h k.kinds.relation type=k.layouts.anchor key=h subject=thing object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.layouts.anchor.part k.kinds.relation type=k.layouts.anchor key=part subject=thing object=word object_type=k.words.sense found=value core.source="hand-core 1"
-@k.kinds.relation.k.layouts.anchor.holds k.kinds.relation type=k.layouts.anchor key=holds subject=thing object=thing object_type=k.scenes.thing found=value core.source="hand-core 1"
-@k.kinds.relation.k.layouts.anchor.on k.kinds.relation type=k.layouts.anchor key=on subject=thing object=thing object_type=k.attributes.thing object_type=k.scenes.thing found=value core.source="hand-core 1"
+@k.kinds.relation.k.layouts.anchor.holds k.kinds.relation type=k.layouts.anchor key=holds subject=thing object=thing object_type=k.scenes.thing object_type=k.objects.object found=value core.source="hand-core 1"
+@k.kinds.relation.k.layouts.anchor.on k.kinds.relation type=k.layouts.anchor key=on subject=thing object=thing object_type=k.attributes.drawn object_type=k.objects.object object_type=k.attributes.thing found=value core.source="hand-core 1"
 @k.kinds.relation.k.layouts.anchor.named k.kinds.relation type=k.layouts.anchor key=named subject=thing object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.layouts.joins.a k.kinds.relation type=k.layouts.joins key=a subject=joins object=thing object_type=k.attributes.drawn object_type=k.attributes.thing object_type=k.objects.object found=value core.source="hand-core 1"
 @k.kinds.relation.k.layouts.joins.rel k.kinds.relation type=k.layouts.joins key=rel subject=joins object=value found=schema core.source="hand-core 1"
@@ -43,6 +43,7 @@
 @k.kinds.relation.k.layouts.slot.pair k.kinds.relation type=k.layouts.slot key=pair subject=slot object=boolean found=schema core.source="hand-core 1"
 @k.kinds.relation.k.layouts.slot.optional k.kinds.relation type=k.layouts.slot key=optional subject=slot object=boolean found=schema core.source="hand-core 1"
 @k.kinds.relation.k.layouts.slot.holds k.kinds.relation type=k.layouts.slot key=holds subject=slot object=thing object_type=k.attributes.thing object_type=k.scenes.thing object_type=k.attributes.drawn found=value core.source="hand-core 1"
+@k.kinds.relation.k.layouts.slot.fills k.kinds.relation type=k.layouts.slot key=fills subject=slot object=thing object_type=k.attributes.drawn object_type=k.objects.object found=value core.source="hand-core 1"
 @k.kinds.relation.k.layouts.slot.arranged k.kinds.relation type=k.layouts.slot key=arranged subject=slot object=group object_type=k.layouts.layout found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.layouts.slot.x k.kinds.relation type=k.layouts.slot key=x subject=slot object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.layouts.slot.y k.kinds.relation type=k.layouts.slot key=y subject=slot object=number found=schema core.source="hand-core 1"

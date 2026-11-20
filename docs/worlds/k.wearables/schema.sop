@@ -27,7 +27,8 @@
 # coat: arms, legs). `layer`: under (next to the skin), main, over (on top of the main clothes); a host draws
 # under first. `pair=true`: two are worn (shoes, gloves). `drawing` names its drawing in k.objects, where there
 # is one; `face_slot` and `face` name the k.faces slot and its variant (style plain) that show it on a face (cap:
-# slot hat, variant "cap"; bow tie: slot shoulders, variant "bow tie"). `worn_for` (many) says when or why it is worn (cold, rain, sun, sleep, swimming, sport,
+# slot hat, variant "cap"; bow tie: slot shoulders, variant "bow tie"). `figure_slot` and `figure` name the slot and
+# variant of the style figure of k.faces that show it on a whole drawn person (t-shirt: slot top, variant "t-shirt"). `worn_for` (many) says when or why it is worn (cold, rain, sun, sleep, swimming, sport,
 # work, safety, party, looks). Other words are core.word facts (trousers: pants; jumper: sweater).
 @k.wearables.wearable core.type of=k.wearables.wearable shared=true closed=true core.source="hand-core 1"
 @k.wearables.wearable.name core.slot of=k.wearables.wearable key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
@@ -39,4 +40,6 @@
 @k.wearables.wearable.drawing core.slot of=k.wearables.wearable key=drawing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 @k.wearables.wearable.face_slot core.slot of=k.wearables.wearable key=face_slot kind=atom type=k.faces.slot by=name core.source="hand-core 1"
 @k.wearables.wearable.face core.slot of=k.wearables.wearable key=face kind=atom kind=string core.source="hand-core 1"
+@k.wearables.wearable.figure_slot core.slot of=k.wearables.wearable key=figure_slot kind=atom type=k.faces.slot by=name core.source="hand-core 1"
+@k.wearables.wearable.figure core.slot of=k.wearables.wearable key=figure kind=atom kind=string core.source="hand-core 1"
 @k.wearables.wearable.worn_for core.slot of=k.wearables.wearable key=worn_for many=true kind=atom kind=string core.source="hand-core 1"

@@ -1,4 +1,4 @@
-# k.kinds/shards/wordnet-1: 1222 up edges: what a thing is by WordNet 3.1 (k.words): the hypernyms of the sense of the name and the chain of first hypernyms above it.
+# k.kinds/shards/wordnet-1: 1223 up edges: what a thing is by WordNet 3.1 (k.words): the hypernyms of the sense of the name and the chain of first hypernyms above it.
 # sources: wordnet 3.1 (Princeton WordNet 3.1, read from k.words and k.parts as imported)
 # license: WordNet-3.0
 # script: tools/kinds-core.mjs
@@ -959,6 +959,7 @@
 @k.kinds.parent.grinder.sandwich k.kinds.parent name=grinder is_a=sandwich dimension=kind from=k.words.sense key=is_a value="grinder noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.grizzly_bear.brown_bear k.kinds.parent name="grizzly bear" is_a="brown bear" dimension=kind from=k.words.sense key=is_a value="grizzly bear noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.grocery_store.marketplace k.kinds.parent name="grocery store" is_a=marketplace dimension=kind from=k.words.sense key=kind_of value="supermarket noun 1" core.source="wordnet 3.1"
+@k.kinds.parent.ground.object k.kinds.parent name=ground is_a=object dimension=kind from=k.words.sense key=is_a value="ground noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.groundhog.marmot.animal k.kinds.parent name=groundhog is_a=marmot dimension=kind from=k.words.sense key=is_a value="groundhog noun 1" sense=animal core.source="wordnet 3.1"
 @k.kinds.parent.guacamole.dip k.kinds.parent name=guacamole is_a=dip dimension=kind from=k.words.sense key=is_a value="guacamole noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.guide.escort k.kinds.parent name=guide is_a=escort dimension=kind from=k.words.sense key=is_a value="guide noun 1" core.source="wordnet 3.1"

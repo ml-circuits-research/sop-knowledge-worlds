@@ -47,6 +47,8 @@ export const GEOMETRY = {
   star: () => Array.from({ length: 10 }, (_, i) => { const a = -Math.PI / 2 + (Math.PI * i) / 5, r = i % 2 ? 19 : 47; return [50 + r * Math.cos(a), 54 + r * Math.sin(a)]; }),
   cross: () => [[35, 5], [65, 5], [65, 35], [95, 35], [95, 65], [65, 65], [65, 95], [35, 95], [35, 65], [5, 65], [5, 35], [35, 35]],
   arrow: () => [[60, 15], [95, 50], [60, 85], [60, 65], [5, 65], [5, 35], [60, 35]],
+  // a closed outline with no regular shape (a pond, an island): sixteen points round the middle, each at its own radius
+  irregular: () => [45, 38, 43, 35, 41, 46, 39, 33, 42, 47, 36, 40, 44, 34, 39, 43].map((r, i) => { const a = -Math.PI / 2 + (2 * Math.PI * i) / 16; return [50 + r * Math.cos(a), 50 + r * 0.8 * Math.sin(a)]; }),
 };
 
 const tok = (t) => (t.startsWith('"') ? JSON.parse(t) : t);

@@ -15,9 +15,9 @@ and the meat).
 
 ## Numbers
 
-- names carried by facts of more than one world: 3549
-- one thing everywhere: 3478
-- clashes of sense: 71
+- names carried by facts of more than one world: 3553
+- one thing everywhere: 3481
+- clashes of sense: 72
 
 | sense of the one thing | names |
 |---|---:|
@@ -27,12 +27,12 @@ and the meat).
 | person | 69 |
 | body part | 84 |
 | clothing | 164 |
-| colour | 30 |
-| shape | 29 |
+| colour | 29 |
+| shape | 30 |
 | place | 300 |
 | time | 44 |
 | body in space | 35 |
-| thing | 1778 |
+| thing | 1781 |
 
 ## Clashes of sense
 
@@ -93,6 +93,7 @@ and the meat).
 | ring | **clothing**: `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`, `k.wearables.wearable`; **shape**: `k.shapes.shape` |
 | rose | **plant**: `k.attributes.drawn`, `k.attributes.number`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour`; unsure: `k.attributes.thing` |
 | salmon | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.commonsense.thing`, `k.scenes.thing`; **food**: `k.food.food`; **colour**: `k.colours.colour`; **place**: `k.geo.river`; unsure: `k.objects.object` |
+| sand | **colour**: `k.colours.colour`; **thing**: `k.attributes.drawn`, `k.objects.object`; unsure: `k.attributes.thing` |
 | sardine | **animal**: `k.animals.animal`, `k.attributes.number`, `k.commonsense.thing`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.objects.stand_in` |
 | shrimp | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food` |
 | skin | **body part**: `k.body.part`; **colour**: `k.colours.colour` |
@@ -116,7 +117,7 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 
 | worlds | names |
 |---|---:|
-| `k.attributes` and `k.objects` | 2356 |
+| `k.attributes` and `k.objects` | 2359 |
 | `k.objects` and `k.scenes` | 2196 |
 | `k.attributes` and `k.scenes` | 2154 |
 | `k.commonsense` and `k.scenes` | 318 |
@@ -145,9 +146,9 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 | `k.body` and `k.objects` | 10 |
 | `k.commonsense` and `k.layouts` | 9 |
 | `k.attributes` and `k.people` | 8 |
-| `k.attributes` and `k.colours` | 5 |
 | `k.geo` and `k.objects` | 5 |
 | `k.animals` and `k.layouts` | 4 |
+| `k.attributes` and `k.colours` | 4 |
 | `k.body` and `k.scenes` | 4 |
 | `k.attributes` and `k.geo` | 3 |
 | `k.commonsense` and `k.space` | 2 |

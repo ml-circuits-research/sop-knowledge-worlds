@@ -81,6 +81,7 @@ export const SHAPES = [
   ['dot', 'flat', { sides: 0, corners: 0, round: T, symmetric: T }, 'button', 'dots, point, points, spot, spots'],
   ['ring', 'flat', { sides: 0, corners: 0, round: T, symmetric: T }, 'ring, doughnut, tire, bagel, wheel', 'rings, hoop, loop, annulus'],
   ['drop', 'flat', { sides: 0, corners: 1, round: T, symmetric: T }, 'droplet, pear, balloon, light bulb', 'drops, teardrop, tear shape'],
+  ['irregular', 'flat', { round: T }, 'pond, lake, puddle, island, cloud', 'irregular shape, blob, uneven shape, wobbly shape, natural shape'],
   ['cloud shape', 'flat', { sides: 0, corners: 0, round: T }, 'cloud, sheep, tree, broccoli', 'cloud-shaped, fluffy shape, bumpy outline'],
   // ---- lines
   ['line', 'line', { round: false }, 'pencil, pole, rope, ladder', 'lines, straight line, stroke'],

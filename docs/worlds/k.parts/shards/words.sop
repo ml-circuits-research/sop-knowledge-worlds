@@ -7,6 +7,10 @@
 # Words for the types and keys of this world.
 @k.parts.word.whole core.word text=part text=parts text="made up of" text=consists means=k.parts.whole core.source="hand-core 1"
 @k.parts.word.has core.word text=has text=have text=with means=k.parts.whole.has core.source="hand-core 1"
+@k.parts.word.name core.word text="part name" text="name of a part" means=k.parts.name core.source="hand-core 1"
+@k.parts.word.name.name core.word text=name means=k.parts.name.name core.source="hand-core 1"
+@k.parts.word.name.of core.word text="part of" text=whole means=k.parts.name.of core.source="hand-core 1"
+@k.parts.word.name.slot core.word text=slot text="drawn as" means=k.parts.name.slot core.source="hand-core 1"
 
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
 @k.parts.word.key.whole.gloss core.word text=gloss means=k.parts.whole.gloss core.source="hand-core 1"

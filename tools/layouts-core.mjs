@@ -4,7 +4,7 @@
 //                                   hand-written k.objects objects) and joins.sop (from sources/hand-core/joins.tsv)
 // Deterministic: the same data, tables and k.objects shards give the same files.
 // A layout: [name, kind, about, { ordered, usual, words }, slots, relations].
-// A slot: [name, count, { pair, optional, holds, role, arranged, box: [x, y, w, h] }]; a relation: [a, rel, b, among].
+// A slot: [name, count, { pair, optional, holds, fills, role, arranged, box: [x, y, w, h] }] (fills: the kinds drawn as the whole slot); a relation: [a, rel, b, among].
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds } from './lib/worlds.mjs';
@@ -53,8 +53,8 @@ export const LAYOUTS = [
   ['outline', R, 'Things spaced evenly along the outline of a shape (a house, a star, a heart): the path of an outline of k.layouts, the first thing at its first point, the others in order round it.', { ordered: true, usual: ['a diagram in the shape of a house', 'candles in the shape of a heart', 'lights in the shape of a star', 'stones laid out in the shape of an arrow'], words: ['in the shape of', 'shaped like', 'in the form of'] },
     [item()], [['item', 'evenly_spaced', 'item', 'neighbours'], ['item', 'same_size', 'item', 'all']]],
   ['landscape', F, 'An outdoor view: the sky above the ground, far things on the horizon, water lying in the ground, small things in front.', { usual: ['an outdoor scene', 'a farm', 'a beach', 'a village', 'a view of the countryside'], words: ['landscapes', 'scenery', 'view', 'countryside', 'outdoor scene', 'panorama', 'horizon'] },
-    [['sky', 'one', { holds: ['sun', 'moon', 'cloud', 'star', 'bird', 'rainbow', 'plane'], arranged: 'scatter', box: [0, 0, 100, 50] }], ['far', 'many', { optional: true, holds: ['mountain', 'hill', 'forest', 'far house'], arranged: 'row', box: [0, 32, 100, 20] }],
-      ['ground', 'one', { holds: ['tree', 'house', 'animal', 'person', 'road', 'fence'], box: [0, 50, 100, 50] }], ['water', 'one', { optional: true, holds: ['pond', 'lake', 'river', 'boat', 'duck'], box: [10, 62, 45, 22] }], ['foreground', 'many', { optional: true, holds: ['flower', 'grass', 'stone', 'small animal'], arranged: 'row', box: [0, 86, 100, 14] }]],
+    [['sky', 'one', { holds: ['sun', 'moon', 'cloud', 'star', 'bird', 'rainbow', 'plane'], fills: ['sky'], arranged: 'scatter', box: [0, 0, 100, 50] }], ['far', 'many', { optional: true, holds: ['mountain', 'hill', 'forest', 'far house'], arranged: 'row', box: [0, 32, 100, 20] }],
+      ['ground', 'one', { holds: ['tree', 'house', 'animal', 'person', 'road', 'fence'], fills: ['ground', 'land', 'sand'], box: [0, 50, 100, 50] }], ['water', 'one', { optional: true, holds: ['pond', 'lake', 'river', 'boat', 'duck'], box: [10, 62, 45, 22] }], ['foreground', 'many', { optional: true, holds: ['flower', 'grass', 'stone', 'small animal'], arranged: 'row', box: [0, 86, 100, 14] }]],
     [['sky', 'above', 'ground'], ['sky', 'above', 'far'], ['far', 'above', 'ground'], ['far', 'behind', 'ground'], ['water', 'inside', 'ground'], ['foreground', 'inside', 'ground'], ['ground', 'behind', 'foreground'], ['water', 'above', 'foreground'], ['sky', 'same_size', 'ground']]],
   ['room', F, 'An indoor view: the floor below the back wall, the ceiling on top, furniture standing on the floor, small things on the furniture.', { usual: ['a kitchen', 'a bedroom', 'a classroom', 'a shop', 'any indoor scene'], words: ['rooms', 'interior', 'indoors', 'inside a house', 'indoor scene'] },
     [['ceiling', 'one', { holds: ['lamp'], box: [0, 0, 100, 10] }], ['back_wall', 'one', { holds: ['window', 'picture', 'clock', 'shelf', 'door'], arranged: 'row', box: [0, 10, 100, 50] }], ['floor', 'one', { holds: ['rug'], box: [0, 60, 100, 40] }],
@@ -90,7 +90,7 @@ export function layoutWires() {
     for (const [slot, count, s = {}] of slots) {
       if (s.arranged && !LAYOUTS.some((l) => l[0] === s.arranged)) throw new Error(`${name}.${slot}: no layout ${s.arranged}`);
       lines.push(wire(`k.layouts.slot.${seg(name)}.${slot}`, 'k.layouts.slot', [['layout', name], ['name', slot], ['count', count], ['pair', s.pair ? 'true' : undefined], ['optional', s.optional ? 'true' : undefined],
-        ...(s.holds ?? []).map((h) => ['holds', h]), ['role', s.role], ['arranged', s.arranged], ...(s.box ? ['x', 'y', 'w', 'h'].map((k, i) => [k, s.box[i]]) : [])], SRC));
+        ...(s.holds ?? []).map((h) => ['holds', h]), ...(s.fills ?? []).map((f) => ['fills', f]), ['role', s.role], ['arranged', s.arranged], ...(s.box ? ['x', 'y', 'w', 'h'].map((k, i) => [k, s.box[i]]) : [])], SRC));
     }
     for (const [a, rel, b, among] of relations) {
       if (!names.has(a) || !names.has(b)) throw new Error(`${name}: relation ${a} ${rel} ${b}: no such slot`);

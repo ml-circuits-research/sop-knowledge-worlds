@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-faces: the keys of the types of k.faces read as relations: 84 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-faces: the keys of the types of k.faces read as relations: 95 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -27,6 +27,10 @@
 @k.kinds.relation.k.faces.expression.goal.property k.kinds.relation type=k.faces.expression.goal key=property subject=goal object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.expression.goal.value k.kinds.relation type=k.faces.expression.goal key=value subject=goal object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.feature.scale k.kinds.relation type=k.faces.feature key=scale subject=feature object=value object_type=k.values.scale found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.faces.frame.style k.kinds.relation type=k.faces.frame key=style subject=frame object=thing object_type=k.faces.canon found=declared object_by=style core.source="hand-core 1"
+@k.kinds.relation.k.faces.frame.drawing k.kinds.relation type=k.faces.frame key=drawing subject=frame object=thing object_type=k.objects.object found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.faces.frame.hides k.kinds.relation type=k.faces.frame key=hides subject=frame object=word found=value core.source="hand-core 1"
+@k.kinds.relation.k.faces.frame.about k.kinds.relation type=k.faces.frame key=about subject=frame object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.faces.part.slot k.kinds.relation type=k.faces.part key=slot subject=part object=thing object_type=k.faces.slot found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.faces.part.of k.kinds.relation type=k.faces.part key=of subject=part object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.part.name k.kinds.relation type=k.faces.part key=name subject=part object=word found=value core.source="hand-core 1"
@@ -64,12 +68,19 @@
 @k.kinds.relation.k.faces.preset.hat k.kinds.relation type=k.faces.preset key=hat subject=preset object=thing object_type=k.scenes.thing found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.preset.earrings k.kinds.relation type=k.faces.preset key=earrings subject=preset object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.preset.shoulders k.kinds.relation type=k.faces.preset key=shoulders subject=preset object=thing object_type=k.wearables.wearable object_sense=clothing found=value core.source="hand-core 1"
+@k.kinds.relation.k.faces.preset.body k.kinds.relation type=k.faces.preset key=body subject=preset object=word object_type=k.words.sense found=value core.source="hand-core 1"
+@k.kinds.relation.k.faces.preset.top k.kinds.relation type=k.faces.preset key=top subject=preset object=thing object_type=k.attributes.drawn object_type=k.attributes.thing object_type=k.objects.object found=value core.source="hand-core 1"
+@k.kinds.relation.k.faces.preset.bottom k.kinds.relation type=k.faces.preset key=bottom subject=preset object=thing object_type=k.attributes.drawn object_type=k.attributes.thing object_type=k.objects.object found=value core.source="hand-core 1"
+@k.kinds.relation.k.faces.preset.shoes k.kinds.relation type=k.faces.preset key=shoes subject=preset object=thing object_type=k.attributes.drawn object_type=k.attributes.thing object_type=k.objects.object found=value core.source="hand-core 1"
+@k.kinds.relation.k.faces.preset.coat k.kinds.relation type=k.faces.preset key=coat subject=preset object=thing object_type=k.attributes.drawn object_type=k.attributes.number object_type=k.attributes.thing found=value core.source="hand-core 1"
+@k.kinds.relation.k.faces.preset.age k.kinds.relation type=k.faces.preset key=age subject=preset object=value object_type=k.attributes.thing object_type=k.faces.preset object_type=k.people.kind object_sense=person found=value core.source="hand-core 1"
+@k.kinds.relation.k.faces.preset.sex k.kinds.relation type=k.faces.preset key=sex subject=preset object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.faces.preset.skin k.kinds.relation type=k.faces.preset key=skin subject=preset object=value object_type=k.colours.colour object_sense=colour found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.preset.hair_colour k.kinds.relation type=k.faces.preset key=hair_colour subject=preset object=value object_type=k.colours.basic object_type=k.colours.colour object_sense=colour found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.preset.eye_colour k.kinds.relation type=k.faces.preset key=eye_colour subject=preset object=value object_type=k.colours.basic object_type=k.colours.colour object_sense=colour found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.preset.clothes k.kinds.relation type=k.faces.preset key=clothes subject=preset object=value object_type=k.colours.colour object_sense=colour found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.faces.slot.style k.kinds.relation type=k.faces.slot key=style subject=slot object=word found=value core.source="hand-core 1"
-@k.kinds.relation.k.faces.slot.name k.kinds.relation type=k.faces.slot key=name subject=slot object=thing object_type=k.body.part object_sense="body part" found=value core.source="hand-core 1"
+@k.kinds.relation.k.faces.slot.name k.kinds.relation type=k.faces.slot key=name subject=slot object=thing object_type=k.parts.name found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.slot.x k.kinds.relation type=k.faces.slot key=x subject=slot object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.faces.slot.y k.kinds.relation type=k.faces.slot key=y subject=slot object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.faces.slot.w k.kinds.relation type=k.faces.slot key=w subject=slot object=number found=schema core.source="hand-core 1"

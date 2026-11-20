@@ -5,7 +5,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/parts.mjs
 
-@k.parts core.module name=k.parts version=1 exports=whole exports=inherited exports=usual exports=called core.source="hand-core 1"
+@k.parts core.module name=k.parts version=1 exports=whole exports=inherited exports=usual exports=called exports=name core.source="hand-core 1"
 
 # A thing and its own parts. `name` is the common word; `gloss` is WordNet's definition of the sense meant (the
 # sense that names a physical thing and is the most frequent one, as tools/coverage.mjs keeps it); `has` (many)
@@ -46,3 +46,12 @@
 @k.parts.called.of core.slot of=k.parts.called key=of id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.parts.called.part core.slot of=k.parts.called key=part id=true required=true kind=atom core.source="hand-core 1"
 @k.parts.called.also core.slot of=k.parts.called key=also many=true kind=atom kind=string core.source="hand-core 1"
+
+# A word that names a part of drawn things, once whatever the whole is: the meaning a reader binds "the roof", "the
+# rays", "her hair" to (k.parts.called holds the word once for every whole). `of` (many): the wholes k.parts.called
+# says have it; `slot` (many): the k.faces slots it draws on a face or a whole drawn person (hair: the front and the
+# back hair). Its other words are core.word facts (rays: ray, beams).
+@k.parts.name core.type of=k.parts.name shared=true closed=true core.source="hand-core 1"
+@k.parts.name.name core.slot of=k.parts.name key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.parts.name.of core.slot of=k.parts.name key=of many=true kind=atom kind=string core.source="hand-core 1"
+@k.parts.name.slot core.slot of=k.parts.name key=slot many=true kind=atom type=k.faces.slot by=name core.source="hand-core 1"

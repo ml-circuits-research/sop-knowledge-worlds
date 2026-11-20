@@ -1,4 +1,4 @@
-# k.attributes/shards/drawn-hand: the main colours in which 328 things are drawn (hand-written drawings of k.objects), the largest first: how the thing is drawn, not its usual colour.
+# k.attributes/shards/drawn-hand: the main colours in which 332 things are drawn (hand-written drawings of k.objects), the largest first: how the thing is drawn, not its usual colour.
 # sources: hand-core 1 (computed from the parts of the drawings in k.objects)
 # license: CC0-1.0
 # script: tools/drawn-colour.mjs
@@ -123,6 +123,7 @@
 @k.attributes.drawn.grave k.attributes.drawn name=grave drawn_colour=grey drawn_colour=brown drawn_colour=green drawn_shade=grey drawn_shade=brown drawn_shade=green core.source="hand-core 1"
 @k.attributes.drawn.greenhouse k.attributes.drawn name=greenhouse drawn_colour=white drawn_colour=green drawn_shade=white drawn_shade=green core.source="hand-core 1"
 @k.attributes.drawn.grinder k.attributes.drawn name=grinder drawn_colour=brown drawn_shade=brown core.source="hand-core 1"
+@k.attributes.drawn.ground k.attributes.drawn name=ground drawn_colour=green drawn_shade="olive drab" core.source="hand-core 1"
 @k.attributes.drawn.gun k.attributes.drawn name=gun drawn_colour=grey drawn_colour=brown drawn_shade=grey drawn_shade=brown core.source="hand-core 1"
 @k.attributes.drawn.handkerchief k.attributes.drawn name=handkerchief drawn_colour=white drawn_shade=white core.source="hand-core 1"
 @k.attributes.drawn.harmonica k.attributes.drawn name=harmonica drawn_colour=grey drawn_colour=white drawn_shade=grey drawn_shade=white core.source="hand-core 1"
@@ -158,6 +159,7 @@
 @k.attributes.drawn.ladder k.attributes.drawn name=ladder drawn_colour=brown drawn_shade=brown core.source="hand-core 1"
 @k.attributes.drawn.lake k.attributes.drawn name=lake drawn_colour=blue drawn_shade=blue core.source="hand-core 1"
 @k.attributes.drawn.lance k.attributes.drawn name=lance drawn_colour=brown drawn_colour=grey drawn_shade=brown drawn_shade=grey core.source="hand-core 1"
+@k.attributes.drawn.land k.attributes.drawn name=land drawn_colour=green drawn_shade="olive drab" core.source="hand-core 1"
 @k.attributes.drawn.lane k.attributes.drawn name=lane drawn_colour=green drawn_colour=blue drawn_shade=green drawn_shade=blue core.source="hand-core 1"
 @k.attributes.drawn.leash k.attributes.drawn name=leash drawn_colour=yellow drawn_colour=grey drawn_shade=yellow drawn_shade=grey core.source="hand-core 1"
 @k.attributes.drawn.leech k.attributes.drawn name=leech drawn_colour=brown drawn_shade=brown core.source="hand-core 1"
@@ -250,6 +252,7 @@
 @k.attributes.drawn.saddle k.attributes.drawn name=saddle drawn_colour=brown drawn_shade=brown core.source="hand-core 1"
 @k.attributes.drawn.salmon k.attributes.drawn name=salmon drawn_colour=grey drawn_shade=grey core.source="hand-core 1"
 @k.attributes.drawn.salsa k.attributes.drawn name=salsa drawn_colour=white drawn_shade=white core.source="hand-core 1"
+@k.attributes.drawn.sand k.attributes.drawn name=sand drawn_colour=brown drawn_shade="pale goldenrod" core.source="hand-core 1"
 @k.attributes.drawn.sandcastle k.attributes.drawn name=sandcastle drawn_colour=yellow drawn_shade=yellow core.source="hand-core 1"
 @k.attributes.drawn.sauce k.attributes.drawn name=sauce drawn_colour=red drawn_colour=white drawn_shade=red drawn_shade=white core.source="hand-core 1"
 @k.attributes.drawn.scalpel k.attributes.drawn name=scalpel drawn_colour=grey drawn_colour=white drawn_shade=grey drawn_shade=white core.source="hand-core 1"
@@ -270,6 +273,7 @@
 @k.attributes.drawn.shrine k.attributes.drawn name=shrine drawn_colour=green drawn_colour=grey drawn_colour=red drawn_shade=green drawn_shade=grey drawn_shade=red core.source="hand-core 1"
 @k.attributes.drawn.sidewalk k.attributes.drawn name=sidewalk drawn_colour=white drawn_colour=black drawn_colour=red drawn_shade=white drawn_shade=black drawn_shade=red core.source="hand-core 1"
 @k.attributes.drawn.skate k.attributes.drawn name=skate drawn_colour=white drawn_shade=white core.source="hand-core 1"
+@k.attributes.drawn.sky k.attributes.drawn name=sky drawn_colour=blue drawn_shade="light blue" core.source="hand-core 1"
 @k.attributes.drawn.slab k.attributes.drawn name=slab drawn_colour=grey drawn_colour=white drawn_shade=grey drawn_shade=white core.source="hand-core 1"
 @k.attributes.drawn.snowman k.attributes.drawn name=snowman drawn_colour=white drawn_shade=white core.source="hand-core 1"
 @k.attributes.drawn.sock k.attributes.drawn name=sock drawn_colour=red drawn_colour=white drawn_shade=red drawn_shade=white core.source="hand-core 1"
