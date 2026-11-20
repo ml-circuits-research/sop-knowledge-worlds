@@ -105,7 +105,7 @@ export const MEASURES = {
     part: { n: ord, min: { counts: 'time the part occurs in one document' }, max: { counts: 'time the part occurs in one document' } }, step: { n: ord, min: { counts: 'sentence' }, max: { counts: 'sentence' } } },
   // k.story: places in an order and years are orders; how many of an element a story has.
   // k.diagrams: a year is an order.
-  'k.charts': { source: { year: ord }, rank: { rank: ord }, rule: { rank: ord, categories_max: { counts: 'category or slice' }, points_min: { counts: 'value of a series' } }, category: { n: ord } },
+  'k.charts': { source: { year: ord }, rank: { rank: ord }, rule: { rank: ord, categories_max: { counts: 'category or slice' }, points_min: { counts: 'value of a series' } }, category: { n: ord }, measure: { min: { counts: 'unit named by the unit key of the same fact' }, max: { counts: 'unit named by the unit key of the same fact' }, step: { counts: 'unit named by the unit key of the same fact' } } },
   // k.styles: a line's width is a plain number of the picture's units; a palette place is an order.
   // A fill's gap, an effect's spread and offsets and a filter's amounts are plain numbers (picture units or factors); angles, a hue turn and named turns are degrees.
   'k.styles': { theme: { width: { plain: true } }, swatch: { n: ord }, fill: { gap: { plain: true }, angle: deg },

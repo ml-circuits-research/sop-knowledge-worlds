@@ -6933,3 +6933,7 @@ npm run test:changed: 491 tests, 0 failing.
 - 2026-11-20 charts 3: w.diagram.group y_min, orientation, stacking (none/stacked/percent), width, height, effect; layouts scatter and radar; node x_value; w.diagram.series and w.diagram.datum (one value per series and category, a deny); 18 English words, 2 Romanian. npm run test:changed 135 pass, 0 fail, 3 skipped; 0 warnings.
 2026-11-20 — Drawn person model, round 3: variant drawings (k.objects variants.sop: storm cloud with lightning and rain, rain cloud, sports car, oak tree, cherry tree; object variant_of), pose sitting on the ground with seated (seat_x, seat_y) for a seat, w.drawing object holder and material. npm run test:changed: 3041 tests, 0 failing.
 - 2026-11-20 charts: w.diagram.node error, w.diagram.group error_bars and error_cap (error bars of a chart), with words. 0 warnings; test:changed 89 pass, 0 fail.
+
+## 2026-11-21 k.charts.measure: plausible ranges for invented chart values
+- 22 measures (kind, unit, min, max, step, dimensions, about) in `k.charts/shards/measures.sop` (22 wires, 6354 bytes) from `tools/charts-core.mjs`; units declared in `tools/measures-core.mjs`; PSys2 draws random/"plausible" chart values from them and says they are invented.
+- Checks: `npm run test:changed` 367 pass / 1 fail (stale COVERAGE.md) -> `npm run reports`, then coverage-report + k.charts tests 9/0.

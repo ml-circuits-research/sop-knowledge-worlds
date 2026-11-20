@@ -87,7 +87,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `w.document` | 2 (0%) |
 | `w.drawing` | 5 (0%) |
 | `w.face` | 19 (1%) |
-| `w.lang.en` | 82 (5%) |
+| `w.lang.en` | 88 (6%) |
 | `w.list` | 1 (0%) |
 | `w.map` | 3 (0%) |
 | `w.meetings` | 1 (0%) |

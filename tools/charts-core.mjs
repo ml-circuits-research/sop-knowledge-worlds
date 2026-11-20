@@ -11,7 +11,11 @@
 //  - the typical categories of the dimensions charts are broken down by (months, quarters, regions, roles, payment
 //    methods ...): conventional values a host draws, with sample values said to be a sample, when a chart is asked for
 //    by its dimension alone ("a bar chart of sales by month") and no data is given.
-//   node tools/charts-core.mjs     writes docs/worlds/k.charts/shards/charts.sop and categories.sop
+//  - the measures charts usually show (sales, visitors, temperature, scores ...): what kind of quantity each is, its
+//    unit, a plausible range and step for one category of the dimensions it is usually broken down by, so that a host
+//    asked for a chart with invented ("random", "plausible") values draws them from that range and says they are
+//    invented. Ranges are conventional orders of magnitude for a small business, a school or a website, not data.
+//   node tools/charts-core.mjs     writes docs/worlds/k.charts/shards/charts.sop, categories.sop and measures.sop
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR } from './lib/worlds.mjs';
@@ -19,6 +23,7 @@ import { wire, header, seg, text } from './import/lib.mjs';
 
 export const SHARD = join(WORLDS_DIR, 'k.charts', 'shards', 'charts.sop');
 export const CATEGORY_SHARD = join(WORLDS_DIR, 'k.charts', 'shards', 'categories.sop');
+export const MEASURE_SHARD = join(WORLDS_DIR, 'k.charts', 'shards', 'measures.sop');
 const SRC = 'hand-core 1';
 // name, cite, year
 export const SOURCES = [
@@ -132,6 +137,40 @@ export const CATEGORIES = [
   ['category', ['Category A', 'Category B', 'Category C', 'Category D']],
 ];
 
+// measure, kind (count, money, amount, rate, temperature, score), unit, min, max, step (one category's value), the
+// dimensions it is usually broken down by, about
+export const MEASURES = [
+  ['sales', 'money', 'EUR', 2000, 20000, 500, ['month', 'quarter', 'region', 'product', 'channel', 'year'], 'the money taken from sales in one period, region or product of a small business'],
+  ['revenue', 'money', 'EUR', 10000, 90000, 1000, ['quarter', 'year', 'department', 'region'], 'the money a small company takes in one quarter, year, department or region'],
+  ['expenses', 'money', 'EUR', 1000, 15000, 500, ['month', 'quarter', 'department'], 'the money spent in one period or department of a small company'],
+  ['orders', 'count', 'orders', 20, 400, 5, ['weekday', 'month', 'channel', 'payment method', 'product'], 'the orders a small shop receives in one day, month, channel or way of paying'],
+  ['visitors', 'count', 'visitors', 100, 5000, 50, ['weekday', 'month', 'source', 'device', 'browser', 'platform'], 'the visitors of a website in one day or month, or from one source or device'],
+  ['downloads', 'count', 'downloads', 50, 3000, 50, ['month', 'platform', 'week'], 'the downloads of an app in one month, week or platform'],
+  ['customers', 'count', 'customers', 10, 300, 5, ['weekday', 'region', 'age group', 'channel'], 'the customers a shop serves in one day, region, age group or channel'],
+  ['employees', 'count', 'people', 3, 60, 1, ['department', 'role', 'team', 'rank'], 'the people working in one department, role, team or rank of a small company'],
+  ['students', 'count', 'students', 10, 120, 1, ['grade', 'subject', 'course', 'level', 'year'], 'the students with one grade, in one subject, course, level or year of a school'],
+  ['tasks', 'count', 'tasks', 1, 30, 1, ['status', 'priority', 'team'], 'the tasks of a project with one status or priority, or of one team'],
+  ['votes', 'count', 'votes', 5, 80, 1, ['colour', 'genre', 'rating', 'product'], 'the votes of a class or a club for each option'],
+  ['rainfall', 'amount', 'mm', 10, 120, 5, ['month', 'season'], 'the rain that falls in a month or season in a temperate place'],
+  ['temperature', 'temperature', '°C', -5, 30, 1, ['month', 'season'], 'the average temperature of a month or season in a temperate place'],
+  ['hours of sunshine', 'amount', 'hours', 40, 300, 10, ['month', 'season'], 'the hours of sunshine of a month or season in a temperate place'],
+  ['steps', 'count', 'steps', 2000, 15000, 500, ['weekday', 'day'], 'the steps a person walks in one day'],
+  ['hours of sleep', 'amount', 'hours', 5, 10, 0.5, ['weekday', 'day'], 'the hours a person sleeps in one night'],
+  ['score', 'score', 'points', 40, 100, 1, ['subject', 'course', 'team', 'level'], 'the average test score, out of 100, in one subject, course, team or level'],
+  ['satisfaction', 'score', 'points', 1, 10, 0.5, ['department', 'channel', 'product', 'age group'], 'the average satisfaction, out of 10, of one department, channel, product or age group'],
+  ['conversion rate', 'rate', '%', 1, 12, 0.5, ['source', 'device', 'channel', 'month'], 'the share of the visitors who buy, in percent, by source, device, channel or month'],
+  ['population', 'count', 'thousand people', 200, 4000, 50, ['city', 'region'], 'the people living in one city or region, in thousands'],
+  ['tourists', 'count', 'thousand tourists', 50, 900, 10, ['country', 'continent', 'month', 'season'], 'the tourists a place receives in one year or month, in thousands'],
+  ['books read', 'count', 'books', 0, 12, 1, ['month', 'genre', 'language'], 'the books a reader reads in one month, genre or language'],
+];
+
+export function measureShardText() {
+  const lines = MEASURES.map(([name, kind, unit, min, max, step, dimensions, about]) => wire(`k.charts.measure.${seg(name)}`, 'k.charts.measure',
+    [['name', name], ['kind', kind], ['unit', text(unit)], ['min', min], ['max', max], ['step', step], ...dimensions.map((d) => ['dimension', d]), ['about', text(about)]], SRC));
+  return `${header({ id: 'k.charts/shards/measures', about: `${MEASURES.length} measures charts usually show, each with its kind, unit, a plausible range and step for one category, and the dimensions it is usually broken down by: conventional orders of magnitude for invented ("random", "plausible") values, said to be invented.`,
+    sources: ['hand-core 1 (hand-written in this repository: tools/charts-core.mjs)'], license: 'CC0-1.0', script: 'tools/charts-core.mjs' })}\n${lines.join('\n')}\n`;
+}
+
 export function categoryShardText() {
   const lines = [];
   for (const [dimension, labels] of CATEGORIES) labels.forEach((label, i) => lines.push(wire(`k.charts.category.${seg(dimension)}.${i + 1}`, 'k.charts.category', [['dimension', dimension], ['n', i + 1], ['label', text(label)]], SRC)));
@@ -170,4 +209,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const c = categoryShardText();
   writeFileSync(CATEGORY_SHARD, c);
   console.log(`categories.sop: ${c.split('\n').filter((l) => l.startsWith('@')).length} wires, ${Buffer.byteLength(c)} bytes`);
+  const m = measureShardText();
+  writeFileSync(MEASURE_SHARD, m);
+  console.log(`measures.sop: ${m.split('\n').filter((l) => l.startsWith('@')).length} wires, ${Buffer.byteLength(m)} bytes`);
 }
