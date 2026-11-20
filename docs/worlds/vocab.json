@@ -13401,6 +13401,7 @@
   "k.objects/shards/things",
   "k.objects/shards/things-2",
   "k.objects/shards/things-3",
+  "k.objects/shards/variants",
   "k.procedures/shards/from-knowledge",
   "k.units/schema.sop",
   "k.units/shards/measures",
@@ -17528,6 +17529,18 @@
   "k.words/shards/frequency-b",
   "k.objects/shards/noto-plant-flower-01"
  ],
+ "blossom_1": [
+  "k.objects/shards/variants"
+ ],
+ "blossom_2": [
+  "k.objects/shards/variants"
+ ],
+ "blossom_3": [
+  "k.objects/shards/variants"
+ ],
+ "blossom_4": [
+  "k.objects/shards/variants"
+ ],
  "blouse": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-a-f",
@@ -18114,6 +18127,7 @@
   "k.objects/shards/things",
   "k.objects/shards/things-2",
   "k.objects/shards/things-3",
+  "k.objects/shards/variants",
   "k.objects/shards/vehicles",
   "k.objects/shards/vehicles-2",
   "k.parts/shards/names",
@@ -28514,7 +28528,10 @@
   "k.colours/shards/colours-common"
  ],
  "cherry tree": [
-  "k.objects/shards/stand-ins-variants"
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-c",
+  "k.kinds/shards/head",
+  "k.objects/shards/variants"
  ],
  "chersky range": [
   "k.geo/shards/asia"
@@ -36437,6 +36454,7 @@
   "k.objects/shards/noto-time-01",
   "k.objects/shards/scenery",
   "k.objects/shards/things-2",
+  "k.objects/shards/variants",
   "k.parts/shards/names",
   "k.parts/shards/psys2",
   "k.scenes/shards/scenes-indoors",
@@ -68543,6 +68561,7 @@
   "k.objects/shards/noto-transport-ground-02",
   "k.objects/shards/noto-transport-ground-03",
   "k.objects/shards/openmoji-technology-01",
+  "k.objects/shards/variants",
   "k.parts/shards/names"
  ],
  "headlights": [
@@ -69085,6 +69104,9 @@
  "held": [
   "k.words/shards/frequency-h",
   "k.words/shards/he"
+ ],
+ "held by": [
+  "w.drawing/schema.sop"
  ],
  "held_in": [
   "k.layouts/shards/joins"
@@ -70492,7 +70514,8 @@
  ],
  "holder": [
   "k.words/shards/frequency-h",
-  "k.words/shards/ho"
+  "k.words/shards/ho",
+  "w.drawing/schema.sop"
  ],
  "holders": [
   "k.attributes/shards/narration",
@@ -73743,6 +73766,9 @@
  ],
  "in the hair": [
   "k.wearables/shards/places"
+ ],
+ "in the hand of": [
+  "w.drawing/schema.sop"
  ],
  "in the middle": [
   "k.values/shards/directions"
@@ -78807,6 +78833,7 @@
  "k.objects.object": [
   "k.attributes/shards/aspects",
   "k.attributes/shards/narration",
+  "k.kinds/shards/relations-objects",
   "k.kinds/shards/structures"
  ],
  "k.objects.part": [
@@ -84958,6 +84985,9 @@
  "left_crate": [
   "k.objects/shards/places"
  ],
+ "left_crown": [
+  "k.objects/shards/variants"
+ ],
  "left_cube": [
   "k.objects/shards/food"
  ],
@@ -85367,7 +85397,8 @@
  ],
  "left_puff": [
   "k.faces/shards/plain-hat",
-  "k.objects/shards/sky"
+  "k.objects/shards/sky",
+  "k.objects/shards/variants"
  ],
  "left_pupil": [
   "k.objects/shards/nature-2"
@@ -85562,6 +85593,7 @@
   "k.objects/shards/noto-transport-ground-04",
   "k.objects/shards/noto-transport-ground-05",
   "k.objects/shards/openmoji-transport-and-map-symbols-01",
+  "k.objects/shards/variants",
   "k.objects/shards/vehicles"
  ],
  "left_whisker": [
@@ -86952,6 +86984,7 @@
  "lightning": [
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/noto-sky-weather-03",
+  "k.objects/shards/variants",
   "k.words/shards/frequency-l",
   "k.words/shards/li",
   "k.objects/shards/noto-sky-weather-04",
@@ -88919,6 +88952,9 @@
  "lower_crack": [
   "k.objects/shards/land"
  ],
+ "lower_crown": [
+  "k.objects/shards/variants"
+ ],
  "lower_drawer": [
   "k.objects/shards/things-2"
  ],
@@ -89758,7 +89794,8 @@
  "made of": [
   "k.attributes/schema.sop",
   "k.food/schema.sop",
-  "k.space/schema.sop"
+  "k.space/schema.sop",
+  "w.drawing/schema.sop"
  ],
  "made up of": [
   "k.parts/schema.sop"
@@ -92347,6 +92384,7 @@
   "k.units/shards/measures",
   "k.words/shards/frequency-m",
   "k.words/shards/ma",
+  "w.drawing/schema.sop",
   "w.lang.en/shards/hand-grammar"
  ],
  "maternity": [
@@ -94366,7 +94404,8 @@
  ],
  "middle_puff": [
   "k.faces/shards/plain-hat",
-  "k.objects/shards/sky"
+  "k.objects/shards/sky",
+  "k.objects/shards/variants"
  ],
  "middle_rib": [
   "k.objects/shards/things-2"
@@ -102710,7 +102749,10 @@
   "k.scenes/shards/things-o"
  ],
  "oak tree": [
-  "k.objects/shards/stand-ins-variants"
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-o",
+  "k.kinds/shards/head",
+  "k.objects/shards/variants"
  ],
  "oakland": [
   "k.words/shards/frequency-o",
@@ -103815,6 +103857,12 @@
   "w.request/schema.sop",
   "w.tasks/schema.sop",
   "w.timeline/schema.sop"
+ ],
+ "on a bench": [
+  "k.faces/shards/figure-poses"
+ ],
+ "on a chair": [
+  "k.faces/shards/figure-poses"
  ],
  "on its side": [
   "w.diagram/schema.sop"
@@ -117165,10 +117213,25 @@
   "k.wearables/shards/wearables"
  ],
  "rain cloud": [
-  "k.objects/shards/stand-ins-variants"
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-r",
+  "k.kinds/shards/head",
+  "k.objects/shards/variants"
  ],
  "rain forest": [
   "k.scenes/shards/scenes-nature"
+ ],
+ "rain_1": [
+  "k.objects/shards/variants"
+ ],
+ "rain_2": [
+  "k.objects/shards/variants"
+ ],
+ "rain_3": [
+  "k.objects/shards/variants"
+ ],
+ "rain_4": [
+  "k.objects/shards/variants"
  ],
  "rainbow": [
   "k.attributes/shards/drawn-noto",
@@ -121078,6 +121141,9 @@
  "right_crate": [
   "k.objects/shards/places"
  ],
+ "right_crown": [
+  "k.objects/shards/variants"
+ ],
  "right_cube": [
   "k.objects/shards/food"
  ],
@@ -121489,7 +121555,8 @@
  ],
  "right_puff": [
   "k.faces/shards/plain-hat",
-  "k.objects/shards/sky"
+  "k.objects/shards/sky",
+  "k.objects/shards/variants"
  ],
  "right_pupil": [
   "k.objects/shards/nature-2"
@@ -121680,6 +121747,7 @@
   "k.objects/shards/noto-transport-ground-04",
   "k.objects/shards/noto-transport-ground-05",
   "k.objects/shards/openmoji-transport-and-map-symbols-01",
+  "k.objects/shards/variants",
   "k.objects/shards/vehicles"
  ],
  "right_whisker": [
@@ -125846,6 +125914,12 @@
  "sat down": [
   "k.faces/shards/figure-poses"
  ],
+ "sat on the bench": [
+  "k.faces/shards/figure-poses"
+ ],
+ "sat on the ground": [
+  "k.faces/shards/figure-poses"
+ ],
  "satan": [
   "k.words/shards/frequency-s",
   "k.words/shards/sa"
@@ -128399,6 +128473,7 @@
   "k.attributes/shards/same-s",
   "k.attributes/shards/typical",
   "k.expect/shards/scenes",
+  "k.faces/shards/figure-poses",
   "k.kinds/shards/group-noto",
   "k.kinds/shards/part_of",
   "k.kinds/shards/part_of-wordnet-3",
@@ -128448,6 +128523,16 @@
  ],
  "seat_tube": [
   "k.objects/shards/vehicles"
+ ],
+ "seat_x": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-faces",
+  "k.units/shards/measures"
+ ],
+ "seat_y": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-faces",
+  "k.units/shards/measures"
  ],
  "seatbelt": [
   "k.attributes/shards/drawn-hand",
@@ -132550,6 +132635,15 @@
  "sitting down": [
   "k.faces/shards/figure-poses"
  ],
+ "sitting on a bench": [
+  "k.faces/shards/figure-poses"
+ ],
+ "sitting on a chair": [
+  "k.faces/shards/figure-poses"
+ ],
+ "sitting on the ground": [
+  "k.faces/shards/figure-poses"
+ ],
  "sitting room": [
   "k.scenes/shards/scenes-indoors"
  ],
@@ -136196,6 +136290,9 @@
   "k.words/shards/frequency-s",
   "k.words/shards/sp"
  ],
+ "spoiler": [
+  "k.objects/shards/variants"
+ ],
  "spoiling": [
   "k.words/shards/frequency-s",
   "k.words/shards/sp"
@@ -136324,7 +136421,10 @@
   "k.objects/shards/noto-sport-02"
  ],
  "sports car": [
-  "k.objects/shards/stand-ins-variants"
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-s",
+  "k.kinds/shards/head",
+  "k.objects/shards/variants"
  ],
  "sports equipment": [
   "k.kinds/shards/classes",
@@ -138666,7 +138766,10 @@
   "k.words/shards/st"
  ],
  "storm cloud": [
-  "k.objects/shards/stand-ins-variants"
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-s",
+  "k.kinds/shards/head",
+  "k.objects/shards/variants"
  ],
  "storo": [
   "k.geo/shards/islands-north-america"
@@ -151084,6 +151187,7 @@
   "k.objects/shards/noto-plant-other-03",
   "k.objects/shards/plants",
   "k.objects/shards/scenery",
+  "k.objects/shards/variants",
   "k.objects/shards/words-wordnet",
   "k.parts/shards/names",
   "k.parts/shards/psys2",
@@ -154037,6 +154141,10 @@
   "k.units/shards/measures",
   "w.face/schema.sop",
   "w.lang.en/schema.sop"
+ ],
+ "variant_of": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-objects"
  ],
  "variants": [
   "k.attributes/shards/narration",
@@ -159591,6 +159699,7 @@
   "k.objects/shards/structures",
   "k.objects/shards/things-2",
   "k.objects/shards/things-3",
+  "k.objects/shards/variants",
   "k.objects/shards/vehicles",
   "k.parts/shards/names",
   "k.parts/shards/psys2",
