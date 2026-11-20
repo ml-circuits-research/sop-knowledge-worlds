@@ -19,6 +19,11 @@ one axis. Peer clearance deficit is the shortfall from the desired gap, bounded 
 the product of positive intersection widths and heights. Near cost is the absolute difference from the desired
 gap. The initial gaps, weights and directions are authored starting values.
 
+`left`, `right`, `above` and `below` name one side: the subject goes on that side of the anchor, at the near gap
+(one direction each, measured as `near` is). `in` puts the subject within the anchor's box: in the middle first,
+else a quarter of the way from either side, so that the ranking of peers' overlap picks a free place; its distance
+policy has weight 0, since every direction lies inside.
+
 `member_of` supports occupation of the same region. It enforces box containment when the relation states
 `evidence=containment` and the container is an observed rectangle. `endpoint_of` and `anchored_to` with
 `evidence=coincident` enforce exact equality of the supplied points. Each can cross a direct container scope
