@@ -29,7 +29,7 @@ of its own; two denies keep one code per thing of a kind and one membership per 
   `title_position`, `y_axis` (left, right), `x_axis` (bottom, top), `invert` (none, x, y), `axis_scale` (linear, log),
   `tick_format` (plain, magnitude, power), `precision`, `line_style`, `line_width`, `marker_size`, `marker_edge`,
   `bar_width`, `pie_radius`, `grid_style`; what it was asked to show: `dimension`, `measure`, `aggregate` (count,
-  sum, avg, min, max) and `sample` (its values are a sample drawn for a chart asked for without data).
+  sum, avg, min, max) and `sample`; error bars: `error` on a member, `error_bars` and `error_cap` on the chart (its values are a sample drawn for a chart asked for without data).
 - A chart's shape: `y_min` (the bottom of the value axis), `orientation` (vertical, horizontal), `stacking` (none,
   stacked, percent), `width` and `height` (its plot in pixels), `effect` (none, shadow, glow); group layouts scatter
   (each member at its `x_value` and value) and radar (each member a spoke); `x_value` on nodes.

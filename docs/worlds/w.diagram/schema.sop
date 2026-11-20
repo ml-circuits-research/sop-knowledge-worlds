@@ -60,6 +60,8 @@
 @w.diagram.node.width core.slot of=w.diagram.node key=width kind=number min=8 core.source="hand-core 1"
 @w.diagram.node.height core.slot of=w.diagram.node key=height kind=number min=8 core.source="hand-core 1"
 @w.diagram.node.value core.slot of=w.diagram.node key=value kind=number core.source="hand-core 1"
+# `error` the uncertainty of a chart member's value (drawn as an error bar from value - error to value + error).
+@w.diagram.node.error core.slot of=w.diagram.node key=error kind=number min=0 core.source="hand-core 1"
 @w.diagram.node.pinned core.slot of=w.diagram.node key=pinned kind=boolean core.source="hand-core 1"
 
 # Its style, for an editor: `outline` the colour of its border, `text_colour` the colour of its label, `font_size` the
@@ -162,6 +164,9 @@
 @w.diagram.group.measure core.slot of=w.diagram.group key=measure kind=atom kind=string core.source="hand-core 1"
 @w.diagram.group.aggregate core.slot of=w.diagram.group key=aggregate enum=count enum=sum enum=avg enum=min enum=max core.source="hand-core 1"
 @w.diagram.group.sample core.slot of=w.diagram.group key=sample kind=boolean core.source="hand-core 1"
+# `error_bars` true to draw the members' errors as error bars, `error_cap` the half width of their caps (0: none).
+@w.diagram.group.error_bars core.slot of=w.diagram.group key=error_bars kind=boolean core.source="hand-core 1"
+@w.diagram.group.error_cap core.slot of=w.diagram.group key=error_cap kind=number min=0 max=30 core.source="hand-core 1"
 # How a chart group is shaped: `y_min` the bottom of its value axis (0 when it has none; a value below it is drawn at
 # the bottom); `orientation` vertical (bars standing on the category axis) or horizontal (bars lying, the categories
 # down the side); `stacking` how its series are set out: none (side by side), stacked (on top of each other), percent

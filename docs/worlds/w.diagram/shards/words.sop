@@ -116,3 +116,6 @@
 @w.diagram.word.datum.series core.word text=series text="data series" means=w.diagram.datum.series core.source="hand-core 1"
 @w.diagram.word.datum.node core.word text=category text=categories means=w.diagram.datum.node core.source="hand-core 1"
 @w.diagram.word.datum.code core.word text=code text=id means=w.diagram.datum.code core.source="hand-core 1"
+@w.diagram.word.node.error core.word text=error text=uncertainty text="error margin" text="plus or minus" means=w.diagram.node.error core.source="hand-core 1"
+@w.diagram.word.group.error_bars core.word text="error bars" text="error bar" text=whiskers means=w.diagram.group.error_bars core.source="hand-core 1"
+@w.diagram.word.group.error_cap core.word text="error bar caps" text=caps text="cap size" means=w.diagram.group.error_cap core.source="hand-core 1"

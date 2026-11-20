@@ -1,5 +1,5 @@
 {
- "version": "13558bbee53e",
+ "version": "4c708b0b41a7",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -97856,6 +97856,7 @@
       "width",
       "height",
       "value",
+      "error",
       "pinned",
       "outline",
       "text_colour",
@@ -97973,6 +97974,8 @@
       "measure",
       "aggregate",
       "sample",
+      "error_bars",
+      "error_cap",
       "y_min",
       "orientation",
       "stacking",
@@ -98054,8 +98057,8 @@
      ]
     }
    ],
-   "wires": 140,
-   "bytes": 25713,
+   "wires": 143,
+   "bytes": 26277,
    "sources": [
     "hand-core-1"
    ],

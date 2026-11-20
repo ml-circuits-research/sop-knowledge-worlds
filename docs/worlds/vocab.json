@@ -25142,6 +25142,9 @@
   "w.face/schema.sop",
   "k.objects/shards/noto-clothing-06"
  ],
+ "cap size": [
+  "w.diagram/schema.sop"
+ ],
  "cap-haïtien": [
   "k.geo/shards/north-america"
  ],
@@ -25275,7 +25278,8 @@
   "k.objects/shards/noto-animal-mammal-05"
  ],
  "caps": [
-  "k.wearables/shards/wearables"
+  "k.wearables/shards/wearables",
+  "w.diagram/schema.sop"
  ],
  "capsicum": [
   "k.food/shards/vegetables",
@@ -49948,7 +49952,20 @@
  ],
  "error": [
   "k.words/shards/er",
-  "k.words/shards/frequency-e"
+  "k.words/shards/frequency-e",
+  "w.diagram/schema.sop"
+ ],
+ "error bar": [
+  "w.diagram/schema.sop"
+ ],
+ "error bar caps": [
+  "w.diagram/schema.sop"
+ ],
+ "error bars": [
+  "w.diagram/schema.sop"
+ ],
+ "error margin": [
+  "w.diagram/schema.sop"
  ],
  "ertis": [
   "k.geo/shards/asia"
@@ -112375,6 +112392,9 @@
   "k.words/shards/pl",
   "w.lang.en/shards/arithmetic"
  ],
+ "plus or minus": [
+  "w.diagram/schema.sop"
+ ],
  "plus sign": [
   "k.shapes/shards/shapes"
  ],
@@ -152681,7 +152701,8 @@
  ],
  "uncertainty": [
   "k.words/shards/frequency-u",
-  "k.words/shards/un"
+  "k.words/shards/un",
+  "w.diagram/schema.sop"
  ],
  "uncheck": [
   "k.actions/shards/verbs-deselect"
@@ -158964,7 +158985,8 @@
   "k.parts/shards/names",
   "k.parts/shards/psys2",
   "k.words/shards/frequency-w",
-  "k.words/shards/wh"
+  "k.words/shards/wh",
+  "w.diagram/schema.sop"
  ],
  "whiskey": [
   "k.attributes/shards/drawn-hand",
