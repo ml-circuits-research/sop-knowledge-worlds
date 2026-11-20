@@ -1,18 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>random face 11</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <polygon points="8,100 10,93 26,87 40,84 60,84 74,87 90,93 92,100" fill="#EC87B0" stroke="#333" stroke-width="0.8"><title>shirt</title></polygon>
-  <polygon points="24,88 40,84 47,100 20,100" fill="#FF7A1A" stroke="#333" stroke-width="0.8"><title>left_panel</title></polygon>
-  <polygon points="76,88 60,84 53,100 80,100" fill="#FF7A1A" stroke="#333" stroke-width="0.8"><title>right_panel</title></polygon>
-  <polygon points="21,93 45,93 46,96 20.5,96" fill="#F5F1B8" stroke="#333" stroke-width="0.8"><title>left_stripe</title></polygon>
-  <polygon points="55,93 79,93 79.5,96 54,96" fill="#F5F1B8" stroke="#333" stroke-width="0.8"><title>right_stripe</title></polygon>
-  <polygon points="42,70 58,70 63,88 37,88" fill="#E0AC86" stroke="#333" stroke-width="0.8"><title>neck</title></polygon>
-  <polygon points="28,44 13,39 18,52 28,58" fill="#E0AC86" stroke="#333" stroke-width="0.8"><title>ear</title></polygon>
-  <polygon points="72,44 87,39 82,52 72,58" fill="#E0AC86" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></polygon>
-  <ellipse cx="50" cy="48" rx="28" ry="29" fill="#E0AC86" stroke="#333" stroke-width="0.8"><title>face</title></ellipse>
+  <polygon points="8,100 10,93 26,87 40,84 60,84 74,87 90,93 92,100" fill="#2F2F2F" stroke="#333" stroke-width="0.8"><title>shirt</title></polygon>
+  <polygon points="29,86.5 35,85.5 43,92 38,92" fill="#3F6FB5" stroke="#333" stroke-width="0.8"><title>left_strap</title></polygon>
+  <polygon points="71,86.5 65,85.5 57,92 62,92" fill="#3F6FB5" stroke="#333" stroke-width="0.8"><title>right_strap</title></polygon>
+  <rect x="37" y="91" width="26" height="9" fill="#3F6FB5" stroke="#333" stroke-width="0.8"><title>bib</title></rect>
+  <ellipse cx="40" cy="93" rx="1.5" ry="1.5" fill="#E8B923" stroke="#333" stroke-width="0.8"><title>left_button</title></ellipse>
+  <ellipse cx="60" cy="93" rx="1.5" ry="1.5" fill="#E8B923" stroke="#333" stroke-width="0.8"><title>right_button</title></ellipse>
+  <rect x="42" y="70" width="16" height="18" fill="#E0AC86" stroke="#333" stroke-width="0.8"><title>neck</title></rect>
+  <path d="M42 80 A8 6 0 0 0 58 80" fill="none" stroke="#E8B923" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>chain</title></path>
+  <ellipse cx="50" cy="87" rx="2" ry="2" fill="#E8B923" stroke="#333" stroke-width="0.8"><title>pendant</title></ellipse>
+  <ellipse cx="22" cy="50.5" rx="6" ry="11.5" fill="#E0AC86" stroke="#333" stroke-width="0.8"><title>ear</title></ellipse>
+  <polyline points="21,44 20,56" fill="none" stroke="#B98660" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold</title></polyline>
+  <ellipse cx="78" cy="50.5" rx="6" ry="11.5" fill="#E0AC86" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></ellipse>
+  <polyline points="79,44 80,56" fill="none" stroke="#B98660" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold (mirrored)</title></polyline>
+  <rect x="24" y="14" width="52" height="62" fill="#E0AC86" stroke="#333" stroke-width="0.8"><title>face</title></rect>
+  <ellipse cx="28" cy="18" rx="2" ry="2" fill="#B98660" stroke="#333" stroke-width="0.8"><title>left_bolt</title></ellipse>
+  <ellipse cx="72" cy="18" rx="2" ry="2" fill="#B98660" stroke="#333" stroke-width="0.8"><title>right_bolt</title></ellipse>
   <polygon points="76,54 75,68 70,82 60,92 50,97 40,92 30,82 25,68 24,54 30,52 35,58 50,56 65,58 70,52" fill="#C8562A" stroke="#333" stroke-width="0.8"><title>beard</title></polygon>
-  <ellipse cx="51" cy="70" rx="4" ry="4" fill="#E8788A" stroke="#333" stroke-width="0.8"><title>tongue</title></ellipse>
-  <path d="M41 63 A9 5 0 0 0 59 63" fill="none" stroke="#B5483F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lips</title></path>
+  <polygon points="40,71 60,71 59.2,67.9 57.1,65.3 53.8,63.6 50,63 46.2,63.6 42.9,65.3 40.8,67.9" fill="#6E1F24" stroke="#333" stroke-width="0.8"><title>inside</title></polygon>
   <path d="M44 52 A6 5 0 0 0 56 52" fill="none" stroke="#B98660" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>nose</title></path>
   <ellipse cx="46.8" cy="53.8" rx="0.8" ry="0.8" fill="#B98660" stroke="#333" stroke-width="0.8"><title>left_nostril</title></ellipse>
   <ellipse cx="53.2" cy="53.8" rx="0.8" ry="0.8" fill="#B98660" stroke="#333" stroke-width="0.8"><title>right_nostril</title></ellipse>

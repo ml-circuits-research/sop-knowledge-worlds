@@ -93,6 +93,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `w.meetings` | 1 (0%) |
 | `w.person` | 1 (0%) |
 | `w.picture` | 1 (0%) |
+| `w.preferences` | 1 (0%) |
 | `w.request` | 1 (0%) |
 | `w.seating` | 2 (0%) |
 

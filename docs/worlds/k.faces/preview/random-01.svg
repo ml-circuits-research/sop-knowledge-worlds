@@ -4,13 +4,12 @@
   <polygon points="8,100 10,93 26,87 40,84 60,84 74,87 90,93 92,100" fill="#D64541" stroke="#333" stroke-width="0.8"><title>shirt</title></polygon>
   <path d="M41 84 A9 6 0 0 0 59 84" fill="none" stroke="#A62E2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>neckline</title></path>
   <polygon points="42,70 58,70 63,88 37,88" fill="#9A6A44" stroke="#333" stroke-width="0.8"><title>neck</title></polygon>
-  <rect x="15" y="43" width="12" height="12" fill="#9A6A44" stroke="#333" stroke-width="0.8"><title>ear</title></rect>
-  <ellipse cx="19" cy="49" rx="3" ry="3" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>bolt</title></ellipse>
-  <rect x="73" y="43" width="12" height="12" fill="#9A6A44" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></rect>
-  <ellipse cx="81" cy="49" rx="3" ry="3" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>bolt (mirrored)</title></ellipse>
-  <rect x="24" y="14" width="52" height="62" fill="#9A6A44" stroke="#333" stroke-width="0.8"><title>face</title></rect>
-  <ellipse cx="28" cy="18" rx="2" ry="2" fill="#75492A" stroke="#333" stroke-width="0.8"><title>left_bolt</title></ellipse>
-  <ellipse cx="72" cy="18" rx="2" ry="2" fill="#75492A" stroke="#333" stroke-width="0.8"><title>right_bolt</title></ellipse>
+  <ellipse cx="21.5" cy="48.5" rx="6.5" ry="6.5" fill="#9A6A44" stroke="#333" stroke-width="0.8"><title>ear</title></ellipse>
+  <ellipse cx="21.5" cy="48.5" rx="3.5" ry="3.5" fill="#7FC4F2" stroke="#333" stroke-width="0.8"><title>dial</title></ellipse>
+  <ellipse cx="78.5" cy="48.5" rx="6.5" ry="6.5" fill="#9A6A44" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></ellipse>
+  <ellipse cx="78.5" cy="48.5" rx="3.5" ry="3.5" fill="#7FC4F2" stroke="#333" stroke-width="0.8"><title>dial (mirrored)</title></ellipse>
+  <polygon points="23,40 24.3,32.3 28.2,25.3 34.1,19.8 41.7,16.2 50,15 58.3,16.2 65.9,19.8 71.8,25.3 75.7,32.3 77,40 77,58 73,69 62,76 38,76 27,69 23,58" fill="#9A6A44" stroke="#333" stroke-width="0.8"><title>face</title></polygon>
+  <ellipse cx="50" cy="50" rx="21" ry="20" fill="#DDEEFB" stroke="#333" stroke-width="0.8"><title>plate</title></ellipse>
   <polyline points="27,53 33,55" fill="none" stroke="#75492A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>upper_line</title></polyline>
   <polyline points="30,58 36,63" fill="none" stroke="#75492A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lower_line</title></polyline>
   <polyline points="73,53 67,55" fill="none" stroke="#75492A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>upper_line (mirrored)</title></polyline>
@@ -31,8 +30,7 @@
   <polyline points="38,22 38,30" fill="none" stroke="#553016" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>strand_1</title></polyline>
   <polyline points="50,21 50,30" fill="none" stroke="#553016" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>strand_2</title></polyline>
   <polyline points="62,22 62,30" fill="none" stroke="#553016" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>strand_3</title></polyline>
-  <polygon points="23,27 24.3,19.6 28.2,12.9 34.1,7.6 41.7,4.2 50,3 58.3,4.2 65.9,7.6 71.8,12.9 75.7,19.6 77,27" fill="#C62828" stroke="#333" stroke-width="0.8"><title>shell</title></polygon>
-  <rect x="47" y="3" width="6" height="10" fill="#8E1B1B" stroke="#333" stroke-width="0.8"><title>crest</title></rect>
-  <polygon points="18,25 82,25 92,32 8,32" fill="#8E1B1B" stroke="#333" stroke-width="0.8"><title>brim</title></polygon>
-  <polygon points="44,13 56,13 56,20 50,24 44,20" fill="#E8B923" stroke="#333" stroke-width="0.8"><title>badge</title></polygon>
+  <polygon points="23,26 24.3,18.9 28.2,12.5 34.1,7.4 41.7,4.1 50,3 58.3,4.1 65.9,7.4 71.8,12.5 75.7,18.9 77,26" fill="#F2C200" stroke="#333" stroke-width="0.8"><title>shell</title></polygon>
+  <rect x="46.5" y="3" width="7" height="22" fill="#D9A900" stroke="#333" stroke-width="0.8"><title>ridge</title></rect>
+  <polygon points="20,24 80,24 88,30 12,30" fill="#D9A900" stroke="#333" stroke-width="0.8"><title>brim</title></polygon>
 </svg>

@@ -1,16 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>random face 25</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <polygon points="8,100 10,93 26,87 40,84 60,84 74,87 90,93 92,100" fill="#F5F5F5" stroke="#333" stroke-width="0.8"><title>suit</title></polygon>
+  <polygon points="8,100 10,93 26,87 40,84 60,84 74,87 90,93 92,100" fill="#A9D6F5" stroke="#333" stroke-width="0.8"><title>suit</title></polygon>
   <polygon points="8,100 10,93 26,87 35,85 30,100" fill="#C62828" stroke="#333" stroke-width="0.8"><title>left_cape</title></polygon>
   <polygon points="92,100 90,93 74,87 65,85 70,100" fill="#C62828" stroke="#333" stroke-width="0.8"><title>right_cape</title></polygon>
   <polygon points="50,88 57,94 50,100 43,94" fill="#E8B923" stroke="#333" stroke-width="0.8"><title>emblem</title></polygon>
-  <polygon points="42,70 58,70 63,88 37,88" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>neck</title></polygon>
-  <ellipse cx="22" cy="50.5" rx="6" ry="11.5" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>ear</title></ellipse>
-  <polyline points="21,44 20,56" fill="none" stroke="#472A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold</title></polyline>
-  <ellipse cx="78" cy="50.5" rx="6" ry="11.5" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></ellipse>
-  <polyline points="79,44 80,56" fill="none" stroke="#472A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold (mirrored)</title></polyline>
-  <ellipse cx="50" cy="46" rx="25" ry="33" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>face</title></ellipse>
+  <rect x="42" y="70" width="16" height="18" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>neck</title></rect>
+  <path d="M42 80 A8 6 0 0 0 58 80" fill="none" stroke="#E8B923" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>chain</title></path>
+  <ellipse cx="50" cy="87" rx="2" ry="2" fill="#E8B923" stroke="#333" stroke-width="0.8"><title>pendant</title></ellipse>
+  <rect x="15" y="43" width="12" height="12" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>ear</title></rect>
+  <ellipse cx="19" cy="49" rx="3" ry="3" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>bolt</title></ellipse>
+  <rect x="73" y="43" width="12" height="12" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></rect>
+  <ellipse cx="81" cy="49" rx="3" ry="3" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>bolt (mirrored)</title></ellipse>
+  <ellipse cx="50" cy="46" rx="23" ry="34" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>face</title></ellipse>
   <path d="M33 58 A3 3 0 0 1 33 64" fill="none" stroke="#472A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>dimple</title></path>
   <path d="M67 58 A3 3 0 0 0 67 64" fill="none" stroke="#472A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>dimple (mirrored)</title></path>
   <polyline points="47,66 53,66" fill="none" stroke="#B5483F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lips</title></polyline>

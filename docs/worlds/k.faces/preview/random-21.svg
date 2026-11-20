@@ -7,13 +7,10 @@
   <ellipse cx="80" cy="90" rx="2" ry="2" fill="#3A3A3A" stroke="#333" stroke-width="0.8"><title>right_bolt</title></ellipse>
   <ellipse cx="50" cy="93" rx="3" ry="3" fill="#B5483F" stroke="#333" stroke-width="0.8"><title>light</title></ellipse>
   <rect x="38" y="70" width="24" height="18" fill="#FBE3D0" stroke="#333" stroke-width="0.8"><title>neck</title></rect>
-  <ellipse cx="20" cy="50" rx="8" ry="11" fill="#FBE3D0" stroke="#333" stroke-width="0.8"><title>ear</title></ellipse>
-  <path d="M21 44 A6 6 0 0 0 21 56" fill="none" stroke="#DDB59B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold</title></path>
-  <ellipse cx="80" cy="50" rx="8" ry="11" fill="#FBE3D0" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></ellipse>
-  <path d="M79 44 A6 6 0 0 1 79 56" fill="none" stroke="#DDB59B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold (mirrored)</title></path>
-  <rect x="24" y="14" width="52" height="62" fill="#FBE3D0" stroke="#333" stroke-width="0.8"><title>face</title></rect>
-  <ellipse cx="28" cy="18" rx="2" ry="2" fill="#DDB59B" stroke="#333" stroke-width="0.8"><title>left_bolt</title></ellipse>
-  <ellipse cx="72" cy="18" rx="2" ry="2" fill="#DDB59B" stroke="#333" stroke-width="0.8"><title>right_bolt</title></ellipse>
+  <polygon points="28,44 13,39 18,52 28,58" fill="#FBE3D0" stroke="#333" stroke-width="0.8"><title>ear</title></polygon>
+  <polygon points="72,44 87,39 82,52 72,58" fill="#FBE3D0" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></polygon>
+  <polygon points="23,40 24.3,32.3 28.2,25.3 34.1,19.8 41.7,16.2 50,15 58.3,16.2 65.9,19.8 71.8,25.3 75.7,32.3 77,40 77,58 73,69 62,76 38,76 27,69 23,58" fill="#FBE3D0" stroke="#333" stroke-width="0.8"><title>face</title></polygon>
+  <ellipse cx="50" cy="50" rx="21" ry="20" fill="#DDEEFB" stroke="#333" stroke-width="0.8"><title>plate</title></ellipse>
   <polyline points="43,67 53,67 59,63" fill="none" stroke="#B5483F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lips</title></polyline>
   <polyline points="50,44 46.5,55 52,55" fill="none" stroke="#DDB59B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>nose</title></polyline>
   <path d="M31 41 A6 3 0 0 0 43 41" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid</title></path>

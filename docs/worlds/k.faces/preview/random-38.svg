@@ -5,11 +5,13 @@
   <rect x="46.5" y="93" width="7" height="7" fill="#F7F7F7" stroke="#333" stroke-width="0.8"><title>front_trim</title></rect>
   <polygon points="25,89 36,84 64,84 75,89 63,95 37,95" fill="#F7F7F7" stroke="#333" stroke-width="0.8"><title>fur_collar</title></polygon>
   <rect x="42" y="70" width="16" height="18" fill="#C99A6B" stroke="#333" stroke-width="0.8"><title>neck</title></rect>
-  <ellipse cx="22" cy="50.5" rx="6" ry="11.5" fill="#C99A6B" stroke="#333" stroke-width="0.8"><title>ear</title></ellipse>
-  <polyline points="21,44 20,56" fill="none" stroke="#A2764B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold</title></polyline>
-  <ellipse cx="78" cy="50.5" rx="6" ry="11.5" fill="#C99A6B" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></ellipse>
-  <polyline points="79,44 80,56" fill="none" stroke="#A2764B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold (mirrored)</title></polyline>
-  <ellipse cx="50" cy="48" rx="28" ry="29" fill="#C99A6B" stroke="#333" stroke-width="0.8"><title>face</title></ellipse>
+  <rect x="15" y="43" width="12" height="12" fill="#C99A6B" stroke="#333" stroke-width="0.8"><title>ear</title></rect>
+  <ellipse cx="19" cy="49" rx="3" ry="3" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>bolt</title></ellipse>
+  <rect x="73" y="43" width="12" height="12" fill="#C99A6B" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></rect>
+  <ellipse cx="81" cy="49" rx="3" ry="3" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>bolt (mirrored)</title></ellipse>
+  <rect x="24" y="14" width="52" height="62" fill="#C99A6B" stroke="#333" stroke-width="0.8"><title>face</title></rect>
+  <ellipse cx="28" cy="18" rx="2" ry="2" fill="#A2764B" stroke="#333" stroke-width="0.8"><title>left_bolt</title></ellipse>
+  <ellipse cx="72" cy="18" rx="2" ry="2" fill="#A2764B" stroke="#333" stroke-width="0.8"><title>right_bolt</title></ellipse>
   <path d="M33 58 A3 3 0 0 1 33 64" fill="none" stroke="#A2764B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>dimple</title></path>
   <path d="M67 58 A3 3 0 0 0 67 64" fill="none" stroke="#A2764B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>dimple (mirrored)</title></path>
   <polygon points="75,56 72,66 64,75 50,79 36,75 28,66 25,56 32,58 36,60 50,57 64,60 68,58" fill="#A2764B" stroke="#333" stroke-width="0.8"><title>shadow</title></polygon>

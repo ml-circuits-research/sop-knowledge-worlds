@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **283** in 45 worlds; distinct values 11505, meeting a target 11445 (99.5 %), open 60
+- declared joins: **283** in 45 worlds; distinct values 11508, meeting a target 11448 (99.5 %), open 60
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **69**; left undeclared on purpose: 5; keys with an enum, never suggested: 56
 
@@ -96,7 +96,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.faces | `k.faces.frame.style` | `k.faces.canon` | style | 1 | 1 |  |
 | k.faces | `k.faces.part.slot` | `k.faces.slot` | name | 26 | 26 |  |
 | k.faces | `k.faces.pose.style` | `k.faces.canon` | style | 1 | 1 |  |
-| k.faces | `k.faces.preset.clothes` | `k.colours.colour` | name | 10 | 10 |  |
+| k.faces | `k.faces.preset.clothes` | `k.colours.colour` | name | 11 | 11 |  |
 | k.faces | `k.faces.preset.style` | `k.faces.canon` | style | 2 | 2 |  |
 | k.faces | `k.faces.trait.style` | `k.faces.canon` | style | 1 | 1 |  |
 | k.faces | `k.faces.trait.part.slot` | `k.faces.slot` | name | 6 | 6 |  |
@@ -243,9 +243,9 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.units | `k.units.quantity.base` | `k.units.unit` | name | 8 | 8 |  |
 | k.units | `k.units.unit.quantity` | `k.units.quantity` | name | 8 | 8 |  |
 | k.values | `k.values.coloured.colour` | `k.colours.basic` | name | 11 | 11 |  |
-| k.values | `k.values.comparative.scale` | `k.values.scale` | name | 13 | 13 |  |
+| k.values | `k.values.comparative.scale` | `k.values.scale` | name | 14 | 14 |  |
 | k.values | `k.values.direction.opposite` | `k.values.direction` | name | 18 | 18 |  |
-| k.values | `k.values.step.scale` | `k.values.scale` | name | 14 | 14 |  |
+| k.values | `k.values.step.scale` | `k.values.scale` | name | 15 | 15 |  |
 | k.wearables | `k.wearables.place.body_part` | `k.body.part` | name | 15 | 15 |  |
 | k.wearables | `k.wearables.place.face_slot` | `k.faces.slot` | name | 4 | 4 |  |
 | k.wearables | `k.wearables.wearable.covers` | `k.wearables.place` | name | 10 | 10 |  |
@@ -330,17 +330,17 @@ whose slot has an enum is never suggested here (see the last section).
 | k.expect | `k.expect.part.shape` | value | `k.shapes.shape` | name | 12 | 7 |
 | k.expect | `k.expect.part.slot` | thing | `k.body.part` | name | 8 | 3 |
 | k.faces | `k.faces.canon.name` | thing | `k.faces.canon` | style | 2 | 2 |
-| k.faces | `k.faces.colour.name` | value | `k.colours.colour` | name | 21 | 14 |
+| k.faces | `k.faces.colour.name` | value | `k.colours.colour` | name | 23 | 15 |
 | k.faces | `k.faces.expression.eyes` | thing | `k.faces.expression` | name | 6 | 3 |
 | k.faces | `k.faces.expression.cheeks` | act | `k.actions.action` | name | 1 | 1 |
 | k.faces | `k.faces.expression.goal.value` | thing | `k.faces.expression` | name | 8 | 4 |
-| k.faces | `k.faces.preset.hat` | thing | `k.scenes.thing` | name | 5 | 5 |
-| k.faces | `k.faces.preset.shoulders` | thing | `k.wearables.wearable` | name | 8 | 4 |
+| k.faces | `k.faces.preset.neck` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 6 | 3 |
+| k.faces | `k.faces.preset.hat` | thing | `k.scenes.thing` | name | 6 | 5 |
 | k.faces | `k.faces.preset.top` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 4 | 4 |
 | k.faces | `k.faces.preset.bottom` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 4 | 4 |
 | k.faces | `k.faces.preset.shoes` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 3 | 2 |
 | k.faces | `k.faces.preset.coat` | thing | `k.attributes.drawn`, `k.attributes.number`, `k.attributes.thing` | name | 2 | 2 |
-| k.faces | `k.faces.preset.skin` | value | `k.colours.colour` | name | 9 | 5 |
+| k.faces | `k.faces.preset.skin` | value | `k.colours.colour` | name | 10 | 5 |
 | k.faces | `k.faces.preset.hair_colour` | value | `k.colours.basic`, `k.colours.colour` | name | 9 | 7 |
 | k.faces | `k.faces.preset.eye_colour` | value | `k.colours.basic`, `k.colours.colour` | name | 7 | 6 |
 | k.faces | `k.faces.slot.name` | thing | `k.parts.name` | name | 26 | 14 |

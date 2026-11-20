@@ -49,6 +49,8 @@ const LIP = { rgb: '#B5483F' }, INSIDE = { rgb: '#6E1F24' }, TONGUE = { rgb: '#E
 const BLUSH = { rgb: '#F2A0A0' }, METAL = { rgb: '#9AA4AE' }, GOLD = { rgb: '#E8B923' }, FRAME = { rgb: '#2A2A2A' }, DARK = { rgb: '#3A3A3A' };
 const skin = { tint: 'skin' }, skinShade = { tint: 'skin_shade' }, hair = { tint: 'hair' }, hairShade = { tint: 'hair_shade' }, eyes = { tint: 'eyes' };
 const clothes = { tint: 'clothes' }, clothesShade = { tint: 'clothes_shade' };
+// The lights of the friendly robot (a soft light blue: its face plate, its smile, its dials and its antenna).
+const GLOW = { rgb: '#7FC4F2' }, PLATE = { rgb: '#DDEEFB' }, SMILE = { rgb: '#3D8FD6' };
 
 // The top of a head of hair: the upper half of an ellipse a little larger than the head, closed by a hairline
 // (points from the right temple to the left one).
@@ -71,6 +73,11 @@ export const VARIANTS = {
       ['face', 'rect', [24, 14, 52, 62], 1, 'grey', skin],
       ['left_bolt', 'circle', [26, 16, 4], 2, 'grey', { ...skinShade, kind: 'bolt' }], ['right_bolt', 'circle', [70, 16, 4], 2, 'grey', { ...skinShade, kind: 'bolt' }],
     ]],
+    // The friendly robot's head: a rounded dome with a light face plate where its eyes and smile shine.
+    ['dome', { shape: 'round', kind: 'robot' }, [
+      ['face', 'poly', [...ell(50, 40, 27, 25, 180, 360, 10), [77, 58], [73, 69], [62, 76], [38, 76], [27, 69], [23, 58]], 1, 'white blue', skin],
+      ['plate', 'oval', [29, 30, 42, 40], 2, 'blue', { ...PLATE, kind: 'plate' }],
+    ]],
   ],
   ears: [
     ['round', { shape: 'round', size: 'medium' }, [['ear', 'circle', [15, 42, 13], 1, 'pink brown', skin], ['fold', 'arc', [18, 45, 5, 7, 'right'], 2, 'brown', skinShade]]],
@@ -79,6 +86,7 @@ export const VARIANTS = {
     ['pointed', { kind: 'pointed' }, [['ear', 'poly', [[28, 44], [13, 39], [18, 52], [28, 58]], 1, 'pink brown', skin]]],
     ['long', { shape: 'long' }, [['ear', 'oval', [16, 39, 12, 23], 1, 'pink brown', skin], ['fold', 'line', [[21, 44], [20, 56]], 2, 'brown', skinShade]]],
     ['square', { shape: 'square', kind: 'robot' }, [['ear', 'rect', [15, 43, 12, 12], 1, 'grey', skin], ['bolt', 'circle', [16, 46, 6], 2, 'grey', METAL]]],
+    ['dial', { shape: 'round', kind: 'robot' }, [['ear', 'circle', [15, 42, 13], 1, 'white blue', skin], ['dial', 'circle', [18, 45, 7], 2, 'blue', { ...GLOW, kind: 'light' }]]],
   ],
   neck: [
     ['medium', { size: 'medium' }, [['neck', 'rect', [42, 70, 16, 18], 1, 'pink brown', skin]]],
@@ -87,6 +95,7 @@ export const VARIANTS = {
     ['tapered', { feel: ['wide'], kind: 'tapered' }, [['neck', 'poly', [[42, 70], [58, 70], [63, 88], [37, 88]], 1, 'pink brown', skin]]],
     ['necklace', { kind: 'necklace' }, [['neck', 'rect', [42, 70, 16, 18], 1, 'pink brown', skin], ['chain', 'arc', [42, 80, 16, 6, 'up'], 2, 'yellow', GOLD], ['pendant', 'circle', [48, 85, 4], 3, 'yellow', GOLD]]],
     ['pipe', { feel: ['thin'], kind: 'robot' }, [['neck', 'rect', [45, 70, 10, 18], 1, 'grey', METAL], ['upper_ring', 'line', [[45, 80], [55, 80]], 2, 'black', DARK], ['lower_ring', 'line', [[45, 85], [55, 85]], 2, 'black', DARK]]],
+    ['ring', { kind: 'robot' }, [['neck', 'rect', [43, 70, 14, 18], 1, 'white blue', skinShade], ['ring', 'rect', [41, 79, 18, 4], 2, 'blue', { ...GLOW, kind: 'light' }]]],
   ],
   shoulders: [
     ['t-shirt', { kind: 't-shirt' }, [['shirt', 'poly', [[8, 100], [10, 93], [26, 87], [40, 84], [60, 84], [74, 87], [90, 93], [92, 100]], 1, 'blue red', clothes], ['neckline', 'arc', [41, 84, 18, 6, 'up'], 2, 'blue', clothesShade]]],
@@ -113,6 +122,7 @@ export const VARIANTS = {
     ]],
     ['small', { size: 'small', age: ['child'], kind: 't-shirt' }, [['shirt', 'poly', [[18, 100], [20, 93], [32, 88], [42, 86], [58, 86], [68, 88], [80, 93], [82, 100]], 1, 'red blue', clothes], ['neckline', 'arc', [42, 86, 16, 5, 'up'], 2, 'red', clothesShade]]],
     ['metal plate', { kind: 'robot', shape: 'square' }, [['plate', 'rect', [14, 85, 72, 15], 1, 'grey', METAL], ['left_bolt', 'circle', [18, 88, 4], 2, 'black', DARK], ['right_bolt', 'circle', [78, 88, 4], 2, 'black', DARK], ['light', 'circle', [47, 90, 6], 2, 'red', LIP]]],
+    ['round plate', { kind: 'robot', shape: 'round' }, [['plate', 'poly', BODY, 1, 'blue white', clothes], ['heart', 'circle', [45, 89, 10], 2, 'blue', { ...GLOW, kind: 'light' }], ['left_dot', 'circle', [24, 92, 4], 2, 'white', { ...WHITE, kind: 'button' }], ['right_dot', 'circle', [72, 92, 4], 2, 'white', { ...WHITE, kind: 'button' }]]],
     // Work clothes and clothes of stories (Round 7).
     ['lab coat', { kind: 'lab coat', age: ['adult'] }, [['coat', 'poly', BODY, 1, 'white', { rgb: '#F7F7F7' }], ['shirt_front', 'tri', [41, 84, 18, 13, 'down'], 2, 'blue red', clothes], ['left_lapel', 'poly', [[40, 84], [49, 97], [43, 100], [35, 87]], 3, 'white', { rgb: '#ECECEC', kind: 'lapel' }], ['right_lapel', 'poly', [[60, 84], [51, 97], [57, 100], [65, 87]], 3, 'white', { rgb: '#ECECEC', kind: 'lapel' }], ['pen', 'line', [[70, 92], [70, 98]], 4, 'blue', { rgb: '#2F5DA8' }]]],
     ['scrubs', { kind: 'scrubs', age: ['adult'] }, [['top', 'poly', BODY, 1, 'green blue', { rgb: '#7EC8C8' }], ['opening', 'tri', [41, 84, 18, 11, 'down'], 2, 'pink brown', skin], ['pocket', 'rect', [62, 92, 10, 7], 3, 'green blue', { rgb: '#63B0B0' }]]],
@@ -195,6 +205,8 @@ export const VARIANTS = {
     ['lashes', { shape: 'round', feel: ['open'], kind: 'lashes' }, [['white', 'circle', [32, 38, 10], 1, 'white', WHITE], ['iris', 'circle', [34.5, 40.5, 5], 2, 'blue brown', eyes], ['pupil', 'circle', [36, 42, 2], 3, 'black', PUPIL],
       ['lash_1', 'line', [[32, 39.5], [30, 36.5]], 4, 'black', { ...PUPIL, kind: 'lash' }], ['lash_2', 'line', [[35, 38], [34, 35.5]], 4, 'black', { ...PUPIL, kind: 'lash' }], ['lash_3', 'line', [[39, 38], [40, 35.5]], 4, 'black', { ...PUPIL, kind: 'lash' }]]],
     ['square', { shape: 'square', kind: 'robot' }, [['socket', 'square', [31.5, 36.5, 11], 1, 'black', DARK], ['light', 'square', [33.5, 38.5, 7], 2, 'yellow blue', eyes]]],
+    // Soft round eyes (the friendly robot's): a dark round eye with two glints.
+    ['soft round', { shape: 'round', size: 'large', feel: ['open'], kind: 'robot' }, [['eye', 'circle', [31, 35.5, 12], 1, 'black blue', eyes], ['glint', 'circle', [36, 37.5, 3.6], 2, 'white', WHITE], ['small_glint', 'circle', [33, 42, 1.8], 3, 'white', { ...WHITE, kind: 'glint' }]]],
     ['downcast', { feel: ['open'], kind: 'looking down' }, [['white', 'oval', [30, 38, 14, 8], 1, 'white', WHITE], ['iris', 'circle', [34.5, 41, 5], 2, 'blue brown', eyes], ['pupil', 'circle', [36, 43, 2], 3, 'black', PUPIL], ['lid', 'rect', [29.5, 36.5, 15, 3.5], 4, 'pink brown', skin], ['lid_edge', 'line', [[30, 40], [44, 40]], 5, 'black', PUPIL]]],
     ['looking up', { feel: ['open'], kind: 'looking up' }, [['white', 'oval', [30, 37, 14, 9], 1, 'white', WHITE], ['iris', 'circle', [34.5, 37.5, 5], 2, 'blue brown', eyes], ['pupil', 'circle', [36, 38.5, 2], 3, 'black', PUPIL]]],
     // k.motion (glances): the iris toward the outer side of its eye, or toward the nose. The slot is mirrored, so a
@@ -227,6 +239,8 @@ export const VARIANTS = {
     ['tongue out', { feel: ['smiling'], kind: 'tongue out' }, [['lips', 'arc', [41, 63, 18, 5, 'up'], 2, 'red', LIP], ['tongue', 'oval', [47, 66, 8, 8], 1, 'pink', TONGUE]]],
     ['frown', { feel: ['sad', 'open'] }, [['inside', 'poly', [[40, 71], [60, 71], ...ell(50, 71, 10, 8, 180, 360, 8).slice(1, -1).reverse()], 1, 'red', INSIDE]]],
     ['grille', { shape: 'square', kind: 'robot' }, [['plate', 'rect', [40, 62, 20, 9], 1, 'grey', METAL], ['slot_1', 'line', [[44, 63.5], [44, 69.5]], 2, 'black', { ...DARK, kind: 'slot' }], ['slot_2', 'line', [[48, 63.5], [48, 69.5]], 2, 'black', { ...DARK, kind: 'slot' }], ['slot_3', 'line', [[52, 63.5], [52, 69.5]], 2, 'black', { ...DARK, kind: 'slot' }], ['slot_4', 'line', [[56, 63.5], [56, 69.5]], 2, 'black', { ...DARK, kind: 'slot' }]]],
+    // The friendly robot's smile: a soft line of light (expressions and visemes switch it like any mouth).
+    ['light smile', { feel: ['smiling', 'closed'], kind: 'robot' }, [['lips', 'arc', [40, 62, 20, 7, 'up'], 1, 'blue', { ...SMILE, kind: 'light' }]]],
     ['gritted', { feel: ['open', 'wide'], kind: 'gritted teeth' }, [['teeth', 'rect', [40, 63, 20, 7], 1, 'white', WHITE], ['bite', 'line', [[40, 66.5], [60, 66.5]], 2, 'grey', METAL], ['gap_1', 'line', [[45, 63], [45, 70]], 2, 'grey', { ...METAL, kind: 'gap' }], ['gap_2', 'line', [[50, 63], [50, 70]], 2, 'grey', { ...METAL, kind: 'gap' }], ['gap_3', 'line', [[55, 63], [55, 70]], 2, 'grey', { ...METAL, kind: 'gap' }]]],
     // k.motion (visemes): the mouth while a sound is made: half open (e, i), lips pressed (m, b, p), the upper teeth
     // on the lower lip (f, v), the tip of the tongue behind the upper teeth (t, d, n, l).
@@ -282,6 +296,7 @@ export const VARIANTS = {
     ['party hat', { kind: 'party hat', age: ['child'] }, [['cone', 'tri', [35, 3, 30, 25, 'up'], 1, 'purple yellow', { rgb: '#8E44AD' }], ['stripe', 'line', [[42, 18], [58, 18]], 2, 'yellow', GOLD], ['pompom', 'circle', [46, 0, 8], 3, 'yellow', GOLD]]],
     ['bow', { kind: 'bow', age: ['child'] }, [['left_loop', 'tri', [34, 6, 15, 14, 'right'], 1, 'red pink', { ...LIP, kind: 'loop' }], ['right_loop', 'tri', [51, 6, 15, 14, 'left'], 1, 'red pink', { ...LIP, kind: 'loop' }], ['knot', 'circle', [46.5, 9.5, 7], 2, 'red pink', LIP]]],
     ['antenna', { kind: 'antenna' }, [['rod', 'line', [[50, 15], [50, 5]], 1, 'grey', METAL], ['ball', 'circle', [46.5, 0, 7], 2, 'red', LIP]]],
+    ['light antenna', { kind: 'antenna' }, [['rod', 'line', [[50, 16], [50, 6]], 1, 'grey', { rgb: '#B9C7D4' }], ['ball', 'circle', [45.5, 0, 9], 2, 'blue', { ...GLOW, kind: 'light' }]]],
     ['sun hat', { kind: 'sun hat', feel: ['wide'] }, [['brim', 'oval', [4, 15, 92, 16], 1, 'yellow', { rgb: '#E9D08A' }], ['crown', 'poly', [...ell(50, 22, 22, 18, 180, 360, 10)], 2, 'yellow', { rgb: '#F1DDA0' }], ['ribbon', 'rect', [28.5, 16, 43, 5], 3, 'pink red', { rgb: '#D9698C' }]]],
     // Work hats and hats of stories (Round 7): so that a job shows on the face.
     ['chef hat', { kind: 'chef hat', age: ['adult'] }, [['left_puff', 'circle', [26, 3, 20], 1, 'white', { rgb: '#F4F4F4', kind: 'puff' }], ['right_puff', 'circle', [54, 3, 20], 1, 'white', { rgb: '#F4F4F4', kind: 'puff' }], ['middle_puff', 'circle', [38, 0, 24], 2, 'white', { rgb: '#F4F4F4', kind: 'puff' }], ['band', 'rect', [30, 17, 40, 12], 3, 'white', { rgb: '#EDEDED' }]]],
@@ -321,6 +336,7 @@ export const COLOURS = [
   ['skin', 'pale', '#FBE3D0', '#DDB59B', true], ['skin', 'light', '#F3CFB3', '#D3A482', true], ['skin', 'tan', '#E0AC86', '#B98660', true], ['skin', 'olive', '#C99A6B', '#A2764B', true],
   ['skin', 'brown', '#9A6A44', '#75492A', true], ['skin', 'dark brown', '#6B452B', '#472A17', true],
   ['skin', 'metal grey', '#B8C0C8', '#87919B', false], ['skin', 'green', '#9CCB7A', '#6A9B4C', false], ['skin', 'blue', '#8FB8E8', '#5C89C0', false], ['skin', 'yellow', '#FFD84A', '#D9AA1E', false], ['skin', 'white', '#FAFAFA', '#C9C9C9', false],
+  ['skin', 'robot white', '#F5F9FD', '#C4D9EC', false],
   ['hair', 'black', '#2B2B2B', '#555555', true], ['hair', 'dark brown', '#4A2F1E', '#2C1A0F', true], ['hair', 'brown', '#7A4B2A', '#553016', true], ['hair', 'auburn', '#9A4A2A', '#702E15', true],
   ['hair', 'red', '#C8562A', '#963A15', true], ['hair', 'blond', '#E8C46A', '#BE973A', true], ['hair', 'grey', '#A9A9A9', '#7C7C7C', true], ['hair', 'white', '#F0F0F0', '#C2C2C2', true],
   ['hair', 'blue', '#3F7FD8', '#285AA4', false], ['hair', 'pink', '#F07AB0', '#C24E86', false], ['hair', 'green', '#4CAF50', '#2E7D32', false], ['hair', 'purple', '#8E5BD0', '#653AA2', false], ['hair', 'orange', '#F28C28', '#C46612', false],
@@ -329,7 +345,7 @@ export const COLOURS = [
   ['eyes', 'red', '#D03030', '#9C1C1C', false], ['eyes', 'yellow', '#FFD400', '#C9A400', false], ['eyes', 'black', '#1A1A1A', '#000000', false],
   ['clothes', 'red', '#D64541', '#A62E2B', false], ['clothes', 'blue', '#3B6FB6', '#27508A', false], ['clothes', 'green', '#3F9B5B', '#2A7240', false], ['clothes', 'yellow', '#F2C037', '#C4961C', false],
   ['clothes', 'orange', '#EE8A2E', '#C06716', false], ['clothes', 'purple', '#7E57C2', '#5B3A98', false], ['clothes', 'pink', '#EC87B0', '#C05C88', false], ['clothes', 'black', '#2F2F2F', '#565656', false],
-  ['clothes', 'white', '#F5F5F5', '#C6C6C6', false], ['clothes', 'grey', '#8A8F98', '#646970', false], ['clothes', 'brown', '#8B5E3C', '#644024', false],
+  ['clothes', 'white', '#F5F5F5', '#C6C6C6', false], ['clothes', 'light blue', '#A9D6F5', '#79B2DD', false], ['clothes', 'grey', '#8A8F98', '#646970', false], ['clothes', 'brown', '#8B5E3C', '#644024', false],
 ];
 
 // name -> variants by slot, and colours
@@ -344,13 +360,15 @@ export const PRESETS = [
   ['old man', { head: 'long', ears: 'large', neck: 'thin', hair_front: 'bald on top', eyebrows: 'bushy', eyes: 'narrow', nose: 'long', mouth: 'neutral', cheeks: 'wrinkles', moustache: 'walrus', shoulders: 'suit' }, ['light', 'grey', 'grey', 'brown']],
   ['bearded man', { head: 'oval', ears: 'round', neck: 'thick', hair_front: 'side parting', eyebrows: 'thick', eyes: 'round', nose: 'wide', mouth: 'smile', beard: 'full', moustache: 'thick', glasses: 'square', shoulders: 'hoodie' }, ['brown', 'black', 'dark brown', 'grey']],
   ['woman with curly hair', { head: 'heart', ears: 'small', neck: 'medium', hair_back: 'afro', hair_front: 'curly', eyebrows: 'thick arched', eyes: 'oval', nose: 'wide', mouth: 'big smile', earrings: 'large hoop', shoulders: 'tank top' }, ['dark brown', 'black', 'dark brown', 'orange']],
-  ['robot', { head: 'box', ears: 'square', neck: 'pipe', eyes: 'square', nose: 'bolt', mouth: 'grille', hat: 'antenna', earrings: 'bolt', shoulders: 'metal plate' }, ['metal grey', 'black', 'yellow', 'grey']],
+  // The friendly robot: a rounded white and light-blue dome, soft round eyes, a smile of light, an antenna.
+  ['robot', { head: 'dome', ears: 'dial', neck: 'ring', eyes: 'soft round', nose: 'button', mouth: 'light smile', cheeks: 'round blush', hat: 'light antenna', shoulders: 'round plate' }, ['robot white', 'black', 'black', 'light blue']],
+  ['robot-classic', { head: 'box', ears: 'square', neck: 'pipe', eyes: 'square', nose: 'bolt', mouth: 'grille', hat: 'antenna', earrings: 'bolt', shoulders: 'metal plate' }, ['metal grey', 'black', 'yellow', 'grey']],
   ['alien', { head: 'heart', ears: 'pointed', neck: 'thin', eyebrows: 'raised', eyes: 'surprised', nose: 'small', mouth: 'small', shoulders: 'v-neck' }, ['green', 'green', 'black', 'purple']],
   ['clown', { head: 'wide', ears: 'large', neck: 'medium', hair_back: 'long curly', eyebrows: 'raised', eyes: 'large', nose: 'round', mouth: 'big smile', cheeks: 'round blush', hat: 'party hat', shoulders: 't-shirt' }, ['white', 'orange', 'blue', 'yellow']],
   ['queen', { head: 'oval', ears: 'small', neck: 'necklace', hair_back: 'long wavy', hair_front: 'long sides', eyebrows: 'arched', eyes: 'lashes', nose: 'pointed', mouth: 'smirk', cheeks: 'blush', hat: 'crown', earrings: 'drop', shoulders: 'v-neck' }, ['pale', 'blond', 'blue', 'red']],
 ];
 // the kind of being a preset shows (psys2 Q31: "human", "person", "robot" reach the presets by kind); human when not listed
-export const PRESET_KIND = { robot: 'robot', alien: 'alien' };
+export const PRESET_KIND = { robot: 'robot', 'robot-classic': 'robot', alien: 'alien' };
 // the ages and sexes of people a preset suits (k.people.kind age, sex): a host drawing a boy picks among the presets
 // that suit a male child; a preset with none (a robot, a clown, a queen) suits no kind of person in particular
 export const PRESET_FOR = { baby: [['baby'], ['female', 'male']], child: [['child'], ['female', 'male']], girl: [['child'], ['female']], boy: [['child'], ['male']],

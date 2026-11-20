@@ -85,6 +85,9 @@ export const SCALES = [
   ['loudness', 'how loud a sound is', ['quiet: soft', 'loud: noisy']],
   // Round 10 item 5: the price class of k.attributes.number.
   ['price', 'how much a thing usually costs to buy', ['cheap: inexpensive, low-priced', 'medium: moderately priced', 'expensive: dear, costly, pricey']],
+  // The age of a person or an animal, in the four ages k.people.kind and k.faces.preset name (a standing preference
+  // "actually younger" moves one step down).
+  ['age', 'how old a person or an animal is', ['baby: infant, newborn', 'child: kid, young', 'adult: grown-up, middle-aged', 'old: elderly, aged, senior']],
 ];
 // Comparatives and superlatives: [scale, towards the most (up) or the least (down), comparatives, superlatives].
 export const COMPARATIVES = [
@@ -98,6 +101,7 @@ export const COMPARATIVES = [
   ['speed', 'up', 'faster, quicker', 'fastest, quickest'], ['speed', 'down', 'slower', 'slowest'],
   ['weight', 'up', 'heavier', 'heaviest'], ['weight', 'down', 'lighter', 'lightest'],
   ['temperature', 'up', 'warmer, hotter', 'warmest, hottest'], ['temperature', 'down', 'colder, cooler', 'coldest, coolest'],
+  ['age', 'up', 'older', 'oldest'], ['age', 'down', 'younger', 'youngest'],
   // together and apart (PSys2's ask, block "21:05" item 5): adverbs that compare a distance or a width like a
   // comparative ("move them apart", "push the tables together"); no superlative
   ['distance', 'up', 'farther, further, apart', 'farthest, furthest'], ['distance', 'down', 'nearer, closer, together', 'nearest, closest'],

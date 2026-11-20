@@ -1,32 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>robot</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <rect x="14" y="85" width="72" height="15" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>plate</title></rect>
-  <ellipse cx="20" cy="90" rx="2" ry="2" fill="#3A3A3A" stroke="#333" stroke-width="0.8"><title>left_bolt</title></ellipse>
-  <ellipse cx="80" cy="90" rx="2" ry="2" fill="#3A3A3A" stroke="#333" stroke-width="0.8"><title>right_bolt</title></ellipse>
-  <ellipse cx="50" cy="93" rx="3" ry="3" fill="#B5483F" stroke="#333" stroke-width="0.8"><title>light</title></ellipse>
-  <rect x="45" y="70" width="10" height="18" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>neck</title></rect>
-  <polyline points="45,80 55,80" fill="none" stroke="#3A3A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>upper_ring</title></polyline>
-  <polyline points="45,85 55,85" fill="none" stroke="#3A3A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lower_ring</title></polyline>
-  <rect x="15" y="43" width="12" height="12" fill="#B8C0C8" stroke="#333" stroke-width="0.8"><title>ear</title></rect>
-  <ellipse cx="19" cy="49" rx="3" ry="3" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>bolt</title></ellipse>
-  <rect x="73" y="43" width="12" height="12" fill="#B8C0C8" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></rect>
-  <ellipse cx="81" cy="49" rx="3" ry="3" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>bolt (mirrored)</title></ellipse>
-  <rect x="24" y="14" width="52" height="62" fill="#B8C0C8" stroke="#333" stroke-width="0.8"><title>face</title></rect>
-  <ellipse cx="28" cy="18" rx="2" ry="2" fill="#87919B" stroke="#333" stroke-width="0.8"><title>left_bolt</title></ellipse>
-  <ellipse cx="72" cy="18" rx="2" ry="2" fill="#87919B" stroke="#333" stroke-width="0.8"><title>right_bolt</title></ellipse>
-  <rect x="40" y="62" width="20" height="9" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>plate</title></rect>
-  <polyline points="44,63.5 44,69.5" fill="none" stroke="#3A3A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>slot_1</title></polyline>
-  <polyline points="48,63.5 48,69.5" fill="none" stroke="#3A3A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>slot_2</title></polyline>
-  <polyline points="52,63.5 52,69.5" fill="none" stroke="#3A3A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>slot_3</title></polyline>
-  <polyline points="56,63.5 56,69.5" fill="none" stroke="#3A3A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>slot_4</title></polyline>
-  <rect x="47" y="50" width="6" height="6" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>nose</title></rect>
-  <rect x="31.5" y="36.5" width="11" height="11" fill="#3A3A3A" stroke="#333" stroke-width="0.8"><title>socket</title></rect>
-  <rect x="33.5" y="38.5" width="7" height="7" fill="#FFD400" stroke="#333" stroke-width="0.8"><title>light</title></rect>
-  <rect x="57.5" y="36.5" width="11" height="11" fill="#3A3A3A" stroke="#333" stroke-width="0.8"><title>socket (mirrored)</title></rect>
-  <rect x="59.5" y="38.5" width="7" height="7" fill="#FFD400" stroke="#333" stroke-width="0.8"><title>light (mirrored)</title></rect>
-  <rect x="18" y="57" width="6" height="6" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>bolt</title></rect>
-  <rect x="76" y="57" width="6" height="6" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>bolt (mirrored)</title></rect>
-  <polyline points="50,15 50,5" fill="none" stroke="#9AA4AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rod</title></polyline>
-  <ellipse cx="50" cy="3.5" rx="3.5" ry="3.5" fill="#B5483F" stroke="#333" stroke-width="0.8"><title>ball</title></ellipse>
+  <polygon points="8,100 10,93 26,87 40,84 60,84 74,87 90,93 92,100" fill="#A9D6F5" stroke="#333" stroke-width="0.8"><title>plate</title></polygon>
+  <ellipse cx="50" cy="94" rx="5" ry="5" fill="#7FC4F2" stroke="#333" stroke-width="0.8"><title>heart</title></ellipse>
+  <ellipse cx="26" cy="94" rx="2" ry="2" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>left_dot</title></ellipse>
+  <ellipse cx="74" cy="94" rx="2" ry="2" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>right_dot</title></ellipse>
+  <rect x="43" y="70" width="14" height="18" fill="#C4D9EC" stroke="#333" stroke-width="0.8"><title>neck</title></rect>
+  <rect x="41" y="79" width="18" height="4" fill="#7FC4F2" stroke="#333" stroke-width="0.8"><title>ring</title></rect>
+  <ellipse cx="21.5" cy="48.5" rx="6.5" ry="6.5" fill="#F5F9FD" stroke="#333" stroke-width="0.8"><title>ear</title></ellipse>
+  <ellipse cx="21.5" cy="48.5" rx="3.5" ry="3.5" fill="#7FC4F2" stroke="#333" stroke-width="0.8"><title>dial</title></ellipse>
+  <ellipse cx="78.5" cy="48.5" rx="6.5" ry="6.5" fill="#F5F9FD" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></ellipse>
+  <ellipse cx="78.5" cy="48.5" rx="3.5" ry="3.5" fill="#7FC4F2" stroke="#333" stroke-width="0.8"><title>dial (mirrored)</title></ellipse>
+  <polygon points="23,40 24.3,32.3 28.2,25.3 34.1,19.8 41.7,16.2 50,15 58.3,16.2 65.9,19.8 71.8,25.3 75.7,32.3 77,40 77,58 73,69 62,76 38,76 27,69 23,58" fill="#F5F9FD" stroke="#333" stroke-width="0.8"><title>face</title></polygon>
+  <ellipse cx="50" cy="50" rx="21" ry="20" fill="#DDEEFB" stroke="#333" stroke-width="0.8"><title>plate</title></ellipse>
+  <ellipse cx="31" cy="57" rx="4.5" ry="4.5" fill="#F2A0A0" stroke="#333" stroke-width="0.8"><title>blush</title></ellipse>
+  <ellipse cx="69" cy="57" rx="4.5" ry="4.5" fill="#F2A0A0" stroke="#333" stroke-width="0.8"><title>blush (mirrored)</title></ellipse>
+  <path d="M40 62 A10 7 0 0 0 60 62" fill="none" stroke="#3D8FD6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lips</title></path>
+  <ellipse cx="50" cy="53" rx="3" ry="3" fill="#C4D9EC" stroke="#333" stroke-width="0.8"><title>nose</title></ellipse>
+  <ellipse cx="37" cy="41.5" rx="6" ry="6" fill="#1A1A1A" stroke="#333" stroke-width="0.8"><title>eye</title></ellipse>
+  <ellipse cx="37.8" cy="39.3" rx="1.8" ry="1.8" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>glint</title></ellipse>
+  <ellipse cx="33.9" cy="42.9" rx="0.9" ry="0.9" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>small_glint</title></ellipse>
+  <ellipse cx="63" cy="41.5" rx="6" ry="6" fill="#1A1A1A" stroke="#333" stroke-width="0.8"><title>eye (mirrored)</title></ellipse>
+  <ellipse cx="62.2" cy="39.3" rx="1.8" ry="1.8" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>glint (mirrored)</title></ellipse>
+  <ellipse cx="66.1" cy="42.9" rx="0.9" ry="0.9" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>small_glint (mirrored)</title></ellipse>
+  <polyline points="50,16 50,6" fill="none" stroke="#B9C7D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rod</title></polyline>
+  <ellipse cx="50" cy="4.5" rx="4.5" ry="4.5" fill="#7FC4F2" stroke="#333" stroke-width="0.8"><title>ball</title></ellipse>
 </svg>

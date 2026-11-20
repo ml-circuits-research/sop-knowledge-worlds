@@ -6,9 +6,9 @@
   <polygon points="47,88 53,88 52,100 48,100" fill="#B5483F" stroke="#333" stroke-width="0.8"><title>tie</title></polygon>
   <polyline points="40,84 48,100" fill="none" stroke="#C4961C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_lapel</title></polyline>
   <polyline points="60,84 52,100" fill="none" stroke="#C4961C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_lapel</title></polyline>
-  <rect x="42" y="70" width="16" height="18" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>neck</title></rect>
-  <path d="M42 80 A8 6 0 0 0 58 80" fill="none" stroke="#E8B923" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>chain</title></path>
-  <ellipse cx="50" cy="87" rx="2" ry="2" fill="#E8B923" stroke="#333" stroke-width="0.8"><title>pendant</title></ellipse>
+  <rect x="45" y="70" width="10" height="18" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>neck</title></rect>
+  <polyline points="45,80 55,80" fill="none" stroke="#3A3A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>upper_ring</title></polyline>
+  <polyline points="45,85 55,85" fill="none" stroke="#3A3A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lower_ring</title></polyline>
   <ellipse cx="20" cy="50" rx="8" ry="11" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>ear</title></ellipse>
   <path d="M21 44 A6 6 0 0 0 21 56" fill="none" stroke="#472A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold</title></path>
   <ellipse cx="80" cy="50" rx="8" ry="11" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></ellipse>

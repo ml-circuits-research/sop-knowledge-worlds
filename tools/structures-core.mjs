@@ -102,6 +102,7 @@ export const FORMS = [
   ['w.dialogue', 'whole with parts', 'a session made of tabs', [['whole', 'w.dialogue.session', T], ['part', 'w.dialogue.tab', T], ['part_of', 'w.dialogue.tab.session', K]]],
   ['w.dialogue', 'sequence', 'the turns of a tab in order', [['element', 'w.dialogue.turn', T], ['position', 'w.dialogue.turn.n', K], ['sequence', 'w.dialogue.tab', T], ['element_of', 'w.dialogue.turn.tab', K]]],
   ['w.list', 'sequence', 'items in order on a list', [['element', 'w.list.item', T], ['position', 'w.list.item.n', K], ['sequence', 'w.list.list', T], ['element_of', 'w.list.item.list', K]]],
+  ['w.preferences', 'sequence', 'standing preferences in the order they were stated (the latest statement of a field is the one in force)', [['element', 'w.preferences.preference', T], ['position', 'w.preferences.preference.at', K]]],
   ['w.tasks', 'sequence', 'tasks in order on a to-do list (a list of w.list)', [['element', 'w.tasks.task', T], ['position', 'w.tasks.task.n', K], ['element_of', 'w.tasks.task.list', K]]],
   ['w.person', 'graph', 'a person linked to their relatives (a relative of a relation) and to what they like or dislike', [['node', 'w.person.person', T], ['link', 'w.person.relative', T], ['from', 'w.person.relative.of', K], ['label', 'w.person.relative.relation', K], ['link', 'w.person.taste', T], ['from', 'w.person.taste.of', K], ['label', 'w.person.taste.stance', K]]],
   ['w.face', 'whole with parts', 'a face made of parts of kinds (eyes, nose, mouth), each with a variant, a place and a size', [

@@ -6,9 +6,11 @@
   <rect x="40" y="84" width="20" height="4" fill="#3A3A3A" stroke="#333" stroke-width="0.8"><title>collar</title></rect>
   <rect x="12" y="93" width="76" height="2.5" fill="#F4E04D" stroke="#333" stroke-width="0.8"><title>upper_stripe</title></rect>
   <rect x="10" y="96.5" width="80" height="2.5" fill="#DADADA" stroke="#333" stroke-width="0.8"><title>lower_stripe</title></rect>
-  <rect x="45" y="70" width="10" height="18" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>neck</title></rect>
-  <ellipse cx="23" cy="49" rx="5" ry="5" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>ear</title></ellipse>
-  <ellipse cx="77" cy="49" rx="5" ry="5" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></ellipse>
+  <rect x="38" y="70" width="24" height="18" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>neck</title></rect>
+  <ellipse cx="20" cy="50" rx="8" ry="11" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>ear</title></ellipse>
+  <path d="M21 44 A6 6 0 0 0 21 56" fill="none" stroke="#472A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold</title></path>
+  <ellipse cx="80" cy="50" rx="8" ry="11" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></ellipse>
+  <path d="M79 44 A6 6 0 0 1 79 56" fill="none" stroke="#472A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold (mirrored)</title></path>
   <ellipse cx="50" cy="46" rx="25" ry="33" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>face</title></ellipse>
   <ellipse cx="50" cy="66" rx="7" ry="2.5" fill="#6E1F24" stroke="#333" stroke-width="0.8"><title>inside</title></ellipse>
   <rect x="45" y="63.5" width="10" height="1.5" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>teeth</title></rect>

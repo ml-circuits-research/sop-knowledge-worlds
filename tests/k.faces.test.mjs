@@ -151,6 +151,6 @@ test('every preset has a kind of being, and the kind words (human, person, robot
   const byWord = (text) => words.find((w) => w.attrs.text.map(tok).includes(text));
   const named = (text) => presets.filter((p) => kindOf(p) === tok(byWord(text).attrs.means[0])).map((p) => tok(p.attrs.name[0]));
   assert.ok(named('human').includes('queen') && named('person').includes('old woman'));
-  assert.deepEqual(named('robot'), ['robot']);
+  assert.deepEqual(named('robot'), ['robot', 'robot-classic']);
   assert.deepEqual(named('alien'), ['alien']);
 });

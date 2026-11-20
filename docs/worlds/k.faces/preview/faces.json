@@ -5145,6 +5145,22 @@
   {
    "style": "plain",
    "slot": "ears",
+   "name": "dial",
+   "file": "variant-plain-ears-dial.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "shape": [
+     "round"
+    ],
+    "kind": [
+     "robot"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "ears",
    "name": "large",
    "file": "variant-plain-ears-large.svg",
    "source": "hand-core 1",
@@ -5568,6 +5584,28 @@
     ],
     "kind": [
      "half closed"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "eyes",
+   "name": "soft round",
+   "file": "variant-plain-eyes-soft_round.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "shape": [
+     "round"
+    ],
+    "size": [
+     "large"
+    ],
+    "feel": [
+     "open"
+    ],
+    "kind": [
+     "robot"
     ]
    }
   },
@@ -6309,6 +6347,19 @@
   {
    "style": "plain",
    "slot": "hat",
+   "name": "light antenna",
+   "file": "variant-plain-hat-light_antenna.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "antenna"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
    "name": "military helmet",
    "file": "variant-plain-hat-military_helmet.svg",
    "source": "hand-core 1",
@@ -6515,6 +6566,22 @@
     ],
     "kind": [
      "box"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "head",
+   "name": "dome",
+   "file": "variant-plain-head-dome.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "shape": [
+     "round"
+    ],
+    "kind": [
+     "robot"
     ]
    }
   },
@@ -6820,6 +6887,23 @@
   {
    "style": "plain",
    "slot": "mouth",
+   "name": "light smile",
+   "file": "variant-plain-mouth-light_smile.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "feel": [
+     "smiling",
+     "closed"
+    ],
+    "kind": [
+     "robot"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "mouth",
    "name": "lip bite",
    "file": "variant-plain-mouth-lip_bite.svg",
    "source": "hand-core 1",
@@ -7041,6 +7125,19 @@
     "feel": [
      "thin"
     ],
+    "kind": [
+     "robot"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "neck",
+   "name": "ring",
+   "file": "variant-plain-neck-ring.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
     "kind": [
      "robot"
     ]
@@ -7409,6 +7506,22 @@
     ],
     "kind": [
      "robe"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "round plate",
+   "file": "variant-plain-shoulders-round_plate.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "shape": [
+     "round"
+    ],
+    "kind": [
+     "robot"
     ]
    }
   },
@@ -8189,6 +8302,11 @@
    "name": "robot",
    "style": "plain",
    "file": "preset-robot.svg"
+  },
+  {
+   "name": "robot-classic",
+   "style": "plain",
+   "file": "preset-robot-classic.svg"
   },
   {
    "name": "alien",

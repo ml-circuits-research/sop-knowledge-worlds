@@ -24,8 +24,8 @@ const needs = (v) => (atLeast(v) ? false : `needs sopworld ${v} or later (pinned
 // The facts of a knowledge world's shards (all, or those whose file name passes `pick`).
 const facts = (world, pick = () => true) => readdirSync(join(WORLDS_DIR, world, 'shards')).filter((f) => f.endsWith('.sop') && pick(f)).flatMap((f) => parse(readFileSync(join(WORLDS_DIR, world, 'shards', f), 'utf8')));
 
-test('eighteen world patterns; each names no function, loads with std.acts, has words, and is in the catalog', () => {
-  assert.deepEqual(schemas.map((s) => s.id), ['w.calendar', 'w.chart', 'w.diagram', 'w.dialogue', 'w.document', 'w.drawing', 'w.face', 'w.list', 'w.map', 'w.meetings', 'w.person', 'w.picture', 'w.request', 'w.room', 'w.seating', 'w.tasks', 'w.text', 'w.timeline']);
+test('nineteen world patterns; each names no function, loads with std.acts, has words, and is in the catalog', () => {
+  assert.deepEqual(schemas.map((s) => s.id), ['w.calendar', 'w.chart', 'w.diagram', 'w.dialogue', 'w.document', 'w.drawing', 'w.face', 'w.list', 'w.map', 'w.meetings', 'w.person', 'w.picture', 'w.preferences', 'w.request', 'w.room', 'w.seating', 'w.tasks', 'w.text', 'w.timeline']);
   for (const s of schemas) {
     const d = describeSchema(s);
     assert.deepEqual(d.errors, [], s.id);
@@ -311,11 +311,11 @@ test('w.face: standalone schema imports the inherited part keys used by its rule
 test('w.face: a session: a k.faces preset becomes a face; parts resized, moved, recoloured; one part of each kind; an expression as a mode', () => {
   const w = actsWorld(['w.face']), act = session(w);
   const presets = facts('k.faces', (f) => f === 'presets.sop');
-  const robot = presets.find((x) => x.type === 'k.faces.preset' && x.attrs.name[0] === 'robot');
+  const robot = presets.find((x) => x.type === 'k.faces.preset' && x.attrs.name[0] === 'robot-classic');
   const kinds = new Set(parse(schemas.find((x) => x.id === 'w.face').schemaText).filter((x) => x.type === 'std.schema.kind').map((k) => k.attrs.of[0]));
   // The face takes the preset's style and colours; each slot the preset fills becomes a part with that variant.
   const own = Object.fromEntries(['style', 'skin', 'hair_colour', 'eye_colour', 'clothes'].map((k) => [k, tok(robot.attrs[k][0])]));
-  assert.equal(act('make', { kind: 'w.face.face', name: 'Robo', preset: 'robot', ...own }).ok, true);
+  assert.equal(act('make', { kind: 'w.face.face', name: 'Robo', preset: 'robot-classic', ...own }).ok, true);
   // (`clothes` is a colour on a preset and on a face, and the name of a slot of the style toon-head: the face's key
   // is the colour, the kind w.face.clothes the part.)
   const filled = Object.keys(robot.attrs).filter((k) => kinds.has(`w.face.${k}`) && !(k in own));

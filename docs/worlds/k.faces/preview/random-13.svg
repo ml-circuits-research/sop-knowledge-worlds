@@ -1,9 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>random face 13</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <polygon points="8,100 10,93 26,87 40,84 60,84 74,87 90,93 92,100" fill="#7EC8C8" stroke="#333" stroke-width="0.8"><title>top</title></polygon>
-  <polygon points="41,84 59,84 50,95" fill="#E0AC86" stroke="#333" stroke-width="0.8"><title>opening</title></polygon>
-  <rect x="62" y="92" width="10" height="7" fill="#63B0B0" stroke="#333" stroke-width="0.8"><title>pocket</title></rect>
+  <polygon points="8,100 10,93 26,87 40,84 60,84 74,87 90,93 92,100" fill="#F7F7F7" stroke="#333" stroke-width="0.8"><title>coat</title></polygon>
+  <polygon points="41,84 59,84 50,97" fill="#3B6FB6" stroke="#333" stroke-width="0.8"><title>shirt_front</title></polygon>
+  <polygon points="40,84 49,97 43,100 35,87" fill="#ECECEC" stroke="#333" stroke-width="0.8"><title>left_lapel</title></polygon>
+  <polygon points="60,84 51,97 57,100 65,87" fill="#ECECEC" stroke="#333" stroke-width="0.8"><title>right_lapel</title></polygon>
+  <polyline points="70,92 70,98" fill="none" stroke="#2F5DA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>pen</title></polyline>
   <rect x="42" y="70" width="16" height="18" fill="#E0AC86" stroke="#333" stroke-width="0.8"><title>neck</title></rect>
   <ellipse cx="21.5" cy="48.5" rx="6.5" ry="6.5" fill="#E0AC86" stroke="#333" stroke-width="0.8"><title>ear</title></ellipse>
   <path d="M23 45 A5 3.5 0 0 0 23 52" fill="none" stroke="#B98660" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold</title></path>
@@ -12,10 +14,8 @@
   <ellipse cx="50" cy="47" rx="27" ry="30" fill="#E0AC86" stroke="#333" stroke-width="0.8"><title>face</title></ellipse>
   <ellipse cx="31" cy="57" rx="5" ry="3" fill="#F2A0A0" stroke="#333" stroke-width="0.8"><title>blush</title></ellipse>
   <ellipse cx="69" cy="57" rx="5" ry="3" fill="#F2A0A0" stroke="#333" stroke-width="0.8"><title>blush (mirrored)</title></ellipse>
-  <polygon points="39,62 61,62 58,69 50,71 42,69" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>teeth</title></polygon>
-  <polyline points="45,62.5 45,69.5" fill="none" stroke="#9AA4AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>gap_1</title></polyline>
-  <polyline points="50,62.5 50,70.5" fill="none" stroke="#9AA4AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>gap_2</title></polyline>
-  <polyline points="55,62.5 55,69.5" fill="none" stroke="#9AA4AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>gap_3</title></polyline>
+  <ellipse cx="51" cy="70" rx="4" ry="4" fill="#E8788A" stroke="#333" stroke-width="0.8"><title>tongue</title></ellipse>
+  <path d="M41 63 A9 5 0 0 0 59 63" fill="none" stroke="#B5483F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lips</title></path>
   <polygon points="50,46 54,57 46,57" fill="#B98660" stroke="#333" stroke-width="0.8"><title>nose</title></polygon>
   <ellipse cx="37" cy="42" rx="7" ry="4" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>white</title></ellipse>
   <ellipse cx="37" cy="43.5" rx="2.5" ry="2.5" fill="#8E6B3E" stroke="#333" stroke-width="0.8"><title>iris</title></ellipse>
