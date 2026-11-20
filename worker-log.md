@@ -6908,3 +6908,5 @@ Measured 45 composition schema wires (6,220 bytes, 8.2 ms), 54 layout schema wir
 2026-11-19 — Catalog validated with sopworld 0.225.1 (the release PSys2 runs) instead of 0.144.0: VERSION and the bundle updated; the version test checks a full commit beside the sha256; Q87 expectations emptied (0.225 reads every listed plural both ways); w.meetings got its structure (sequence by start) in k.kinds.
 `SKW_NO_CACHE=1 npm run test:all`: 3,267 tests, 3,249 pass, 0 fail, 18 skipped.
 2026-11-19 — w.meetings declares that two meetings sharing a room or a person do not overlap (half-open intervals; two denies with core.calc ends), moved from the PSys2 calendar policy. Act check: a third meeting at 50 in a room booked 0–100 is refused, one at 100 is admitted.
+2026-11-20 — w.drawing: a std.schema world of placed objects (code, drawing = k.objects name or basic shape, centre, size, optional width/height, colour, label, layer), groups and part edits; unique codes and one edit per part. For the PSys2 Drawing tab's SOP area.
+`npm run test:changed` 223 pass, 0 fail (33 files); act check: a second object with code o1 is refused.
