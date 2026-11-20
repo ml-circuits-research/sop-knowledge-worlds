@@ -28,7 +28,7 @@ test('w.document: loads with std.acts with no error and no warning; found by nam
   assert.deepEqual(d.errors, []);
   assert.deepEqual(d.entry.warnings, []);
   for (const word of ['document', 'essay', 'presentation', 'slides', 'composition']) assert.ok(vocab[word]?.includes('w.document/schema.sop'), word);
-  assert.deepEqual(d.entry.kinds.map((k) => k.kind ?? k.type ?? k.name).length, 6);
+  assert.deepEqual(d.entry.kinds.map((k) => k.kind ?? k.type ?? k.name).length, 10);
 });
 
 test('w.document: an essay made by acts; every sentence names the wires it states; read back in order', () => {
@@ -71,4 +71,26 @@ test('w.document: a presentation as slides with bullets; the denies; places from
   assert.equal(act('make', { kind: 'w.document.sentence', slide: '$w_document_slide3', n: 0, text: 'x' }).ok, false);
   assert.equal(act('make', { kind: 'w.document.slide', document: '$w_document_document1', n: 5, layout: 'poster' }).ok, false);
   assert.equal(act('make', { kind: 'w.document.sentence', slide: '$w_document_slide3', n: 3, text: 'x', interest: 2 }).ok, false);
+});
+
+test('w.document for an editor: blocks in order, list items, table cells and marks; taking a block away takes what it holds; one code per kind', () => {
+  const w = actsWorld(['w.document']);
+  const act = (action, args) => w.act({ action, args });
+  const made = (args) => { const r = act('make', args); assert.ok(r.ok, JSON.stringify(r.violations ?? r)); return r.result.thing; };
+  const doc = made({ kind: 'w.document.document', title: 'Notes', code: 'text1' });
+  const p = made({ kind: 'w.document.block', code: 'b1', document: `$${doc}`, n: 1, form: 'paragraph', text: 'The quick brown fox' });
+  const list = made({ kind: 'w.document.block', code: 'b2', document: `$${doc}`, n: 2, form: 'list', style: 'task' });
+  const item = made({ kind: 'w.document.item', block: `$${list}`, n: 1, text: 'milk', checked: false });
+  const table = made({ kind: 'w.document.block', code: 'b3', document: `$${doc}`, n: 3, form: 'table', header: true });
+  const cell = made({ kind: 'w.document.cell', block: `$${table}`, row: 1, column: 1, text: 'fruit' });
+  made({ kind: 'w.document.mark', block: `$${p}`, from: 4, to: 9, form: 'bold' });
+  made({ kind: 'w.document.mark', block: `$${list}`, item: `$${item}`, from: 0, to: 4, form: 'highlight', colour: '#fff2a8' });
+  assert.equal(act('ask', { thing: p, attr: 'align' }).result.value, 'left', 'a block is left aligned unless said');
+  assert.equal(act('make', { kind: 'w.document.block', code: 'b1', document: `$${doc}`, n: 4, form: 'quote', text: 'x' }).ok, false, 'one block per code');
+  assert.equal(act('make', { kind: 'w.document.block', code: 'b9', document: `$${doc}`, n: 4, form: 'poem' }).ok, false, 'a form of the five');
+  assert.equal(act('make', { kind: 'w.document.mark', block: `$${table}`, item: `$${item}`, cell: `$${cell}`, from: 0, to: 1, form: 'bold' }).ok, false, 'a mark is in an item or a cell, not both');
+  assert.ok(act('remove', { thing: list }).ok);
+  assert.deepEqual([w.ofType('w.document.item').length, w.ofType('w.document.mark').length], [0, 1], 'a list goes with its items and their marks');
+  assert.ok(act('remove', { thing: doc }).ok);
+  assert.deepEqual(['w.document.block', 'w.document.cell', 'w.document.mark'].map((t) => w.ofType(t).length), [0, 0, 0], 'a document goes with all it holds');
 });

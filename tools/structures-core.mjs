@@ -111,8 +111,11 @@ export const FORMS = [
   ['w.document', 'whole with parts', 'a document made of chapters, sections, paragraphs, slides and sentences', [
     ['whole', 'w.document.document', T], ['part', 'w.document.chapter', T], ['part', 'w.document.section', T], ['part', 'w.document.paragraph', T], ['part', 'w.document.slide', T], ['part', 'w.document.sentence', T],
     ['part_of', 'w.document.chapter.document', K], ['part_of', 'w.document.section.chapter', K], ['part_of', 'w.document.paragraph.section', K], ['part_of', 'w.document.slide.document', K], ['part_of', 'w.document.sentence.paragraph', K],
-    ['part_kind', 'w.document.chapter.part', K], ['order', 'w.document.chapter.n', K], ['order', 'w.document.sentence.n', K]]],
-  ['w.document', 'sequence', 'sentences in the order they are read', [['element', 'w.document.sentence', T], ['position', 'w.document.sentence.n', K], ['sequence', 'w.document.paragraph', T], ['element_of', 'w.document.sentence.paragraph', K]]],
+    ['part_kind', 'w.document.chapter.part', K], ['order', 'w.document.chapter.n', K], ['order', 'w.document.sentence.n', K],
+    ['part', 'w.document.block', T], ['part', 'w.document.cell', T], ['part', 'w.document.mark', T], ['part_of', 'w.document.block.document', K], ['part_of', 'w.document.cell.block', K], ['part_of', 'w.document.mark.block', K],
+    ['part_kind', 'w.document.mark.form', K], ['order', 'w.document.block.n', K]]],
+  ['w.document', 'sequence', 'sentences in the order they are read; an editor\'s blocks in the document, a list block\'s items', [['element', 'w.document.sentence', T], ['position', 'w.document.sentence.n', K], ['sequence', 'w.document.paragraph', T], ['element_of', 'w.document.sentence.paragraph', K],
+    ['element', 'w.document.block', T], ['position', 'w.document.block.n', K], ['element_of', 'w.document.block.document', K], ['element', 'w.document.item', T], ['position', 'w.document.item.n', K], ['element_of', 'w.document.item.block', K]]],
   ['w.chart', 'values by category', 'values of series by category in a chart', [
     ['value', 'w.chart.point', T], ['category', 'w.chart.point.category', K], ['series', 'w.chart.series', T], ['value_of', 'w.chart.point.series', K], ['unit', 'w.chart.chart.unit', K], ['order', 'w.chart.point.n', K]]],
   ['w.chart', 'whole with parts', 'a chart made of series', [['whole', 'w.chart.chart', T], ['part', 'w.chart.series', T], ['part_of', 'w.chart.series.chart', K], ['order', 'w.chart.series.n', K]]],

@@ -20,12 +20,24 @@ back with its sources.
 - `w.document.sentence`: `text` (required), in a `paragraph` or on a `slide`, `n`; `move` (the rhetorical move:
   `k.genres.move`, realised by a discourse template of `w.lang.en`), `template` (the id of that template), `fact`
   (many: **the ids of the wires it states**, `k.animals.animal.penguin`), `interest` (its `k.interest` score, 0 to 1).
+- For an editor (a document tab whose state is a w.document instance, as a rich-text editor keeps it): `code` on a
+  document ("text1"); `w.document.block` (`code` "b1", `document`, `n` its place in the document, `form` paragraph,
+  heading, quote, list or table, default paragraph; not `kind`, an argument of `make`; `text`, `name` a label, `level`
+  1 to 6 for a heading, `align` left, center, right or justify, default left; `style` bullet, numbered or task for a
+  list; `header` for a table; `part` a genre part; `source` (many) the wire ids its text states); `w.document.item` (a
+  list block's item: `block`, `n`, `text`, `checked`); `w.document.cell` (`block`, `row`, `column` from 1, `text`);
+  `w.document.mark` (`block`, and `item` or `cell` when the text is an item's or a cell's, never both; `from`, `to` the
+  characters it covers from 0, `to` not included; `form` bold, italic, underline, strike, code, highlight or link;
+  `href` where a link goes; `colour` a highlight's colour). A chapter or section of the sequence is a heading of level
+  1 or 2 with the blocks after it up to the next such heading: a rule of the host, not data. Removing a block removes
+  its items, cells and marks (std.acts removes what refers to a thing); one thing of each kind per code.
 - Places are numbers from 1 (`n`); a part refers to its parent, so the order of a document is (chapter n, section n,
   paragraph n, sentence n) or (slide n, sentence n).
 - Denies: a paragraph is not in a section and a chapter at once; a sentence is not in a paragraph and on a slide at
   once. A sentence with no place is allowed while a composition builds the tree.
-- Acts: make, remove, change, pick, ask, copy on every kind; save and load on a document; connect on slides (a slide
-  to the section it presents). At most 50 documents, 2,000 parts of each kind, 20,000 sentences.
+- Acts: make, remove, change, pick, ask, copy on every kind (no copy on cells and marks); save and load on a document;
+  connect on slides (a slide to the section it presents). At most 50 documents, 2,000 parts of each kind, 20,000
+  sentences, 10,000 blocks, 20,000 items, cells and marks.
 - Found by: document, essay, article, presentation, slides, slide show, composition, story.
 
 ## Shapes by genre (k.genres)
@@ -49,7 +61,8 @@ w.act({ action: 'make', args: { kind: 'w.document.sentence', text: 'A penguin is
 ```
 
 A session (a composed essay and a presentation, the denies, every fact id checked against the catalog, the tree read
-back in order) is in `tests/w.document.test.mjs`: an integration case the library can read in place.
+back in order; an editor's blocks, items, cells and marks) is in `tests/w.document.test.mjs`: an integration case the
+library can read in place.
 
 ## Not said here
 
