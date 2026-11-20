@@ -47960,7 +47960,8 @@
   "k.story/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/el",
-  "k.words/shards/frequency-e"
+  "k.words/shards/frequency-e",
+  "w.diagram/schema.sop"
  ],
  "element of a story": [
   "k.story/schema.sop"
@@ -47992,6 +47993,7 @@
  "elements": [
   "k.words/shards/el",
   "k.words/shards/frequency-e",
+  "w.diagram/schema.sop",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/hand-cues-more"
  ],
@@ -74908,12 +74910,14 @@
   "k.layouts/shards/layouts",
   "k.words/shards/frequency-i",
   "k.words/shards/it",
+  "w.diagram/schema.sop",
   "w.document/schema.sop",
   "w.drawing/schema.sop",
   "w.list/schema.sop"
  ],
  "items": [
   "k.genres/shards/list",
+  "w.diagram/schema.sop",
   "w.document/schema.sop",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/hand-cues-more",
@@ -101516,6 +101520,7 @@
   "k.spatial2d/schema.sop",
   "k.words/shards/frequency-o",
   "k.words/shards/ob",
+  "w.diagram/schema.sop",
   "w.drawing/schema.sop",
   "w.list/schema.sop",
   "w.request/schema.sop"
@@ -101547,7 +101552,8 @@
   "k.words/shards/ob"
  ],
  "objects": [
-  "k.objects/schema.sop"
+  "k.objects/schema.sop",
+  "w.diagram/schema.sop"
  ],
  "obligation": [
   "k.words/shards/frequency-o",
@@ -128365,7 +128371,8 @@
  ],
  "shapes": [
   "k.expect/schema.sop",
-  "k.shapes/schema.sop"
+  "k.shapes/schema.sop",
+  "w.diagram/schema.sop"
  ],
  "shapesorter": [
   "k.attributes/shards/drawn-mulberry",

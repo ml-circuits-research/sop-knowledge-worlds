@@ -6920,3 +6920,6 @@ Measured 45 composition schema wires (6,220 bytes, 8.2 ms), 54 layout schema wir
 `npm run test:changed` 379 pass, 0 fail, 5 skipped (55 files).
 2026-11-20 — People and parts for the PSys2 Drawing tab: k.faces style `figure` (a whole person's body and clothes in the frame of the drawing person: slots body, bottom, shoes, top, coat; 15 variants, 11 outfits with age and sex; k.faces.frame; tools/figures-core.mjs), preset age/sex on the plain presets; w.face kinds body/top/bottom/shoes/coat (group clothes), limits 200; k.wearables figure_slot/figure; w.drawing object look/seed and part shape/drawing/anchor; k.parts.name (74 part words, slots; tools/part-names.mjs); k.objects ground, land, sand, sky; k.layouts slot fills; k.shapes/k.layouts irregular outline.
 `npm run test:changed` 3167 tests, 0 fail after `npm run reports` (97 files).
+
+2026-11-20 — w.diagram.word.node: element, item, shape, object (with plurals) name a diagram node (Diagram reading, part A); derived index/vocab/diagram-frames rebuilt.
+npm run test:changed: 267 tests, 0 failing.

@@ -5,7 +5,7 @@
 
 @w.diagram.word.world core.word text=diagram text=diagrams text=flowchart text="flow chart" text="cycle diagram" text="tree diagram" text="mind map" text="venn diagram" text="org chart" text="organisation chart" text="organization chart" text="network diagram" text="process diagram" text="concept map" means=w.diagram of=std.schema.world.name core.source="hand-core 1"
 @w.diagram.word.diagram core.word text=diagram text=diagrams text=flowchart text=scheme means=w.diagram.diagram core.source="hand-core 1"
-@w.diagram.word.node core.word text=node text=nodes text=box text=boxes text=step text=steps text=stage text=stages text=bubble text=bubbles means=w.diagram.node core.source="hand-core 1"
+@w.diagram.word.node core.word text=node text=nodes text=box text=boxes text=step text=steps text=stage text=stages text=bubble text=bubbles text=element text=elements text=item text=items text=shape text=shapes text=object text=objects means=w.diagram.node core.source="hand-core 1"
 @w.diagram.word.edge core.word text=edge text=edges text=arrow text=arrows text=link text=links text=line text=lines text=connector means=w.diagram.edge core.source="hand-core 1"
 @w.diagram.word.group core.word text=group text=groups text=set text=sets text=cluster text=lane means=w.diagram.group core.source="hand-core 1"
 @w.diagram.word.title core.word text=title text=called text=name means=w.diagram.diagram.title core.source="hand-core 1"
