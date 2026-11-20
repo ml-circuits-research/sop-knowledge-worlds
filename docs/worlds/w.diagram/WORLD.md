@@ -30,11 +30,18 @@ of its own; two denies keep one code per thing of a kind and one membership per 
   `tick_format` (plain, magnitude, power), `precision`, `line_style`, `line_width`, `marker_size`, `marker_edge`,
   `bar_width`, `pie_radius`, `grid_style`; what it was asked to show: `dimension`, `measure`, `aggregate` (count,
   sum, avg, min, max) and `sample` (its values are a sample drawn for a chart asked for without data).
+- A chart's shape: `y_min` (the bottom of the value axis), `orientation` (vertical, horizontal), `stacking` (none,
+  stacked, percent), `width` and `height` (its plot in pixels), `effect` (none, shadow, glow); group layouts scatter
+  (each member at its `x_value` and value) and radar (each member a spoke); `x_value` on nodes.
+- `w.diagram.series`: `label`, `group` (required), `code`, `n`, `colour`: a chart's series beyond its first (the members'
+  own values); `w.diagram.datum`: `series`, `node`, `value` (required), `code`: a series' value at one category (one
+  per series and category, a deny). Removing the chart, the series or the category removes its data.
 - `w.diagram.member`: `group`, `node` (required): a membership as a thing, made and removed by an editor (std.acts
   cannot take a reference away, and removing a group removes what refers to it); `node group=` stays the plain form.
 - Acts: make, remove, change, pick, ask, copy on diagrams and groups; also place, connect, group on nodes; make,
-  remove, change, pick, ask on edges; make, remove, pick, ask on memberships. At most 20 diagrams, 500 nodes, 1,000
-  edges, 100 groups, 1,000 memberships.
+  remove, change, pick, ask on edges; make, remove, pick, ask on memberships; make, remove, change, pick, ask, copy on
+  series; make, remove, change, pick, ask on series values. At most 20 diagrams, 500 nodes, 1,000
+  edges, 100 groups, 1,000 memberships, 200 series, 5,000 series values.
 - Found by: diagram, flowchart, flow chart, cycle diagram, tree diagram, mind map, venn diagram, org chart,
   organisation chart, network diagram, process diagram, concept map.
 
