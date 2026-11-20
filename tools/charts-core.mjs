@@ -26,6 +26,7 @@ export const SOURCES = [
   ['cleveland1984', 'Cleveland, W. S., and McGill, R. (1984). Graphical perception: theory, experimentation, and application to the development of graphical methods. Journal of the American Statistical Association, 79(387), 531-554.', 1984],
   ['few2012', 'Few, S. (2012). Show Me the Numbers: Designing Tables and Graphs to Enlighten (2nd ed.). Analytics Press.', 2012],
   ['few2007', 'Few, S. (2007). Save the pies for dessert. Visual Business Intelligence Newsletter, August 2007.', 2007],
+  ['shneiderman1992', 'Shneiderman, B. (1992). Tree visualization with tree-maps: 2-d space-filling approach. ACM Transactions on Graphics, 11(1), 92-99.', 1992],
   ['zelazny1985', 'Zelazny, G. (1985). Say It with Charts: The Executive\'s Guide to Visual Communication. Dow Jones-Irwin.', 1985],
 ];
 // name, about
@@ -53,6 +54,7 @@ export const KINDS = [
   ['pie chart', 'pie', 'slice', 'angle', ['nominal'], ['quantitative'], true, 'one slice per part of one whole, its angle the share', ['few2007', 'cleveland1984']],
   ['scatter plot', 'scatter', 'point', 'position', ['quantitative'], ['quantitative'], false, 'one point per item at its two values; shows whether two quantities vary together', ['few2012', 'cleveland1984']],
   ['dot plot', 'scatter', 'point', 'position', ['nominal', 'ordinal'], ['quantitative'], false, 'one dot per category at its value on a common scale', ['cleveland1984', 'few2012']],
+  ['treemap', 'treemap', 'rectangle', 'area', ['nominal'], ['quantitative'], true, 'one rectangle per part, its area its share of the whole, the rectangles filling one frame; shows the parts of a whole when there are many', ['shneiderman1992', 'few2012']],
   ['histogram', 'bar', 'bar', 'length', ['quantitative'], ['quantitative'], false, 'bars over ranges of a quantity, their length how many values fall in each', ['few2012', 'zelazny1985']],
 ];
 // name, about, sources

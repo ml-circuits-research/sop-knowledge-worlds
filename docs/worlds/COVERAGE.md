@@ -82,7 +82,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.values` | 1 (0%) |
 | `k.wearables` | 62 (4%) |
 | `k.words` | 1500 (100%) |
-| `w.diagram` | 4 (0%) |
+| `w.diagram` | 7 (0%) |
 | `w.dialogue` | 3 (0%) |
 | `w.document` | 2 (0%) |
 | `w.drawing` | 5 (0%) |
