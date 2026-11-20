@@ -76,7 +76,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.space` | 9 (1%) |
 | `k.spatial2d` | 1 (0%) |
 | `k.story` | 4 (0%) |
-| `k.styles` | 1 (0%) |
+| `k.styles` | 5 (0%) |
 | `k.time` | 9 (1%) |
 | `k.units` | 9 (1%) |
 | `k.values` | 1 (0%) |
@@ -85,7 +85,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `w.diagram` | 4 (0%) |
 | `w.dialogue` | 3 (0%) |
 | `w.document` | 2 (0%) |
-| `w.drawing` | 3 (0%) |
+| `w.drawing` | 5 (0%) |
 | `w.face` | 16 (1%) |
 | `w.lang.en` | 82 (5%) |
 | `w.list` | 1 (0%) |

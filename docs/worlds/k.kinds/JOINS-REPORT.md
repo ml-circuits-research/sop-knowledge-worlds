@@ -11,7 +11,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 
 - declared joins: **275** in 45 worlds; distinct values 11454, meeting a target 11394 (99.5 %), open 60
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **63**; left undeclared on purpose: 5; keys with an enum, never suggested: 53
+- undeclared keys whose values the value share joins to a type: **63**; left undeclared on purpose: 5; keys with an enum, never suggested: 56
 
 ## Declared joins
 
@@ -432,6 +432,9 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.scenes | `k.scenes.thing.place` | 5 | 5 | 3 | `k.objects.object`, `k.scenes.support` |
 | k.scenes | `k.scenes.thing.size` | 5 | 5 | 3 | `k.expect.scale` |
 | k.space | `k.space.body.size` | 4 | 4 | 2 | `k.expect.scale` |
+| k.styles | `k.styles.effect.kind` | 4 | 4 | 4 | `k.styles.effect` |
+| k.styles | `k.styles.fill.pattern` | 8 | 8 | 5 | `k.styles.fill` |
+| k.styles | `k.styles.frame.shape` | 3 | 3 | 2 | `k.layouts.outline`, `k.shapes.shape` |
 | k.time | `k.time.during.hemisphere` | 2 | 2 | 2 | `k.values.direction` |
 | k.time | `k.time.season.next` | 4 | 4 | 4 | `k.time.season` |
 | k.time | `k.time.season_in.hemisphere` | 2 | 2 | 2 | `k.values.direction` |

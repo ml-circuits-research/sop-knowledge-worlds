@@ -105,7 +105,11 @@ export const MEASURES = {
   // k.diagrams: a year is an order.
   'k.charts': { source: { year: ord }, rank: { rank: ord }, rule: { rank: ord, categories_max: { counts: 'category or slice' }, points_min: { counts: 'value of a series' } } },
   // k.styles: a line's width is a plain number of the picture's units; a palette place is an order.
-  'k.styles': { theme: { width: { plain: true } }, swatch: { n: ord } },
+  // A fill's gap, an effect's spread and offsets and a filter's amounts are plain numbers (picture units or factors); angles, a hue turn and named turns are degrees.
+  'k.styles': { theme: { width: { plain: true } }, swatch: { n: ord }, fill: { gap: { plain: true }, angle: deg },
+    effect: { radius: { plain: true }, dx: { plain: true }, dy: { plain: true }, strength: { plain: true } },
+    filter: { sepia: { plain: true }, grayscale: { plain: true }, invert: { plain: true }, brightness: { plain: true }, contrast: { plain: true }, saturate: { plain: true }, hue: deg, blur: { plain: true }, tint_amount: { plain: true } },
+    turn: { by: deg, to: deg } },
   'k.diagrams': { source: { year: ord }, topic: { nodes: { counts: 'node of the largest diagram of the topic' } } },
   'k.story': { source: { year: ord }, element: { n: ord, min: { counts: 'element of that name in one story' }, max: { counts: 'element of that name in one story' } } },
   'k.procedures': { method: { rank: ord }, goal: { default: { plain: true } }, binding: { step: ord, choose: { counts: 'value chosen' }, choose_min: { counts: 'value chosen' } }, match: { n: ord }, step: { n: ord, after: ord }, howto_step: { n: ord, after: ord }, arg: { step: ord, value: { plain: true } }, condition: { n: ord, step: ord } },
