@@ -46,7 +46,8 @@
 # Writing on the page (an object whose `drawing` is text): `text` the words written; `font` the k.styles.font they are
 # set in; `weight` normal or bold; `slant` normal or italic; `align` where the words sit on the object's centre (start:
 # they begin there, middle: centred, end: they end there); `frame` the k.styles.frame drawn round them (a speech bubble,
-# a caption box). Its `size` is the height of its letters; `colour` paints them.
+# a caption box). Its `size` is its larger extent, as for every object; its letters are its `height` over 1.3 tall
+# and its words are stretched to its `width`; `colour` paints them.
 @w.drawing.object.text core.slot of=w.drawing.object key=text kind=string core.source="hand-core 1"
 @w.drawing.object.font core.slot of=w.drawing.object key=font kind=atom kind=string core.source="hand-core 1"
 @w.drawing.object.weight core.slot of=w.drawing.object key=weight enum=normal enum=bold core.source="hand-core 1"
