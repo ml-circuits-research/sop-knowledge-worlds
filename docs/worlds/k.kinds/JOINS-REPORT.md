@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **287** in 46 worlds; distinct values 11537, meeting a target 11477 (99.5 %), open 60
+- declared joins: **287** in 46 worlds; distinct values 11535, meeting a target 11475 (99.5 %), open 60
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **74**; left undeclared on purpose: 5; keys with an enum, never suggested: 57
 
@@ -59,9 +59,9 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.charts | `k.charts.rank.encoding` | `k.charts.encoding` | name | 14 | 14 |  |
 | k.charts | `k.charts.rank.source` | `k.charts.source` | name | 2 | 2 |  |
 | k.charts | `k.charts.relationship.source` | `k.charts.source` | name | 2 | 2 |  |
-| k.charts | `k.charts.rule.kind` | `k.charts.kind` | name | 10 | 10 |  |
+| k.charts | `k.charts.rule.kind` | `k.charts.kind` | name | 9 | 9 |  |
 | k.charts | `k.charts.rule.relationship` | `k.charts.relationship` | name | 7 | 7 |  |
-| k.charts | `k.charts.rule.source` | `k.charts.source` | name | 5 | 5 |  |
+| k.charts | `k.charts.rule.source` | `k.charts.source` | name | 4 | 4 |  |
 | k.colours | `k.colours.colour.complement` | `k.colours.colour` | name | 6 | 6 |  |
 | k.colours | `k.colours.colour.darker` | `k.colours.colour` | name | 13 | 13 |  |
 | k.colours | `k.colours.colour.family` | `k.colours.basic` | name | 11 | 11 |  |
