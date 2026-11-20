@@ -213,6 +213,12 @@
  "a augmented triad": [
   "k.music/shards/chords"
  ],
+ "a beard": [
+  "k.faces/shards/traits"
+ ],
+ "a big smile": [
+  "k.faces/shards/traits"
+ ],
  "a bit": [
   "k.styles/schema.sop",
   "k.values/shards/scales"
@@ -491,6 +497,9 @@
  "a flat suspended second chord": [
   "k.music/shards/chords"
  ],
+ "a frown": [
+  "k.faces/shards/traits"
+ ],
  "a half": [
   "w.lang.en/shards/number-words"
  ],
@@ -505,6 +514,9 @@
  ],
  "a half diminished seventh chord": [
   "k.music/shards/chords"
+ ],
+ "a happy face": [
+  "k.faces/shards/traits"
  ],
  "a harmonic minor scale": [
   "k.music/shards/keys"
@@ -611,6 +623,15 @@
  "a minor triad": [
   "k.music/shards/chords"
  ],
+ "a mohawk": [
+  "k.faces/shards/traits"
+ ],
+ "a moustache": [
+  "k.faces/shards/traits"
+ ],
+ "a mustache": [
+  "k.faces/shards/traits"
+ ],
  "a natural minor scale": [
   "k.music/shards/keys"
  ],
@@ -625,6 +646,12 @@
  ],
  "a person of a role": [
   "k.procedures/shards/from-knowledge"
+ ],
+ "a ponytail": [
+  "k.faces/shards/traits"
+ ],
+ "a proper beard": [
+  "k.faces/shards/traits"
  ],
  "a quarter": [
   "w.lang.en/shards/number-words"
@@ -641,11 +668,17 @@
  "a quarter to": [
   "k.time/shards/clock-words"
  ],
+ "a redhead": [
+  "k.faces/shards/traits"
+ ],
  "a report as a list": [
   "k.procedures/shards/tasks"
  ],
  "a report on a timeline": [
   "k.procedures/shards/tasks"
+ ],
+ "a sad face": [
+  "k.faces/shards/traits"
  ],
  "a seventh": [
   "k.music/shards/chords"
@@ -842,14 +875,23 @@
  "a sharp suspended second chord": [
   "k.music/shards/chords"
  ],
+ "a shocked face": [
+  "k.faces/shards/traits"
+ ],
  "a sixth": [
   "k.music/shards/chords"
  ],
  "a sixth chord": [
   "k.music/shards/chords"
  ],
+ "a smile": [
+  "k.faces/shards/traits"
+ ],
  "a spider has how many legs": [
   "w.lang.en/shards/alternations"
+ ],
+ "a surprised face": [
+  "k.faces/shards/traits"
  ],
  "a sus": [
   "k.music/shards/chords"
@@ -3334,6 +3376,7 @@
   "k.people/shards/given-names-a"
  ],
  "afraid": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings",
   "k.words/shards/af",
   "k.words/shards/frequency-a"
@@ -5009,6 +5052,7 @@
   "k.words/shards/frequency-a"
  ],
  "amazed": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings"
  ],
  "amazing": [
@@ -5728,6 +5772,9 @@
  "an additional": [
   "k.values/shards/sets"
  ],
+ "an angry face": [
+  "k.faces/shards/traits"
+ ],
  "an extra": [
   "k.values/shards/sets"
  ],
@@ -6176,6 +6223,7 @@
  "angle": [
   "k.attributes/shards/narration",
   "k.charts/shards/charts",
+  "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-styles",
   "k.units/shards/core",
   "k.units/shards/measures",
@@ -6205,9 +6253,13 @@
  "angry": [
   "k.faces/shards/plain-eyebrows",
   "k.faces/shards/presets",
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings",
   "k.words/shards/an",
   "k.words/shards/frequency-a"
+ ],
+ "angry face": [
+  "k.faces/shards/traits"
  ],
  "anguilla": [
   "k.geo/shards/derived",
@@ -8034,6 +8086,18 @@
   "k.words/shards/ar",
   "k.words/shards/frequency-a"
  ],
+ "arms akimbo": [
+  "k.faces/shards/figure-poses"
+ ],
+ "arms in the air": [
+  "k.faces/shards/figure-poses"
+ ],
+ "arms raised": [
+  "k.faces/shards/figure-poses"
+ ],
+ "arms up": [
+  "k.faces/shards/figure-poses"
+ ],
  "armstrong": [
   "k.words/shards/ar",
   "k.words/shards/frequency-a"
@@ -9043,6 +9107,7 @@
   "k.words/shards/frequency-a"
  ],
  "astonished": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings"
  ],
  "astrakhan": [
@@ -11470,6 +11535,8 @@
  "back": [
   "k.attributes/shards/same-b",
   "k.body/shards/core",
+  "k.faces/shards/figure-back",
+  "k.faces/shards/figure-slots",
   "k.geo/shards/north-america",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of",
@@ -11491,6 +11558,7 @@
   "k.wearables/shards/places",
   "k.words/shards/ba",
   "k.words/shards/frequency-b",
+  "w.face/schema.sop",
   "k.objects/shards/noto-household-01"
  ],
  "back garden": [
@@ -12097,11 +12165,18 @@
   "k.words/shards/frequency-b"
  ],
  "bald": [
+  "k.faces/shards/traits",
   "k.words/shards/ba",
   "k.words/shards/frequency-b"
  ],
+ "bald head": [
+  "k.faces/shards/traits"
+ ],
  "bald on top": [
   "k.faces/shards/plain-hair-front"
+ ],
+ "bald-headed": [
+  "k.faces/shards/traits"
  ],
  "baldur": [
   "k.people/shards/given-names-b"
@@ -14364,6 +14439,9 @@
   "k.words/shards/be",
   "k.words/shards/frequency-b"
  ],
+ "beaming": [
+  "k.faces/shards/traits"
+ ],
  "beams": [
   "k.parts/shards/names"
  ],
@@ -14478,6 +14556,7 @@
   "k.faces/shards/slots",
   "k.faces/shards/toon-head-beard",
   "k.faces/shards/toon-head-slots",
+  "k.faces/shards/traits",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-people",
@@ -14491,8 +14570,20 @@
   "k.words/shards/frequency-b",
   "w.face/schema.sop"
  ],
+ "beard and moustache": [
+  "k.faces/shards/traits"
+ ],
+ "beard and mustache": [
+  "k.faces/shards/traits"
+ ],
+ "bearded": [
+  "k.faces/shards/traits"
+ ],
  "bearded man": [
   "k.faces/shards/presets"
+ ],
+ "bearded with a moustache": [
+  "k.faces/shards/traits"
  ],
  "beards": [
   "w.face/schema.sop"
@@ -16039,7 +16130,8 @@
   "k.geo/shards/islands-north-america"
  ],
  "big smile": [
-  "k.faces/shards/plain-mouth"
+  "k.faces/shards/plain-mouth",
+  "k.faces/shards/traits"
  ],
  "big top": [
   "k.scenes/shards/scenes-town"
@@ -16821,6 +16913,9 @@
  "black elk peak": [
   "k.geo/shards/north-america"
  ],
+ "black hair": [
+  "k.faces/shards/traits"
+ ],
  "black hills": [
   "k.geo/shards/north-america"
  ],
@@ -16858,6 +16953,9 @@
  ],
  "black volta": [
   "k.geo/shards/africa"
+ ],
+ "black-haired": [
+  "k.faces/shards/traits"
  ],
  "black_and_white": [
   "k.styles/shards/drawing"
@@ -16981,6 +17079,7 @@
   "k.body/shards/core"
  ],
  "blade": [
+  "k.faces/shards/figure-neckwear",
   "k.kinds/shards/part_of",
   "k.kinds/shards/part_of-wordnet-1",
   "k.layouts/shards/joins",
@@ -17304,12 +17403,20 @@
  ],
  "blond": [
   "k.faces/shards/colours",
+  "k.faces/shards/traits",
   "k.words/shards/bl",
   "k.words/shards/frequency-b"
  ],
+ "blond hair": [
+  "k.faces/shards/traits"
+ ],
  "blonde": [
+  "k.faces/shards/traits",
   "k.words/shards/bl",
   "k.words/shards/frequency-b"
+ ],
+ "blonde hair": [
+  "k.faces/shards/traits"
  ],
  "bloo": [
   "k.colours/shards/psys2"
@@ -18329,16 +18436,19 @@
   "k.words/shards/frequency-b"
  ],
  "bone": [
+  "k.attributes/shards/narration",
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-objects",
   "k.body/shards/core",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of",
+  "k.kinds/shards/relations-faces",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/food",
   "k.objects/shards/mulberry-food-poultry-01",
   "k.objects/shards/noto-food-prepared-02",
+  "k.units/shards/measures",
   "k.words/shards/bo",
   "k.words/shards/frequency-b",
   "k.objects/shards/openmoji-healthcare-03"
@@ -19240,6 +19350,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-uses",
+  "k.faces/shards/figure-neckwear",
   "k.faces/shards/plain-shoulders",
   "k.kinds/shards/group-mulberry",
   "k.kinds/shards/head",
@@ -20715,6 +20826,9 @@
  "brown bear": [
   "k.kinds/shards/wordnet-1"
  ],
+ "brown hair": [
+  "k.faces/shards/traits"
+ ],
  "brown mushroom": [
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-b",
@@ -20722,6 +20836,9 @@
   "k.kinds/shards/head",
   "k.objects/shards/noto-food-vegetable-03",
   "k.scenes/shards/things-b"
+ ],
+ "brown-haired": [
+  "k.faces/shards/traits"
  ],
  "brownie": [
   "k.attributes/shards/same-b",
@@ -20787,6 +20904,7 @@
   "k.geo/shards/asia"
  ],
  "brunette": [
+  "k.faces/shards/traits",
   "k.words/shards/br",
   "k.words/shards/frequency-b"
  ],
@@ -24994,6 +25112,7 @@
  "cape": [
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-worn",
+  "k.faces/shards/figure-back",
   "k.faces/shards/plain-shoulders",
   "k.kinds/shards/kind",
   "k.kinds/shards/material",
@@ -25004,7 +25123,8 @@
   "k.parts/shards/usual",
   "k.wearables/shards/wearables",
   "k.words/shards/ca",
-  "k.words/shards/frequency-c"
+  "k.words/shards/frequency-c",
+  "w.face/schema.sop"
  ],
  "cape barren island": [
   "k.geo/shards/islands-oceania"
@@ -25023,7 +25143,8 @@
   "k.geo/shards/africa"
  ],
  "capes": [
-  "k.wearables/shards/wearables"
+  "k.wearables/shards/wearables",
+  "w.face/schema.sop"
  ],
  "capillary": [
   "k.kinds/shards/part_of-wordnet-1"
@@ -25683,6 +25804,7 @@
   "k.words/shards/frequency-c"
  ],
  "carries": [
+  "k.faces/shards/figure-poses",
   "k.layouts/schema.sop",
   "k.people/schema.sop"
  ],
@@ -25717,8 +25839,12 @@
  "carry": [
   "k.actions/shards/actions-hands",
   "k.actions/shards/verbs-place",
+  "k.faces/shards/figure-poses",
   "k.words/shards/ca",
   "k.words/shards/frequency-c"
+ ],
+ "carrying": [
+  "k.faces/shards/figure-poses"
  ],
  "cars": [
   "k.commonsense/shards/core",
@@ -27877,6 +28003,9 @@
   "k.words/shards/ch",
   "k.words/shards/frequency-c"
  ],
+ "chatting": [
+  "k.faces/shards/traits"
+ ],
  "chattogram": [
   "k.geo/shards/asia"
  ],
@@ -28001,6 +28130,7 @@
   "k.faces/shards/miniavs-slots",
   "k.faces/shards/plain-cheeks",
   "k.faces/shards/slots",
+  "k.faces/shards/traits",
   "k.feelings/schema.sop",
   "k.kinds/shards/part_of",
   "k.kinds/shards/relations-faces",
@@ -28015,6 +28145,7 @@
   "k.words/shards/frequency-c"
  ],
  "cheerful": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings"
  ],
  "cheering": [
@@ -29980,6 +30111,7 @@
   "k.words/shards/frequency-c"
  ],
  "clap": [
+  "k.faces/shards/figure-poses",
   "k.words/shards/cl",
   "k.words/shards/frequency-c",
   "k.objects/shards/noto-clothing-03"
@@ -29998,8 +30130,15 @@
   "k.scenes/shards/things-c"
  ],
  "clapping": [
+  "k.faces/shards/figure-poses",
   "k.words/shards/cl",
   "k.words/shards/frequency-c"
+ ],
+ "clapping hands": [
+  "k.faces/shards/figure-poses"
+ ],
+ "claps": [
+  "k.faces/shards/figure-poses"
  ],
  "clara": [
   "k.people/shards/given-names-c"
@@ -30493,6 +30632,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-glosses",
+  "k.faces/shards/figure-back",
   "k.faces/shards/plain-shoulders",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of",
@@ -30503,10 +30643,12 @@
   "k.parts/shards/usual",
   "k.wearables/shards/wearables",
   "k.words/shards/cl",
-  "k.words/shards/frequency-c"
+  "k.words/shards/frequency-c",
+  "w.face/schema.sop"
  ],
  "cloaks": [
-  "k.wearables/shards/wearables"
+  "k.wearables/shards/wearables",
+  "w.face/schema.sop"
  ],
  "clock": [
   "k.attributes/shards/drawn-mulberry",
@@ -35311,6 +35453,9 @@
   "k.words/shards/cr",
   "k.words/shards/frequency-c"
  ],
+ "cracking up": [
+  "k.faces/shards/traits"
+ ],
  "crackling": [
   "k.words/shards/cr",
   "k.words/shards/frequency-c"
@@ -35865,6 +36010,9 @@
  "crickets": [
   "k.animals/shards/invertebrates"
  ],
+ "cries": [
+  "k.faces/shards/traits"
+ ],
  "crime": [
   "k.words/shards/cr",
   "k.words/shards/frequency-c"
@@ -36065,6 +36213,7 @@
  ],
  "cross": [
   "k.attributes/shards/same-c",
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings",
   "k.layouts/shards/outlines-cc0-1-0",
   "k.objects/shards/mulberry-healthcare-medical-items-01",
@@ -36076,8 +36225,14 @@
   "k.words/shards/cr",
   "k.words/shards/frequency-c"
  ],
+ "cross legged": [
+  "k.faces/shards/figure-poses"
+ ],
  "cross out": [
   "k.actions/shards/verbs-remove"
+ ],
+ "cross-legged": [
+  "k.faces/shards/figure-poses"
  ],
  "cross_bar": [
   "k.faces/shards/plain-hat",
@@ -36380,6 +36535,7 @@
  ],
  "cry": [
   "k.actions/shards/actions-mind-talk",
+  "k.faces/shards/traits",
   "k.words/shards/cr",
   "k.words/shards/frequency-c",
   "w.lang.en/shards/core-plurals"
@@ -36388,6 +36544,8 @@
   "k.actions/shards/actions-mind-talk"
  ],
  "crying": [
+  "k.faces/shards/presets",
+  "k.faces/shards/traits",
   "k.words/shards/cr",
   "k.words/shards/frequency-c"
  ],
@@ -36901,8 +37059,18 @@
   "k.objects/shards/noto-sport-04",
   "k.scenes/shards/things-c"
  ],
+ "curls": [
+  "k.faces/shards/traits"
+ ],
  "curly": [
-  "k.faces/shards/plain-hair-front"
+  "k.faces/shards/plain-hair-front",
+  "k.faces/shards/traits"
+ ],
+ "curly hair": [
+  "k.faces/shards/traits"
+ ],
+ "curly-haired": [
+  "k.faces/shards/traits"
  ],
  "currant": [
   "k.kinds/shards/wordnet-1"
@@ -39193,6 +39361,7 @@
  ],
  "dance": [
   "k.actions/shards/actions-move",
+  "k.faces/shards/figure-poses",
   "k.words/shards/da",
   "k.words/shards/frequency-d",
   "k.objects/shards/noto-clothing-03",
@@ -39212,7 +39381,11 @@
  "dancers": [
   "k.people/shards/roles-jobs"
  ],
+ "dances": [
+  "k.faces/shards/figure-poses"
+ ],
  "dancing": [
+  "k.faces/shards/figure-poses",
   "k.words/shards/da",
   "k.words/shards/frequency-d"
  ],
@@ -39384,6 +39557,9 @@
   "k.colours/shards/colours",
   "k.colours/shards/colours-css"
  ],
+ "dark hair": [
+  "k.faces/shards/traits"
+ ],
  "dark khaki": [
   "k.colours/shards/colours-css"
  ],
@@ -39432,6 +39608,9 @@
  ],
  "dark yellow": [
   "k.colours/shards/colours"
+ ],
+ "dark-haired": [
+  "k.faces/shards/traits"
  ],
  "dark_half": [
   "k.objects/shards/noto-sky-weather-01"
@@ -44779,6 +44958,9 @@
  "drown": [
   "k.words/shards/dr",
   "k.words/shards/frequency-d"
+ ],
+ "drowsy": [
+  "k.faces/shards/traits"
  ],
  "drug": [
   "k.kinds/shards/wordnet-1",
@@ -52565,6 +52747,12 @@
   "k.words/shards/fa",
   "k.words/shards/frequency-f"
  ],
+ "fair hair": [
+  "k.faces/shards/traits"
+ ],
+ "fair-haired": [
+  "k.faces/shards/traits"
+ ],
  "fairground": [
   "k.scenes/shards/scenes-town"
  ],
@@ -53287,6 +53475,7 @@
   "k.words/shards/frequency-f"
  ],
  "fearful": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings"
  ],
  "feast": [
@@ -54069,6 +54258,7 @@
  ],
  "figure": [
   "k.attributes/shards/narration",
+  "k.faces/shards/figure-poses",
   "k.faces/shards/figure-slots",
   "k.kinds/shards/relations-wearables",
   "k.kinds/shards/wordnet-2",
@@ -57497,9 +57687,16 @@
  "freckle_4": [
   "k.faces/shards/plain-cheeks"
  ],
+ "freckled": [
+  "k.faces/shards/traits"
+ ],
  "freckles": [
   "k.faces/shards/plain-cheeks",
+  "k.faces/shards/traits",
   "w.face/schema.sop"
+ ],
+ "freckly": [
+  "k.faces/shards/traits"
  ],
  "fred": [
   "k.people/shards/given-names-f"
@@ -57895,6 +58092,7 @@
   "k.words/shards/frequency-f"
  ],
  "frightened": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings",
   "k.words/shards/fr",
   "k.words/shards/frequency-f"
@@ -58244,8 +58442,16 @@
  "frown": [
   "k.actions/shards/actions-mind-talk",
   "k.faces/shards/plain-mouth",
+  "k.faces/shards/traits",
   "k.words/shards/fr",
   "k.words/shards/frequency-f"
+ ],
+ "frowning": [
+  "k.faces/shards/presets",
+  "k.faces/shards/traits"
+ ],
+ "frowns": [
+  "k.faces/shards/traits"
  ],
  "frozen chips": [
   "k.attributes/shards/drawn-mulberry",
@@ -58667,6 +58873,7 @@
   "k.kinds/shards/part_of-wordnet-2"
  ],
  "furious": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings"
  ],
  "furnace": [
@@ -61915,6 +62122,9 @@
   "k.words/shards/frequency-g",
   "k.words/shards/gi"
  ],
+ "giggling": [
+  "k.faces/shards/traits"
+ ],
  "gigolo": [
   "k.words/shards/gi"
  ],
@@ -61988,6 +62198,7 @@
   "k.attributes/shards/same-g",
   "k.attributes/shards/things-wikidata",
   "k.colours/shards/psys2",
+  "k.faces/shards/traits",
   "k.food/shards/other",
   "k.kinds/shards/group-hand",
   "k.kinds/shards/kind",
@@ -62000,6 +62211,12 @@
   "k.words/shards/gi",
   "k.objects/shards/noto-food-vegetable-02"
  ],
+ "ginger hair": [
+  "k.faces/shards/traits"
+ ],
+ "ginger hair with freckles": [
+  "k.faces/shards/traits"
+ ],
  "ginger root": [
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-g",
@@ -62007,6 +62224,9 @@
   "k.kinds/shards/head",
   "k.objects/shards/noto-food-vegetable-02",
   "k.scenes/shards/things-g"
+ ],
+ "ginger-haired": [
+  "k.faces/shards/traits"
  ],
  "gingerbread": [
   "k.attributes/shards/numbers-g-o",
@@ -62243,6 +62463,7 @@
   "k.objects/shards/land-3"
  ],
  "glad": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings",
   "k.words/shards/frequency-g",
   "k.words/shards/gl"
@@ -62502,6 +62723,9 @@
   "k.words/shards/frequency-g",
   "k.words/shards/gl"
  ],
+ "gloomy": [
+  "k.faces/shards/traits"
+ ],
  "gloria": [
   "k.people/shards/given-names-g"
  ],
@@ -62557,12 +62781,14 @@
   "k.attributes/shards/same-g",
   "k.attributes/shards/things-worn",
   "k.attributes/shards/usage",
+  "k.faces/shards/figure-hands",
   "k.kinds/shards/head",
   "k.kinds/shards/kind",
   "k.kinds/shards/use",
   "k.objects/shards/noto-clothing-02",
   "k.scenes/shards/things-g",
-  "k.wearables/shards/wearables"
+  "k.wearables/shards/wearables",
+  "w.face/schema.sop"
  ],
  "glow": [
   "k.actions/shards/actions-body-social-nature",
@@ -62610,6 +62836,9 @@
   "k.kinds/shards/group-mulberry",
   "k.objects/shards/mulberry-work-and-school-stationery-02",
   "k.scenes/shards/things-g"
+ ],
+ "glum": [
+  "k.faces/shards/traits"
  ],
  "gm": [
   "k.music/shards/chords",
@@ -62802,6 +63031,9 @@
   "k.words/shards/frequency-g",
   "k.words/shards/go"
  ],
+ "gobsmacked": [
+  "k.faces/shards/traits"
+ ],
  "god": [
   "k.words/shards/frequency-g",
   "k.words/shards/go"
@@ -62922,6 +63154,9 @@
   "k.colours/shards/colours-css",
   "k.words/shards/frequency-g",
   "k.words/shards/go"
+ ],
+ "golden hair": [
+  "k.faces/shards/traits"
  ],
  "golden hinde": [
   "k.geo/shards/north-america"
@@ -63963,6 +64198,12 @@
   "k.words/shards/frequency-g",
   "k.words/shards/gr"
  ],
+ "gray hair": [
+  "k.faces/shards/traits"
+ ],
+ "gray-haired": [
+  "k.faces/shards/traits"
+ ],
  "grays": [
   "k.colours/shards/colours"
  ],
@@ -64345,8 +64586,14 @@
   "k.words/shards/frequency-g",
   "k.words/shards/gr"
  ],
+ "grey hair": [
+  "k.faces/shards/traits"
+ ],
  "grey matter": [
   "k.objects/shards/openmoji-healthcare-03"
+ ],
+ "grey-haired": [
+  "k.faces/shards/traits"
  ],
  "greyhound": [
   "k.attributes/shards/numbers-g-o",
@@ -64453,6 +64700,7 @@
  "grin": [
   "k.actions/shards/actions-mind-talk",
   "k.faces/shards/plain-mouth",
+  "k.faces/shards/traits",
   "k.words/shards/frequency-g",
   "k.words/shards/gr"
  ],
@@ -64486,8 +64734,12 @@
   "k.words/shards/gr"
  ],
  "grinning": [
+  "k.faces/shards/traits",
   "k.words/shards/frequency-g",
   "k.words/shards/gr"
+ ],
+ "grinning a little": [
+  "k.faces/shards/traits"
  ],
  "grip": [
   "k.actions/shards/actions-hands",
@@ -64876,6 +65128,9 @@
  "grumbling": [
   "k.words/shards/frequency-g",
   "k.words/shards/gr"
+ ],
+ "grumpy": [
+  "k.faces/shards/traits"
  ],
  "grunt": [
   "k.words/shards/frequency-g",
@@ -66223,6 +66478,7 @@
   "k.faces/shards/slots",
   "k.faces/shards/toon-head-hair-back",
   "k.faces/shards/toon-head-slots",
+  "k.faces/shards/traits",
   "k.kinds/shards/relations-faces",
   "k.layouts/shards/layouts"
  ],
@@ -66249,6 +66505,7 @@
   "k.faces/shards/slots",
   "k.faces/shards/toon-head-hair-front",
   "k.faces/shards/toon-head-slots",
+  "k.faces/shards/traits",
   "k.kinds/shards/relations-faces",
   "k.layouts/shards/layouts"
  ],
@@ -66295,6 +66552,9 @@
   "k.kinds/shards/use-wordnet",
   "k.objects/shards/mulberry-healthcare-grooming-items-03",
   "k.scenes/shards/things-h"
+ ],
+ "hairless": [
+  "k.faces/shards/traits"
  ],
  "hairpiece": [
   "k.kinds/shards/wordnet-2"
@@ -67033,9 +67293,26 @@
  ],
  "hands": [
   "k.body/shards/core",
+  "k.faces/shards/figure-hands",
+  "k.faces/shards/figure-slots",
   "k.wearables/shards/places",
   "k.words/shards/frequency-h",
   "k.words/shards/ha"
+ ],
+ "hands in the air": [
+  "k.faces/shards/figure-poses"
+ ],
+ "hands on her hips": [
+  "k.faces/shards/figure-poses"
+ ],
+ "hands on hips": [
+  "k.faces/shards/figure-poses"
+ ],
+ "hands on his hips": [
+  "k.faces/shards/figure-poses"
+ ],
+ "hands up": [
+  "k.faces/shards/figure-poses"
  ],
  "handset": [
   "k.objects/shards/noto-phone-01"
@@ -67052,7 +67329,8 @@
   "k.procedures/shards/everyday"
  ],
  "handwear": [
-  "k.kinds/shards/kind"
+  "k.kinds/shards/kind",
+  "w.face/schema.sop"
  ],
  "handwriting": [
   "k.styles/schema.sop",
@@ -67241,10 +67519,14 @@
  "happy": [
   "k.faces/shards/plain-eyes",
   "k.faces/shards/presets",
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings",
   "k.words/shards/frequency-h",
   "k.words/shards/ha",
   "k.objects/shards/noto-food-sweet-01"
+ ],
+ "happy face": [
+  "k.faces/shards/traits"
  ],
  "har us nuur": [
   "k.geo/shards/asia"
@@ -69968,6 +70250,7 @@
  ],
  "hold": [
   "k.actions/shards/actions-hands",
+  "k.faces/shards/figure-poses",
   "k.layouts/schema.sop",
   "k.people/schema.sop",
   "k.words/shards/frequency-h",
@@ -70002,6 +70285,16 @@
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-motion"
  ],
+ "hold_x": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-faces",
+  "k.units/shards/measures"
+ ],
+ "hold_y": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-faces",
+  "k.units/shards/measures"
+ ],
  "holdall": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-h",
@@ -70019,6 +70312,7 @@
   "k.units/shards/measures"
  ],
  "holding": [
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-h",
   "k.words/shards/ho"
  ],
@@ -70030,8 +70324,10 @@
   "k.attributes/schema.sop",
   "k.attributes/shards/aspects",
   "k.attributes/shards/narration",
+  "k.faces/shards/figure-poses",
   "k.kinds/shards/relations-actions",
   "k.kinds/shards/relations-attributes",
+  "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-layouts",
   "k.kinds/shards/relations-people",
   "k.layouts/schema.sop",
@@ -73219,6 +73515,9 @@
  ],
  "in tab": [
   "w.dialogue/schema.sop"
+ ],
+ "in tears": [
+  "k.faces/shards/traits"
  ],
  "in the background": [
   "k.values/shards/directions"
@@ -77087,6 +77386,7 @@
   "k.words/shards/jo"
  ],
  "joyful": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings"
  ],
  "joystick": [
@@ -77346,6 +77646,7 @@
  ],
  "jump": [
   "k.actions/shards/actions-move",
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-j",
   "k.words/shards/ju",
   "k.objects/shards/noto-animal-mammal-08"
@@ -77371,8 +77672,12 @@
   "w.face/schema.sop"
  ],
  "jumping": [
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-j",
   "k.words/shards/ju"
+ ],
+ "jumps": [
+  "k.faces/shards/figure-poses"
  ],
  "jumpsuit": [
   "k.attributes/shards/numbers-g-o",
@@ -77876,6 +78181,10 @@
   "k.kinds/shards/structures",
   "k.units/shards/measures"
  ],
+ "k.faces.bone": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-faces"
+ ],
  "k.faces.canon": [
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-faces"
@@ -77908,6 +78217,10 @@
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-faces"
  ],
+ "k.faces.pose": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-faces"
+ ],
  "k.faces.preset": [
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-faces",
@@ -77929,6 +78242,18 @@
  ],
  "k.faces.slot.z": [
   "k.kinds/shards/structures"
+ ],
+ "k.faces.trait": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-faces"
+ ],
+ "k.faces.trait.part": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-faces"
+ ],
+ "k.faces.turn": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-faces"
  ],
  "k.faces.variant": [
   "k.attributes/shards/narration",
@@ -80368,6 +80693,7 @@
  ],
  "kick": [
   "k.actions/shards/actions-hands",
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-k",
   "k.words/shards/ki",
   "k.objects/shards/noto-clothing-04",
@@ -80393,8 +80719,15 @@
   "k.kinds/shards/part_of-wordnet-2"
  ],
  "kicking": [
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-k",
   "k.words/shards/ki"
+ ],
+ "kicking a ball": [
+  "k.faces/shards/figure-poses"
+ ],
+ "kicks": [
+  "k.faces/shards/figure-poses"
  ],
  "kickstand": [
   "k.kinds/shards/part_of-wordnet-2"
@@ -81375,6 +81708,7 @@
   "k.actions/shards/actions-hands",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-k",
+  "k.faces/shards/figure-neckwear",
   "k.faces/shards/plain-hat",
   "k.faces/shards/plain-shoulders",
   "k.kinds/shards/group-noto",
@@ -83554,14 +83888,21 @@
  ],
  "laugh": [
   "k.actions/shards/actions-mind-talk",
+  "k.faces/shards/traits",
   "k.words/shards/frequency-l",
   "k.words/shards/la"
  ],
  "laughing": [
+  "k.faces/shards/presets",
+  "k.faces/shards/traits",
   "k.words/shards/frequency-l",
   "k.words/shards/la"
  ],
+ "laughs": [
+  "k.faces/shards/traits"
+ ],
  "laughter": [
+  "k.faces/shards/traits",
   "k.words/shards/frequency-l",
   "k.words/shards/la"
  ],
@@ -84019,6 +84360,7 @@
  ],
  "leap": [
   "k.actions/shards/actions-move",
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-l",
   "k.words/shards/le"
  ],
@@ -84040,6 +84382,7 @@
   "k.units/shards/measures"
  ],
  "leaping": [
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-l",
   "k.words/shards/le"
  ],
@@ -84281,7 +84624,6 @@
   "k.objects/shards/noto-animal-mammal-03"
  ],
  "left_arm": [
-  "k.faces/shards/figure-body",
   "k.faces/shards/plain-glasses",
   "k.objects/shards/figures",
   "k.objects/shards/home",
@@ -84419,6 +84761,8 @@
   "k.objects/shards/food"
  ],
  "left_cuff": [
+  "k.faces/shards/figure-coat",
+  "k.faces/shards/figure-top",
   "k.objects/shards/mulberry-clothes-general-03",
   "k.objects/shards/mulberry-clothes-general-05",
   "k.objects/shards/mulberry-clothes-general-06",
@@ -84480,6 +84824,11 @@
  ],
  "left_egg": [
   "k.objects/shards/things-2"
+ ],
+ "left_elbow": [
+  "k.faces/shards/figure-body",
+  "k.faces/shards/figure-coat",
+  "k.faces/shards/figure-top"
  ],
  "left_end": [
   "k.objects/shards/mulberry-building-contents-01",
@@ -84553,6 +84902,10 @@
   "k.objects/shards/noto-time-01",
   "k.objects/shards/things-2"
  ],
+ "left_forearm": [
+  "k.faces/shards/figure-body",
+  "k.faces/shards/figure-poses"
+ ],
  "left_front": [
   "k.faces/shards/plain-shoulders",
   "k.objects/shards/mulberry-clothes-general-07"
@@ -84564,6 +84917,7 @@
   "k.objects/shards/places-2"
  ],
  "left_glove": [
+  "k.faces/shards/figure-hands",
   "k.objects/shards/noto-clothing-02"
  ],
  "left_grass": [
@@ -84627,12 +84981,17 @@
  "left_kerb": [
   "k.layouts/shards/terrain"
  ],
+ "left_knee": [
+  "k.faces/shards/figure-body",
+  "k.faces/shards/figure-bottom"
+ ],
  "left_knob": [
   "k.objects/shards/food-2",
   "k.objects/shards/things",
   "k.objects/shards/things-2"
  ],
  "left_lapel": [
+  "k.faces/shards/figure-coat",
   "k.faces/shards/plain-shoulders",
   "k.objects/shards/things",
   "k.objects/shards/things-2"
@@ -84661,7 +85020,6 @@
   "k.objects/shards/noto-plant-other-01"
  ],
  "left_leg": [
-  "k.faces/shards/figure-body",
   "k.faces/shards/figure-bottom",
   "k.objects/shards/animals",
   "k.objects/shards/animals-2",
@@ -84720,6 +85078,7 @@
   "k.objects/shards/openmoji-transport-and-map-symbols-01"
  ],
  "left_mitten": [
+  "k.faces/shards/figure-hands",
   "k.objects/shards/mulberry-clothes-general-04"
  ],
  "left_mountain": [
@@ -84865,12 +85224,18 @@
  "left_segment": [
   "k.objects/shards/mulberry-food-fruit-03"
  ],
+ "left_shin": [
+  "k.faces/shards/figure-body",
+  "k.faces/shards/figure-bottom",
+  "k.faces/shards/figure-poses"
+ ],
  "left_shoe": [
   "k.faces/shards/figure-shoes",
   "k.objects/shards/mulberry-celebration-item-02",
   "k.objects/shards/things-2"
  ],
  "left_shoulder": [
+  "k.faces/shards/figure-body",
   "k.objects/shards/things-2"
  ],
  "left_side": [
@@ -84881,6 +85246,8 @@
   "k.faces/shards/plain-beard"
  ],
  "left_sleeve": [
+  "k.faces/shards/figure-coat",
+  "k.faces/shards/figure-top",
   "k.objects/shards/mulberry-clothes-general-03",
   "k.objects/shards/things",
   "k.objects/shards/things-2"
@@ -84898,6 +85265,9 @@
  "left_sock": [
   "k.objects/shards/noto-clothing-02"
  ],
+ "left_sole": [
+  "k.faces/shards/figure-shoes"
+ ],
  "left_stalactite": [
   "k.objects/shards/land"
  ],
@@ -84912,6 +85282,7 @@
   "k.objects/shards/places"
  ],
  "left_strap": [
+  "k.faces/shards/figure-shoes",
   "k.faces/shards/plain-shoulders",
   "k.objects/shards/home",
   "k.objects/shards/mulberry-clothes-general-01",
@@ -84935,6 +85306,10 @@
  "left_tail": [
   "k.faces/shards/plain-hair-back",
   "k.objects/shards/noto-event-02"
+ ],
+ "left_thigh": [
+  "k.faces/shards/figure-body",
+  "k.faces/shards/figure-poses"
  ],
  "left_tip": [
   "k.objects/shards/mulberry-healthcare-grooming-items-01"
@@ -84960,6 +85335,10 @@
  ],
  "left_tusk": [
   "k.objects/shards/mulberry-animal-fish-and-marine-mammals-01"
+ ],
+ "left_upper_arm": [
+  "k.faces/shards/figure-body",
+  "k.faces/shards/figure-poses"
  ],
  "left_upper_wing": [
   "k.objects/shards/animals"
@@ -84997,6 +85376,7 @@
   "k.objects/shards/vehicles"
  ],
  "left_wing": [
+  "k.faces/shards/figure-neckwear",
   "k.faces/shards/plain-shoulders",
   "k.objects/shards/more",
   "k.objects/shards/mulberry-animal-spiders-and-insects-01",
@@ -85164,6 +85544,9 @@
   "k.wearables/shards/places",
   "k.words/shards/frequency-l",
   "k.words/shards/le"
+ ],
+ "legs crossed": [
+  "k.faces/shards/figure-poses"
  ],
  "legume": [
   "k.kinds/shards/kind",
@@ -85681,7 +86064,10 @@
   "k.people/shards/given-names-l"
  ],
  "level": [
+  "k.attributes/shards/narration",
   "k.charts/shards/categories",
+  "k.kinds/shards/relations-faces",
+  "k.units/shards/measures",
   "k.words/shards/frequency-l",
   "k.words/shards/le",
   "w.document/schema.sop",
@@ -86749,6 +87135,7 @@
   "k.geo/shards/islands-asia"
  ],
  "lining": [
+  "k.faces/shards/figure-back",
   "k.words/shards/frequency-l",
   "k.words/shards/li"
  ],
@@ -87769,6 +88156,9 @@
   "w.seating/schema.sop",
   "k.objects/shards/noto-musical-instrument-02"
  ],
+ "long bushy beard": [
+  "k.faces/shards/traits"
+ ],
  "long curly": [
   "k.faces/shards/plain-hair-back"
  ],
@@ -87781,6 +88171,7 @@
   "k.scenes/shards/things-l"
  ],
  "long hair": [
+  "k.faces/shards/traits",
   "w.face/schema.sop"
  ],
  "long island": [
@@ -87805,6 +88196,9 @@
  ],
  "long wavy": [
   "k.faces/shards/plain-hair-back"
+ ],
+ "long-haired": [
+  "k.faces/shards/traits"
  ],
  "long_sentence": [
   "k.interest/shards/features"
@@ -89082,6 +89476,7 @@
   "k.geo/shards/islands-asia"
  ],
  "mad": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings",
   "k.units/shards/currencies",
   "k.words/shards/frequency-m",
@@ -95007,13 +95402,15 @@
   "k.attributes/shards/things-worn",
   "k.attributes/shards/usage",
   "k.expect/shards/scenes",
+  "k.faces/shards/figure-hands",
   "k.kinds/shards/kind",
   "k.kinds/shards/material",
   "k.kinds/shards/use",
   "k.objects/shards/mulberry-clothes-general-04",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-m",
-  "k.wearables/shards/wearables"
+  "k.wearables/shards/wearables",
+  "w.face/schema.sop"
  ],
  "mitts": [
   "k.wearables/shards/wearables"
@@ -95311,7 +95708,11 @@
  ],
  "mohawk": [
   "k.faces/shards/plain-hair-front",
+  "k.faces/shards/traits",
   "k.geo/shards/north-america"
+ ],
+ "mohican": [
+  "k.faces/shards/traits"
  ],
  "mohéli": [
   "k.geo/shards/islands-africa"
@@ -97395,6 +97796,7 @@
   "k.faces/shards/miniavs-slots",
   "k.faces/shards/plain-moustache",
   "k.faces/shards/slots",
+  "k.faces/shards/traits",
   "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-people",
   "k.layouts/shards/layouts",
@@ -97403,6 +97805,9 @@
   "k.words/shards/frequency-m",
   "k.words/shards/mo",
   "w.face/schema.sop"
+ ],
+ "moustached": [
+  "k.faces/shards/traits"
  ],
  "mouth": [
   "k.attributes/shards/narration",
@@ -98157,6 +98562,7 @@
   "k.faces/shards/miniavs-slots",
   "k.faces/shards/plain-moustache",
   "k.faces/shards/slots",
+  "k.faces/shards/traits",
   "k.parts/shards/names",
   "k.words/shards/frequency-m",
   "k.words/shards/mu",
@@ -99434,8 +99840,11 @@
   "w.lang.en/shards/catalog-plurals"
  ],
  "neckwear": [
+  "k.faces/shards/figure-neckwear",
+  "k.faces/shards/figure-slots",
   "k.kinds/shards/kind",
-  "k.kinds/shards/wordnet-2"
+  "k.kinds/shards/wordnet-2",
+  "w.face/schema.sop"
  ],
  "nectar": [
   "k.words/shards/frequency-n",
@@ -100602,6 +101011,9 @@
  ],
  "no change of things": [
   "k.actions/shards/families"
+ ],
+ "no hair": [
+  "k.faces/shards/traits"
  ],
  "no sorry": [
   "w.lang.en/shards/clauses"
@@ -106314,6 +106726,7 @@
   "k.attributes/shards/narration",
   "k.kinds/schema.sop",
   "k.kinds/shards/relations-actions",
+  "k.kinds/shards/relations-faces",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.words/shards/frequency-p",
@@ -110852,6 +111265,7 @@
   "k.attributes/shards/narration",
   "k.faces/shards/plain-canon",
   "k.faces/shards/slots",
+  "k.faces/shards/traits",
   "k.kinds/shards/relations-parts",
   "k.kinds/shards/relations-units",
   "k.motion/shards/mouth",
@@ -111794,6 +112208,7 @@
  "point": [
   "k.actions/shards/verbs-pick",
   "k.drawing/schema.sop",
+  "k.faces/shards/figure-poses",
   "k.genres/shards/presentation",
   "k.kinds/shards/part_of",
   "k.kinds/shards/part_of-wordnet-1",
@@ -111835,6 +112250,7 @@
  "pointing": [
   "k.attributes/shards/narration",
   "k.drawing/schema.sop",
+  "k.faces/shards/figure-poses",
   "k.kinds/shards/relations-drawing",
   "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-objects"
@@ -111842,6 +112258,7 @@
  "points": [
   "k.attributes/shards/narration",
   "k.drawing/schema.sop",
+  "k.faces/shards/figure-poses",
   "k.kinds/shards/relations-layouts",
   "k.layouts/schema.sop",
   "k.procedures/shards/compose",
@@ -112258,6 +112675,7 @@
  ],
  "ponytail": [
   "k.faces/shards/plain-hair-back",
+  "k.faces/shards/traits",
   "k.words/shards/frequency-p",
   "k.words/shards/po",
   "w.face/schema.sop"
@@ -112730,8 +113148,12 @@
   "k.words/schema.sop"
  ],
  "pose": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-faces",
+  "k.units/shards/measures",
   "k.words/shards/frequency-p",
-  "k.words/shards/po"
+  "k.words/shards/po",
+  "w.face/schema.sop"
  ],
  "poseidon": [
   "k.words/shards/frequency-p",
@@ -112752,6 +113174,7 @@
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
+  "w.face/schema.sop",
   "w.list/schema.sop",
   "w.request/schema.sop",
   "w.seating/schema.sop",
@@ -112944,7 +113367,8 @@
  ],
  "posture": [
   "k.words/shards/frequency-p",
-  "k.words/shards/po"
+  "k.words/shards/po",
+  "w.face/schema.sop"
  ],
  "postwoman": [
   "k.people/shards/roles-jobs"
@@ -116550,6 +116974,9 @@
   "k.objects/shards/noto-mail-01",
   "k.objects/shards/noto-mail-02"
  ],
+ "raised arms": [
+  "k.faces/shards/figure-poses"
+ ],
  "raised_arm": [
   "k.objects/shards/things-2"
  ],
@@ -116574,6 +117001,9 @@
  "raising": [
   "k.words/shards/frequency-r",
   "k.words/shards/ra"
+ ],
+ "raising arms": [
+  "k.faces/shards/figure-poses"
  ],
  "raivo": [
   "k.people/shards/given-names-r"
@@ -117196,9 +117626,16 @@
  "reach a place": [
   "k.story/shards/goals-obstacles"
  ],
+ "reach up": [
+  "k.faces/shards/figure-poses"
+ ],
  "reaching": [
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-r",
   "k.words/shards/re"
+ ],
+ "reaching up": [
+  "k.faces/shards/figure-poses"
  ],
  "react": [
   "k.words/shards/frequency-r",
@@ -117780,6 +118217,9 @@
   "k.objects/shards/noto-event-02",
   "k.scenes/shards/things-r"
  ],
+ "red hair": [
+  "k.faces/shards/traits"
+ ],
  "red panda": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-r",
@@ -117812,6 +118252,9 @@
   "k.geo/shards/numbers",
   "k.geo/shards/seas"
  ],
+ "red-haired": [
+  "k.faces/shards/traits"
+ ],
  "red_button": [
   "k.objects/shards/mulberry-electrical-media-02"
  ],
@@ -117836,6 +118279,7 @@
   "k.words/shards/re"
  ],
  "redhead": [
+  "k.faces/shards/traits",
   "k.words/shards/frequency-r",
   "k.words/shards/re"
  ],
@@ -118538,6 +118982,8 @@
   "k.actions/shards/acts",
   "k.actions/shards/families",
   "k.actions/shards/verbs-remove",
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-faces",
   "k.words/shards/frequency-r",
   "k.words/shards/re"
  ],
@@ -120206,7 +120652,6 @@
   "k.objects/shards/noto-animal-mammal-03"
  ],
  "right_arm": [
-  "k.faces/shards/figure-body",
   "k.faces/shards/plain-glasses",
   "k.objects/shards/figures",
   "k.objects/shards/home",
@@ -120344,6 +120789,8 @@
   "k.objects/shards/food"
  ],
  "right_cuff": [
+  "k.faces/shards/figure-coat",
+  "k.faces/shards/figure-top",
   "k.objects/shards/mulberry-clothes-general-03",
   "k.objects/shards/mulberry-clothes-general-05",
   "k.objects/shards/mulberry-clothes-general-06",
@@ -120403,6 +120850,11 @@
  ],
  "right_egg": [
   "k.objects/shards/things-2"
+ ],
+ "right_elbow": [
+  "k.faces/shards/figure-body",
+  "k.faces/shards/figure-coat",
+  "k.faces/shards/figure-top"
  ],
  "right_end": [
   "k.objects/shards/mulberry-building-contents-01",
@@ -120476,6 +120928,10 @@
   "k.objects/shards/noto-time-01",
   "k.objects/shards/things-2"
  ],
+ "right_forearm": [
+  "k.faces/shards/figure-body",
+  "k.faces/shards/figure-poses"
+ ],
  "right_front": [
   "k.faces/shards/plain-shoulders",
   "k.objects/shards/mulberry-clothes-general-07"
@@ -120487,6 +120943,7 @@
   "k.objects/shards/places-2"
  ],
  "right_glove": [
+  "k.faces/shards/figure-hands",
   "k.objects/shards/noto-clothing-02"
  ],
  "right_grass": [
@@ -120547,12 +121004,17 @@
  "right_kerb": [
   "k.layouts/shards/terrain"
  ],
+ "right_knee": [
+  "k.faces/shards/figure-body",
+  "k.faces/shards/figure-bottom"
+ ],
  "right_knob": [
   "k.objects/shards/food-2",
   "k.objects/shards/things",
   "k.objects/shards/things-2"
  ],
  "right_lapel": [
+  "k.faces/shards/figure-coat",
   "k.faces/shards/plain-shoulders",
   "k.objects/shards/things",
   "k.objects/shards/things-2"
@@ -120581,7 +121043,6 @@
   "k.objects/shards/noto-plant-other-01"
  ],
  "right_leg": [
-  "k.faces/shards/figure-body",
   "k.faces/shards/figure-bottom",
   "k.objects/shards/animals",
   "k.objects/shards/animals-2",
@@ -120640,6 +121101,7 @@
   "k.objects/shards/openmoji-transport-and-map-symbols-01"
  ],
  "right_mitten": [
+  "k.faces/shards/figure-hands",
   "k.objects/shards/mulberry-clothes-general-04"
  ],
  "right_mountain": [
@@ -120785,12 +121247,18 @@
  "right_segment": [
   "k.objects/shards/mulberry-food-fruit-03"
  ],
+ "right_shin": [
+  "k.faces/shards/figure-body",
+  "k.faces/shards/figure-bottom",
+  "k.faces/shards/figure-poses"
+ ],
  "right_shoe": [
   "k.faces/shards/figure-shoes",
   "k.objects/shards/mulberry-celebration-item-02",
   "k.objects/shards/things-2"
  ],
  "right_shoulder": [
+  "k.faces/shards/figure-body",
   "k.objects/shards/things-2"
  ],
  "right_side": [
@@ -120804,6 +121272,8 @@
   "k.objects/shards/mulberry-transport-road-03"
  ],
  "right_sleeve": [
+  "k.faces/shards/figure-coat",
+  "k.faces/shards/figure-top",
   "k.objects/shards/mulberry-clothes-general-03",
   "k.objects/shards/things",
   "k.objects/shards/things-2"
@@ -120821,6 +121291,9 @@
  "right_sock": [
   "k.objects/shards/noto-clothing-02"
  ],
+ "right_sole": [
+  "k.faces/shards/figure-shoes"
+ ],
  "right_stalactite": [
   "k.objects/shards/land"
  ],
@@ -120835,6 +121308,7 @@
   "k.objects/shards/places"
  ],
  "right_strap": [
+  "k.faces/shards/figure-shoes",
   "k.faces/shards/plain-shoulders",
   "k.objects/shards/home",
   "k.objects/shards/mulberry-clothes-general-01",
@@ -120858,6 +121332,10 @@
  "right_tail": [
   "k.faces/shards/plain-hair-back",
   "k.objects/shards/noto-event-02"
+ ],
+ "right_thigh": [
+  "k.faces/shards/figure-body",
+  "k.faces/shards/figure-poses"
  ],
  "right_tip": [
   "k.objects/shards/mulberry-healthcare-grooming-items-01"
@@ -120883,6 +121361,10 @@
  ],
  "right_tusk": [
   "k.objects/shards/mulberry-animal-fish-and-marine-mammals-01"
+ ],
+ "right_upper_arm": [
+  "k.faces/shards/figure-body",
+  "k.faces/shards/figure-poses"
  ],
  "right_upper_wing": [
   "k.objects/shards/animals"
@@ -120920,6 +121402,7 @@
   "k.objects/shards/vehicles"
  ],
  "right_wing": [
+  "k.faces/shards/figure-neckwear",
   "k.faces/shards/plain-shoulders",
   "k.objects/shards/more",
   "k.objects/shards/mulberry-animal-spiders-and-insects-01",
@@ -123105,6 +123588,7 @@
  ],
  "run": [
   "k.actions/shards/actions-move",
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-r",
   "k.words/shards/ru",
   "k.objects/shards/openmoji-travel-places-01"
@@ -123169,6 +123653,7 @@
   "k.words/shards/ru"
  ],
  "running": [
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-r",
   "k.words/shards/ru",
   "k.objects/shards/noto-clothing-04",
@@ -123202,6 +123687,9 @@
   "k.time/shards/derived-public-domain",
   "k.words/shards/frequency-r",
   "k.words/shards/ru"
+ ],
+ "runs": [
+  "k.faces/shards/figure-poses"
  ],
  "runway": [
   "k.attributes/shards/same-r",
@@ -123522,11 +124010,15 @@
   "k.faces/shards/plain-eyebrows",
   "k.faces/shards/plain-mouth",
   "k.faces/shards/presets",
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings",
   "k.words/shards/frequency-s",
   "k.words/shards/sa",
   "k.objects/shards/noto-musical-instrument-01",
   "k.objects/shards/noto-sky-weather-06"
+ ],
+ "sad face": [
+  "k.faces/shards/traits"
  ],
  "saddam": [
   "k.words/shards/frequency-s",
@@ -124556,6 +125048,7 @@
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-worn",
   "k.attributes/shards/usage",
+  "k.faces/shards/figure-shoes",
   "k.kinds/shards/kind",
   "k.kinds/shards/material",
   "k.kinds/shards/use",
@@ -125025,9 +125518,13 @@
   "k.geo/shards/africa"
  ],
  "sat": [
+  "k.faces/shards/figure-poses",
   "k.time/shards/calendar",
   "k.words/shards/frequency-s",
   "k.words/shards/sa"
+ ],
+ "sat down": [
+  "k.faces/shards/figure-poses"
  ],
  "satan": [
   "k.words/shards/frequency-s",
@@ -126493,9 +126990,14 @@
   "k.words/shards/sc"
  ],
  "scared": [
+  "k.faces/shards/presets",
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings",
   "k.words/shards/frequency-s",
   "k.words/shards/sc"
+ ],
+ "scared face": [
+  "k.faces/shards/traits"
  ],
  "scarf": [
   "k.attributes/shards/drawn-noto",
@@ -126504,6 +127006,7 @@
   "k.attributes/shards/things-worn",
   "k.attributes/shards/usage",
   "k.expect/shards/scenes",
+  "k.faces/shards/figure-neckwear",
   "k.faces/shards/plain-hat",
   "k.kinds/shards/kind",
   "k.kinds/shards/material",
@@ -126518,7 +127021,8 @@
   "k.scenes/shards/things-s",
   "k.wearables/shards/wearables",
   "k.words/shards/frequency-s",
-  "k.words/shards/sc"
+  "k.words/shards/sc",
+  "w.face/schema.sop"
  ],
  "scarfs": [
   "k.wearables/shards/wearables"
@@ -126531,7 +127035,8 @@
   "k.words/shards/sc"
  ],
  "scarves": [
-  "k.wearables/shards/wearables"
+  "k.wearables/shards/wearables",
+  "w.face/schema.sop"
  ],
  "scary": [
   "k.words/shards/frequency-s",
@@ -126974,7 +127479,11 @@
   "k.words/shards/sc"
  ],
  "scowl": [
-  "k.actions/shards/actions-mind-talk"
+  "k.actions/shards/actions-mind-talk",
+  "k.faces/shards/traits"
+ ],
+ "scowling": [
+  "k.faces/shards/traits"
  ],
  "scr": [
   "k.units/shards/currencies"
@@ -127636,6 +128145,7 @@
   "k.objects/shards/things-3"
  ],
  "seated": [
+  "k.faces/shards/figure-poses",
   "w.seating/schema.sop"
  ],
  "seating": [
@@ -129971,8 +130481,16 @@
   "k.people/shards/given-names-s"
  ],
  "shock": [
+  "k.faces/shards/traits",
   "k.words/shards/frequency-s",
   "k.words/shards/sh"
+ ],
+ "shocked": [
+  "k.faces/shards/presets",
+  "k.faces/shards/traits"
+ ],
+ "shocked face": [
+  "k.faces/shards/traits"
  ],
  "shocker": [
   "k.words/shards/frequency-s",
@@ -131291,6 +131809,9 @@
   "k.objects/shards/noto-award-medal-01",
   "k.objects/shards/noto-money-01"
  ],
+ "silver hair": [
+  "k.faces/shards/traits"
+ ],
  "silverware": [
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-glosses",
@@ -131619,6 +132140,7 @@
  ],
  "sit": [
   "k.actions/shards/actions-body-social-nature",
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-s",
   "k.words/shards/si",
   "w.seating/schema.sop"
@@ -131651,6 +132173,7 @@
   "k.geo/shards/islands-asia"
  ],
  "sits": [
+  "k.faces/shards/figure-poses",
   "k.layouts/schema.sop",
   "w.seating/schema.sop"
  ],
@@ -131662,9 +132185,19 @@
   "k.words/shards/si"
  ],
  "sitting": [
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-s",
   "k.words/shards/si",
   "w.seating/schema.sop"
+ ],
+ "sitting cross legged": [
+  "k.faces/shards/figure-poses"
+ ],
+ "sitting cross-legged": [
+  "k.faces/shards/figure-poses"
+ ],
+ "sitting down": [
+  "k.faces/shards/figure-poses"
  ],
  "sitting room": [
   "k.scenes/shards/scenes-indoors"
@@ -132467,7 +133000,11 @@
  "sleepy": [
   "k.faces/shards/plain-eyes",
   "k.faces/shards/presets",
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings"
+ ],
+ "sleepy face": [
+  "k.faces/shards/traits"
  ],
  "sleet": [
   "k.words/shards/frequency-s",
@@ -132967,6 +133504,7 @@
  "smile": [
   "k.actions/shards/actions-mind-talk",
   "k.faces/shards/plain-mouth",
+  "k.faces/shards/traits",
   "k.kinds/shards/part_of",
   "k.parts/shards/names",
   "k.parts/shards/psys2",
@@ -132974,11 +133512,17 @@
   "k.words/shards/sm",
   "w.face/schema.sop"
  ],
+ "smiles": [
+  "k.faces/shards/traits"
+ ],
  "smiley": [
+  "k.faces/shards/traits",
   "k.words/shards/frequency-s",
   "k.words/shards/sm"
  ],
  "smiling": [
+  "k.faces/shards/presets",
+  "k.faces/shards/traits",
   "k.words/shards/frequency-s",
   "k.words/shards/sm"
  ],
@@ -133460,6 +134004,7 @@
   "k.geo/shards/africa"
  ],
  "sobbing": [
+  "k.faces/shards/traits",
   "k.words/shards/frequency-s",
   "k.words/shards/so"
  ],
@@ -134789,6 +135334,7 @@
   "w.document/schema.sop"
  ],
  "speaking": [
+  "k.faces/shards/traits",
   "k.words/shards/frequency-s",
   "k.words/shards/sp"
  ],
@@ -136329,6 +136875,7 @@
  ],
  "stand": [
   "k.actions/shards/actions-body-social-nature",
+  "k.faces/shards/figure-poses",
   "k.kinds/shards/part_of-wordnet-3",
   "k.objects/shards/home",
   "k.objects/shards/mulberry-building-furniture-04",
@@ -136372,13 +136919,21 @@
   "k.words/shards/st"
  ],
  "standing": [
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-s",
   "k.words/shards/st"
  ],
  "standing room": [
   "k.kinds/shards/part_of-wordnet-3"
  ],
+ "standing still": [
+  "k.faces/shards/figure-poses"
+ ],
+ "standing up": [
+  "k.faces/shards/figure-poses"
+ ],
  "stands": [
+  "k.faces/shards/figure-poses",
   "k.objects/shards/noto-place-building-01",
   "w.seating/schema.sop"
  ],
@@ -136648,6 +137203,7 @@
   "k.words/shards/st"
  ],
  "startled": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings"
  ],
  "starts": [
@@ -138431,6 +138987,9 @@
   "k.words/shards/frequency-s",
   "k.words/shards/st"
  ],
+ "stunned": [
+  "k.faces/shards/traits"
+ ],
  "stunt": [
   "k.words/shards/frequency-s",
   "k.words/shards/st"
@@ -138869,6 +139428,9 @@
   "k.objects/shards/mulberry-clothes-general-06",
   "k.scenes/shards/things-s"
  ],
+ "suit jacket": [
+  "k.faces/shards/figure-coat"
+ ],
  "suit of armour": [
   "k.wearables/shards/wearables"
  ],
@@ -139139,6 +139701,9 @@
   "k.objects/shards/noto-sky-weather-02",
   "k.scenes/shards/things-s"
  ],
+ "sun-bleached blond hair": [
+  "k.faces/shards/traits"
+ ],
  "sunburst pleat": [
   "k.kinds/shards/part_of-wordnet-3"
  ],
@@ -139226,6 +139791,9 @@
   "k.words/shards/su",
   "w.face/schema.sop",
   "w.lang.en/shards/catalog-plurals"
+ ],
+ "sunhat": [
+  "k.wearables/shards/wearables"
  ],
  "sunlight": [
   "k.words/shards/frequency-s",
@@ -139558,6 +140126,7 @@
   "k.words/shards/su"
  ],
  "surprise": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings",
   "k.words/shards/frequency-s",
   "k.words/shards/su",
@@ -139569,9 +140138,13 @@
  "surprised": [
   "k.faces/shards/plain-eyes",
   "k.faces/shards/presets",
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings",
   "k.words/shards/frequency-s",
   "k.words/shards/su"
+ ],
+ "surprised face": [
+  "k.faces/shards/traits"
  ],
  "surprising fact": [
   "k.genres/shards/essay",
@@ -141038,6 +141611,7 @@
  ],
  "tail": [
   "k.attributes/shards/narration",
+  "k.faces/shards/figure-neckwear",
   "k.faces/shards/plain-hair-back",
   "k.kinds/shards/part_of",
   "k.kinds/shards/part_of-wordnet-3",
@@ -141353,6 +141927,7 @@
  ],
  "talk": [
   "k.actions/shards/actions-mind-talk",
+  "k.faces/shards/traits",
   "k.genres/shards/presentation",
   "k.motion/shards/rules",
   "k.procedures/shards/tasks",
@@ -141370,6 +141945,7 @@
  "talking": [
   "k.faces/shards/plain-mouth",
   "k.faces/shards/presets",
+  "k.faces/shards/traits",
   "k.words/shards/frequency-t",
   "k.words/shards/ta"
  ],
@@ -142299,8 +142875,12 @@
   "k.words/shards/te"
  ],
  "tears": [
+  "k.faces/shards/traits",
   "k.words/shards/frequency-t",
   "k.words/shards/te"
+ ],
+ "teary": [
+  "k.faces/shards/traits"
  ],
  "teas": [
   "k.food/shards/other"
@@ -142995,6 +143575,7 @@
   "k.words/shards/te"
  ],
  "terrified": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings"
  ],
  "territorial": [
@@ -146217,6 +146798,8 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-t",
   "k.attributes/shards/things-worn",
+  "k.faces/shards/figure-coat",
+  "k.faces/shards/figure-neckwear",
   "k.faces/shards/plain-shoulders",
   "k.kinds/shards/head",
   "k.kinds/shards/kind",
@@ -146233,6 +146816,7 @@
   "k.wearables/shards/wearables",
   "k.words/shards/frequency-t",
   "k.words/shards/ti",
+  "w.face/schema.sop",
   "w.lang.en/shards/catalog-plurals",
   "k.objects/shards/noto-arts-crafts-01"
  ],
@@ -146253,7 +146837,8 @@
   "k.layouts/shards/layouts"
  ],
  "ties": [
-  "k.wearables/shards/wearables"
+  "k.wearables/shards/wearables",
+  "w.face/schema.sop"
  ],
  "tietê": [
   "k.geo/shards/south-america"
@@ -146871,6 +147456,7 @@
   "k.objects/shards/noto-transport-ground-06"
  ],
  "tired": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings",
   "k.words/shards/frequency-t",
   "k.words/shards/ti"
@@ -148954,6 +149540,8 @@
   "k.objects/shards/noto-transport-ground-01"
  ],
  "trait": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-faces",
   "k.words/shards/frequency-t",
   "k.words/shards/tr"
  ],
@@ -151836,6 +152424,7 @@
   "k.words/shards/un"
  ],
  "unhappy": [
+  "k.faces/shards/traits",
   "k.feelings/shards/feelings"
  ],
  "unhighlight": [
@@ -152293,6 +152882,7 @@
   "k.geo/shards/europe"
  ],
  "upright": [
+  "k.faces/shards/figure-poses",
   "k.styles/schema.sop",
   "k.styles/shards/drawing",
   "k.words/shards/frequency-u",
@@ -152307,6 +152897,7 @@
   "k.words/shards/up"
  ],
  "upset": [
+  "k.faces/shards/traits",
   "k.words/shards/frequency-u",
   "k.words/shards/up",
   "k.objects/shards/noto-food-prepared-05"
@@ -153018,6 +153609,7 @@
   "k.attributes/shards/narration",
   "k.attributes/shards/typical",
   "k.faces/schema.sop",
+  "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-layouts",
   "k.layouts/schema.sop",
   "k.procedures/shards/from-knowledge",
@@ -155674,6 +156266,7 @@
  ],
  "walk": [
   "k.actions/shards/actions-move",
+  "k.faces/shards/figure-poses",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.words/shards/frequency-w",
@@ -155689,6 +156282,7 @@
   "k.words/shards/wa"
  ],
  "walking": [
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-w",
   "k.words/shards/wa"
  ],
@@ -155719,6 +156313,9 @@
   "k.kinds/shards/group-mulberry",
   "k.objects/shards/mulberry-electrical-media-03",
   "k.scenes/shards/things-w"
+ ],
+ "walks": [
+  "k.faces/shards/figure-poses"
  ],
  "walkway": [
   "k.objects/shards/places-3"
@@ -156587,6 +157184,7 @@
  ],
  "wave": [
   "k.actions/shards/actions-body-social-nature",
+  "k.faces/shards/figure-poses",
   "k.objects/shards/land",
   "k.objects/shards/noto-sky-weather-06",
   "k.parts/shards/names",
@@ -156630,14 +157228,22 @@
   "k.kinds/shards/part_of-wordnet-3"
  ],
  "waves": [
+  "k.faces/shards/figure-poses",
   "k.kinds/shards/part_of",
   "k.parts/shards/names",
   "k.parts/shards/psys2",
   "k.shapes/shards/shapes"
  ],
  "waving": [
+  "k.faces/shards/figure-poses",
   "k.words/shards/frequency-w",
   "k.words/shards/wa"
+ ],
+ "waving goodbye": [
+  "k.faces/shards/figure-poses"
+ ],
+ "waving hello": [
+  "k.faces/shards/figure-poses"
  ],
  "wavy": [
   "k.faces/shards/plain-hair-front",
@@ -156968,6 +157574,7 @@
   "k.words/shards/we"
  ],
  "weeping": [
+  "k.faces/shards/traits",
   "k.words/shards/frequency-w",
   "k.words/shards/we"
  ],
@@ -157906,6 +158513,9 @@
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2"
  ],
+ "white hair": [
+  "k.faces/shards/traits"
+ ],
  "white hill": [
   "k.geo/shards/north-america"
  ],
@@ -158827,8 +159437,15 @@
  ],
  "wink": [
   "k.faces/shards/presets",
+  "k.faces/shards/traits",
   "k.words/shards/frequency-w",
   "k.words/shards/wi"
+ ],
+ "winking": [
+  "k.faces/shards/traits"
+ ],
+ "winks": [
+  "k.faces/shards/traits"
  ],
  "winner": [
   "k.words/shards/frequency-w",
@@ -159048,8 +159665,23 @@
   "w.meetings/schema.sop",
   "w.seating/schema.sop"
  ],
+ "with a beard": [
+  "k.faces/shards/traits"
+ ],
+ "with a moustache": [
+  "k.faces/shards/traits"
+ ],
+ "with a ponytail": [
+  "k.faces/shards/traits"
+ ],
  "with dots": [
   "k.values/shards/fills"
+ ],
+ "with freckles": [
+  "k.faces/shards/traits"
+ ],
+ "with long hair": [
+  "k.faces/shards/traits"
  ],
  "with stripes": [
   "k.values/shards/fills"
@@ -159766,6 +160398,7 @@
  ],
  "wrap": [
   "k.actions/shards/actions-hands",
+  "k.faces/shards/figure-neckwear",
   "k.objects/shards/noto-plant-flower-01",
   "k.words/shards/frequency-w",
   "k.words/shards/wr",
@@ -160462,6 +161095,7 @@
   "k.words/shards/ya"
  ],
  "yawning": [
+  "k.faces/shards/traits",
   "k.words/shards/frequency-y",
   "k.words/shards/ya"
  ],

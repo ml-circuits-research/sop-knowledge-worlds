@@ -1238,6 +1238,41 @@
   },
   {
    "style": "figure",
+   "slot": "back",
+   "name": "cape",
+   "file": "variant-figure-back-cape.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "long"
+    ],
+    "kind": [
+     "cape"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "back",
+   "name": "cloak",
+   "file": "variant-figure-back-cloak.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "long"
+    ],
+    "feel": [
+     "thick"
+    ],
+    "kind": [
+     "cloak"
+    ]
+   }
+  },
+  {
+   "style": "figure",
    "slot": "body",
    "name": "bare",
    "file": "variant-figure-body-bare.svg",
@@ -1350,6 +1385,102 @@
   },
   {
    "style": "figure",
+   "slot": "coat",
+   "name": "suit jacket",
+   "file": "variant-figure-coat-suit_jacket.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "short"
+    ],
+    "kind": [
+     "suit"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "hands",
+   "name": "gloves",
+   "file": "variant-figure-hands-gloves.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "gloves"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "hands",
+   "name": "mittens",
+   "file": "variant-figure-hands-mittens.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "feel": [
+     "thick"
+    ],
+    "kind": [
+     "mittens"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "neckwear",
+   "name": "bow tie",
+   "file": "variant-figure-neckwear-bow_tie.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "short"
+    ],
+    "kind": [
+     "bow tie"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "neckwear",
+   "name": "scarf",
+   "file": "variant-figure-neckwear-scarf.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "long"
+    ],
+    "feel": [
+     "thick"
+    ],
+    "kind": [
+     "scarf"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "neckwear",
+   "name": "tie",
+   "file": "variant-figure-neckwear-tie.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "length": [
+     "long"
+    ],
+    "kind": [
+     "tie"
+    ]
+   }
+  },
+  {
+   "style": "figure",
    "slot": "shoes",
    "name": "boots",
    "file": "variant-figure-shoes-boots.svg",
@@ -1361,6 +1492,19 @@
     ],
     "kind": [
      "boots"
+    ]
+   }
+  },
+  {
+   "style": "figure",
+   "slot": "shoes",
+   "name": "sandals",
+   "file": "variant-figure-shoes-sandals.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "sandals"
     ]
    }
   },
@@ -8097,6 +8241,36 @@
    "name": "talking",
    "style": "plain",
    "file": "expression-talking.svg"
+  },
+  {
+   "name": "smiling",
+   "style": "plain",
+   "file": "expression-smiling.svg"
+  },
+  {
+   "name": "laughing",
+   "style": "plain",
+   "file": "expression-laughing.svg"
+  },
+  {
+   "name": "crying",
+   "style": "plain",
+   "file": "expression-crying.svg"
+  },
+  {
+   "name": "shocked",
+   "style": "plain",
+   "file": "expression-shocked.svg"
+  },
+  {
+   "name": "scared",
+   "style": "plain",
+   "file": "expression-scared.svg"
+  },
+  {
+   "name": "frowning",
+   "style": "plain",
+   "file": "expression-frowning.svg"
   }
  ],
  "random": [

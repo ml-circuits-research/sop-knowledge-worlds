@@ -110,7 +110,7 @@ export function presetFace(world, name, expression) {
   if (expression) {
     const e = idx.expressions.find((x) => x.name === expression && x.style === p.style);
     if (!e) throw new Error(`no expression ${expression}`);
-    for (const key of ['mouth', 'eyebrows', 'eyes']) if (e.attrs[key]) face.pick[key] = tok(e.attrs[key][0]);
+    for (const key of ['mouth', 'eyebrows', 'eyes', 'cheeks']) if (e.attrs[key]) face.pick[key] = tok(e.attrs[key][0]);
     if (e.attrs.one_eye) face.oneEye = tok(e.attrs.one_eye[0]);
   }
   return face;

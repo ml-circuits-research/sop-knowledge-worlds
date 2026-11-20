@@ -9,7 +9,7 @@
 # needs: sopworld with std.schema and std.acts (tools/sopworld/VERSION, 0.30.0 or later)
 
 @w.face.schema core.use world=std.schema core.source="hand-core 1"
-@w.face core.module name=w.face version=1 exports=face exports=part exports=hair_back exports=shoulders exports=clothes exports=neck exports=ears exports=head exports=cheeks exports=beard exports=mouth exports=moustache exports=nose exports=eyes exports=eyebrows exports=glasses exports=hair_front exports=earrings exports=hat exports=accessories exports=body exports=top exports=bottom exports=shoes exports=coat exports=slot core.source="hand-core 1"
+@w.face core.module name=w.face version=1 exports=face exports=part exports=hair_back exports=shoulders exports=clothes exports=neck exports=ears exports=head exports=cheeks exports=beard exports=mouth exports=moustache exports=nose exports=eyes exports=eyebrows exports=glasses exports=hair_front exports=earrings exports=hat exports=accessories exports=body exports=top exports=bottom exports=shoes exports=coat exports=back exports=neckwear exports=hands exports=slot core.source="hand-core 1"
 @w.face.world std.schema.world name=w.face doc="a drawn face: parts with their variant, colour, size and place, and an expression" core.source="hand-core 1"
 
 # A face. A whole person drawn on a drawing has two: its face (style plain, drawn on the head) and its figure (style
@@ -29,6 +29,9 @@
 @w.face.face.eye_colour core.slot of=w.face.face key=eye_colour kind=atom kind=string core.source="hand-core 1"
 @w.face.face.clothes core.slot of=w.face.face key=clothes kind=atom kind=string core.source="hand-core 1"
 @w.face.face.expression core.slot of=w.face.face key=expression kind=atom kind=string type=k.faces.expression by=name core.source="hand-core 1"
+# `pose` is a mode of a face of a style with a skeleton (the figure of a person): the name of a k.faces pose (sitting,
+# waving, arms up) whose turns move the parts with their bones while it is set; no pose: standing as drawn.
+@w.face.face.pose core.slot of=w.face.face key=pose kind=atom kind=string type=k.faces.pose by=name core.source="hand-core 1"
 
 # A part of a face, the parent of every kind of part. `face` refers to the face it belongs to (a host with one face
 # may leave it out); `variant` names a k.faces variant of the part's slot in the face's style (`k.faces.variant`,
@@ -67,12 +70,16 @@
 @w.face.hat core.type of=w.face.hat extends=w.face.part closed=true core.source="hand-core 1"
 @w.face.accessories core.type of=w.face.accessories extends=w.face.part closed=true core.source="hand-core 1"
 # The kinds of part of the style `figure` (k.faces: a whole person's body and clothes, in the frame of the drawing
-# person): the bare body, and what is worn on the legs, on the feet, on the upper body and over everything.
+# person): the bare body, and what is worn on the legs, on the feet, on the upper body and over everything; behind the
+# body (a cape), round the neck (a scarf, a tie) and on the hands (gloves).
 @w.face.body core.type of=w.face.body extends=w.face.part closed=true core.source="hand-core 1"
 @w.face.top core.type of=w.face.top extends=w.face.part closed=true core.source="hand-core 1"
 @w.face.bottom core.type of=w.face.bottom extends=w.face.part closed=true core.source="hand-core 1"
 @w.face.shoes core.type of=w.face.shoes extends=w.face.part closed=true core.source="hand-core 1"
 @w.face.coat core.type of=w.face.coat extends=w.face.part closed=true core.source="hand-core 1"
+@w.face.back core.type of=w.face.back extends=w.face.part closed=true core.source="hand-core 1"
+@w.face.neckwear core.type of=w.face.neckwear extends=w.face.part closed=true core.source="hand-core 1"
+@w.face.hands core.type of=w.face.hands extends=w.face.part closed=true core.source="hand-core 1"
 
 # The kinds and the acts. A face is made, changed (its colours, style, expression), copied, asked about and removed;
 # a part is made (added to the face), removed (taken off), changed (variant, colour, size), placed (moved), picked
@@ -102,6 +109,9 @@
 @w.face.kind.bottom std.schema.kind of=w.face.bottom world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
 @w.face.kind.shoes std.schema.kind of=w.face.shoes world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
 @w.face.kind.coat std.schema.kind of=w.face.coat world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
+@w.face.kind.back std.schema.kind of=w.face.back world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
+@w.face.kind.neckwear std.schema.kind of=w.face.neckwear world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
+@w.face.kind.hands std.schema.kind of=w.face.hands world=w.face acts=make acts=remove acts=change acts=place acts=pick acts=ask core.source="hand-core 1"
 @w.face.one.first w.face.part kind=?kind face=?face
 @w.face.one.second w.face.part kind=?kind face=?face
 @w.face.one.other core.check fn=neq args=$w.face.one.first args=$w.face.one.second
@@ -130,6 +140,9 @@
 @w.face.limit.bottom std.schema.limit of=w.face.bottom max=200 core.source="hand-core 1"
 @w.face.limit.shoes std.schema.limit of=w.face.shoes max=200 core.source="hand-core 1"
 @w.face.limit.coat std.schema.limit of=w.face.coat max=200 core.source="hand-core 1"
+@w.face.limit.back std.schema.limit of=w.face.back max=200 core.source="hand-core 1"
+@w.face.limit.neckwear std.schema.limit of=w.face.neckwear max=200 core.source="hand-core 1"
+@w.face.limit.hands std.schema.limit of=w.face.hands max=200 core.source="hand-core 1"
 
 # Which k.faces slot each kind of part draws: an explicit join, so a rule that reads a part's variant
 # from k.faces matches the slot by a declared fact, not by the spelling of the type name.
@@ -163,5 +176,8 @@
 @w.face.slot.bottom w.face.slot part=w.face.bottom slot=bottom group=clothes core.source="hand-core 1"
 @w.face.slot.shoes w.face.slot part=w.face.shoes slot=shoes group=clothes core.source="hand-core 1"
 @w.face.slot.coat w.face.slot part=w.face.coat slot=coat group=clothes core.source="hand-core 1"
+@w.face.slot.back w.face.slot part=w.face.back slot=back group=clothes core.source="hand-core 1"
+@w.face.slot.neckwear w.face.slot part=w.face.neckwear slot=neckwear group=clothes core.source="hand-core 1"
+@w.face.slot.hands w.face.slot part=w.face.hands slot=hands group=clothes core.source="hand-core 1"
 
 # Words: for the world (how a host finds it by name), its kinds and its keys.

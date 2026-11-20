@@ -366,6 +366,40 @@ export const EXPRESSIONS = [
   ['sleepy', { mouth: 'small', eyebrows: 'straight', eyes: 'sleepy' }],
   ['wink', { mouth: 'smile', one_eye: 'closed' }],
   ['talking', { mouth: 'talking', mouth_alt: 'neutral' }],
+  ['smiling', { mouth: 'smile', eyebrows: 'arched' }],
+  ['laughing', { mouth: 'grin', eyebrows: 'raised', eyes: 'happy' }],
+  ['crying', { mouth: 'sad', eyebrows: 'sad', eyes: 'closed', cheeks: 'tear' }],
+  ['shocked', { mouth: 'open', eyebrows: 'raised', eyes: 'large' }],
+  ['scared', { mouth: 'gritted', eyebrows: 'sad', eyes: 'large' }],
+  ['frowning', { mouth: 'frown', eyebrows: 'angry' }],
+];
+// Other words for the expressions (core.word ... of=k.faces.expression.name): what a person says for each.
+export const EXPRESSION_WORDS = {
+  happy: 'happy face, a happy face, big smile, a big smile, beaming, cheerful, glad, joyful', sad: 'sad face, a sad face, unhappy, upset, gloomy, glum',
+  angry: 'angry face, an angry face, mad, cross, furious, grumpy', surprised: 'surprised face, a surprised face, surprise, amazed, astonished, startled',
+  sleepy: 'tired, drowsy, yawning, sleepy face', wink: 'winking, winks', talking: 'speaking, chatting, talk',
+  smiling: 'smile, smiles, a smile, smiley, grinning a little', laughing: 'laugh, laughs, laughter, giggling, cracking up, grinning, grin',
+  crying: 'cry, cries, in tears, tears, weeping, sobbing, teary', shocked: 'shocked face, a shocked face, shock, stunned, gobsmacked',
+  scared: 'afraid, frightened, terrified, fearful, scared face', frowning: 'frown, frowns, a frown, scowling, scowl',
+};
+// Traits a person is drawn with (psys2 drawn.trait: "a ginger girl", "make him bald", "give the man a beard"): the
+// colours of the face a trait sets and the parts it adds (a slot and its variant) or takes away (the slot emptied).
+// [name, about, colours, parts ([slot, variant] or [slot, null]), words]
+export const TRAITS = [
+  ['ginger', 'red hair', { hair_colour: 'red' }, [], 'ginger hair, red hair, red-haired, redhead, a redhead, ginger-haired'],
+  ['blond', 'fair hair', { hair_colour: 'blond' }, [], 'blond hair, blonde, blonde hair, fair-haired, fair hair, golden hair, sun-bleached blond hair'],
+  ['dark-haired', 'black hair', { hair_colour: 'black' }, [], 'black hair, dark hair, black-haired'],
+  ['brown-haired', 'brown hair', { hair_colour: 'brown' }, [], 'brown hair, brunette'],
+  ['grey-haired', 'grey hair', { hair_colour: 'grey' }, [], 'grey hair, gray hair, silver hair, white hair, gray-haired'],
+  ['bald', 'no hair on the head', {}, [['hair_front', null], ['hair_back', null]], 'bald head, no hair, hairless, bald-headed'],
+  ['bearded', 'a full beard', {}, [['beard', 'full']], 'beard, a beard, with a beard, a proper beard, long bushy beard'],
+  ['moustached', 'a moustache', {}, [['moustache', 'chevron']], 'moustache, mustache, a moustache, a mustache, with a moustache'],
+  ['beard and moustache', 'a full beard and a moustache', {}, [['beard', 'full'], ['moustache', 'chevron']], 'beard and mustache, bearded with a moustache'],
+  ['freckled', 'freckles on the cheeks', {}, [['cheeks', 'freckles']], 'freckles, freckly, with freckles, ginger hair with freckles'],
+  ['curly-haired', 'curly hair', {}, [['hair_front', 'curly']], 'curly hair, curls, curly'],
+  ['mohawk', 'a mohawk', {}, [['hair_front', 'mohawk']], 'a mohawk, mohican'],
+  ['ponytail', 'hair in a ponytail', {}, [['hair_back', 'ponytail']], 'a ponytail, with a ponytail'],
+  ['long-haired', 'long hair', {}, [['hair_back', 'long straight']], 'long hair, with long hair'],
 ];
 
 // Sparse authored cartoon-style constraints; other compatible properties remain free.
@@ -494,12 +528,17 @@ export function coreShards({ slots: drawnSlots = SLOTS, variants: drawnVariants 
       variants[slot].map((v) => variantLines(slot, box, v)).join('\n\n')}\n`;
   }
   if (canonText) files[`${STYLE}-canon.sop`] = canonText;
+  files['traits.sop'] = `${head('traits', `traits a person of the style \`${STYLE}\` is drawn with (ginger, bald, bearded): the face colours a trait sets and the parts it adds or takes away (remove=true), and the words for the traits and the expressions.`)}\n${
+    TRAITS.map(([name, about, colours, parts]) => [wire(`k.faces.${STYLE}.trait.${seg(name)}`, 'k.faces.trait', [['name', name], ['style', STYLE], ['about', { string: about }], ...Object.entries(colours)], SRC),
+      ...parts.map(([slot, variant]) => wire(`k.faces.${STYLE}.trait.${seg(name)}.${slot}`, 'k.faces.trait.part', [['trait', name], ['style', STYLE], ['slot', slot], ['variant', variant ?? undefined], ['remove', variant ? undefined : 'true']], SRC))].join('\n')).join('\n')}\n\n${
+    TRAITS.map(([name, , , , words]) => wire(`k.faces.word.trait.${seg(name)}`, 'core.word', [['text', name], ...words.split(',').map((w) => ['text', w.trim()]), ['means', name], ['of', 'k.faces.trait.name']], SRC)).join('\n')}\n${
+    EXPRESSIONS.map(([name]) => wire(`k.faces.word.expression.${seg(name)}`, 'core.word', [['text', name], ...(EXPRESSION_WORDS[name] ?? '').split(',').map((w) => w.trim()).filter(Boolean).map((w) => ['text', w]), ['means', name], ['of', 'k.faces.expression.name']], SRC)).join('\n')}\n`;
   return files;
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const files = coreShards();
   writeShards(join(WORLDS_DIR, 'k.faces', 'shards'), files, `${STYLE}-`);
-  writeShards(join(WORLDS_DIR, 'k.faces', 'shards'), Object.fromEntries(['slots.sop', 'colours.sop', 'presets.sop'].map((f) => [f, files[f]])), 'zzz-none-');
+  writeShards(join(WORLDS_DIR, 'k.faces', 'shards'), Object.fromEntries(['slots.sop', 'colours.sop', 'presets.sop', 'traits.sop'].map((f) => [f, files[f]])), 'zzz-none-');
   console.log(`${Object.keys(files).length} shards, ${Object.values(VARIANTS).reduce((n, v) => n + v.length, 0)} variants`);
 }

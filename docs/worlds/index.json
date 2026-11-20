@@ -1,5 +1,5 @@
 {
- "version": "c22eebc6a9b0",
+ "version": "dae21d0df06f",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -4706,8 +4706,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1448,
-     "bytes": 281077,
+     "wires": 1477,
+     "bytes": 286530,
      "keys": [
       "a",
       "about",
@@ -4758,6 +4758,7 @@
       "blur",
       "body",
       "body_part",
+      "bone",
       "botanically",
       "bottom",
       "branch",
@@ -4934,6 +4935,8 @@
       "hold_max",
       "hold_min",
       "hold_until",
+      "hold_x",
+      "hold_y",
       "holders",
       "holds",
       "hour12",
@@ -5004,6 +5007,7 @@
       "k.expect.make",
       "k.expect.part",
       "k.expect.scale",
+      "k.faces.bone",
       "k.faces.canon",
       "k.faces.colour",
       "k.faces.expression",
@@ -5012,8 +5016,12 @@
       "k.faces.frame",
       "k.faces.part",
       "k.faces.point",
+      "k.faces.pose",
       "k.faces.preset",
       "k.faces.slot",
+      "k.faces.trait",
+      "k.faces.trait.part",
+      "k.faces.turn",
       "k.faces.variant",
       "k.feelings.feeling",
       "k.food.food",
@@ -5189,6 +5197,7 @@
       "length_about",
       "length_unit",
       "letter",
+      "level",
       "lies",
       "light_years_about",
       "lighter",
@@ -5305,6 +5314,7 @@
       "political_continent",
       "population",
       "pos",
+      "pose",
       "present",
       "price_class",
       "priority",
@@ -5326,6 +5336,7 @@
       "relation",
       "relationship",
       "relative",
+      "remove",
       "repeat_max",
       "repeat_min",
       "required",
@@ -5424,6 +5435,7 @@
       "tool",
       "top",
       "topic",
+      "trait",
       "tried_by",
       "type",
       "typical",
@@ -15066,6 +15078,7 @@
    "schema": "k.faces/schema.sop",
    "vocabulary": "k.faces/shards/words.sop",
    "exports": [
+    "k.faces.bone",
     "k.faces.canon",
     "k.faces.colour",
     "k.faces.expression",
@@ -15074,8 +15087,12 @@
     "k.faces.frame",
     "k.faces.part",
     "k.faces.point",
+    "k.faces.pose",
     "k.faces.preset",
     "k.faces.slot",
+    "k.faces.trait",
+    "k.faces.trait.part",
+    "k.faces.turn",
     "k.faces.variant"
    ],
    "depends": [
@@ -15084,6 +15101,10 @@
     "k.values"
    ],
    "indexedFields": {
+    "k.faces.bone": [
+     "name",
+     "style"
+    ],
     "k.faces.canon": [
      "style"
     ],
@@ -15105,11 +15126,29 @@
      "of",
      "slot"
     ],
+    "k.faces.pose": [
+     "name",
+     "style"
+    ],
     "k.faces.preset": [
      "name"
     ],
     "k.faces.slot": [
      "name",
+     "style"
+    ],
+    "k.faces.trait": [
+     "name",
+     "style"
+    ],
+    "k.faces.trait.part": [
+     "slot",
+     "style",
+     "trait"
+    ],
+    "k.faces.turn": [
+     "bone",
+     "pose",
      "style"
     ],
     "k.faces.variant": [
@@ -15456,20 +15495,47 @@
      "warnings": []
     },
     {
+     "id": "k.faces/shards/figure-back",
+     "path": "k.faces/shards/figure-back.sop",
+     "wires": 17,
+     "bytes": 2787,
+     "keys": [
+      "back",
+      "cape",
+      "cloak",
+      "lining"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "k.faces/shards/figure-body",
      "path": "k.faces/shards/figure-body.sop",
-     "wires": 25,
-     "bytes": 4004,
+     "wires": 51,
+     "bytes": 8652,
      "keys": [
       "bare",
       "body",
-      "left_arm",
+      "left_elbow",
+      "left_forearm",
       "left_hand",
-      "left_leg",
+      "left_knee",
+      "left_shin",
+      "left_shoulder",
+      "left_thigh",
+      "left_upper_arm",
       "neck",
-      "right_arm",
+      "right_elbow",
+      "right_forearm",
       "right_hand",
-      "right_leg",
+      "right_knee",
+      "right_shin",
+      "right_shoulder",
+      "right_thigh",
+      "right_upper_arm",
       "torso"
      ],
      "sources": [
@@ -15481,13 +15547,17 @@
     {
      "id": "k.faces/shards/figure-bottom",
      "path": "k.faces/shards/figure-bottom.sop",
-     "wires": 45,
-     "bytes": 7660,
+     "wires": 69,
+     "bytes": 12171,
      "keys": [
       "bottom",
       "jeans",
+      "left_knee",
       "left_leg",
+      "left_shin",
+      "right_knee",
       "right_leg",
+      "right_shin",
       "seam",
       "shorts",
       "skirt",
@@ -15503,13 +15573,103 @@
     {
      "id": "k.faces/shards/figure-coat",
      "path": "k.faces/shards/figure-coat.sop",
-     "wires": 34,
-     "bytes": 5407,
+     "wires": 123,
+     "bytes": 20991,
      "keys": [
       "coat",
       "jacket",
+      "left_cuff",
+      "left_elbow",
+      "left_lapel",
       "left_side",
-      "right_side"
+      "left_sleeve",
+      "right_cuff",
+      "right_elbow",
+      "right_lapel",
+      "right_side",
+      "right_sleeve",
+      "suit jacket",
+      "tie"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/figure-hands",
+     "path": "k.faces/shards/figure-hands.sop",
+     "wires": 6,
+     "bytes": 1610,
+     "keys": [
+      "gloves",
+      "hands",
+      "left_glove",
+      "left_mitten",
+      "mittens",
+      "right_glove",
+      "right_mitten"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/figure-neckwear",
+     "path": "k.faces/shards/figure-neckwear.sop",
+     "wires": 29,
+     "bytes": 4934,
+     "keys": [
+      "blade",
+      "bow tie",
+      "knot",
+      "left_wing",
+      "neckwear",
+      "right_wing",
+      "scarf",
+      "tail",
+      "tie",
+      "wrap"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/figure-poses",
+     "path": "k.faces/shards/figure-poses.sop",
+     "wires": 101,
+     "bytes": 15560,
+     "keys": [
+      "arms up",
+      "clapping",
+      "cross legged",
+      "dancing",
+      "figure",
+      "hands on hips",
+      "holding",
+      "jumping",
+      "kicking",
+      "left_forearm",
+      "left_shin",
+      "left_thigh",
+      "left_upper_arm",
+      "pointing",
+      "reaching up",
+      "right_forearm",
+      "right_shin",
+      "right_thigh",
+      "right_upper_arm",
+      "running",
+      "sitting",
+      "standing",
+      "walking",
+      "waving"
      ],
      "sources": [
       "hand-core-1"
@@ -15544,16 +15704,21 @@
     {
      "id": "k.faces/shards/figure-shoes",
      "path": "k.faces/shards/figure-shoes.sop",
-     "wires": 27,
-     "bytes": 4735,
+     "wires": 38,
+     "bytes": 6729,
      "keys": [
       "boots",
       "left_boot",
       "left_shoe",
+      "left_sole",
+      "left_strap",
       "left_stripe",
       "right_boot",
       "right_shoe",
+      "right_sole",
+      "right_strap",
       "right_stripe",
+      "sandals",
       "shoes",
       "trainers"
      ],
@@ -15566,13 +15731,16 @@
     {
      "id": "k.faces/shards/figure-slots",
      "path": "k.faces/shards/figure-slots.sop",
-     "wires": 7,
-     "bytes": 1648,
+     "wires": 10,
+     "bytes": 2037,
      "keys": [
+      "back",
       "body",
       "bottom",
       "coat",
       "figure",
+      "hands",
+      "neckwear",
       "person",
       "shoes",
       "top"
@@ -15586,14 +15754,20 @@
     {
      "id": "k.faces/shards/figure-top",
      "path": "k.faces/shards/figure-top.sop",
-     "wires": 72,
-     "bytes": 10004,
+     "wires": 134,
+     "bytes": 19816,
      "keys": [
       "buttons",
       "collar",
       "dress",
       "hem",
       "jumper",
+      "left_cuff",
+      "left_elbow",
+      "left_sleeve",
+      "right_cuff",
+      "right_elbow",
+      "right_sleeve",
       "shirt",
       "t-shirt",
       "tank top",
@@ -17025,8 +17199,8 @@
     {
      "id": "k.faces/shards/presets",
      "path": "k.faces/shards/presets.sop",
-     "wires": 33,
-     "bytes": 7597,
+     "wires": 39,
+     "bytes": 8437,
      "keys": [
       "alien",
       "angry",
@@ -17035,15 +17209,21 @@
       "boy",
       "child",
       "clown",
+      "crying",
+      "frowning",
       "girl",
       "happy",
+      "laughing",
       "man",
       "old man",
       "old woman",
       "queen",
       "robot",
       "sad",
+      "scared",
+      "shocked",
       "sleepy",
+      "smiling",
       "surprised",
       "talking",
       "wink",
@@ -17266,6 +17446,39 @@
       "dicebear-toon-head-67f54a0"
      ],
      "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/traits",
+     "path": "k.faces/shards/traits.sop",
+     "wires": 52,
+     "bytes": 8882,
+     "keys": [
+      "bald",
+      "beard",
+      "beard and moustache",
+      "bearded",
+      "blond",
+      "brown-haired",
+      "cheeks",
+      "curly-haired",
+      "dark-haired",
+      "freckled",
+      "ginger",
+      "grey-haired",
+      "hair_back",
+      "hair_front",
+      "long-haired",
+      "mohawk",
+      "moustache",
+      "moustached",
+      "plain",
+      "ponytail"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
      "warnings": []
     },
     {
@@ -34703,13 +34916,15 @@
     {
      "id": "k.kinds/shards/relations-faces",
      "path": "k.kinds/shards/relations-faces.sop",
-     "wires": 95,
-     "bytes": 17122,
+     "wires": 124,
+     "bytes": 21959,
      "keys": [
       "about",
       "age",
+      "angle",
       "beard",
       "body",
+      "bone",
       "bottom",
       "brow_above",
       "cheeks",
@@ -34735,6 +34950,10 @@
       "hat",
       "head",
       "hides",
+      "hold_x",
+      "hold_y",
+      "holds",
+      "k.faces.bone",
       "k.faces.canon",
       "k.faces.colour",
       "k.faces.expression",
@@ -34743,11 +34962,16 @@
       "k.faces.frame",
       "k.faces.part",
       "k.faces.point",
+      "k.faces.pose",
       "k.faces.preset",
       "k.faces.slot",
+      "k.faces.trait",
+      "k.faces.trait.part",
+      "k.faces.turn",
       "k.faces.variant",
       "kind",
       "length",
+      "level",
       "mirror",
       "moustache",
       "mouth",
@@ -34764,9 +34988,12 @@
       "one_eye",
       "opens",
       "optional",
+      "parent",
       "part",
       "pointing",
+      "pose",
       "property",
+      "remove",
       "rgb",
       "scale",
       "sex",
@@ -34780,7 +35007,9 @@
       "style",
       "tint",
       "top",
+      "trait",
       "value",
+      "variant",
       "w",
       "x",
       "y",
@@ -65056,8 +65285,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 376,
-     "bytes": 53640,
+     "wires": 382,
+     "bytes": 54394,
      "keys": [
       "after",
       "age_years_about",
@@ -65085,6 +65314,7 @@
       "binding",
       "blur",
       "body",
+      "bone",
       "box",
       "brightness",
       "brow_above",
@@ -65169,6 +65399,8 @@
       "high",
       "hold_max",
       "hold_min",
+      "hold_x",
+      "hold_y",
       "holders",
       "hour",
       "hour12",
@@ -65227,6 +65459,7 @@
       "length",
       "length_about",
       "letters",
+      "level",
       "light_years_about",
       "lightness",
       "lon",
@@ -65288,6 +65521,7 @@
       "points_min",
       "policy",
       "population",
+      "pose",
       "preference",
       "preferred_policy",
       "prep",
@@ -65802,7 +66036,7 @@
      "id": "k.wearables/shards/wearables",
      "path": "k.wearables/shards/wearables.sop",
      "wires": 206,
-     "bytes": 35006,
+     "bytes": 35318,
      "keys": [
       "apron",
       "armor",
@@ -98183,7 +98417,8 @@
       "hair_colour",
       "eye_colour",
       "clothes",
-      "expression"
+      "expression",
+      "pose"
      ],
      "words": [
       "face",
@@ -98751,10 +98986,86 @@
       "coat",
       "coats"
      ]
+    },
+    {
+     "type": "w.face.back",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "cape",
+      "capes",
+      "cloak",
+      "cloaks",
+      "back"
+     ]
+    },
+    {
+     "type": "w.face.neckwear",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "scarf",
+      "scarves",
+      "tie",
+      "ties",
+      "neckwear"
+     ]
+    },
+    {
+     "type": "w.face.hands",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "gloves",
+      "mittens",
+      "handwear"
+     ]
     }
    ],
-   "wires": 121,
-   "bytes": 17458,
+   "wires": 134,
+   "bytes": 19277,
    "sources": [
     "hand-core-1"
    ],

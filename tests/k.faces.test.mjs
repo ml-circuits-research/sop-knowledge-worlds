@@ -76,8 +76,8 @@ test('presets name a variant of their style for every slot they fill, and four c
 });
 
 test('expressions switch to variants that exist; talking is a pair of mouths; wink closes one eye', () => {
-  assert.deepEqual(idx.expressions.map((e) => e.name).sort(), ['angry', 'happy', 'sad', 'sleepy', 'surprised', 'talking', 'wink']);
-  const slotOf = { mouth: 'mouth', mouth_alt: 'mouth', eyebrows: 'eyebrows', eyes: 'eyes', one_eye: 'eyes' };
+  assert.deepEqual(idx.expressions.map((e) => e.name).sort(), ['angry', 'crying', 'frowning', 'happy', 'laughing', 'sad', 'scared', 'shocked', 'sleepy', 'smiling', 'surprised', 'talking', 'wink']);
+  const slotOf = { mouth: 'mouth', mouth_alt: 'mouth', eyebrows: 'eyebrows', eyes: 'eyes', one_eye: 'eyes', cheeks: 'cheeks' };
   for (const e of idx.expressions) {
     for (const [key, slot] of Object.entries(slotOf)) for (const name of e.attrs[key] ?? []) assert.ok(idx.variants.some((v) => v.style === e.style && v.slot === slot && v.name === tok(name)), `${e.name}: ${key}=${name}`);
     for (const p of idx.presets.filter((x) => x.style === e.style)) assert.ok(composeFace(world, presetFace(world, p.name, e.name)).length > 5);

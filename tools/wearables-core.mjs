@@ -37,7 +37,7 @@ export const WEARABLES = [
   W('bobble hat', 'headwear', 'head', 'ears', 'over', false, 'bobble hat', 'beanie', 'cold', 'beanie, woolly hat, wool hat, winter hat'),
   W('top hat', 'headwear', 'head', '', 'over', false, 'top hat', 'top hat', 'party, looks', 'top hats'),
   W('cowboy hat', 'headwear', 'head', '', 'over', false, undefined, 'cowboy hat', 'sun', 'stetson'),
-  W('sun hat', 'headwear', 'head', '', 'over', false, undefined, 'sun hat', 'sun', 'straw hat'),
+  W('sun hat', 'headwear', 'head', '', 'over', false, undefined, 'sun hat', 'sun', 'straw hat, sunhat'),
   W('beret', 'headwear', 'head', '', 'over', false, undefined, 'beret', 'looks', 'berets'),
   W('party hat', 'headwear', 'head', '', 'over', false, undefined, 'party hat', 'party', 'paper hat'),
   W('chef hat', 'headwear', 'head', '', 'over', false, undefined, 'chef hat', 'work', "chef's hat, cook's hat"),
@@ -152,8 +152,10 @@ export const WEARABLES = [
 export const FIGURE = { shirt: 'shirt', 't-shirt': 't-shirt', blouse: 'shirt', vest: 'tank top', jumper: 'jumper', sweatshirt: 'jumper', hoodie: 'jumper', cardigan: 'jacket',
   jacket: 'jacket', coat: 'coat', raincoat: 'coat', 'lab coat': 'coat', dress: 'dress', nightgown: 'dress', sari: 'dress', trousers: 'trousers', jeans: 'jeans', shorts: 'shorts',
   skirt: 'skirt', 'swimming trunks': 'shorts', shoes: 'shoes', sandals: 'shoes', slippers: 'shoes', 'high-heeled shoes': 'shoes', 'ballet shoes': 'shoes', boots: 'boots',
-  'wellington boots': 'boots', 'hiking boots': 'boots', trainers: 'trainers' };
-const FIGURE_SLOT = (w) => (w.kind === 'coat' || w.name === 'cardigan' ? 'coat' : w.kind === 'bottom' ? 'bottom' : w.kind === 'footwear' ? 'shoes' : 'top');
+  'wellington boots': 'boots', 'hiking boots': 'boots', trainers: 'trainers', cape: 'cape', cloak: 'cloak', suit: 'suit jacket', scarf: 'scarf', tie: 'tie',
+  'bow tie': 'bow tie', gloves: 'gloves', 'gardening gloves': 'gloves', mittens: 'mittens', sandals: 'sandals' };
+// The figure slot: worn on the back behind the body (a cape), round the neck (a scarf, a tie), on the hands (gloves).
+const FIGURE_SLOT = (w) => (w.on === 'back' ? 'back' : w.kind === 'neckwear' ? 'neckwear' : w.kind === 'handwear' ? 'hands' : w.kind === 'coat' || w.name === 'cardigan' || w.name === 'suit' ? 'coat' : w.kind === 'bottom' ? 'bottom' : w.kind === 'footwear' ? 'shoes' : 'top');
 
 // The k.faces slot that draws a wearable: by its kind, or the slot of its place.
 const FACE_SLOT = (w) => (w.kind === 'headwear' ? 'hat' : w.kind === 'eyewear' ? 'glasses' : w.name === 'earrings' ? 'earrings' : 'shoulders');
