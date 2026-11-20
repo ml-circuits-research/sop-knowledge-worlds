@@ -52962,6 +52962,9 @@
   "k.words/shards/fe",
   "k.words/shards/frequency-f"
  ],
+ "feature scale": [
+  "k.faces/schema.sop"
+ ],
  "features": [
   "k.attributes/schema.sop"
  ],
@@ -64238,7 +64241,8 @@
   "k.words/shards/gr",
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
-  "w.drawing/schema.sop"
+  "w.drawing/schema.sop",
+  "w.face/schema.sop"
  ],
  "group photo": [
   "k.layouts/shards/layouts",
@@ -77271,6 +77275,10 @@
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-faces"
  ],
+ "k.faces.feature": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-faces"
+ ],
  "k.faces.part": [
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-faces"
@@ -84595,6 +84603,7 @@
   "k.charts/shards/charts",
   "k.expect/schema.sop",
   "k.faces/schema.sop",
+  "k.faces/shards/features",
   "k.geo/schema.sop",
   "k.kinds/shards/relations-expect",
   "k.kinds/shards/relations-faces",
@@ -103029,6 +103038,9 @@
   "k.words/shards/frequency-o",
   "k.words/shards/or"
  ],
+ "ordered feature": [
+  "k.faces/schema.sop"
+ ],
  "ordering": [
   "k.words/shards/frequency-o",
   "k.words/shards/or"
@@ -105728,6 +105740,9 @@
   "k.words/schema.sop",
   "k.words/shards/frequency-p",
   "k.words/shards/pa",
+  "w.face/schema.sop"
+ ],
+ "parts named together": [
   "w.face/schema.sop"
  ],
  "parts of speech": [
@@ -124354,10 +124369,12 @@
   "k.actions/shards/verbs-change",
   "k.attributes/shards/narration",
   "k.expect/schema.sop",
+  "k.faces/schema.sop",
   "k.kinds/schema.sop",
   "k.kinds/shards/head",
   "k.kinds/shards/part_of",
   "k.kinds/shards/part_of-wordnet-3",
+  "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-music",
   "k.kinds/shards/relations-values",
   "k.kinds/shards/wordnet-1",
@@ -130505,6 +130522,7 @@
   "k.attributes/shards/typical",
   "k.expect/schema.sop",
   "k.faces/schema.sop",
+  "k.faces/shards/features",
   "k.geo/schema.sop",
   "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-scenes",

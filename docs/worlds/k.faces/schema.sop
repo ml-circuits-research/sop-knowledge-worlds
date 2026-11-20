@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.faces core.module name=k.faces version=3 imports=k.named imports=k.drawing exports=slot exports=variant exports=part exports=point exports=colour exports=preset exports=expression exports=expression.goal exports=canon core.source="hand-core 1"
+@k.faces core.module name=k.faces version=3 imports=k.named imports=k.drawing imports=k.values exports=slot exports=variant exports=feature exports=part exports=point exports=colour exports=preset exports=expression exports=expression.goal exports=canon core.source="hand-core 1"
 
 # A place of a face in one style: its anchor box in the face frame and its draw order (lower first). The parts of a
 # variant lie inside the box of its slot. `mirror=true`: the slot is a pair (eyes, eyebrows, ears, cheeks, earrings);
@@ -38,6 +38,14 @@
 @k.faces.variant.feel core.slot of=k.faces.variant key=feel many=true enum=thin enum=thick enum=curly enum=straight enum=wavy enum=bushy enum=arched enum=flat enum=wide enum=narrow enum=open enum=closed enum=smiling enum=sad enum=surprised core.source="hand-core 1"
 @k.faces.variant.age core.slot of=k.faces.variant key=age many=true enum=child enum=adult enum=old core.source="hand-core 1"
 @k.faces.variant.kind core.slot of=k.faces.variant key=kind kind=atom kind=string core.source="hand-core 1"
+
+# A feature of the variants whose values are the steps of an ordered scale of k.values: the ranks of the scale order
+# the values of the key, so a host can move a part one step along it ("longer hair": a variant of the next step, of
+# the same slot and style) or set it to a step ("long hair"). `key` names a key of k.faces.variant; `scale` the
+# k.values scale whose step names are its values (length: short < medium < long).
+@k.faces.feature core.type of=k.faces.feature shared=true closed=true core.source="hand-core 1"
+@k.faces.feature.key core.slot of=k.faces.feature key=key id=true required=true enum=length enum=size core.source="hand-core 1"
+@k.faces.feature.scale core.slot of=k.faces.feature key=scale required=true kind=atom kind=string type=k.values.scale by=name core.source="hand-core 1"
 
 # A part of a variant, a part of k.drawing (as the parts of k.objects): a primitive shape with a box in the face frame, a draw order inside the
 # variant and typical colours. `slot` and `of` name the variant. `tint` says which colour of the face fills the part

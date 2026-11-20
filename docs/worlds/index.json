@@ -1,5 +1,5 @@
 {
- "version": "56d5192153f5",
+ "version": "92e18ddffbdb",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -4702,8 +4702,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1339,
-     "bytes": 260024,
+     "wires": 1341,
+     "bytes": 260402,
      "keys": [
       "a",
       "about",
@@ -4981,6 +4981,7 @@
       "k.faces.colour",
       "k.faces.expression",
       "k.faces.expression.goal",
+      "k.faces.feature",
       "k.faces.part",
       "k.faces.point",
       "k.faces.preset",
@@ -14944,6 +14945,7 @@
     "k.faces.colour",
     "k.faces.expression",
     "k.faces.expression.goal",
+    "k.faces.feature",
     "k.faces.part",
     "k.faces.point",
     "k.faces.preset",
@@ -14952,7 +14954,8 @@
    ],
    "depends": [
     "k.drawing",
-    "k.named"
+    "k.named",
+    "k.values"
    ],
    "indexedFields": {
     "k.faces.canon": [
@@ -14964,6 +14967,9 @@
     ],
     "k.faces.expression": [
      "name"
+    ],
+    "k.faces.feature": [
+     "key"
     ],
     "k.faces.part": [
      "of",
@@ -15300,6 +15306,21 @@
      ],
      "sources": [
       "dicebear-cutouts-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/features",
+     "path": "k.faces/shards/features.sop",
+     "wires": 2,
+     "bytes": 397,
+     "keys": [
+      "length",
+      "size"
+     ],
+     "sources": [
+      "hand-core-1"
      ],
      "license": "CC0-1.0",
      "warnings": []
@@ -16969,8 +16990,8 @@
     {
      "id": "k.faces/shards/words",
      "path": "k.faces/shards/words.sop",
-     "wires": 90,
-     "bytes": 10596,
+     "wires": 92,
+     "bytes": 10827,
      "keys": [],
      "sources": [
       "hand-core-1"
@@ -34397,8 +34418,8 @@
     {
      "id": "k.kinds/shards/relations-faces",
      "path": "k.kinds/shards/relations-faces.sop",
-     "wires": 83,
-     "bytes": 14708,
+     "wires": 84,
+     "bytes": 14908,
      "keys": [
       "about",
       "age",
@@ -34428,6 +34449,7 @@
       "k.faces.colour",
       "k.faces.expression",
       "k.faces.expression.goal",
+      "k.faces.feature",
       "k.faces.part",
       "k.faces.point",
       "k.faces.preset",
@@ -34455,6 +34477,7 @@
       "pointing",
       "property",
       "rgb",
+      "scale",
       "shade",
       "shape",
       "shoulders",
@@ -97629,8 +97652,8 @@
      ]
     }
    ],
-   "wires": 100,
-   "bytes": 14338,
+   "wires": 101,
+   "bytes": 14640,
    "sources": [
     "hand-core-1"
    ],

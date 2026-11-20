@@ -33,6 +33,7 @@
 @k.faces.word.shape core.word text=shape means=k.faces.variant.shape core.source="hand-core 1"
 @k.faces.word.size core.word text=size means=k.faces.variant.size core.source="hand-core 1"
 @k.faces.word.length core.word text=length means=k.faces.variant.length core.source="hand-core 1"
+@k.faces.word.feature core.word text="feature scale" text="ordered feature" means=k.faces.feature core.source="hand-core 1"
 @k.faces.word.age core.word text=age means=k.faces.variant.age core.source="hand-core 1"
 @k.faces.word.skin core.word text=skin means=k.faces.preset.skin core.source="hand-core 1"
 
@@ -49,6 +50,7 @@
 @k.faces.word.key.variant.style core.word text=style means=k.faces.variant.style core.source="hand-core 1"
 @k.faces.word.key.variant.feel core.word text=feel means=k.faces.variant.feel core.source="hand-core 1"
 @k.faces.word.key.variant.kind core.word text=kind means=k.faces.variant.kind core.source="hand-core 1"
+@k.faces.word.key.feature.scale core.word text=scale means=k.faces.feature.scale core.source="hand-core 1"
 @k.faces.word.key.part.of core.word text=of means=k.faces.part.of core.source="hand-core 1"
 @k.faces.word.key.part.name core.word text=name means=k.faces.part.name core.source="hand-core 1"
 @k.faces.word.key.part.kind core.word text=kind means=k.faces.part.kind core.source="hand-core 1"

@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (419 of 1339 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (419 of 1341 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -352,6 +352,8 @@
 @k.attributes.narration.k.faces.variant.feel k.attributes.narration type=k.faces.variant key=feel narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.variant.age k.attributes.narration type=k.faces.variant key=age narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.variant.kind k.attributes.narration type=k.faces.variant key=kind narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.feature.key k.attributes.narration type=k.faces.feature key=key narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.feature.scale k.attributes.narration type=k.faces.feature key=scale narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.part.slot k.attributes.narration type=k.faces.part key=slot narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.part.of k.attributes.narration type=k.faces.part key=of narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.part.name k.attributes.narration type=k.faces.part key=name narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"

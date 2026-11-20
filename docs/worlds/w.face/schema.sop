@@ -118,7 +118,10 @@
 @w.face.slot.type core.type of=w.face.slot closed=true core.source="hand-core 1"
 @w.face.slot.part core.slot of=w.face.slot key=part kind=atom core.source="hand-core 1"
 @w.face.slot.slot core.slot of=w.face.slot key=slot kind=atom core.source="hand-core 1"
-@w.face.slot.hair_back w.face.slot part=w.face.hair_back slot=hair_back core.source="hand-core 1"
+# `group`: the kinds of part a person names together as one thing ("her hair": the back hair and the front hair);
+# a feature of the group (its length) is the feature of its parts together.
+@w.face.slot.group core.slot of=w.face.slot key=group kind=atom core.source="hand-core 1"
+@w.face.slot.hair_back w.face.slot part=w.face.hair_back slot=hair_back group=hair core.source="hand-core 1"
 @w.face.slot.shoulders w.face.slot part=w.face.shoulders slot=shoulders core.source="hand-core 1"
 @w.face.slot.clothes w.face.slot part=w.face.clothes slot=clothes core.source="hand-core 1"
 @w.face.slot.neck w.face.slot part=w.face.neck slot=neck core.source="hand-core 1"
@@ -132,7 +135,7 @@
 @w.face.slot.eyes w.face.slot part=w.face.eyes slot=eyes core.source="hand-core 1"
 @w.face.slot.eyebrows w.face.slot part=w.face.eyebrows slot=eyebrows core.source="hand-core 1"
 @w.face.slot.glasses w.face.slot part=w.face.glasses slot=glasses core.source="hand-core 1"
-@w.face.slot.hair_front w.face.slot part=w.face.hair_front slot=hair_front core.source="hand-core 1"
+@w.face.slot.hair_front w.face.slot part=w.face.hair_front slot=hair_front group=hair core.source="hand-core 1"
 @w.face.slot.earrings w.face.slot part=w.face.earrings slot=earrings core.source="hand-core 1"
 @w.face.slot.hat w.face.slot part=w.face.hat slot=hat core.source="hand-core 1"
 @w.face.slot.accessories w.face.slot part=w.face.accessories slot=accessories core.source="hand-core 1"
