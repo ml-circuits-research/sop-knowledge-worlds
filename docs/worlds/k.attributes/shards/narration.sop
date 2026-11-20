@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (423 of 1358 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (426 of 1376 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -1196,6 +1196,24 @@
 @k.attributes.narration.k.story.constraint.about k.attributes.narration type=k.story.constraint key=about narrate=no salience=0 why="machinery: how stories are built" core.source="hand-core 1"
 @k.attributes.narration.k.story.constraint.source k.attributes.narration type=k.story.constraint key=source narrate=no salience=0 why="machinery: how stories are built" core.source="hand-core 1"
 @k.attributes.narration.k.story.constraint.own k.attributes.narration type=k.story.constraint key=own narrate=no salience=0 why="machinery: how stories are built" core.source="hand-core 1"
+@k.attributes.narration.k.styles.theme.name k.attributes.narration type=k.styles.theme key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
+@k.attributes.narration.k.styles.theme.about k.attributes.narration type=k.styles.theme key=about narrate=yes salience=0.3 form=text basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.styles.theme.fill k.attributes.narration type=k.styles.theme key=fill narrate=no salience=0 why="its values are catalog ids or codes" core.source="hand-core 1"
+@k.attributes.narration.k.styles.theme.outline k.attributes.narration type=k.styles.theme key=outline narrate=no salience=0 why="its values are catalog ids or codes" core.source="hand-core 1"
+@k.attributes.narration.k.styles.theme.text k.attributes.narration type=k.styles.theme key=text narrate=no salience=0 why="its values are catalog ids or codes" core.source="hand-core 1"
+@k.attributes.narration.k.styles.theme.edge k.attributes.narration type=k.styles.theme key=edge narrate=no salience=0 why="its values are catalog ids or codes" core.source="hand-core 1"
+@k.attributes.narration.k.styles.theme.background k.attributes.narration type=k.styles.theme key=background narrate=no salience=0 why="its values are catalog ids or codes" core.source="hand-core 1"
+@k.attributes.narration.k.styles.theme.group k.attributes.narration type=k.styles.theme key=group narrate=no salience=0 why="its values are catalog ids or codes" core.source="hand-core 1"
+@k.attributes.narration.k.styles.theme.weight k.attributes.narration type=k.styles.theme key=weight narrate=yes salience=0.3 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.styles.theme.width k.attributes.narration type=k.styles.theme key=width narrate=yes salience=0.3 form=measure basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.styles.role.theme k.attributes.narration type=k.styles.role key=theme narrate=no salience=0 why="part of the subject of a fact of several keys (red and yellow give orange)" core.source="hand-core 1"
+@k.attributes.narration.k.styles.role.role k.attributes.narration type=k.styles.role key=role narrate=no salience=0 why="part of the subject of a fact of several keys (red and yellow give orange)" core.source="hand-core 1"
+@k.attributes.narration.k.styles.role.fill k.attributes.narration type=k.styles.role key=fill narrate=no salience=0 why="its values are catalog ids or codes" core.source="hand-core 1"
+@k.attributes.narration.k.styles.role.outline k.attributes.narration type=k.styles.role key=outline narrate=no salience=0 why="its values are catalog ids or codes" core.source="hand-core 1"
+@k.attributes.narration.k.styles.role.text k.attributes.narration type=k.styles.role key=text narrate=no salience=0 why="its values are catalog ids or codes" core.source="hand-core 1"
+@k.attributes.narration.k.styles.swatch.theme k.attributes.narration type=k.styles.swatch key=theme narrate=no salience=0 why="part of the subject of a fact of several keys (red and yellow give orange)" core.source="hand-core 1"
+@k.attributes.narration.k.styles.swatch.n k.attributes.narration type=k.styles.swatch key=n narrate=no salience=0 why="part of the subject of a fact of several keys (red and yellow give orange)" core.source="hand-core 1"
+@k.attributes.narration.k.styles.swatch.colour k.attributes.narration type=k.styles.swatch key=colour narrate=no salience=0 why="its values are catalog ids or codes" core.source="hand-core 1"
 @k.attributes.narration.k.time.ordered.name k.attributes.narration type=k.time.ordered key=name narrate=no salience=0 why="machinery: orders for the time solver" core.source="hand-core 1"
 @k.attributes.narration.k.time.ordered.cycle k.attributes.narration type=k.time.ordered key=cycle narrate=no salience=0 why="machinery: orders for the time solver" core.source="hand-core 1"
 @k.attributes.narration.k.time.ordered.n k.attributes.narration type=k.time.ordered key=n narrate=no salience=0 why="machinery: orders for the time solver" core.source="hand-core 1"

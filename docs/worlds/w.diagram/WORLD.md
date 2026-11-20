@@ -19,6 +19,11 @@ of its own; two denies keep one code per thing of a kind and one membership per 
   kind); on nodes `size` (tiny, small, medium, large, huge), `width`, `height`, `value`, `pinned` and the shapes
   square, triangle, hexagon, star, text; on edges `n`, `colour`, `style` (solid, dashed, dotted), `width`; on groups
   `n`, `colour`, `layout` (row, column, grid, bar, line), `framed`, `scale`, `x`, `y`, `pinned`.
+- For an editor's page and style: on the diagram `arrange` (tree, layered, row, column, grid, circle, radial, free),
+  `direction` (down, right, up, left), `spacing` (compact, normal, loose), `route` (orthogonal, straight, curved),
+  `theme` (a `k.styles` theme), `background`, `numbered`, `code`; on nodes `outline`, `text_colour`, `font_size`,
+  `font_weight` (normal, bold), the roles database, actor, note, external and the shapes cylinder, cloud, actor,
+  note; on edges the direction `back` and `route`; group layouts circle, pie and doughnut.
 - `w.diagram.member`: `group`, `node` (required): a membership as a thing, made and removed by an editor (std.acts
   cannot take a reference away, and removing a group removes what refers to it); `node group=` stays the plain form.
 - Acts: make, remove, change, pick, ask, copy on diagrams and groups; also place, connect, group on nodes; make,

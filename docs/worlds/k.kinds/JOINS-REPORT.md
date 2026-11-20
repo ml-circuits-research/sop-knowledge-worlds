@@ -9,9 +9,9 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **271** in 44 worlds; distinct values 11428, meeting a target 11368 (99.5 %), open 60
+- declared joins: **273** in 45 worlds; distinct values 11440, meeting a target 11380 (99.5 %), open 60
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **61**; left undeclared on purpose: 5; keys with an enum, never suggested: 50
+- undeclared keys whose values the value share joins to a type: **61**; left undeclared on purpose: 5; keys with an enum, never suggested: 49
 
 ## Declared joins
 
@@ -213,6 +213,8 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.story | `k.story.obstacle.overcome_by` | `k.actions.action` | name | 6 | 6 |  |
 | k.story | `k.story.obstacle.thing` | `k.objects.object` | name | 7 | 7 |  |
 | k.story | `k.story.obstacle.tried_by` | `k.actions.action` | name | 9 | 9 |  |
+| k.styles | `k.styles.role.theme` | `k.styles.theme` | name | 1 | 1 |  |
+| k.styles | `k.styles.swatch.theme` | `k.styles.theme` | name | 11 | 11 |  |
 | k.time | `k.time.before.cycle` | `k.time.cycle` | name | 9 | 9 |  |
 | k.time | `k.time.cycle.lasts` | `k.time.duration` | name | 3 | 3 |  |
 | k.time | `k.time.duration.unit` | `k.units.unit` | name | 9 | 9 |  |
@@ -314,8 +316,8 @@ whose slot has an enum is never suggested here (see the last section).
 | k.commonsense | `k.commonsense.lives.at` | place | `k.objects.object` | name | 3 | 2 |
 | k.commonsense | `k.commonsense.thing.at` | place | `k.commonsense.lives`, `k.attributes.thing` | in | 42 | 32 |
 | k.expect | `k.expect.make.layout` | group | `k.layouts.layout` | name | 10 | 7 |
-| k.expect | `k.expect.part.part` | thing | `k.scenes.thing` | name | 632 | 599 |
-| k.expect | `k.expect.part.shape` | value | `k.shapes.shape` | name | 11 | 6 |
+| k.expect | `k.expect.part.part` | thing | `k.scenes.thing` | name | 633 | 599 |
+| k.expect | `k.expect.part.shape` | value | `k.shapes.shape` | name | 12 | 7 |
 | k.expect | `k.expect.part.slot` | thing | `k.body.part` | name | 8 | 3 |
 | k.faces | `k.faces.canon.name` | thing | `k.faces.canon` | style | 2 | 2 |
 | k.faces | `k.faces.colour.name` | value | `k.colours.colour` | name | 21 | 14 |
@@ -395,7 +397,6 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.colours | `k.colours.colour.tone` | 3 | 3 | 2 | `k.values.shade` |
 | k.diagrams | `k.diagrams.kind.form` | 10 | 10 | 6 | `k.diagrams.kind`, `k.expect.make` |
 | k.diagrams | `k.diagrams.kind.groups` | 2 | 2 | 2 | `k.values.reply` |
-| k.diagrams | `k.diagrams.shape.shape` | 11 | 11 | 6 | `k.shapes.shape` |
 | k.expect | `k.expect.make.extent` | 5 | 1 | 1 | `k.expect.scale` |
 | k.expect | `k.expect.make.varies` | 7 | 7 | 3 | `k.attributes.attribute` |
 | k.expect | `k.expect.part.needed` | 1 | 1 | 1 | `k.values.reply` |

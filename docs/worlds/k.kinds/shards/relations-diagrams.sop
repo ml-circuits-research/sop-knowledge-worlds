@@ -22,7 +22,7 @@
 @k.kinds.relation.k.diagrams.kind.source k.kinds.relation type=k.diagrams.kind key=source subject=kind object=thing object_type=k.diagrams.source found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.diagrams.shape.kind k.kinds.relation type=k.diagrams.shape key=kind subject=shape object=kind object_type=k.diagrams.kind found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.diagrams.shape.role k.kinds.relation type=k.diagrams.shape key=role subject=shape object=value found=schema core.source="hand-core 1"
-@k.kinds.relation.k.diagrams.shape.shape k.kinds.relation type=k.diagrams.shape key=shape subject=shape object=value object_type=k.shapes.shape object_sense=shape found=value core.source="hand-core 1"
+@k.kinds.relation.k.diagrams.shape.shape k.kinds.relation type=k.diagrams.shape key=shape subject=shape object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.diagrams.shape.about k.kinds.relation type=k.diagrams.shape key=about subject=shape object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.diagrams.shape.source k.kinds.relation type=k.diagrams.shape key=source subject=shape object=thing object_type=k.diagrams.source found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.diagrams.source.cite k.kinds.relation type=k.diagrams.source key=cite subject=source object=text found=schema core.source="hand-core 1"

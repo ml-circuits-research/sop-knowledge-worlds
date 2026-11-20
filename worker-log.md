@@ -6923,3 +6923,4 @@ Measured 45 composition schema wires (6,220 bytes, 8.2 ms), 54 layout schema wir
 
 2026-11-20 — w.diagram.word.node: element, item, shape, object (with plurals) name a diagram node (Diagram reading, part A); derived index/vocab/diagram-frames rebuilt.
 npm run test:changed: 267 tests, 0 failing.
+- 2026-11-20 diagram editor: w.diagram page settings (arrange, direction, spacing, route, theme, background, numbered), node style and effects (outline, text_colour, font_size/weight, effect, opacity, corner, rotation; roles database/actor/note/external; shapes cylinder/cloud/actor/note), edge back/route, chart formatting (circle/area/pie/doughnut layouts, x/y labels, value_labels, gridlines, legend, y_max); new k.styles (11 themes, 8 role colours, 76 palette colours); k.diagrams flowchart database -> cylinder. schema w.diagram 17.3 kB, k.styles 3.9 kB + themes 12.3 kB (100 wires), 0 warnings. test:changed 372 pass, 0 fail, 5 skipped.

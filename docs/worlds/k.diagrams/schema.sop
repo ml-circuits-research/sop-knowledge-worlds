@@ -29,7 +29,7 @@
 @k.diagrams.kind.layout core.slot of=k.diagrams.kind key=layout many=true required=true enum=top_down enum=left_right enum=radial enum=circular enum=grid enum=overlapping enum=free core.source="hand-core 1"
 @k.diagrams.kind.arranged core.slot of=k.diagrams.kind key=arranged many=true kind=atom kind=string type=k.layouts.layout by=name core.source="hand-core 1"
 @k.diagrams.kind.edges core.slot of=k.diagrams.kind key=edges required=true enum=directed enum=undirected enum=none core.source="hand-core 1"
-@k.diagrams.kind.role core.slot of=k.diagrams.kind key=role many=true required=true enum=start enum=end enum=process enum=decision enum=data enum=document enum=subprocess enum=connector enum=root enum=item enum=stage enum=event enum=centre enum=branch enum=post enum=node enum=row enum=column enum=cell core.source="hand-core 1"
+@k.diagrams.kind.role core.slot of=k.diagrams.kind key=role many=true required=true enum=start enum=end enum=process enum=decision enum=data enum=document enum=subprocess enum=connector enum=root enum=item enum=stage enum=event enum=centre enum=branch enum=post enum=node enum=row enum=column enum=cell enum=database enum=actor enum=note enum=external core.source="hand-core 1"
 @k.diagrams.kind.groups core.slot of=k.diagrams.kind key=groups enum=yes enum=no core.source="hand-core 1"
 @k.diagrams.kind.usual_for core.slot of=k.diagrams.kind key=usual_for many=true required=true kind=string core.source="hand-core 1"
 @k.diagrams.kind.source core.slot of=k.diagrams.kind key=source many=true kind=atom type=k.diagrams.source by=name core.source="hand-core 1"
@@ -38,8 +38,8 @@
 # a value of w.diagram.node.shape, `about`, `source`).
 @k.diagrams.shape core.type of=k.diagrams.shape shared=true closed=true core.source="hand-core 1"
 @k.diagrams.shape.kind core.slot of=k.diagrams.shape key=kind id=true required=true kind=atom kind=string type=k.diagrams.kind by=name core.source="hand-core 1"
-@k.diagrams.shape.role core.slot of=k.diagrams.shape key=role id=true required=true enum=start enum=end enum=process enum=decision enum=data enum=document enum=subprocess enum=connector enum=root enum=item enum=stage enum=event enum=centre enum=branch enum=post enum=node enum=row enum=column enum=cell core.source="hand-core 1"
-@k.diagrams.shape.shape core.slot of=k.diagrams.shape key=shape required=true enum=oval enum=rectangle enum=rounded_rectangle enum=diamond enum=parallelogram enum=document enum=double_rectangle enum=circle enum=ellipse enum=dot enum=chevron core.source="hand-core 1"
+@k.diagrams.shape.role core.slot of=k.diagrams.shape key=role id=true required=true enum=start enum=end enum=process enum=decision enum=data enum=document enum=subprocess enum=connector enum=root enum=item enum=stage enum=event enum=centre enum=branch enum=post enum=node enum=row enum=column enum=cell enum=database enum=actor enum=note enum=external core.source="hand-core 1"
+@k.diagrams.shape.shape core.slot of=k.diagrams.shape key=shape required=true enum=oval enum=rectangle enum=rounded_rectangle enum=diamond enum=parallelogram enum=document enum=double_rectangle enum=circle enum=ellipse enum=dot enum=chevron enum=cylinder enum=cloud enum=actor enum=note core.source="hand-core 1"
 @k.diagrams.shape.about core.slot of=k.diagrams.shape key=about required=true kind=string core.source="hand-core 1"
 @k.diagrams.shape.source core.slot of=k.diagrams.shape key=source many=true kind=atom type=k.diagrams.source by=name core.source="hand-core 1"
 

@@ -26,7 +26,7 @@ export const SOURCES = [
 // name, form, about, structures, layouts, arrangements (k.layouts), edges, roles, groups, usual for, sources
 export const KINDS = [
   ['flowchart', 'flowchart', 'the steps of a process and the decisions between them, joined by arrows from one step to the next; a decision has an arrow for each answer',
-    ['graph', 'sequence'], ['top_down', 'left_right'], ['flow', 'column'], 'directed', ['start', 'end', 'process', 'decision', 'data', 'document', 'subprocess', 'connector'], 'no',
+    ['graph', 'sequence'], ['top_down', 'left_right'], ['flow', 'column'], 'directed', ['start', 'end', 'process', 'decision', 'data', 'document', 'subprocess', 'connector', 'database'], 'no',
     ['the steps of a method or a recipe', 'how a program decides', 'what to do when something happens'], ['gilbreth1921', 'iso5807', 'sugiyama1981']],
   ['tree', 'tree', 'one thing at the top and the things under it below, each again the top of a smaller tree; a line joins each thing to the one it is under',
     ['whole with parts', 'graph'], ['top_down'], ['tree'], 'undirected', ['root', 'item'], 'no',
@@ -67,6 +67,7 @@ export const SHAPES = [
   ['flowchart', 'document', 'document', 'a document, a rectangle with a wavy bottom edge', ['iso5807']],
   ['flowchart', 'subprocess', 'double_rectangle', 'a predefined process, told elsewhere: a rectangle with double sides', ['iso5807']],
   ['flowchart', 'connector', 'circle', 'a small circle where a flow line continues elsewhere', ['iso5807']],
+  ['flowchart', 'database', 'cylinder', 'direct access storage, a database: a cylinder', ['iso5807']],
   ['tree', 'root', 'rectangle', 'the thing at the top', []],
   ['tree', 'item', 'rectangle', 'a thing under another', []],
   ['cycle', 'stage', 'circle', 'a stage, its arrows going round', []],

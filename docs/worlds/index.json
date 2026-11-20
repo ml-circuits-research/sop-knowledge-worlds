@@ -1,5 +1,5 @@
 {
- "version": "23721cd4a56b",
+ "version": "463df7b244d2",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -4706,8 +4706,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1358,
-     "bytes": 263600,
+     "wires": 1376,
+     "bytes": 267118,
      "keys": [
       "a",
       "about",
@@ -4743,6 +4743,7 @@
       "baby",
       "back_max",
       "back_min",
+      "background",
       "band",
       "base",
       "basic",
@@ -4837,6 +4838,7 @@
       "east",
       "eaten",
       "eats",
+      "edge",
       "edges",
       "element",
       "elevation",
@@ -4871,6 +4873,7 @@
       "feel",
       "figure",
       "figure_slot",
+      "fill",
       "filler",
       "fills",
       "finding",
@@ -5103,6 +5106,9 @@
       "k.story.goal",
       "k.story.obstacle",
       "k.story.source",
+      "k.styles.role",
+      "k.styles.swatch",
+      "k.styles.theme",
       "k.time.before",
       "k.time.clock_phrase",
       "k.time.cycle",
@@ -5371,6 +5377,7 @@
       "temperature_about",
       "tense",
       "text",
+      "theme",
       "thing",
       "time",
       "tint",
@@ -5420,6 +5427,7 @@
       "who",
       "whole",
       "why",
+      "width",
       "wikidata",
       "with",
       "within",
@@ -13858,8 +13866,8 @@
     {
      "id": "k.diagrams/shards/diagrams",
      "path": "k.diagrams/shards/diagrams.sop",
-     "wires": 68,
-     "bytes": 17288,
+     "wires": 69,
+     "bytes": 17495,
      "keys": [
       "after",
       "b",
@@ -13873,6 +13881,7 @@
       "country",
       "cycle",
       "data",
+      "database",
       "decision",
       "document",
       "end",
@@ -14144,8 +14153,8 @@
     {
      "id": "k.expect/shards/diagrams",
      "path": "k.expect/shards/diagrams.sop",
-     "wires": 40,
-     "bytes": 8609,
+     "wires": 41,
+     "bytes": 8782,
      "keys": [
       "branch",
       "cell",
@@ -14155,6 +14164,7 @@
       "connector",
       "cycle",
       "data",
+      "database",
       "decision",
       "document",
       "end",
@@ -34484,7 +34494,7 @@
      "id": "k.kinds/shards/relations-diagrams",
      "path": "k.kinds/shards/relations-diagrams.sop",
      "wires": 28,
-     "bytes": 5364,
+     "bytes": 5319,
      "keys": [
       "about",
       "arranged",
@@ -35477,6 +35487,35 @@
       "thing",
       "tried_by",
       "year"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.kinds/shards/relations-styles",
+     "path": "k.kinds/shards/relations-styles.sop",
+     "wires": 17,
+     "bytes": 3162,
+     "keys": [
+      "about",
+      "background",
+      "colour",
+      "edge",
+      "fill",
+      "group",
+      "k.styles.role",
+      "k.styles.swatch",
+      "k.styles.theme",
+      "n",
+      "outline",
+      "role",
+      "text",
+      "theme",
+      "weight",
+      "width"
      ],
      "sources": [
       "hand-core-1"
@@ -63425,6 +63464,83 @@
    "warnings": []
   },
   {
+   "id": "k.styles",
+   "version": "1",
+   "schema": "k.styles/schema.sop",
+   "vocabulary": "k.styles/shards/words.sop",
+   "exports": [
+    "k.styles.role",
+    "k.styles.swatch",
+    "k.styles.theme"
+   ],
+   "depends": [],
+   "indexedFields": {
+    "k.styles.role": [
+     "role",
+     "theme"
+    ],
+    "k.styles.swatch": [
+     "theme"
+    ],
+    "k.styles.theme": [
+     "name"
+    ]
+   },
+   "shards": [
+    {
+     "id": "k.styles/shards/themes",
+     "path": "k.styles/shards/themes.sop",
+     "wires": 95,
+     "bytes": 12267,
+     "keys": [
+      "blueprint",
+      "classic",
+      "connector",
+      "dark",
+      "data",
+      "database",
+      "decision",
+      "document",
+      "end",
+      "flowchart",
+      "forest",
+      "highlight",
+      "monochrome",
+      "ocean",
+      "pastel",
+      "start",
+      "subprocess",
+      "sunset",
+      "vivid"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.styles/shards/words",
+     "path": "k.styles/shards/words.sop",
+     "wires": 19,
+     "bytes": 2762,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
    "id": "k.time",
    "version": "7",
    "schema": "k.time/schema.sop",
@@ -64518,8 +64634,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 345,
-     "bytes": 49564,
+     "wires": 347,
+     "bytes": 49824,
      "keys": [
       "after",
       "age_years_about",
@@ -64651,6 +64767,7 @@
       "k.space",
       "k.spatial2d",
       "k.story",
+      "k.styles",
       "k.time",
       "k.units",
       "k.values",
@@ -64780,7 +64897,9 @@
       "steps",
       "subject_x",
       "subject_y",
+      "swatch",
       "temperature_about",
+      "theme",
       "thing",
       "tolerance",
       "topic",
@@ -64802,6 +64921,7 @@
       "weight_min",
       "west",
       "wheels",
+      "width",
       "with",
       "x",
       "y",
@@ -96815,7 +96935,15 @@
       "title",
       "form",
       "layout",
-      "topic"
+      "topic",
+      "arrange",
+      "direction",
+      "spacing",
+      "route",
+      "theme",
+      "background",
+      "numbered",
+      "code"
      ],
      "words": [
       "diagram",
@@ -96853,7 +96981,15 @@
       "width",
       "height",
       "value",
-      "pinned"
+      "pinned",
+      "outline",
+      "text_colour",
+      "font_size",
+      "font_weight",
+      "effect",
+      "opacity",
+      "corner",
+      "rotation"
      ],
      "words": [
       "node",
@@ -96895,7 +97031,8 @@
       "n",
       "colour",
       "style",
-      "width"
+      "width",
+      "route"
      ],
      "words": [
       "edge",
@@ -96932,7 +97069,13 @@
       "scale",
       "x",
       "y",
-      "pinned"
+      "pinned",
+      "x_label",
+      "y_label",
+      "value_labels",
+      "gridlines",
+      "legend",
+      "y_max"
      ],
      "words": [
       "group",
@@ -96961,8 +97104,8 @@
      ]
     }
    ],
-   "wires": 70,
-   "bytes": 12396,
+   "wires": 93,
+   "bytes": 17310,
    "sources": [
     "hand-core-1"
    ],

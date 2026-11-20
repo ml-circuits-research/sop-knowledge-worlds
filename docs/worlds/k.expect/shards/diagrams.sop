@@ -3,7 +3,7 @@
 # license: CC0-1.0
 # script: tools/expect-core.mjs
 
-@k.expect.make.flowchart k.expect.make thing=flowchart made_in=diagram unit=node min=5 max=9 typical=7 kinds_min=2 kinds_max=3 layout=flow extent=default diagram=flowchart varies=count varies=kinds varies=colour about="a flowchart of k.diagrams: 5 to 9 nodes, drawn as oval, rectangle, diamond, parallelogram, document, double_rectangle, circle, laid out flow, edges directed" core.source="hand-core 1"
+@k.expect.make.flowchart k.expect.make thing=flowchart made_in=diagram unit=node min=5 max=9 typical=7 kinds_min=2 kinds_max=3 layout=flow extent=default diagram=flowchart varies=count varies=kinds varies=colour about="a flowchart of k.diagrams: 5 to 9 nodes, drawn as oval, rectangle, diamond, parallelogram, document, double_rectangle, circle, cylinder, laid out flow, edges directed" core.source="hand-core 1"
 @k.expect.part.flowchart.start k.expect.part of=flowchart part=start group=node min=1 max=1 typical=1 needed=yes shape=oval role=start core.source="hand-core 1"
 @k.expect.part.flowchart.end k.expect.part of=flowchart part=end group=node min=1 max=1 typical=1 needed=yes shape=oval role=end core.source="hand-core 1"
 @k.expect.part.flowchart.process k.expect.part of=flowchart part=process group=node min=2 max=6 typical=3 needed=yes shape=rectangle role=process core.source="hand-core 1"
@@ -12,6 +12,7 @@
 @k.expect.part.flowchart.document k.expect.part of=flowchart part=document group=node min=0 max=1 typical=0 shape=document role=document core.source="hand-core 1"
 @k.expect.part.flowchart.subprocess k.expect.part of=flowchart part=subprocess group=node min=0 max=2 typical=0 shape=double_rectangle role=subprocess core.source="hand-core 1"
 @k.expect.part.flowchart.connector k.expect.part of=flowchart part=connector group=node min=0 max=2 typical=0 shape=circle role=connector core.source="hand-core 1"
+@k.expect.part.flowchart.database k.expect.part of=flowchart part=database group=node min=0 max=2 typical=1 shape=cylinder role=database core.source="hand-core 1"
 @k.expect.part.flowchart.link k.expect.part of=flowchart part=link group=link min=4 max=12 typical=7 needed=yes core.source="hand-core 1"
 
 @k.expect.make.tree_diagram k.expect.make thing="tree diagram" made_in=diagram unit=node min=5 max=9 typical=7 kinds_min=1 kinds_max=1 layout=tree extent=default diagram=tree varies=count varies=kinds varies=colour about="a tree of k.diagrams: 5 to 9 nodes, drawn as rectangle, laid out tree, edges undirected" core.source="hand-core 1"
