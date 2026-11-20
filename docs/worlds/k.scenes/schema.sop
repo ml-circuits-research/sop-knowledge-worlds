@@ -5,7 +5,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.scenes core.module name=k.scenes version=3 imports=k.named exports=thing exports=scene exports=has core.source="hand-core 1"
+@k.scenes core.module name=k.scenes version=4 imports=k.named exports=thing exports=scene exports=has exports=support exports=surface exports=light core.source="hand-core 1"
 
 # The usual place and the relative size of a thing, named as its drawing in k.objects (the same name), as a word or a
 # stand-in there, or as a thing of a scene that nothing draws (a stage). `place` is where one usually sees it: in the `sky` (also: in the air), on the `ground` (outdoors),
@@ -67,5 +67,31 @@
 @k.scenes.has.on core.slot of=k.scenes.has key=on kind=atom kind=string type=k.scenes.thing by=name core.source="hand-core 1"
 @k.scenes.has.fills core.slot of=k.scenes.has key=fills kind=boolean core.source="hand-core 1"
 @k.scenes.has.drawing core.slot of=k.scenes.has key=drawing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
+
+# Support (owner, 2026-11-20): what holds a thing up in a picture and what it keeps out of, so that it is never drawn
+# where it cannot be: a house in a river, a tree in a lake, a fish on a road. `name` is a place of k.scenes.thing
+# (`ground`, `water`, `sky`: it holds for every thing of that place) or the name of one thing (it adds to what its
+# place says). `on` names the surfaces it stands, floats, swims or flies on; where the page has one of them, the thing
+# goes there (a boat on the water, a car on the road). `avoids` names the surfaces whose inside it keeps out of (a
+# house stays out of the water); a surface the thing's own row puts it `on` is not avoided (a car is on the road
+# although ground things keep off it). The surfaces: `ground` (land to stand on), `water` (to float or swim in),
+# `road` (to drive on), `air` (the sky, to fly in).
+@k.scenes.support core.type of=k.scenes.support shared=true closed=true core.source="hand-core 1"
+@k.scenes.support.name core.slot of=k.scenes.support key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.scenes.support.on core.slot of=k.scenes.support key=on many=true enum=ground enum=water enum=road enum=air core.source="hand-core 1"
+@k.scenes.support.avoids core.slot of=k.scenes.support key=avoids many=true enum=ground enum=water enum=road enum=air core.source="hand-core 1"
+
+# A surface: the part of a drawable thing that others stand, float or drive on, and which surface it is. `of` names
+# the thing (a terrain feature of k.layouts or a k.objects object), `part` its part (a terrain part or an object
+# part), `surface` the surface it is (as in k.scenes.support).
+@k.scenes.surface core.type of=k.scenes.surface shared=true closed=true core.source="hand-core 1"
+@k.scenes.surface.of core.slot of=k.scenes.surface key=of id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.scenes.surface.part core.slot of=k.scenes.surface key=part id=true required=true kind=atom core.source="hand-core 1"
+@k.scenes.surface.surface core.slot of=k.scenes.surface key=surface required=true enum=ground enum=water enum=road enum=air core.source="hand-core 1"
+
+# A light of a landscape: a thing in the sky that shines (k.attributes can=shine: the sun, the moon, a star). A picture
+# lights its scene from the largest one on the page: shadows fall away from it and side faces turn from it.
+@k.scenes.light core.type of=k.scenes.light shared=true closed=true core.source="hand-core 1"
+@k.scenes.light.name core.slot of=k.scenes.light key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 
 # Words for the types and keys of this world.

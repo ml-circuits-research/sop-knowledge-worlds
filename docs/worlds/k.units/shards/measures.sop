@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (w.reader.en, k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.composition2d, k.layouts, k.spatial2d, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.expect, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.charts, k.styles, k.diagrams, k.story, k.procedures): 347 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (w.reader.en, k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.composition2d, k.layouts, k.spatial2d, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.expect, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.charts, k.styles, k.diagrams, k.story, k.procedures): 358 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -139,6 +139,17 @@
 @k.units.measure.k.layouts.outline_point.n k.units.measure world=k.layouts type=outline_point key=n ordinal=true core.source="hand-core 1"
 @k.units.measure.k.layouts.outline_point.x k.units.measure world=k.layouts type=outline_point key=x frame=outline core.source="hand-core 1"
 @k.units.measure.k.layouts.outline_point.y k.units.measure world=k.layouts type=outline_point key=y frame=outline core.source="hand-core 1"
+@k.units.measure.k.layouts.terrain.variants k.units.measure world=k.layouts type=terrain key=variants counts="outline variant of the feature" core.source="hand-core 1"
+@k.units.measure.k.layouts.handle.n k.units.measure world=k.layouts type=handle key=n ordinal=true core.source="hand-core 1"
+@k.units.measure.k.layouts.handle.variant k.units.measure world=k.layouts type=handle key=variant ordinal=true core.source="hand-core 1"
+@k.units.measure.k.layouts.handle.x k.units.measure world=k.layouts type=handle key=x frame=feature core.source="hand-core 1"
+@k.units.measure.k.layouts.handle.y k.units.measure world=k.layouts type=handle key=y frame=feature core.source="hand-core 1"
+@k.units.measure.k.layouts.handle.w k.units.measure world=k.layouts type=handle key=w frame=feature core.source="hand-core 1"
+@k.units.measure.k.layouts.handle.h k.units.measure world=k.layouts type=handle key=h frame=feature core.source="hand-core 1"
+@k.units.measure.k.layouts.terrain_part.from k.units.measure world=k.layouts type=terrain_part key=from plain=true core.source="hand-core 1"
+@k.units.measure.k.layouts.terrain_part.to k.units.measure world=k.layouts type=terrain_part key=to plain=true core.source="hand-core 1"
+@k.units.measure.k.layouts.terrain_part.grow k.units.measure world=k.layouts type=terrain_part key=grow plain=true core.source="hand-core 1"
+@k.units.measure.k.layouts.terrain_part.z k.units.measure world=k.layouts type=terrain_part key=z ordinal=true core.source="hand-core 1"
 @k.units.measure.k.spatial2d.box.revision k.units.measure world=k.spatial2d type=box key=revision ordinal=true core.source="hand-core 1"
 @k.units.measure.k.spatial2d.box.min_x k.units.measure world=k.spatial2d type=box key=min_x counts="coordinate unit of the observed frame" core.source="hand-core 1"
 @k.units.measure.k.spatial2d.box.min_y k.units.measure world=k.spatial2d type=box key=min_y counts="coordinate unit of the observed frame" core.source="hand-core 1"

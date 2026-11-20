@@ -39,6 +39,18 @@ diagram and puts things on or next to each other from knowledge.
   `side` of `b` where there is a usual one (top, bottom, side, front, back, end, edge, corner, centre, inside,
   around). `named=model`.
 
+- `k.layouts.terrain` (identity `name`), `k.layouts.handle` (identity `of`, `name`), `k.layouts.terrain_part`
+  (identity `of`, `name`), shard `terrain.sop` (owner, 2026-11-20): seven terrain features drawn from handles, not
+  from a fixed picture: `landscape` (form `view`: the sky above its `horizon` handle in three bands that lighten
+  towards the horizon, the ground below it in three bands that darken towards the front), `river` and `road` (form
+  `band`, lying `through` from the horizon to the front: a course from the `start` handle through the `bend` handle
+  to the `end` handle, as wide as each end's `w`: banks and kerbs as `edge` parts, the current and lane marks as the
+  `middle` part), `lake` (three irregular outline variants) and `pond` (two), form `area`: water in a rounded outline,
+  a `shore` that follows it (grown by `grow` per cent), a deeper middle; `hill` and `mountain` (form `silhouette`,
+  lying on the `horizon`: a ridge through the outline handles, snow as a `cap` around the `peak` handle). Colours
+  are k.colours names with an exact `rgb`. A host keeps their rules when people bend, widen, raise or move them
+  (PSys2: worlds/art.draw/landscape-rules.sop).
+
 ## Shards
 
 `layouts` (17 arrangements, 50 places, 91 relations, 17 word facts; 175 wires), `anchors` (127 wires), `anchors-points` (98

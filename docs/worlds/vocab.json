@@ -5063,6 +5063,7 @@
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/noto-transport-ground-02",
   "k.parts/shards/a",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-a",
   "k.words/shards/am",
   "k.words/shards/frequency-a",
@@ -9800,6 +9801,7 @@
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/noto-transport-ground-03",
   "k.parts/shards/a",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-a",
   "k.words/shards/au",
   "k.words/shards/frequency-a",
@@ -9818,6 +9820,7 @@
   "k.kinds/shards/group-openmoji",
   "k.kinds/shards/head",
   "k.objects/shards/openmoji-technology-01",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-a"
  ],
  "autopsy": [
@@ -9938,6 +9941,11 @@
  "avoid": [
   "k.words/shards/av",
   "k.words/shards/frequency-a"
+ ],
+ "avoids": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-scenes",
+  "k.scenes/schema.sop"
  ],
  "avon": [
   "k.words/shards/av",
@@ -15331,6 +15339,7 @@
   "k.actions/shards/actions-make-change",
   "k.actions/shards/verbs-change",
   "k.kinds/shards/part_of-wordnet-1",
+  "k.layouts/shards/terrain",
   "k.shapes/shards/shapes",
   "k.words/shards/be",
   "k.words/shards/frequency-b"
@@ -15917,6 +15926,7 @@
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-b",
   "k.words/shards/bi",
   "k.words/shards/frequency-b"
@@ -20125,6 +20135,7 @@
   "k.parts/shards/b",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-b",
   "k.shapes/shards/shapes",
   "k.words/shards/br",
@@ -21110,6 +21121,7 @@
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/vehicles-2",
   "k.parts/shards/b",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-b",
   "k.words/shards/bu",
   "k.words/shards/frequency-b"
@@ -21867,6 +21879,7 @@
   "k.objects/shards/noto-transport-ground-05",
   "k.parts/shards/b",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-b",
   "k.words/shards/bu",
   "k.words/shards/frequency-b",
@@ -25099,6 +25112,7 @@
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-c",
   "k.words/shards/ca",
   "k.words/shards/frequency-c",
@@ -25352,6 +25366,7 @@
   "k.attributes/shards/same-c",
   "k.kinds/shards/head",
   "k.objects/shards/openmoji-travel-places-02",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-c"
  ],
  "cargo ship": [
@@ -25657,6 +25672,7 @@
   "k.objects/shards/mulberry-transport-road-01",
   "k.parts/shards/c",
   "k.parts/shards/r",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-c",
   "k.words/shards/ca",
   "k.words/shards/frequency-c",
@@ -27606,6 +27622,7 @@
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/vehicles-2",
   "k.parts/shards/c",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-c",
   "k.words/shards/ch",
   "k.words/shards/frequency-c"
@@ -31793,10 +31810,12 @@
   "k.kinds/shards/relations-drawing",
   "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-food",
+  "k.kinds/shards/relations-layouts",
   "k.kinds/shards/relations-objects",
   "k.kinds/shards/relations-space",
   "k.kinds/shards/relations-styles",
   "k.kinds/shards/relations-values",
+  "k.layouts/schema.sop",
   "k.objects/schema.sop",
   "k.styles/schema.sop",
   "k.values/schema.sop",
@@ -36796,6 +36815,7 @@
   "k.objects/shards/noto-money-02"
  ],
  "current": [
+  "k.layouts/shards/terrain",
   "k.words/shards/cu",
   "k.words/shards/frequency-c",
   "w.dialogue/schema.sop"
@@ -40298,6 +40318,9 @@
  "deep sky blue": [
   "k.colours/shards/colours-css"
  ],
+ "deep_water": [
+  "k.layouts/shards/terrain"
+ ],
  "deepak": [
   "k.people/shards/given-names-d"
  ],
@@ -40616,6 +40639,7 @@
   "k.attributes/shards/same-d",
   "k.kinds/shards/head",
   "k.objects/shards/noto-transport-ground-04",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-d"
  ],
  "deliveryman": [
@@ -52683,6 +52707,7 @@
   "k.values/shards/scales"
  ],
  "far_end": [
+  "k.layouts/shards/terrain",
   "k.objects/shards/places"
  ],
  "far_mountain": [
@@ -56594,6 +56619,8 @@
   "k.kinds/shards/relations-attributes",
   "k.kinds/shards/relations-charts",
   "k.kinds/shards/relations-diagrams",
+  "k.kinds/shards/relations-layouts",
+  "k.layouts/schema.sop",
   "k.procedures/shards/tasks",
   "k.shapes/schema.sop",
   "k.words/shards/fo",
@@ -57822,6 +57849,7 @@
   "k.layouts/schema.sop",
   "k.parts/schema.sop",
   "k.procedures/schema.sop",
+  "k.units/shards/measures",
   "w.calendar/schema.sop",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
@@ -64437,6 +64465,7 @@
   "k.objects/shards/things-2",
   "k.procedures/shards/from-knowledge",
   "k.scenes/schema.sop",
+  "k.scenes/shards/support",
   "k.words/shards/frequency-g",
   "k.words/shards/gr",
   "k.objects/shards/noto-sky-weather-05"
@@ -64444,8 +64473,20 @@
  "ground beef": [
   "k.kinds/shards/part_of-wordnet-2"
  ],
+ "ground_far": [
+  "k.layouts/shards/terrain",
+  "k.scenes/shards/support"
+ ],
  "ground_left": [
   "k.objects/shards/land-3"
+ ],
+ "ground_middle": [
+  "k.layouts/shards/terrain",
+  "k.scenes/shards/support"
+ ],
+ "ground_near": [
+  "k.layouts/shards/terrain",
+  "k.scenes/shards/support"
  ],
  "ground_right": [
   "k.objects/shards/land-3"
@@ -64542,7 +64583,11 @@
  ],
  "grow": [
   "k.actions/shards/actions-body-social-nature",
+  "k.attributes/shards/narration",
   "k.food/schema.sop",
+  "k.kinds/shards/relations-layouts",
+  "k.layouts/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/frequency-g",
   "k.words/shards/gr",
   "k.objects/shards/noto-plant-other-01"
@@ -66706,6 +66751,7 @@
   "k.objects/shards/things-2",
   "k.objects/shards/things-3",
   "k.parts/shards/names",
+  "k.units/shards/measures",
   "k.words/shards/frequency-h",
   "k.words/shards/ha"
  ],
@@ -69221,6 +69267,7 @@
   "k.kinds/shards/part_of-wordnet-3",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/anchors",
+  "k.layouts/shards/terrain",
   "k.objects/shards/land",
   "k.objects/shards/places-2",
   "k.objects/shards/things",
@@ -70374,6 +70421,7 @@
  ],
  "horizon": [
   "k.layouts/shards/layouts",
+  "k.layouts/shards/terrain",
   "k.words/shards/frequency-h",
   "k.words/shards/ho"
  ],
@@ -75900,6 +75948,7 @@
   "k.objects/shards/mulberry-transport-road-02",
   "k.parts/shards/j",
   "k.scenes/shards/scenes-nature",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-j",
   "k.words/shards/frequency-j",
   "k.words/shards/je"
@@ -77834,6 +77883,10 @@
   "k.kinds/shards/relations-layouts",
   "k.kinds/shards/structures"
  ],
+ "k.layouts.handle": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-layouts"
+ ],
  "k.layouts.joins": [
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
@@ -77891,6 +77944,14 @@
  ],
  "k.layouts.slot.y": [
   "k.kinds/shards/structures"
+ ],
+ "k.layouts.terrain": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-layouts"
+ ],
+ "k.layouts.terrain_part": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-layouts"
  ],
  "k.motion": [
   "k.units/shards/measures"
@@ -78135,11 +78196,22 @@
  "k.scenes.has.where": [
   "k.kinds/shards/structures"
  ],
+ "k.scenes.light": [
+  "k.attributes/shards/narration"
+ ],
  "k.scenes.scene": [
   "k.attributes/shards/attributes",
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-scenes",
   "k.kinds/shards/structures"
+ ],
+ "k.scenes.support": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-scenes"
+ ],
+ "k.scenes.surface": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-scenes"
  ],
  "k.scenes.thing": [
   "k.attributes/shards/aspects",
@@ -80035,6 +80107,7 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/use",
   "k.objects/shards/noto-transport-ground-05",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-k"
  ],
  "kick starter": [
@@ -82247,10 +82320,12 @@
   "k.kinds/shards/part_of",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/anchors",
+  "k.layouts/shards/terrain",
   "k.objects/shards/scenery",
   "k.objects/shards/things",
   "k.parts/shards/psys2",
   "k.scenes/shards/scenes-nature",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-l",
   "k.shapes/shards/shapes",
   "k.units/shards/measures",
@@ -82710,6 +82785,8 @@
  ],
  "landscape": [
   "k.layouts/shards/layouts",
+  "k.layouts/shards/terrain",
+  "k.scenes/shards/support",
   "k.words/shards/frequency-l",
   "k.words/shards/la",
   "k.objects/shards/noto-place-other-01",
@@ -82733,6 +82810,7 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/wordnet-2",
+  "k.layouts/shards/terrain",
   "k.objects/shards/places",
   "k.scenes/shards/things-l",
   "k.words/shards/frequency-l",
@@ -83931,6 +84009,9 @@
   "k.faces/shards/plain-hair-back",
   "k.faces/shards/plain-shoulders"
  ],
+ "left_bank": [
+  "k.layouts/shards/terrain"
+ ],
  "left_bar_1": [
   "k.objects/shards/places"
  ],
@@ -84174,6 +84255,7 @@
   "k.objects/shards/places-2"
  ],
  "left_foot": [
+  "k.layouts/shards/terrain",
   "k.objects/shards/animals-2",
   "k.objects/shards/mulberry-building-furniture-05",
   "k.objects/shards/mulberry-clothes-general-05",
@@ -84257,6 +84339,9 @@
  ],
  "left_jewel": [
   "k.faces/shards/plain-hat"
+ ],
+ "left_kerb": [
+  "k.layouts/shards/terrain"
  ],
  "left_knob": [
   "k.objects/shards/food-2",
@@ -84463,6 +84548,9 @@
   "k.objects/shards/mulberry-sport-accessories-02",
   "k.objects/shards/noto-award-medal-01"
  ],
+ "left_ridge": [
+  "k.layouts/shards/terrain"
+ ],
  "left_rim": [
   "k.faces/shards/plain-glasses"
  ],
@@ -84520,6 +84608,7 @@
   "k.objects/shards/places-2"
  ],
  "left_slope": [
+  "k.layouts/shards/terrain",
   "k.objects/shards/land"
  ],
  "left_sock": [
@@ -85620,6 +85709,11 @@
  ],
  "liepaga": [
   "k.geo/shards/europe"
+ ],
+ "lies": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-layouts",
+  "k.layouts/schema.sop"
  ],
  "lieutenant": [
   "k.words/shards/frequency-l",
@@ -87601,6 +87695,7 @@
   "k.layouts/shards/anchors-points",
   "k.objects/shards/mulberry-transport-road-02",
   "k.parts/shards/l",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-l",
   "k.words/shards/frequency-l",
   "k.words/shards/lo",
@@ -95538,6 +95633,7 @@
   "k.parts/shards/psys2",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-other",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-m",
   "k.space/shards/kinds",
   "k.space/shards/solar-system",
@@ -95652,6 +95748,7 @@
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/mulberry-transport-road-02",
   "k.parts/shards/usual",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-m",
   "k.words/shards/frequency-m",
   "k.words/shards/mo"
@@ -96199,6 +96296,7 @@
   "k.objects/shards/noto-transport-ground-04",
   "k.parts/shards/m",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-m",
   "k.words/shards/frequency-m",
   "k.words/shards/mo",
@@ -96774,6 +96872,7 @@
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/anchors",
+  "k.layouts/shards/terrain",
   "k.objects/shards/land-3",
   "k.objects/shards/nature",
   "k.objects/shards/noto-place-geographic-01",
@@ -96807,6 +96906,7 @@
   "k.kinds/shards/head",
   "k.layouts/shards/anchors",
   "k.objects/shards/scenery",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-m"
  ],
  "mountain lakes": [
@@ -96994,6 +97094,7 @@
   "k.layouts/shards/anchors-points",
   "k.layouts/shards/joins",
   "k.layouts/shards/layouts",
+  "k.layouts/shards/terrain",
   "k.motion/schema.sop",
   "k.motion/shards/rules",
   "k.objects/shards/animals",
@@ -98847,6 +98948,9 @@
  ],
  "near placement": [
   "k.spatial2d/schema.sop"
+ ],
+ "near_end": [
+  "k.layouts/shards/terrain"
  ],
  "near_mountain": [
   "k.objects/shards/scenery"
@@ -102067,10 +102171,12 @@
   "k.kinds/shards/relations-composition2d",
   "k.kinds/shards/relations-expect",
   "k.kinds/shards/relations-faces",
+  "k.kinds/shards/relations-layouts",
   "k.kinds/shards/relations-motion",
   "k.kinds/shards/relations-objects",
   "k.kinds/shards/relations-parts",
   "k.kinds/shards/relations-procedures",
+  "k.kinds/shards/relations-scenes",
   "k.kinds/shards/relations-time",
   "k.motion/schema.sop",
   "k.objects/schema.sop",
@@ -102753,6 +102859,7 @@
   "k.attributes/shards/same-o",
   "k.kinds/shards/head",
   "k.objects/shards/noto-transport-ground-03",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-o"
  ],
  "oncoming bus": [
@@ -102760,6 +102867,7 @@
   "k.attributes/shards/same-o",
   "k.kinds/shards/head",
   "k.objects/shards/noto-transport-ground-02",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-o"
  ],
  "oncoming fire engine": [
@@ -102774,6 +102882,7 @@
   "k.attributes/shards/same-o",
   "k.kinds/shards/head",
   "k.objects/shards/noto-transport-ground-03",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-o"
  ],
  "oncoming taxi": [
@@ -102781,6 +102890,7 @@
   "k.attributes/shards/same-o",
   "k.kinds/shards/head",
   "k.objects/shards/noto-transport-ground-03",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-o"
  ],
  "ondřej": [
@@ -106041,6 +106151,7 @@
   "k.kinds/shards/relations-layouts",
   "k.kinds/shards/relations-objects",
   "k.kinds/shards/relations-parts",
+  "k.kinds/shards/relations-scenes",
   "k.kinds/shards/relations-story",
   "k.kinds/shards/relations-time",
   "k.kinds/shards/structures",
@@ -106051,6 +106162,7 @@
   "k.parts/schema.sop",
   "k.procedures/shards/compose",
   "k.procedures/shards/from-knowledge",
+  "k.scenes/schema.sop",
   "k.story/schema.sop",
   "k.time/schema.sop",
   "k.units/shards/measures",
@@ -106927,6 +107039,7 @@
   "k.faces/shards/plain-hat",
   "k.geo/schema.sop",
   "k.kinds/shards/part_of-wordnet-1",
+  "k.layouts/shards/terrain",
   "k.objects/shards/mulberry-clothes-general-02",
   "k.objects/shards/mulberry-clothes-sport-01",
   "k.parts/shards/names",
@@ -108857,6 +108970,7 @@
   "k.kinds/shards/material",
   "k.kinds/shards/use",
   "k.objects/shards/noto-transport-ground-04",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-p"
  ],
  "picnic": [
@@ -111486,6 +111600,7 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/material",
   "k.objects/shards/noto-transport-ground-03",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-p"
  ],
  "police car light": [
@@ -111682,11 +111797,13 @@
   "k.kinds/shards/material",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/anchors-points",
+  "k.layouts/shards/terrain",
   "k.objects/shards/mulberry-building-garden-and-farm-01",
   "k.parts/shards/names",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-p",
   "k.shapes/shards/shapes",
   "k.words/shards/frequency-p",
@@ -111783,6 +111900,7 @@
   "k.objects/shards/places",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-p",
   "k.words/shards/frequency-p",
   "k.words/shards/po",
@@ -115585,6 +115703,7 @@
   "k.kinds/shards/material",
   "k.kinds/shards/use",
   "k.objects/shards/noto-transport-ground-04",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-r"
  ],
  "racism": [
@@ -115895,6 +116014,7 @@
   "k.kinds/shards/head",
   "k.objects/shards/noto-transport-ground-01",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-r"
  ],
  "railway station": [
@@ -119188,7 +119308,9 @@
   "k.kinds/shards/relations-colours",
   "k.kinds/shards/relations-drawing",
   "k.kinds/shards/relations-faces",
-  "k.kinds/shards/relations-objects"
+  "k.kinds/shards/relations-layouts",
+  "k.kinds/shards/relations-objects",
+  "k.layouts/schema.sop"
  ],
  "rgb_about": [
   "k.attributes/shards/narration",
@@ -119678,6 +119800,9 @@
   "k.faces/shards/plain-hair-back",
   "k.faces/shards/plain-shoulders"
  ],
+ "right_bank": [
+  "k.layouts/shards/terrain"
+ ],
  "right_bar_1": [
   "k.objects/shards/places"
  ],
@@ -119919,6 +120044,7 @@
   "k.objects/shards/places-2"
  ],
  "right_foot": [
+  "k.layouts/shards/terrain",
   "k.objects/shards/animals-2",
   "k.objects/shards/mulberry-building-furniture-05",
   "k.objects/shards/mulberry-clothes-general-05",
@@ -119999,6 +120125,9 @@
  ],
  "right_jewel": [
   "k.faces/shards/plain-hat"
+ ],
+ "right_kerb": [
+  "k.layouts/shards/terrain"
  ],
  "right_knob": [
   "k.objects/shards/food-2",
@@ -120268,6 +120397,7 @@
   "k.objects/shards/places-2"
  ],
  "right_slope": [
+  "k.layouts/shards/terrain",
   "k.objects/shards/land"
  ],
  "right_sock": [
@@ -120433,6 +120563,7 @@
   "k.faces/shards/plain-hat",
   "k.kinds/shards/part_of",
   "k.kinds/shards/part_of-wordnet-3",
+  "k.layouts/shards/terrain",
   "k.objects/shards/food-3",
   "k.objects/shards/land",
   "k.objects/shards/mulberry-building-contents-03",
@@ -120441,6 +120572,54 @@
   "k.objects/shards/things-3",
   "k.words/shards/frequency-r",
   "k.words/shards/ri"
+ ],
+ "rim_point_1_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_1_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_2_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_2_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_3_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_3_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_4_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_4_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_5_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_5_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_6_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_6_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_7_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_7_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_8_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "rim_point_8_variant_2": [
+  "k.layouts/shards/terrain"
  ],
  "rima": [
   "k.kinds/shards/wordnet-1",
@@ -120745,12 +120924,14 @@
   "k.kinds/shards/part_of",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/anchors",
+  "k.layouts/shards/terrain",
   "k.objects/shards/land",
   "k.objects/shards/land-2",
   "k.objects/shards/scenery",
   "k.objects/shards/things",
   "k.parts/shards/psys2",
   "k.scenes/shards/scenes-nature",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-r",
   "k.shapes/shards/shapes",
   "k.story/shards/goals-obstacles",
@@ -120854,6 +121035,7 @@
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/anchors",
   "k.layouts/shards/joins",
+  "k.layouts/shards/terrain",
   "k.objects/shards/mulberry-holiday-and-travel-02",
   "k.objects/shards/noto-transport-ground-05",
   "k.objects/shards/places",
@@ -120863,6 +121045,7 @@
   "k.parts/shards/psys2",
   "k.parts/shards/r",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-r",
   "k.words/shards/frequency-r",
   "k.words/shards/ro"
@@ -121132,6 +121315,7 @@
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/anchors-points",
+  "k.layouts/shards/terrain",
   "k.objects/shards/land",
   "k.objects/shards/noto-place-building-01",
   "k.objects/shards/plants",
@@ -122925,6 +123109,7 @@
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/anchors",
   "k.layouts/shards/joins",
+  "k.layouts/shards/terrain",
   "k.objects/shards/animals-2",
   "k.objects/shards/things-2",
   "k.parts/shards/s",
@@ -126225,6 +126410,7 @@
   "k.objects/shards/words-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-s",
   "k.words/shards/frequency-s",
   "k.words/shards/sc",
@@ -126641,6 +126827,7 @@
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-s",
   "k.story/shards/goals-obstacles",
   "k.styles/schema.sop",
@@ -129540,11 +129727,84 @@
  ],
  "shore": [
   "k.kinds/shards/part_of",
+  "k.layouts/shards/terrain",
   "k.objects/shards/places-2",
   "k.objects/shards/scenery",
   "k.scenes/shards/scenes-nature",
   "k.words/shards/frequency-s",
   "k.words/shards/sh"
+ ],
+ "shore_point_1_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_1_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_1_variant_3": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_2_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_2_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_2_variant_3": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_3_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_3_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_3_variant_3": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_4_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_4_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_4_variant_3": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_5_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_5_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_5_variant_3": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_6_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_6_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_6_variant_3": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_7_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_7_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_7_variant_3": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_8_variant_1": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_8_variant_2": [
+  "k.layouts/shards/terrain"
+ ],
+ "shore_point_8_variant_3": [
+  "k.layouts/shards/terrain"
  ],
  "short": [
   "k.faces/shards/plain-beard",
@@ -129666,6 +129926,7 @@
   "k.kinds/shards/part_of-wordnet-3",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/joins",
+  "k.layouts/shards/terrain",
   "k.objects/shards/food-2",
   "k.objects/shards/food-3",
   "k.objects/shards/home",
@@ -131144,6 +131405,7 @@
   "k.layouts/shards/anchors-points",
   "k.objects/shards/noto-transport-ground-05",
   "k.parts/shards/usual",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-s",
   "k.words/shards/frequency-s",
   "k.words/shards/sk"
@@ -131389,6 +131651,7 @@
   "k.objects/shards/openmoji-objects-01",
   "k.objects/shards/places",
   "k.objects/shards/things",
+  "k.scenes/shards/support",
   "k.words/shards/frequency-s",
   "k.words/shards/sk"
  ],
@@ -131399,6 +131662,18 @@
  "sky blue": [
   "k.colours/shards/colours",
   "k.colours/shards/colours-css"
+ ],
+ "sky_high": [
+  "k.layouts/shards/terrain",
+  "k.scenes/shards/support"
+ ],
+ "sky_low": [
+  "k.layouts/shards/terrain",
+  "k.scenes/shards/support"
+ ],
+ "sky_middle": [
+  "k.layouts/shards/terrain",
+  "k.scenes/shards/support"
  ],
  "skyblue": [
   "k.colours/shards/colours-css"
@@ -131924,6 +132199,7 @@
   "k.kinds/shards/part_of-wordnet-3",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
+  "k.layouts/shards/terrain",
   "k.objects/shards/land",
   "k.objects/shards/land-2",
   "k.parts/shards/names",
@@ -132490,6 +132766,7 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of",
   "k.kinds/shards/wordnet-2",
+  "k.layouts/shards/terrain",
   "k.objects/shards/land",
   "k.parts/shards/names",
   "k.parts/shards/psys2",
@@ -133438,6 +133715,7 @@
   "k.kinds/shards/relations-genres",
   "k.kinds/shards/relations-interest",
   "k.kinds/shards/relations-story",
+  "k.layouts/shards/terrain",
   "k.story/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/frequency-s",
@@ -135685,6 +135963,7 @@
   "k.objects/shards/sky",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-other",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-s",
   "k.shapes/shards/shapes",
   "k.space/shards/kinds",
@@ -138279,6 +138558,7 @@
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-s",
   "k.shapes/shards/shapes",
   "k.space/shards/solar-system",
@@ -138691,13 +138971,18 @@
   "k.objects/shards/noto-sky-weather-06"
  ],
  "surface": [
+  "k.attributes/shards/narration",
   "k.kinds/shards/part_of",
+  "k.kinds/shards/relations-scenes",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/anchors",
   "k.layouts/shards/anchors-points",
+  "k.layouts/shards/terrain",
   "k.objects/shards/ground",
   "k.parts/shards/names",
   "k.parts/shards/psys2",
+  "k.scenes/schema.sop",
+  "k.scenes/shards/support",
   "k.words/shards/frequency-s",
   "k.words/shards/su"
  ],
@@ -139060,6 +139345,7 @@
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/anchors",
   "k.objects/shards/land-2",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-s",
   "k.words/shards/frequency-s",
   "k.words/shards/sw"
@@ -141263,6 +141549,7 @@
   "k.objects/shards/noto-transport-ground-03",
   "k.parts/shards/t",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-t",
   "k.words/shards/frequency-t",
   "k.words/shards/ta",
@@ -142136,8 +142423,12 @@
   "k.colours/shards/colours-common"
  ],
  "terrain": [
+  "k.units/shards/measures",
   "k.words/shards/frequency-t",
   "k.words/shards/te"
+ ],
+ "terrain_part": [
+  "k.units/shards/measures"
  ],
  "terrapin": [
   "k.animals/shards/reptiles-and-amphibians",
@@ -146156,8 +146447,12 @@
   "k.actions/shards/verbs-make",
   "k.actions/shards/verbs-pick",
   "k.actions/shards/verbs-undo",
+  "k.attributes/shards/narration",
   "k.attributes/shards/typical",
+  "k.kinds/shards/relations-layouts",
   "k.kinds/shards/structures",
+  "k.layouts/schema.sop",
+  "k.units/shards/measures",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
   "w.lang.en/shards/closed-classes",
@@ -147093,6 +147388,7 @@
   "k.kinds/shards/relations-faces",
   "k.layouts/shards/anchors",
   "k.layouts/shards/anchors-points",
+  "k.layouts/shards/terrain",
   "k.objects/shards/food-2",
   "k.objects/shards/food-3",
   "k.objects/shards/home",
@@ -147921,6 +148217,7 @@
   "k.objects/shards/noto-transport-ground-04",
   "k.parts/shards/t",
   "k.scenes/shards/scenes-nature",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-t",
   "k.words/shards/frequency-t",
   "k.words/shards/tr"
@@ -148115,6 +148412,7 @@
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/noto-transport-ground-01",
   "k.parts/shards/usual",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-t",
   "k.words/shards/frequency-t",
   "k.words/shards/tr",
@@ -148125,6 +148423,7 @@
   "k.attributes/shards/same-t",
   "k.kinds/shards/head",
   "k.objects/shards/noto-transport-ground-02",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-t"
  ],
  "tramp": [
@@ -149108,6 +149407,7 @@
   "k.parts/shards/p",
   "k.parts/shards/t",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-t",
   "k.words/shards/frequency-t",
   "k.words/shards/tr",
@@ -152024,6 +152324,7 @@
   "k.kinds/shards/use",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/mulberry-transport-road-03",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-v",
   "k.words/shards/frequency-v",
   "k.words/shards/va",
@@ -152127,14 +152428,22 @@
   "k.kinds/shards/wordnet-2"
  ],
  "variant": [
+  "k.attributes/shards/narration",
   "k.attributes/shards/typical",
   "k.faces/schema.sop",
+  "k.kinds/shards/relations-layouts",
+  "k.layouts/schema.sop",
   "k.procedures/shards/from-knowledge",
+  "k.units/shards/measures",
   "w.face/schema.sop",
   "w.lang.en/schema.sop"
  ],
  "variants": [
-  "k.faces/schema.sop"
+  "k.attributes/shards/narration",
+  "k.faces/schema.sop",
+  "k.kinds/shards/relations-layouts",
+  "k.layouts/schema.sop",
+  "k.units/shards/measures"
  ],
  "variation": [
   "k.words/shards/frequency-v",
@@ -154610,6 +154919,7 @@
   "k.parts/shards/c",
   "k.parts/shards/l",
   "k.parts/shards/w",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-w",
   "k.words/shards/frequency-w",
   "k.words/shards/wa"
@@ -155499,6 +155809,7 @@
   "k.layouts/shards/anchors",
   "k.layouts/shards/anchors-points",
   "k.layouts/shards/layouts",
+  "k.layouts/shards/terrain",
   "k.objects/shards/land-2",
   "k.objects/shards/mulberry-building-garden-and-farm-01",
   "k.objects/shards/mulberry-drink-type-03",
@@ -155512,6 +155823,7 @@
   "k.objects/shards/things-3",
   "k.parts/shards/names",
   "k.parts/shards/psys2",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-w",
   "k.words/shards/frequency-w",
   "k.words/shards/wa",
@@ -156660,6 +156972,7 @@
   "k.parts/shards/w",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-town",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-w",
   "k.words/shards/frequency-w",
   "k.words/shards/wh"
@@ -156681,6 +156994,7 @@
   "k.layouts/shards/anchors-points",
   "k.objects/shards/mulberry-transport-road-03",
   "k.parts/shards/w",
+  "k.scenes/shards/support",
   "k.scenes/shards/things-w",
   "k.words/shards/frequency-w",
   "k.words/shards/wh",
@@ -160080,7 +160394,9 @@
   "k.faces/schema.sop",
   "k.kinds/shards/relations-drawing",
   "k.kinds/shards/relations-faces",
+  "k.kinds/shards/relations-layouts",
   "k.kinds/shards/relations-objects",
+  "k.layouts/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/frequency-z",
   "k.words/shards/z"

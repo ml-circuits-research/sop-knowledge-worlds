@@ -64,7 +64,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.genres` | 1 (0%) |
 | `k.geo` | 22 (1%) |
 | `k.kinds` | 1303 (87%) |
-| `k.layouts` | 221 (15%) |
+| `k.layouts` | 223 (15%) |
 | `k.motion` | 1 (0%) |
 | `k.music` | 3 (0%) |
 | `k.objects` | 1219 (81%) |

@@ -9,9 +9,9 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **273** in 45 worlds; distinct values 11440, meeting a target 11380 (99.5 %), open 60
+- declared joins: **275** in 45 worlds; distinct values 11454, meeting a target 11394 (99.5 %), open 60
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **61**; left undeclared on purpose: 5; keys with an enum, never suggested: 49
+- undeclared keys whose values the value share joins to a type: **63**; left undeclared on purpose: 5; keys with an enum, never suggested: 53
 
 ## Declared joins
 
@@ -131,12 +131,14 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.interest | `k.interest.feature.appraisal` | `k.interest.appraisal` | name | 4 | 4 |  |
 | k.interest | `k.interest.feature.measure` | `k.interest.measure` | name | 20 | 20 |  |
 | k.interest | `k.interest.feature.source` | `k.interest.source` | name | 23 | 23 |  |
+| k.layouts | `k.layouts.handle.of` | `k.layouts.terrain` | name | 7 | 7 |  |
 | k.layouts | `k.layouts.outline.drawing` | `k.objects.object` | name | 33 | 33 |  |
 | k.layouts | `k.layouts.outline.shape` | `k.shapes.shape` | name | 18 | 18 |  |
 | k.layouts | `k.layouts.outline_point.outline` | `k.layouts.outline` | name | 51 | 51 |  |
 | k.layouts | `k.layouts.relation.layout` | `k.layouts.layout` | name | 19 | 19 |  |
 | k.layouts | `k.layouts.slot.arranged` | `k.layouts.layout` | name | 2 | 2 |  |
 | k.layouts | `k.layouts.slot.layout` | `k.layouts.layout` | name | 19 | 19 |  |
+| k.layouts | `k.layouts.terrain_part.of` | `k.layouts.terrain` | name | 7 | 7 |  |
 | k.motion | `k.motion.field.event` | `k.motion.event` | name | 2 | 2 |  |
 | k.motion | `k.motion.letters.splitter` | `k.motion.splitter` | name | 1 | 1 |  |
 | k.motion | `k.motion.rule.emits` | `k.motion.event` | name | 1 | 1 |  |
@@ -313,7 +315,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.attributes | `k.attributes.range.kind` | kind | `k.attributes.kind` | name | 24 | 14 |
 | k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3553 | 2346 |
 | k.attributes | `k.attributes.typical.of` | thing | `k.attributes.kind` | name | 36 | 18 |
-| k.commonsense | `k.commonsense.lives.at` | place | `k.objects.object` | name | 3 | 2 |
+| k.commonsense | `k.commonsense.lives.at` | place | `k.objects.object`, `k.scenes.support` | name | 3 | 2 |
 | k.commonsense | `k.commonsense.thing.at` | place | `k.commonsense.lives`, `k.attributes.thing` | in | 42 | 32 |
 | k.expect | `k.expect.make.layout` | group | `k.layouts.layout` | name | 10 | 7 |
 | k.expect | `k.expect.part.part` | thing | `k.scenes.thing` | name | 633 | 599 |
@@ -342,6 +344,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.layouts | `k.layouts.joins.b` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 98 | 71 |
 | k.layouts | `k.layouts.slot.holds` | thing | `k.attributes.thing`, `k.scenes.thing`, `k.attributes.drawn` | name | 84 | 48 |
 | k.layouts | `k.layouts.slot.fills` | thing | `k.attributes.drawn`, `k.objects.object` | name | 4 | 4 |
+| k.layouts | `k.layouts.terrain_part.colour` | value | `k.colours.colour` | name | 8 | 8 |
 | k.motion | `k.motion.rule.during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
 | k.motion | `k.motion.rule.not_during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
 | k.parts | `k.parts.called.part` | thing | `k.parts.name` | name | 66 | 66 |
@@ -358,6 +361,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.procedures | `k.procedures.goal.kind` | kind | `k.actions.act` | name | 1 | 1 |
 | k.procedures | `k.procedures.match.differs` | thing | `k.story.element` | name | 8 | 4 |
 | k.scenes | `k.scenes.scene.ground` | thing | `k.attributes.thing`, `k.objects.object`, `k.scenes.thing` | name | 15 | 7 |
+| k.scenes | `k.scenes.surface.of` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 10 | 9 |
 | k.scenes | `k.scenes.thing.on` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 23 | 19 |
 | k.shapes | `k.shapes.shape.is_a` | kind | `k.shapes.shape` | name | 5 | 5 |
 | k.shapes | `k.shapes.shape.kind_of` | kind | `k.shapes.shape` | name | 5 | 5 |
@@ -410,6 +414,7 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.kinds | `k.kinds.parent.sense` | 12 | 7 | 4 | `k.attributes.kind` |
 | k.kinds | `k.kinds.sensitivity.sensitive` | 4 | 4 | 3 | `k.kinds.sensitivity` |
 | k.layouts | `k.layouts.slot.count` | 2 | 2 | 2 | `k.expect.amount` |
+| k.layouts | `k.layouts.terrain_part.side` | 2 | 2 | 2 | `k.values.direction`, `k.values.position` |
 | k.motion | `k.motion.layer.key` | 4 | 4 | 1 | `k.body.part` |
 | k.motion | `k.motion.set.key` | 4 | 4 | 1 | `k.body.part` |
 | k.motion | `k.motion.step.key` | 4 | 1 | 1 | `k.body.part` |
@@ -421,7 +426,10 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.scenes | `k.scenes.has.where` | 7 | 7 | 4 | `k.objects.object` |
 | k.scenes | `k.scenes.has.side` | 3 | 3 | 3 | `k.values.position` |
 | k.scenes | `k.scenes.scene.kind` | 4 | 4 | 2 | `k.scenes.scene` |
-| k.scenes | `k.scenes.thing.place` | 5 | 5 | 3 | `k.objects.object` |
+| k.scenes | `k.scenes.support.on` | 4 | 4 | 3 | `k.objects.object` |
+| k.scenes | `k.scenes.support.avoids` | 4 | 4 | 3 | `k.objects.object` |
+| k.scenes | `k.scenes.surface.surface` | 4 | 4 | 3 | `k.objects.object` |
+| k.scenes | `k.scenes.thing.place` | 5 | 5 | 3 | `k.objects.object`, `k.scenes.support` |
 | k.scenes | `k.scenes.thing.size` | 5 | 5 | 3 | `k.expect.scale` |
 | k.space | `k.space.body.size` | 4 | 4 | 2 | `k.expect.scale` |
 | k.time | `k.time.during.hemisphere` | 2 | 2 | 2 | `k.values.direction` |

@@ -44,6 +44,16 @@ CC0-1.0); the place and size labels were given by a language model (`named=model
   a `k.objects.stand_in` (a stall by `shop`, a control tower by `tower`, the people by `person`). Four have no
   drawable kind and no `drawing` (stage, till, diving board, mobile), and three things whose namesake object shows
   another thing (`pipe`, `ring`, `seat`) have none either.
+- `k.scenes.support` (identity `name`), `k.scenes.surface` (identity `of`, `part`), shard `support.sop`
+  (`tools/support-core.mjs`; owner, 2026-11-20): what holds a thing up in a picture and what it keeps out of. The
+  rows of the places hold for every thing of that place: ground things stand `on` the ground and `avoid` water and
+  roads, water things are on the water, sky things in the air. The rows of things are derived from k.kinds, not
+  listed: 35 ground things that are motor vehicles, public transport or wheeled vehicles (not on rails) are on the
+  road; a bridge stands over water and roads. The surfaces are the water, road, ground and sky parts of the terrain
+  features of k.layouts and the water anchors of drawn objects (15). The lights (`k.scenes.light`, identity `name`)
+  are the things in the sky that shine (k.attributes can=shine: sun, moon, star): a picture lights its scene from
+  the largest one, shadows falling away from it. A host compiles them into placement and drawing: a house never in
+  a river, a car on the road, shadows away from the sun (PSys2: worlds/art.draw/landscape-rules.sop, perspective-rules.sop).
 
 ## The scenes, and how many of their things have a drawing
 

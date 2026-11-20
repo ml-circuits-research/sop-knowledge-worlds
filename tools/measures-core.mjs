@@ -44,7 +44,10 @@ export const MEASURES = {
       eye_width: { counts: 'width of the head box' }, eye_gap: { counts: 'eye width' }, brow_above: { counts: 'eye width' } } },
   'k.drawing': { '*': { ...box('drawing'), z: ord, n: ord } }, // Q34 item 1: the frame of the drawing that extends it (an object, a face)
   'k.composition2d': { slot: box('arrangement'), anchor: box('object') },
-  'k.layouts': { slot: box('arrangement'), anchor: box('object'), outline: { points: { counts: 'point of the path' }, tolerance: { frame: 'outline' } }, outline_point: { n: ord, x: { frame: 'outline' }, y: { frame: 'outline' } } },
+  'k.layouts': { slot: box('arrangement'), anchor: box('object'), outline: { points: { counts: 'point of the path' }, tolerance: { frame: 'outline' } }, outline_point: { n: ord, x: { frame: 'outline' }, y: { frame: 'outline' } },
+    // terrain: how many outline variants; a handle is a point and a size in the frame of the feature; a terrain part's
+    // from, to and grow are plain shares (per cent of a room or of a size), its z an order.
+    terrain: { variants: { counts: 'outline variant of the feature' } }, handle: { ...box('feature'), n: ord, variant: ord }, terrain_part: { from: unitless, to: unitless, grow: unitless, z: ord } },
   'k.spatial2d': {
     '*': { revision: ord, clearance: frameUnit, weight: unitless },
     box: { min_x: frameUnit, min_y: frameUnit, max_x: frameUnit, max_y: frameUnit },

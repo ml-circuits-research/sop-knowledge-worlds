@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.layouts core.module name=k.layouts version=3 imports=k.named exports=layout exports=slot exports=relation exports=anchor exports=joins exports=outline exports=outline_point core.source="hand-core 1"
+@k.layouts core.module name=k.layouts version=4 imports=k.named exports=layout exports=slot exports=relation exports=anchor exports=joins exports=outline exports=outline_point exports=terrain exports=handle exports=terrain_part core.source="hand-core 1"
 
 # A named arrangement. `kind` is `repeating` when it arranges any number of like things (a row, a ring) and `fixed`
 # when it has named places, each for its own kind of thing (a landscape, a face). `about` says it in one sentence;
@@ -112,3 +112,57 @@
 @k.layouts.outline_point.n core.slot of=k.layouts.outline_point key=n id=true required=true kind=integer min=1 core.source="hand-core 1"
 @k.layouts.outline_point.x core.slot of=k.layouts.outline_point key=x required=true kind=number min=0 max=100 core.source="hand-core 1"
 @k.layouts.outline_point.y core.slot of=k.layouts.outline_point key=y required=true kind=number min=0 max=100 core.source="hand-core 1"
+
+# A terrain feature (owner, 2026-11-20): a piece of the landscape itself rather than a thing standing in it: the sky
+# and the ground of a view, a river, a lake, a road, a hill. A picture draws it from its handles, never from a fixed
+# picture, so that it stays what it is when people bend, widen, raise or move it, and keeps its own rules: the banks
+# of a river run side by side, the shore of a lake follows its water, the ground stays below the horizon. `name` is
+# the kind (the name a request uses); `form` says how its shape follows from its handles: `view` (the whole picture:
+# the sky above its `horizon` handle and the ground below it), `band` (a strip along a course from its `start` handle
+# through its `bend` handle to its `end` handle, as wide as each end's handle `w` there and widening evenly between:
+# narrow far away at the horizon, wide in front), `area` (a closed outline through its `outline` handles in their
+# order, rounded), `silhouette` (a ridge through its `outline` handles, closed along its base: hills, mountains).
+# `lies` is where it lies in the depth of a landscape: `view` (the whole picture), `horizon` (far away, its base on
+# the horizon), `ground` (on the ground between the horizon and the front), `through` (from the horizon to the front
+# of the picture: a river or a road coming towards the viewer). `variants` is how many outlines an `area` has (its
+# handles say which variant they belong to); an object takes one of them, so two lakes are not the same shape.
+@k.layouts.terrain core.type of=k.layouts.terrain shared=true closed=true core.source="hand-core 1"
+@k.layouts.terrain.name core.slot of=k.layouts.terrain key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.layouts.terrain.form core.slot of=k.layouts.terrain key=form required=true enum=view enum=band enum=area enum=silhouette core.source="hand-core 1"
+@k.layouts.terrain.lies core.slot of=k.layouts.terrain key=lies required=true enum=view enum=horizon enum=ground enum=through core.source="hand-core 1"
+@k.layouts.terrain.variants core.slot of=k.layouts.terrain key=variants kind=integer min=1 core.source="hand-core 1"
+# A handle of a terrain feature: a point (and, for some, a size) that people move or change, in the 0 to 100 frame of
+# the feature's box (x right, y down). `n` is its place among the handles, from 0 (the index a host gives the part);
+# `role` what it does: `start`, `bend` and `end` of a band, `horizon` of a view, `outline` (a point of the outline of
+# an area or the ridge of a silhouette, in order), `peak` (an outline point that is the top: snow lies there);
+# `variant` the outline it belongs to (absent: every variant); `x`, `y` the point; `w` the width of a band at that
+# handle, `h` its height (0 for a point).
+@k.layouts.handle core.type of=k.layouts.handle shared=true closed=true core.source="hand-core 1"
+@k.layouts.handle.of core.slot of=k.layouts.handle key=of id=true required=true kind=atom kind=string type=k.layouts.terrain by=name core.source="hand-core 1"
+@k.layouts.handle.name core.slot of=k.layouts.handle key=name id=true required=true kind=atom core.source="hand-core 1"
+@k.layouts.handle.n core.slot of=k.layouts.handle key=n required=true kind=integer min=0 core.source="hand-core 1"
+@k.layouts.handle.role core.slot of=k.layouts.handle key=role required=true enum=start enum=bend enum=end enum=horizon enum=outline enum=peak core.source="hand-core 1"
+@k.layouts.handle.variant core.slot of=k.layouts.handle key=variant kind=integer min=1 core.source="hand-core 1"
+@k.layouts.handle.x core.slot of=k.layouts.handle key=x required=true kind=number min=0 max=100 core.source="hand-core 1"
+@k.layouts.handle.y core.slot of=k.layouts.handle key=y required=true kind=number min=0 max=100 core.source="hand-core 1"
+@k.layouts.handle.w core.slot of=k.layouts.handle key=w required=true kind=number min=0 max=100 core.source="hand-core 1"
+@k.layouts.handle.h core.slot of=k.layouts.handle key=h required=true kind=number min=0 max=100 core.source="hand-core 1"
+# A drawn part of a terrain feature and how it follows from the handles. `form`: `fill` (the shape itself: the band,
+# the outline or the silhouette), `above` and `below` (for a view: the share `from` to `to`, 0 to 100, of the room
+# above or below the horizon, top to bottom: the sky in bands that lighten towards the horizon, the ground in bands
+# that darken towards the front), `edge` (a line along the `side` left or right of a band: a bank, a kerb), `middle`
+# (the middle line of a band, dashed: the lane marks of a road, the current of a river), `shore` (the outline grown
+# by `grow` per cent of its size around its middle: the shore round a lake; a negative grow draws a smaller copy
+# inside, a lighter middle that gives water depth), `cap` (the top `grow` per cent of a silhouette around each `peak`
+# handle: snow). `colour` is its colour (a k.colours name), `rgb` the exact shade; `z` its draw order among the parts.
+@k.layouts.terrain_part core.type of=k.layouts.terrain_part shared=true closed=true core.source="hand-core 1"
+@k.layouts.terrain_part.of core.slot of=k.layouts.terrain_part key=of id=true required=true kind=atom kind=string type=k.layouts.terrain by=name core.source="hand-core 1"
+@k.layouts.terrain_part.name core.slot of=k.layouts.terrain_part key=name id=true required=true kind=atom core.source="hand-core 1"
+@k.layouts.terrain_part.form core.slot of=k.layouts.terrain_part key=form required=true enum=fill enum=above enum=below enum=edge enum=middle enum=shore enum=cap core.source="hand-core 1"
+@k.layouts.terrain_part.side core.slot of=k.layouts.terrain_part key=side enum=left enum=right core.source="hand-core 1"
+@k.layouts.terrain_part.from core.slot of=k.layouts.terrain_part key=from kind=number min=0 max=100 core.source="hand-core 1"
+@k.layouts.terrain_part.to core.slot of=k.layouts.terrain_part key=to kind=number min=0 max=100 core.source="hand-core 1"
+@k.layouts.terrain_part.grow core.slot of=k.layouts.terrain_part key=grow kind=number min=-90 max=100 core.source="hand-core 1"
+@k.layouts.terrain_part.colour core.slot of=k.layouts.terrain_part key=colour required=true kind=atom kind=string core.source="hand-core 1"
+@k.layouts.terrain_part.rgb core.slot of=k.layouts.terrain_part key=rgb kind=string core.source="hand-core 1"
+@k.layouts.terrain_part.z core.slot of=k.layouts.terrain_part key=z required=true kind=integer core.source="hand-core 1"
