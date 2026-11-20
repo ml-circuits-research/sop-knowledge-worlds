@@ -10,7 +10,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/charts-core.mjs
 
-@k.charts core.module name=k.charts version=1 exports=source exports=kind exports=encoding exports=relationship exports=rule core.source="hand-core 1"
+@k.charts core.module name=k.charts version=1 exports=source exports=kind exports=encoding exports=relationship exports=rule exports=category core.source="hand-core 1"
 
 # A published work a fact rests on: `name` a short id (author and year), `cite` the reference, `year`.
 @k.charts.source core.type of=k.charts.source shared=true closed=true core.source="hand-core 1"
@@ -67,5 +67,15 @@
 @k.charts.rule.points_min core.slot of=k.charts.rule key=points_min kind=integer min=2 core.source="hand-core 1"
 @k.charts.rule.about core.slot of=k.charts.rule key=about required=true kind=string core.source="hand-core 1"
 @k.charts.rule.source core.slot of=k.charts.rule key=source many=true required=true kind=atom type=k.charts.source by=name core.source="hand-core 1"
+
+# The typical categories of a dimension a chart is broken down by (sales by month, staff by role, customers by
+# payment method): `dimension` the dimension's name (month, region, payment method), `n` the place of the category in
+# the usual order, from 1, `label` the category. A host that is asked for a chart by its dimension alone, with no data,
+# draws these categories with sample values and says that the values are a sample. Conventional values (the months of
+# the year, the four quarters), not data about the world.
+@k.charts.category core.type of=k.charts.category shared=true closed=true core.source="hand-core 1"
+@k.charts.category.dimension core.slot of=k.charts.category key=dimension id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.charts.category.n core.slot of=k.charts.category key=n id=true required=true kind=integer min=1 core.source="hand-core 1"
+@k.charts.category.label core.slot of=k.charts.category key=label required=true kind=atom kind=string core.source="hand-core 1"
 
 # Its English words are in w.lang.en (shard words-k.charts, KR3).

@@ -1,5 +1,5 @@
 {
- "version": "52190c1b18c3",
+ "version": "c22eebc6a9b0",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -4706,8 +4706,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1445,
-     "bytes": 280427,
+     "wires": 1448,
+     "bytes": 281077,
      "keys": [
       "a",
       "about",
@@ -4976,6 +4976,7 @@
       "k.attributes.usage",
       "k.body.part",
       "k.body.sense",
+      "k.charts.category",
       "k.charts.encoding",
       "k.charts.kind",
       "k.charts.rank",
@@ -5172,6 +5173,7 @@
       "kind_of",
       "kinds_max",
       "kinds_min",
+      "label",
       "landlocked",
       "language",
       "last",
@@ -12870,6 +12872,7 @@
    "schema": "k.charts/schema.sop",
    "vocabulary": "k.charts/shards/words.sop",
    "exports": [
+    "k.charts.category",
     "k.charts.encoding",
     "k.charts.kind",
     "k.charts.relationship",
@@ -12878,6 +12881,9 @@
    ],
    "depends": [],
    "indexedFields": {
+    "k.charts.category": [
+     "dimension"
+    ],
     "k.charts.encoding": [
      "name"
     ],
@@ -12896,6 +12902,60 @@
     ]
    },
    "shards": [
+    {
+     "id": "k.charts/shards/categories",
+     "path": "k.charts/shards/categories.sop",
+     "wires": 178,
+     "bytes": 19676,
+     "keys": [
+      "age",
+      "age group",
+      "browser",
+      "category",
+      "channel",
+      "city",
+      "colour",
+      "continent",
+      "country",
+      "course",
+      "day",
+      "department",
+      "device",
+      "education",
+      "gender",
+      "genre",
+      "grade",
+      "language",
+      "level",
+      "month",
+      "payment",
+      "payment method",
+      "platform",
+      "priority",
+      "product",
+      "quarter",
+      "rank",
+      "rating",
+      "region",
+      "role",
+      "season",
+      "sex",
+      "shift",
+      "size",
+      "source",
+      "status",
+      "subject",
+      "team",
+      "week",
+      "weekday",
+      "year"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
     {
      "id": "k.charts/shards/charts",
      "path": "k.charts/shards/charts.sop",
@@ -34404,15 +34464,17 @@
     {
      "id": "k.kinds/shards/relations-charts",
      "path": "k.kinds/shards/relations-charts.sop",
-     "wires": 25,
-     "bytes": 4704,
+     "wires": 28,
+     "bytes": 5236,
      "keys": [
       "about",
       "categories_max",
       "cite",
       "data",
+      "dimension",
       "encoding",
       "form",
+      "k.charts.category",
       "k.charts.encoding",
       "k.charts.kind",
       "k.charts.rank",
@@ -34420,7 +34482,9 @@
       "k.charts.rule",
       "k.charts.source",
       "kind",
+      "label",
       "mark",
+      "n",
       "points_min",
       "rank",
       "relationship",
@@ -64992,8 +65056,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 375,
-     "bytes": 53513,
+     "wires": 376,
+     "bytes": 53640,
      "keys": [
       "after",
       "age_years_about",
@@ -65028,6 +65092,7 @@
       "calc",
       "canon",
       "categories_max",
+      "category",
       "chance",
       "child_count",
       "choose",
@@ -97461,7 +97526,28 @@
       "value_labels",
       "gridlines",
       "legend",
-      "y_max"
+      "y_max",
+      "font_size",
+      "title_weight",
+      "title_colour",
+      "title_position",
+      "y_axis",
+      "x_axis",
+      "invert",
+      "axis_scale",
+      "tick_format",
+      "precision",
+      "line_style",
+      "line_width",
+      "marker_size",
+      "marker_edge",
+      "bar_width",
+      "pie_radius",
+      "grid_style",
+      "dimension",
+      "measure",
+      "aggregate",
+      "sample"
      ],
      "words": [
       "group",
@@ -97490,8 +97576,8 @@
      ]
     }
    ],
-   "wires": 93,
-   "bytes": 17310,
+   "wires": 114,
+   "bytes": 21228,
    "sources": [
     "hand-core-1"
    ],

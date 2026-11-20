@@ -1,8 +1,11 @@
-# k.kinds/shards/relations-charts: the keys of the types of k.charts read as relations: 25 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-charts: the keys of the types of k.charts read as relations: 28 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
 
+@k.kinds.relation.k.charts.category.dimension k.kinds.relation type=k.charts.category key=dimension subject=category object=word object_type=k.words.sense found=value core.source="hand-core 1"
+@k.kinds.relation.k.charts.category.n k.kinds.relation type=k.charts.category key=n subject=category object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.charts.category.label k.kinds.relation type=k.charts.category key=label subject=category object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.charts.encoding.about k.kinds.relation type=k.charts.encoding key=about subject=encoding object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.charts.kind.form k.kinds.relation type=k.charts.kind key=form subject=kind object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.charts.kind.mark k.kinds.relation type=k.charts.kind key=mark subject=kind object=value found=schema core.source="hand-core 1"

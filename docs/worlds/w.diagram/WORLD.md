@@ -24,6 +24,12 @@ of its own; two denies keep one code per thing of a kind and one membership per 
   `theme` (a `k.styles` theme), `background`, `numbered`, `code`; on nodes `outline`, `text_colour`, `font_size`,
   `font_weight` (normal, bold), the roles database, actor, note, external and the shapes cylinder, cloud, actor,
   note; on edges the direction `back` and `route`; group layouts circle, pie and doughnut.
+- For an editor's charts (a group laid out as bar, line, area, pie or doughnut): `x_label`, `y_label`,
+  `value_labels`, `gridlines`, `legend`, `y_max`; how it is drawn: `font_size`, `title_weight`, `title_colour`,
+  `title_position`, `y_axis` (left, right), `x_axis` (bottom, top), `invert` (none, x, y), `axis_scale` (linear, log),
+  `tick_format` (plain, magnitude, power), `precision`, `line_style`, `line_width`, `marker_size`, `marker_edge`,
+  `bar_width`, `pie_radius`, `grid_style`; what it was asked to show: `dimension`, `measure`, `aggregate` (count,
+  sum, avg, min, max) and `sample` (its values are a sample drawn for a chart asked for without data).
 - `w.diagram.member`: `group`, `node` (required): a membership as a thing, made and removed by an editor (std.acts
   cannot take a reference away, and removing a group removes what refers to it); `node group=` stays the plain form.
 - Acts: make, remove, change, pick, ask, copy on diagrams and groups; also place, connect, group on nodes; make,

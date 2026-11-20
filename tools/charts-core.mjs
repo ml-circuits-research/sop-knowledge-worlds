@@ -8,13 +8,17 @@
 //  - the relationships data shows (Few 2012: time series, ranking, part-to-whole, deviation, distribution,
 //    correlation, nominal comparison; Zelazny 1985 named five of them), and the rules from each to the kinds that
 //    show it, best first, with their conditions (a pie chart for a few parts of one whole: Few 2007).
-//   node tools/charts-core.mjs     writes docs/worlds/k.charts/shards/charts.sop
+//  - the typical categories of the dimensions charts are broken down by (months, quarters, regions, roles, payment
+//    methods ...): conventional values a host draws, with sample values said to be a sample, when a chart is asked for
+//    by its dimension alone ("a bar chart of sales by month") and no data is given.
+//   node tools/charts-core.mjs     writes docs/worlds/k.charts/shards/charts.sop and categories.sop
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR } from './lib/worlds.mjs';
 import { wire, header, seg, text } from './import/lib.mjs';
 
 export const SHARD = join(WORLDS_DIR, 'k.charts', 'shards', 'charts.sop');
+export const CATEGORY_SHARD = join(WORLDS_DIR, 'k.charts', 'shards', 'categories.sop');
 const SRC = 'hand-core 1';
 // name, cite, year
 export const SOURCES = [
@@ -80,6 +84,59 @@ export const RULES = [
   ['nominal comparison', 'dot plot', 2, {}, 'dots on a common scale when bars would not start at zero', ['cleveland1984', 'few2012']],
 ];
 
+// dimension, its categories in the usual order (conventional values; the dimensions charts of business, school,
+// survey and web data are most often broken down by)
+export const CATEGORIES = [
+  ['month', ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']],
+  ['quarter', ['Q1', 'Q2', 'Q3', 'Q4']],
+  ['week', ['Week 1', 'Week 2', 'Week 3', 'Week 4']],
+  ['weekday', ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']],
+  ['day', ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']],
+  ['year', ['2021', '2022', '2023', '2024', '2025']],
+  ['season', ['Spring', 'Summer', 'Autumn', 'Winter']],
+  ['shift', ['Morning', 'Afternoon', 'Night']],
+  ['region', ['North', 'South', 'East', 'West']],
+  ['continent', ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']],
+  ['country', ['France', 'Germany', 'Italy', 'Spain', 'Poland']],
+  ['city', ['London', 'Paris', 'Berlin', 'Madrid']],
+  ['department', ['Sales', 'Marketing', 'Engineering', 'Finance', 'Support']],
+  ['team', ['Team A', 'Team B', 'Team C', 'Team D']],
+  ['role', ['Manager', 'Engineer', 'Analyst', 'Designer']],
+  ['rank', ['Junior', 'Mid-level', 'Senior', 'Lead']],
+  ['level', ['Beginner', 'Intermediate', 'Advanced']],
+  ['grade', ['A', 'B', 'C', 'D', 'F']],
+  ['status', ['Open', 'In progress', 'Done', 'Blocked']],
+  ['priority', ['Low', 'Medium', 'High', 'Critical']],
+  ['size', ['Small', 'Medium', 'Large']],
+  ['sex', ['Female', 'Male']],
+  ['gender', ['Female', 'Male', 'Other']],
+  ['age group', ['18-24', '25-34', '35-44', '45-54', '55+']],
+  ['age', ['18-24', '25-34', '35-44', '45-54', '55+']],
+  ['education', ['Secondary', 'Bachelor', 'Master', 'Doctorate']],
+  ['payment method', ['Card', 'Cash', 'Bank transfer', 'Mobile']],
+  ['payment', ['Card', 'Cash', 'Bank transfer', 'Mobile']],
+  ['channel', ['Online', 'Store', 'Phone', 'Partner']],
+  ['source', ['Search', 'Social', 'Email', 'Direct']],
+  ['device', ['Desktop', 'Mobile', 'Tablet']],
+  ['platform', ['Web', 'iOS', 'Android']],
+  ['browser', ['Chrome', 'Safari', 'Firefox', 'Edge']],
+  ['language', ['English', 'Spanish', 'French', 'German']],
+  ['subject', ['Mathematics', 'Science', 'History', 'Languages']],
+  ['course', ['Mathematics', 'Physics', 'History', 'Biology']],
+  ['genre', ['Rock', 'Pop', 'Jazz', 'Classical']],
+  ['colour', ['Red', 'Blue', 'Green', 'Yellow']],
+  ['rating', ['1 star', '2 stars', '3 stars', '4 stars', '5 stars']],
+  ['product', ['Product A', 'Product B', 'Product C', 'Product D']],
+  ['category', ['Category A', 'Category B', 'Category C', 'Category D']],
+];
+
+export function categoryShardText() {
+  const lines = [];
+  for (const [dimension, labels] of CATEGORIES) labels.forEach((label, i) => lines.push(wire(`k.charts.category.${seg(dimension)}.${i + 1}`, 'k.charts.category', [['dimension', dimension], ['n', i + 1], ['label', text(label)]], SRC)));
+  return `${header({ id: 'k.charts/shards/categories', about: `the typical categories of ${CATEGORIES.length} dimensions charts are broken down by (${lines.length} categories): conventional values, drawn with sample values when a chart is asked for by its dimension alone.`,
+    sources: ['hand-core 1 (hand-written in this repository: tools/charts-core.mjs)'], license: 'CC0-1.0', script: 'tools/charts-core.mjs' })}\n${lines.join('\n')}\n`;
+}
+
 export function shardText() {
   const lines = [];
   for (const [name, cite, year] of SOURCES) lines.push(wire(`k.charts.source.${name}`, 'k.charts.source', [['name', name], ['cite', text(cite)], ['year', year]], SRC));
@@ -108,4 +165,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const t = shardText();
   writeFileSync(SHARD, t);
   console.log(`charts.sop: ${t.split('\n').filter((l) => l.startsWith('@')).length} wires, ${Buffer.byteLength(t)} bytes`);
+  const c = categoryShardText();
+  writeFileSync(CATEGORY_SHARD, c);
+  console.log(`categories.sop: ${c.split('\n').filter((l) => l.startsWith('@')).length} wires, ${Buffer.byteLength(c)} bytes`);
 }

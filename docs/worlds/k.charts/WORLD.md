@@ -20,6 +20,7 @@
 | `k.charts.encoding` | `name` | `about` (position, length, angle, area, colour hue ...) |
 | `k.charts.rank` | `encoding`, `data`, `source` | `rank` (1: read most accurately) |
 | `k.charts.relationship` | `name` | `about`, `source` |
+| `k.charts.category` | `dimension`, `n` | `label`: the typical categories of a dimension charts are broken down by (the months, the quarters, regions, roles, payment methods), in their usual order; conventional values a host draws with sample values (and says so) when a chart is asked for by its dimension alone |
 | `k.charts.rule` | `relationship`, `kind` | `rank` among the kinds for that relationship; conditions `categories_max`, `series` (one or several), `points_min`; `about` why; `source` |
 
 9 kinds (bar, grouped bar, stacked bar, line, area, pie, scatter, dot plot, histogram), 14 encodings in 4 rankings,

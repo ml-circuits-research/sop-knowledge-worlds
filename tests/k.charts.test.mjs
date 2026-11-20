@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR, factsOf, scanWorlds } from '../tools/lib/worlds.mjs';
-import { SHARD, shardText, chartsFor } from '../tools/charts-core.mjs';
+import { SHARD, shardText, chartsFor, CATEGORY_SHARD, categoryShardText } from '../tools/charts-core.mjs';
 
 const worlds = scanWorlds();
 const unq = (v) => String(v).replace(/^"|"$/g, '');
@@ -50,4 +50,13 @@ test('expressiveness and the rules: the reviewer\'s cases, and every best kind t
   for (const r of rules.filter((x) => one(x, 'relationship') === 'time series')) assert.ok(all(kind(one(r, 'kind')), 'x').includes('time'), r.id);
   for (const r of rules.filter((x) => one(x, 'relationship') === 'correlation')) assert.deepEqual([all(kind(one(r, 'kind')), 'x'), all(kind(one(r, 'kind')), 'y')], [['quantitative'], ['quantitative']]);
   assert.ok(!all(kind('pie chart'), 'x').includes('time'), 'no pie over time');
+});
+
+test('the typical categories of a dimension: the shard is what the tool writes, each dimension in order from 1', () => {
+  assert.equal(readFileSync(CATEGORY_SHARD, 'utf8'), categoryShardText());
+  const byDimension = new Map();
+  for (const c of of('category')) byDimension.set(one(c, 'dimension'), [...(byDimension.get(one(c, 'dimension')) ?? []), Number(one(c, 'n'))]);
+  for (const [d, ns] of byDimension) { assert.ok(ns.length >= 2, d); assert.deepEqual([...ns].sort((a, b) => a - b), ns.map((_, i) => i + 1), d); }
+  assert.equal(of('category').find((c) => one(c, 'dimension') === 'month' && one(c, 'n') === '3') && one(of('category').find((c) => one(c, 'dimension') === 'month' && one(c, 'n') === '3'), 'label'), 'March');
+  assert.equal(byDimension.get('quarter').length, 4);
 });

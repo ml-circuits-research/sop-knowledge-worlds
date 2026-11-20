@@ -129,6 +129,39 @@
 @w.diagram.group.legend core.slot of=w.diagram.group key=legend enum=none enum=right enum=bottom core.source="hand-core 1"
 # `y_max` the top of a chart's value axis (a value above it is drawn at the top); the largest value when it has none.
 @w.diagram.group.y_max core.slot of=w.diagram.group key=y_max kind=number core.source="hand-core 1"
+# How a chart group is drawn beyond its data: `font_size` the size of its text (12 when it has none); the title's
+# `title_weight` (normal, bold), `title_colour` and `title_position` (top, top_left, bottom); the side of the value
+# axis `y_axis` (left, right) and of the category axis `x_axis` (bottom, top); `invert` an axis drawn the other way
+# (x: the categories from the right; y: the values from the top); `axis_scale` the value axis linear or log;
+# `tick_format` how its numbers are written (plain, magnitude: 1.2k, 3M; power: 10^3); `precision` the decimals of
+# the values and the shares of a pie (0 to 4); `line_style` (solid, dashed, dotted, dash_dot) and `line_width` of a
+# line chart; `marker_size` and `marker_edge` (the outline's width; 0 none) of its points; `bar_width` the share of a
+# category's room its bar takes (0.1 to 1; 1 leaves no gap between the bars); `pie_radius` the radius of a pie or
+# doughnut; `grid_style` (solid, dashed, dotted) of its gridlines.
+@w.diagram.group.font_size core.slot of=w.diagram.group key=font_size kind=number min=6 max=40 core.source="hand-core 1"
+@w.diagram.group.title_weight core.slot of=w.diagram.group key=title_weight enum=normal enum=bold core.source="hand-core 1"
+@w.diagram.group.title_colour core.slot of=w.diagram.group key=title_colour kind=atom kind=string core.source="hand-core 1"
+@w.diagram.group.title_position core.slot of=w.diagram.group key=title_position enum=top enum=top_left enum=bottom core.source="hand-core 1"
+@w.diagram.group.y_axis core.slot of=w.diagram.group key=y_axis enum=left enum=right core.source="hand-core 1"
+@w.diagram.group.x_axis core.slot of=w.diagram.group key=x_axis enum=bottom enum=top core.source="hand-core 1"
+@w.diagram.group.invert core.slot of=w.diagram.group key=invert enum=none enum=x enum=y core.source="hand-core 1"
+@w.diagram.group.axis_scale core.slot of=w.diagram.group key=axis_scale enum=linear enum=log core.source="hand-core 1"
+@w.diagram.group.tick_format core.slot of=w.diagram.group key=tick_format enum=plain enum=magnitude enum=power core.source="hand-core 1"
+@w.diagram.group.precision core.slot of=w.diagram.group key=precision kind=integer min=0 max=4 core.source="hand-core 1"
+@w.diagram.group.line_style core.slot of=w.diagram.group key=line_style enum=solid enum=dashed enum=dotted enum=dash_dot core.source="hand-core 1"
+@w.diagram.group.line_width core.slot of=w.diagram.group key=line_width kind=number min=0.5 max=12 core.source="hand-core 1"
+@w.diagram.group.marker_size core.slot of=w.diagram.group key=marker_size kind=number min=2 max=40 core.source="hand-core 1"
+@w.diagram.group.marker_edge core.slot of=w.diagram.group key=marker_edge kind=number min=0 max=8 core.source="hand-core 1"
+@w.diagram.group.bar_width core.slot of=w.diagram.group key=bar_width kind=number min=0.1 max=1 core.source="hand-core 1"
+@w.diagram.group.pie_radius core.slot of=w.diagram.group key=pie_radius kind=number min=30 max=300 core.source="hand-core 1"
+@w.diagram.group.grid_style core.slot of=w.diagram.group key=grid_style enum=solid enum=dashed enum=dotted core.source="hand-core 1"
+# What a chart group was asked to show: `dimension` the categories' dimension (month, region), `measure` what the
+# values measure (sales, staff), `aggregate` how the values of a category are made from the measure (count, sum, avg,
+# min, max), `sample` true while its values are a sample drawn for a chart asked for without data.
+@w.diagram.group.dimension core.slot of=w.diagram.group key=dimension kind=atom kind=string core.source="hand-core 1"
+@w.diagram.group.measure core.slot of=w.diagram.group key=measure kind=atom kind=string core.source="hand-core 1"
+@w.diagram.group.aggregate core.slot of=w.diagram.group key=aggregate enum=count enum=sum enum=avg enum=min enum=max core.source="hand-core 1"
+@w.diagram.group.sample core.slot of=w.diagram.group key=sample kind=boolean core.source="hand-core 1"
 
 # A node's membership in a group as a thing of its own, for an editor: std.acts cannot take a reference away, and
 # removing a group removes the things that refer to it, so a membership that comes and goes is made and removed.
