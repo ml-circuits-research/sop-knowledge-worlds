@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (458 of 1477 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (463 of 1487 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -436,6 +436,7 @@
 @k.attributes.narration.k.faces.pose.holds k.attributes.narration type=k.faces.pose key=holds narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.pose.hold_x k.attributes.narration type=k.faces.pose key=hold_x narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.pose.hold_y k.attributes.narration type=k.faces.pose key=hold_y narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.pose.drop k.attributes.narration type=k.faces.pose key=drop narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.turn.pose k.attributes.narration type=k.faces.turn key=pose narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.turn.style k.attributes.narration type=k.faces.turn key=style narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.turn.bone k.attributes.narration type=k.faces.turn key=bone narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
@@ -900,6 +901,9 @@
 @k.attributes.narration.k.objects.skeleton.spread k.attributes.narration type=k.objects.skeleton key=spread narrate=no salience=0 why="machinery: drawings and their parts" core.source="hand-core 1"
 @k.attributes.narration.k.objects.stand_in.name k.attributes.narration type=k.objects.stand_in key=name narrate=no salience=0 why="machinery: drawings and their parts" core.source="hand-core 1"
 @k.attributes.narration.k.objects.stand_in.drawing k.attributes.narration type=k.objects.stand_in key=drawing narrate=no salience=0 why="machinery: drawings and their parts" core.source="hand-core 1"
+@k.attributes.narration.k.objects.stand_in.colour k.attributes.narration type=k.objects.stand_in key=colour narrate=no salience=0 why="machinery: drawings and their parts" core.source="hand-core 1"
+@k.attributes.narration.k.objects.stand_in.scale k.attributes.narration type=k.objects.stand_in key=scale narrate=no salience=0 why="machinery: drawings and their parts" core.source="hand-core 1"
+@k.attributes.narration.k.objects.stand_in.material k.attributes.narration type=k.objects.stand_in key=material narrate=no salience=0 why="machinery: drawings and their parts" core.source="hand-core 1"
 @k.attributes.narration.k.objects.keyword.of k.attributes.narration type=k.objects.keyword key=of narrate=no salience=0 why="machinery: drawings and their parts" core.source="hand-core 1"
 @k.attributes.narration.k.objects.keyword.text k.attributes.narration type=k.objects.keyword key=text narrate=no salience=0 why="machinery: drawings and their parts" core.source="hand-core 1"
 @k.attributes.narration.k.parts.whole.name k.attributes.narration type=k.parts.whole key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
@@ -1283,8 +1287,8 @@
 @k.attributes.narration.k.styles.fill.name k.attributes.narration type=k.styles.fill key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
 @k.attributes.narration.k.styles.fill.about k.attributes.narration type=k.styles.fill key=about narrate=yes salience=0.3 form=text basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.styles.fill.pattern k.attributes.narration type=k.styles.fill key=pattern narrate=yes salience=0.3 form=relation basis=measured core.source="hand-core 1"
-@k.attributes.narration.k.styles.fill.gap k.attributes.narration type=k.styles.fill key=gap narrate=yes salience=0.2 form=measure basis=measured core.source="hand-core 1"
-@k.attributes.narration.k.styles.fill.angle k.attributes.narration type=k.styles.fill key=angle narrate=yes salience=0.2 form=measure basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.styles.fill.gap k.attributes.narration type=k.styles.fill key=gap narrate=yes salience=0.24 form=measure basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.styles.fill.angle k.attributes.narration type=k.styles.fill key=angle narrate=yes salience=0.22 form=measure basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.styles.effect.name k.attributes.narration type=k.styles.effect key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
 @k.attributes.narration.k.styles.effect.about k.attributes.narration type=k.styles.effect key=about narrate=yes salience=0.3 form=text basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.styles.effect.kind k.attributes.narration type=k.styles.effect key=kind narrate=yes salience=0.3 form=kind basis=measured core.source="hand-core 1"
@@ -1315,6 +1319,12 @@
 @k.attributes.narration.k.styles.turn.about k.attributes.narration type=k.styles.turn key=about narrate=yes salience=0.3 form=text basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.styles.turn.by k.attributes.narration type=k.styles.turn key=by narrate=yes salience=0.22 form=measure basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.styles.turn.to k.attributes.narration type=k.styles.turn key=to narrate=yes salience=0.08 form=measure basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.styles.material.name k.attributes.narration type=k.styles.material key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
+@k.attributes.narration.k.styles.material.about k.attributes.narration type=k.styles.material key=about narrate=yes salience=0.3 form=text basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.styles.material.colour k.attributes.narration type=k.styles.material key=colour narrate=yes salience=0.3 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.styles.material.fill k.attributes.narration type=k.styles.material key=fill narrate=yes salience=0.3 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.styles.material.opacity k.attributes.narration type=k.styles.material key=opacity narrate=yes salience=0.05 form=measure basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.styles.material.gradient k.attributes.narration type=k.styles.material key=gradient narrate=yes salience=0.05 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.time.ordered.name k.attributes.narration type=k.time.ordered key=name narrate=no salience=0 why="machinery: orders for the time solver" core.source="hand-core 1"
 @k.attributes.narration.k.time.ordered.cycle k.attributes.narration type=k.time.ordered key=cycle narrate=no salience=0 why="machinery: orders for the time solver" core.source="hand-core 1"
 @k.attributes.narration.k.time.ordered.n k.attributes.narration type=k.time.ordered key=n narrate=no salience=0 why="machinery: orders for the time solver" core.source="hand-core 1"
@@ -1387,7 +1397,7 @@
 @k.attributes.narration.k.units.quantity.name k.attributes.narration type=k.units.quantity key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
 @k.attributes.narration.k.units.quantity.base k.attributes.narration type=k.units.quantity key=base narrate=yes salience=0.5 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.units.unit.name k.attributes.narration type=k.units.unit key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
-@k.attributes.narration.k.units.unit.symbol k.attributes.narration type=k.units.unit key=symbol narrate=yes salience=0.46 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.units.unit.symbol k.attributes.narration type=k.units.unit key=symbol narrate=yes salience=0.45 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.units.unit.quantity k.attributes.narration type=k.units.unit key=quantity narrate=yes salience=0.7 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.units.unit.factor k.attributes.narration type=k.units.unit key=factor narrate=yes salience=0.7 form=measure basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.units.unit.offset k.attributes.narration type=k.units.unit key=offset narrate=no salience=0 why="an internal number (a position, a rank, a step count)" core.source="hand-core 1"

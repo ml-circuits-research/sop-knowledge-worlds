@@ -11,7 +11,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.styles core.module name=k.styles version=1 exports=theme exports=role exports=swatch exports=font exports=fill exports=effect exports=filter exports=frame exports=turn core.source="hand-core 1"
+@k.styles core.module name=k.styles version=1 exports=theme exports=role exports=swatch exports=font exports=fill exports=effect exports=filter exports=frame exports=turn exports=material core.source="hand-core 1"
 
 # A theme. `name`; `about` in words; `fill` the colour inside a shape; `outline` its border; `text` the colour of
 # labels; `edge` the colour of lines and arrows; `background` the page; `group` the inside of a frame around several
@@ -57,7 +57,7 @@
 @k.styles.fill core.type of=k.styles.fill shared=true closed=true core.source="hand-core 1"
 @k.styles.fill.name core.slot of=k.styles.fill key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.styles.fill.about core.slot of=k.styles.fill key=about required=true kind=string core.source="hand-core 1"
-@k.styles.fill.pattern core.slot of=k.styles.fill key=pattern required=true enum=solid enum=none enum=hachure enum=dots enum=cross-hatch enum=zigzag enum=dashed enum=gradient core.source="hand-core 1"
+@k.styles.fill.pattern core.slot of=k.styles.fill key=pattern required=true enum=solid enum=none enum=hachure enum=dots enum=cross-hatch enum=zigzag enum=dashed enum=gradient enum=bricks core.source="hand-core 1"
 @k.styles.fill.gap core.slot of=k.styles.fill key=gap kind=number min=1 max=60 core.source="hand-core 1"
 @k.styles.fill.angle core.slot of=k.styles.fill key=angle kind=number min=-180 max=180 core.source="hand-core 1"
 
@@ -110,3 +110,15 @@
 @k.styles.turn.about core.slot of=k.styles.turn key=about required=true kind=string core.source="hand-core 1"
 @k.styles.turn.by core.slot of=k.styles.turn key=by kind=number min=-360 max=360 core.source="hand-core 1"
 @k.styles.turn.to core.slot of=k.styles.turn key=to kind=number min=-360 max=360 core.source="hand-core 1"
+
+# A material a drawn thing is made of (wooden, glass, metal, brick, stone, thatch, water): how a picture shows it.
+# `colour` a k.colours colour name it is painted in, `fill` the k.styles fill its colour is laid in (planks, bricks,
+# tiles), `opacity` how solid it is (glass 0.45: things behind it show through), `gradient` the colour a gradient fill
+# ends in (metal shines towards silver).
+@k.styles.material core.type of=k.styles.material shared=true closed=true core.source="hand-core 1"
+@k.styles.material.name core.slot of=k.styles.material key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.styles.material.about core.slot of=k.styles.material key=about required=true kind=string core.source="hand-core 1"
+@k.styles.material.colour core.slot of=k.styles.material key=colour required=true kind=atom kind=string core.source="hand-core 1"
+@k.styles.material.fill core.slot of=k.styles.material key=fill required=true kind=atom kind=string type=k.styles.fill by=name core.source="hand-core 1"
+@k.styles.material.opacity core.slot of=k.styles.material key=opacity kind=number min=0 max=1 core.source="hand-core 1"
+@k.styles.material.gradient core.slot of=k.styles.material key=gradient kind=atom kind=string core.source="hand-core 1"

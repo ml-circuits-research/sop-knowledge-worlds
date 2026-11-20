@@ -7297,6 +7297,9 @@
   "k.kinds/shards/kind",
   "k.words/shards/ap"
  ],
+ "apple tree": [
+  "k.objects/shards/stand-ins-variants"
+ ],
  "applejack": [
   "k.attributes/shards/same-a",
   "k.kinds/shards/sensitive",
@@ -14709,7 +14712,8 @@
   "k.animals/shards/mammals"
  ],
  "because": [
-  "k.feelings/schema.sop"
+  "k.feelings/schema.sop",
+  "w.face/schema.sop"
  ],
  "beck": [
   "k.words/shards/be",
@@ -16596,6 +16600,9 @@
  ],
  "birch mountains": [
   "k.geo/shards/north-america"
+ ],
+ "birch tree": [
+  "k.objects/shards/stand-ins-variants"
  ],
  "bird": [
   "k.animals/shards/classes",
@@ -20258,8 +20265,12 @@
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-b",
   "k.shapes/shards/shapes",
+  "k.styles/shards/materials",
   "k.words/shards/br",
   "k.words/shards/frequency-b"
+ ],
+ "brick house": [
+  "k.objects/shards/stand-ins-variants"
  ],
  "bricklayer": [
   "k.people/shards/roles-jobs"
@@ -20274,6 +20285,7 @@
   "k.objects/shards/places",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-b",
+  "k.styles/shards/materials",
   "k.objects/shards/noto-place-building-01"
  ],
  "bridal": [
@@ -25504,6 +25516,7 @@
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/mulberry-work-and-school-stationery-01",
   "k.scenes/shards/things-c",
+  "k.styles/shards/materials",
   "k.words/shards/ca",
   "k.words/shards/frequency-c"
  ],
@@ -26531,7 +26544,8 @@
  "cause": [
   "k.feelings/schema.sop",
   "k.words/shards/ca",
-  "k.words/shards/frequency-c"
+  "k.words/shards/frequency-c",
+  "w.face/schema.sop"
  ],
  "caused by": [
   "k.feelings/schema.sop"
@@ -28478,6 +28492,9 @@
  ],
  "cherry red": [
   "k.colours/shards/colours-common"
+ ],
+ "cherry tree": [
+  "k.objects/shards/stand-ins-variants"
  ],
  "chersky range": [
   "k.geo/shards/asia"
@@ -31372,6 +31389,9 @@
  "cobbler": [
   "k.words/shards/co-1",
   "k.words/shards/frequency-c"
+ ],
+ "cobbles": [
+  "k.styles/shards/materials"
  ],
  "cobra": [
   "k.animals/shards/reptiles-and-amphibians",
@@ -42162,7 +42182,8 @@
  "digit": [
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/wordnet-1",
-  "k.kinds/shards/wordnet-2"
+  "k.kinds/shards/wordnet-2",
+  "k.units/shards/core"
  ],
  "digit1": [
   "k.objects/shards/noto-office-01",
@@ -44405,6 +44426,9 @@
   "k.kinds/shards/group-noto",
   "k.objects/shards/noto-animal-reptile-01"
  ],
+ "dragon kite": [
+  "k.objects/shards/stand-ins-variants"
+ ],
  "dragonflies": [
   "k.animals/shards/invertebrates"
  ],
@@ -44933,9 +44957,11 @@
   "k.actions/shards/actions-hands",
   "k.actions/shards/verbs-place",
   "k.actions/shards/verbs-remove",
+  "k.attributes/shards/narration",
   "k.attributes/shards/same-d",
   "k.faces/shards/plain-earrings",
   "k.kinds/shards/head",
+  "k.kinds/shards/relations-faces",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/noto-household-02",
   "k.objects/shards/noto-medical-01",
@@ -48337,6 +48363,9 @@
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/noto-transport-ground-01",
   "k.objects/shards/openmoji-technology-02"
+ ],
+ "electric car": [
+  "k.objects/shards/stand-ins-variants"
  ],
  "electric coffee percolator": [
   "k.attributes/shards/drawn-openmoji",
@@ -54690,6 +54719,7 @@
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/joins",
+  "k.units/shards/core",
   "k.wearables/shards/places",
   "k.words/shards/fi",
   "k.words/shards/frequency-f"
@@ -54705,6 +54735,21 @@
   "k.objects/shards/mulberry-leisure-toys-02",
   "k.scenes/shards/things-f"
  ],
+ "finger width": [
+  "k.units/shards/core"
+ ],
+ "finger widths": [
+  "k.units/shards/core"
+ ],
+ "finger-breadth": [
+  "k.units/shards/core"
+ ],
+ "finger-width": [
+  "k.units/shards/core"
+ ],
+ "finger-widths": [
+  "k.units/shards/core"
+ ],
  "fingerboard": [
   "k.kinds/shards/part_of-wordnet-2",
   "k.objects/shards/things-3"
@@ -54715,6 +54760,7 @@
  ],
  "fingers": [
   "k.body/shards/core",
+  "k.units/shards/core",
   "k.wearables/shards/places"
  ],
  "fingertip": [
@@ -55308,6 +55354,9 @@
   "k.words/shards/frequency-f",
   "k.objects/shards/noto-animal-mammal-08",
   "k.objects/shards/noto-sport-03"
+ ],
+ "fishing boat": [
+  "k.objects/shards/stand-ins-variants"
  ],
  "fishing net": [
   "k.attributes/shards/same-f",
@@ -58512,6 +58561,9 @@
  ],
  "frowns": [
   "k.faces/shards/traits"
+ ],
+ "frozen": [
+  "k.styles/shards/materials"
  ],
  "frozen chips": [
   "k.attributes/shards/drawn-mulberry",
@@ -62271,6 +62323,9 @@
   "k.words/shards/gi",
   "k.objects/shards/noto-food-vegetable-02"
  ],
+ "ginger cat": [
+  "k.objects/shards/stand-ins-variants"
+ ],
  "ginger hair": [
   "k.faces/shards/traits"
  ],
@@ -62584,6 +62639,7 @@
   "k.objects/shards/noto-household-01",
   "k.objects/shards/noto-time-01",
   "k.objects/shards/things-3",
+  "k.styles/shards/materials",
   "k.words/shards/frequency-g",
   "k.words/shards/gl",
   "k.objects/shards/noto-drink-01",
@@ -62649,6 +62705,9 @@
  ],
  "glasshouse": [
   "k.objects/shards/places-3"
+ ],
+ "glassy": [
+  "k.styles/shards/materials"
  ],
  "glbt": [
   "k.objects/shards/noto-sky-weather-04"
@@ -63188,6 +63247,7 @@
   "k.colours/shards/colours-css",
   "k.kinds/shards/kind",
   "k.kinds/shards/wordnet-1",
+  "k.styles/shards/materials",
   "k.words/shards/frequency-g",
   "k.words/shards/go",
   "k.objects/shards/noto-award-medal-01",
@@ -63213,6 +63273,7 @@
  "golden": [
   "k.colours/shards/colours",
   "k.colours/shards/colours-css",
+  "k.styles/shards/materials",
   "k.words/shards/frequency-g",
   "k.words/shards/go"
  ],
@@ -63655,6 +63716,8 @@
   "k.words/shards/gr"
  ],
  "gradient": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-styles",
   "k.styles/schema.sop",
   "k.styles/shards/drawing",
   "w.drawing/schema.sop"
@@ -64127,6 +64190,7 @@
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-g",
+  "k.styles/shards/materials",
   "k.words/shards/frequency-g",
   "k.words/shards/gr"
  ],
@@ -64164,6 +64228,9 @@
  "grassland animal": [
   "k.kinds/shards/classes",
   "k.kinds/shards/place"
+ ],
+ "grassy": [
+  "k.styles/shards/materials"
  ],
  "grate": [
   "k.attributes/shards/same-g",
@@ -67093,6 +67160,7 @@
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/joins",
   "k.objects/shards/noto-time-01",
+  "k.units/shards/core",
   "k.wearables/shards/places",
   "k.words/shards/frequency-h",
   "k.words/shards/ha",
@@ -67146,8 +67214,20 @@
  "hand washing": [
   "k.procedures/shards/everyday"
  ],
+ "hand width": [
+  "k.units/shards/core"
+ ],
+ "hand widths": [
+  "k.units/shards/core"
+ ],
  "hand written": [
   "k.styles/schema.sop"
+ ],
+ "hand-width": [
+  "k.units/shards/core"
+ ],
+ "hand-widths": [
+  "k.units/shards/core"
  ],
  "handan": [
   "k.geo/shards/psys2-cities-asia"
@@ -67171,6 +67251,9 @@
  "handbook": [
   "k.words/shards/frequency-h",
   "k.words/shards/ha"
+ ],
+ "handbreadth": [
+  "k.units/shards/core"
  ],
  "handcart": [
   "k.kinds/shards/wordnet-2",
@@ -67359,6 +67442,7 @@
   "k.body/shards/core",
   "k.faces/shards/figure-hands",
   "k.faces/shards/figure-slots",
+  "k.units/shards/core",
   "k.wearables/shards/places",
   "k.words/shards/frequency-h",
   "k.words/shards/ha"
@@ -72742,6 +72826,7 @@
   "k.objects/shards/noto-drink-03",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-i",
+  "k.styles/shards/materials",
   "k.words/shards/frequency-i",
   "k.words/shards/ic",
   "k.objects/shards/noto-food-sweet-01",
@@ -72902,6 +72987,7 @@
   "k.words/shards/ic"
  ],
  "icy": [
+  "k.styles/shards/materials",
   "k.values/shards/scales"
  ],
  "id": [
@@ -75247,6 +75333,7 @@
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/mulberry-building-contents-02",
   "k.scenes/shards/things-i",
+  "k.styles/shards/materials",
   "k.words/shards/frequency-i",
   "k.words/shards/ir",
   "k.objects/shards/noto-food-prepared-01"
@@ -79009,6 +79096,10 @@
   "k.kinds/shards/relations-styles"
  ],
  "k.styles.frame": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-styles"
+ ],
+ "k.styles.material": [
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-styles"
  ],
@@ -84087,6 +84178,7 @@
  "lawn": [
   "k.objects/shards/mulberry-building-garden-and-farm-01",
   "k.parts/shards/names",
+  "k.styles/shards/materials",
   "k.words/shards/frequency-l",
   "k.words/shards/la"
  ],
@@ -85377,6 +85469,7 @@
   "k.objects/shards/mulberry-healthcare-medical-items-02"
  ],
  "left_tail": [
+  "k.faces/shards/figure-coat",
   "k.faces/shards/plain-hair-back",
   "k.objects/shards/noto-event-02"
  ],
@@ -89227,6 +89320,9 @@
   "k.words/shards/lu",
   "k.objects/shards/noto-transport-water-01"
  ],
+ "luxury sedan": [
+  "k.objects/shards/stand-ins-variants"
+ ],
  "luza": [
   "k.geo/shards/europe"
  ],
@@ -91099,7 +91195,8 @@
   "k.words/shards/ma"
  ],
  "maple tree": [
-  "k.kinds/shards/origin"
+  "k.kinds/shards/origin",
+  "k.objects/shards/stand-ins-variants"
  ],
  "maps": [
   "k.objects/shards/things",
@@ -92202,11 +92299,13 @@
   "k.attributes/shards/typical",
   "k.kinds/shards/kind",
   "k.kinds/shards/relations-attributes",
+  "k.kinds/shards/relations-objects",
   "k.kinds/shards/relations-space",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.procedures/shards/from-knowledge",
   "k.space/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/frequency-m",
   "k.words/shards/ma",
   "w.lang.en/shards/hand-grammar"
@@ -93671,6 +93770,7 @@
   "k.words/shards/me"
  ],
  "metal": [
+  "k.styles/shards/materials",
   "k.words/shards/frequency-m",
   "k.words/shards/me",
   "k.objects/shards/noto-money-01"
@@ -93682,6 +93782,7 @@
   "k.faces/shards/plain-shoulders"
  ],
  "metallic": [
+  "k.styles/shards/materials",
   "k.words/shards/frequency-m",
   "k.words/shards/me"
  ],
@@ -97112,6 +97213,7 @@
  "motorboat": [
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
+  "k.objects/shards/stand-ins-variants",
   "k.objects/shards/noto-transport-water-01"
  ],
  "motorcycle": [
@@ -102568,6 +102670,9 @@
   "k.objects/shards/mulberry-plants-and-trees-03",
   "k.scenes/shards/things-o"
  ],
+ "oak tree": [
+  "k.objects/shards/stand-ins-variants"
+ ],
  "oakland": [
   "k.words/shards/frequency-o",
   "k.words/shards/oa"
@@ -103949,6 +104054,9 @@
   "k.objects/shards/noto-drink-02"
  ],
  "opacity": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-styles",
+  "k.units/shards/measures",
   "w.diagram/schema.sop",
   "w.drawing/schema.sop"
  ],
@@ -106569,6 +106677,7 @@
   "k.procedures/shards/tasks",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-p",
+  "k.styles/shards/materials",
   "k.words/shards/frequency-p",
   "k.words/shards/pa",
   "k.objects/shards/noto-household-03",
@@ -108072,6 +108181,9 @@
   "k.objects/shards/stand-ins-wordnet",
   "k.words/shards/frequency-p",
   "k.words/shards/pe"
+ ],
+ "pebbles": [
+  "k.styles/shards/materials"
  ],
  "pec": [
   "k.geo/shards/europe"
@@ -111477,6 +111589,9 @@
  ],
  "plank_3": [
   "k.objects/shards/places-2"
+ ],
+ "planks": [
+  "k.styles/shards/materials"
  ],
  "plankton": [
   "k.objects/shards/noto-animal-marine-02"
@@ -115688,6 +115803,9 @@
   "k.words/shards/pu",
   "k.objects/shards/noto-animal-mammal-01"
  ],
+ "puppy dog": [
+  "k.objects/shards/stand-ins-variants"
+ ],
  "pur": [
   "k.geo/shards/europe"
  ],
@@ -116610,6 +116728,9 @@
   "k.words/shards/frequency-r",
   "k.words/shards/ra"
  ],
+ "race car": [
+  "k.objects/shards/stand-ins-variants"
+ ],
  "racehorse": [
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-r",
@@ -117000,6 +117121,9 @@
  ],
  "rain boots": [
   "k.wearables/shards/wearables"
+ ],
+ "rain cloud": [
+  "k.objects/shards/stand-ins-variants"
  ],
  "rain forest": [
   "k.scenes/shards/scenes-nature"
@@ -117942,6 +118066,7 @@
  "reason": [
   "k.words/shards/frequency-r",
   "k.words/shards/re",
+  "w.face/schema.sop",
   "w.request/schema.sop"
  ],
  "reasoning": [
@@ -118316,6 +118441,9 @@
   "k.kinds/shards/head",
   "k.objects/shards/noto-food-fruit-02",
   "k.scenes/shards/things-r"
+ ],
+ "red brick": [
+  "k.styles/shards/materials"
  ],
  "red china": [
   "k.geo/shards/aliases"
@@ -121456,6 +121584,7 @@
   "k.objects/shards/mulberry-healthcare-medical-items-02"
  ],
  "right_tail": [
+  "k.faces/shards/figure-coat",
   "k.faces/shards/plain-hair-back",
   "k.objects/shards/noto-event-02"
  ],
@@ -122361,6 +122490,7 @@
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-r",
+  "k.styles/shards/materials",
   "k.words/shards/frequency-r",
   "k.words/shards/ro",
   "k.objects/shards/noto-household-02",
@@ -122428,6 +122558,9 @@
  "rocks": [
   "k.parts/shards/names",
   "k.objects/shards/noto-place-geographic-01"
+ ],
+ "rocky": [
+  "k.styles/shards/materials"
  ],
  "rocky mountains": [
   "k.geo/shards/north-america"
@@ -122855,6 +122988,9 @@
  ],
  "roof peak": [
   "k.kinds/shards/part_of-wordnet-3"
+ ],
+ "roof tiles": [
+  "k.styles/shards/materials"
  ],
  "roof1": [
   "k.objects/shards/noto-place-building-01"
@@ -124398,6 +124534,9 @@
   "k.words/shards/frequency-s",
   "k.words/shards/sa",
   "k.objects/shards/noto-transport-water-01"
+ ],
+ "sailing boat": [
+  "k.objects/shards/stand-ins-variants"
  ],
  "sailing vessel": [
   "k.kinds/shards/wordnet-1",
@@ -126157,6 +126296,7 @@
   "k.kinds/shards/part_of-wordnet-3",
   "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-music",
+  "k.kinds/shards/relations-objects",
   "k.kinds/shards/relations-values",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
@@ -128515,6 +128655,7 @@
   "k.scenes/shards/things-s"
  ],
  "see-through": [
+  "k.styles/shards/materials",
   "w.drawing/schema.sop"
  ],
  "seeb": [
@@ -129340,6 +129481,9 @@
  ],
  "setting has the obstacle": [
   "k.story/shards/structure"
+ ],
+ "setting sun": [
+  "k.objects/shards/stand-ins-variants"
  ],
  "setting the table": [
   "k.procedures/shards/everyday"
@@ -131447,6 +131591,9 @@
  "siam": [
   "k.geo/shards/aliases"
  ],
+ "siamese cat": [
+  "k.objects/shards/stand-ins-variants"
+ ],
  "siantan island": [
   "k.geo/shards/islands-asia"
  ],
@@ -132968,6 +133115,7 @@
   "k.objects/shards/things-2"
  ],
  "slate": [
+  "k.styles/shards/materials",
   "k.words/shards/frequency-s",
   "k.words/shards/sl"
  ],
@@ -136124,6 +136272,9 @@
   "k.objects/shards/noto-sport-01",
   "k.objects/shards/noto-sport-02"
  ],
+ "sports car": [
+  "k.objects/shards/stand-ins-variants"
+ ],
  "sports equipment": [
   "k.kinds/shards/classes",
   "k.kinds/shards/group-mulberry",
@@ -137064,6 +137215,9 @@
  "stand-ins": [
   "k.objects/schema.sop"
  ],
+ "stand_in": [
+  "k.units/shards/measures"
+ ],
  "standard": [
   "k.kinds/shards/wordnet-2",
   "k.words/shards/frequency-s",
@@ -137664,6 +137818,7 @@
   "k.words/shards/st"
  ],
  "steel": [
+  "k.styles/shards/materials",
   "k.words/shards/frequency-s",
   "k.words/shards/st"
  ],
@@ -138275,11 +138430,15 @@
   "k.parts/shards/names",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-s",
+  "k.styles/shards/materials",
   "k.words/shards/frequency-s",
   "k.words/shards/st",
   "k.objects/shards/noto-clothing-06",
   "k.objects/shards/noto-place-building-01",
   "k.objects/shards/noto-sport-04"
+ ],
+ "stone house": [
+  "k.objects/shards/stand-ins-variants"
  ],
  "stone slab": [
   "k.objects/shards/things-3"
@@ -138294,7 +138453,8 @@
   "k.objects/shards/noto-other-object-01"
  ],
  "stones": [
-  "k.objects/shards/places"
+  "k.objects/shards/places",
+  "k.styles/shards/materials"
  ],
  "stool": [
   "k.attributes/shards/drawn-mulberry",
@@ -138448,6 +138608,9 @@
   "k.scenes/shards/scenes-other",
   "k.words/shards/frequency-s",
   "k.words/shards/st"
+ ],
+ "storm cloud": [
+  "k.objects/shards/stand-ins-variants"
  ],
  "storo": [
   "k.geo/shards/islands-north-america"
@@ -138625,6 +138788,7 @@
   "k.objects/shards/noto-drink-02",
   "k.objects/shards/noto-drink-03",
   "k.scenes/shards/things-s",
+  "k.styles/shards/materials",
   "k.words/shards/frequency-s",
   "k.words/shards/st"
  ],
@@ -139163,6 +139327,9 @@
  "stunt": [
   "k.words/shards/frequency-s",
   "k.words/shards/st"
+ ],
+ "stunt kite": [
+  "k.objects/shards/stand-ins-variants"
  ],
  "stupa": [
   "k.attributes/shards/drawn-openmoji",
@@ -141509,6 +141676,9 @@
  ],
  "tab3": [
   "k.objects/shards/noto-office-01"
+ ],
+ "tabby cat": [
+  "k.objects/shards/stand-ins-variants"
  ],
  "tablas": [
   "k.geo/shards/islands-asia"
@@ -144028,6 +144198,12 @@
  ],
  "that's": [
   "w.lang.en/shards/morphology"
+ ],
+ "thatch": [
+  "k.styles/shards/materials"
+ ],
+ "thatched": [
+  "k.styles/shards/materials"
  ],
  "thatcher": [
   "k.words/shards/frequency-t",
@@ -146786,6 +146962,9 @@
  "thunderclap": [
   "k.words/shards/th"
  ],
+ "thundercloud": [
+  "k.objects/shards/stand-ins-variants"
+ ],
  "thunderstorm": [
   "k.scenes/shards/scenes-other",
   "k.objects/shards/noto-sky-weather-03"
@@ -147171,9 +147350,13 @@
  "tile_9": [
   "k.objects/shards/things-3"
  ],
+ "tiled": [
+  "k.styles/shards/materials"
+ ],
  "tiles": [
   "k.layouts/shards/layouts",
-  "k.objects/shards/things-3"
+  "k.objects/shards/things-3",
+  "k.styles/shards/materials"
  ],
  "till": [
   "k.attributes/shards/same-t",
@@ -147205,6 +147388,7 @@
   "k.people/shards/given-names-t"
  ],
  "timber": [
+  "k.styles/shards/materials",
   "k.words/shards/frequency-t",
   "k.words/shards/ti",
   "k.objects/shards/noto-place-building-01"
@@ -157204,6 +157388,7 @@
   "k.parts/shards/psys2",
   "k.scenes/shards/support",
   "k.scenes/shards/things-w",
+  "k.styles/shards/materials",
   "k.words/shards/frequency-w",
   "k.words/shards/wa",
   "k.objects/shards/noto-animal-mammal-04",
@@ -157359,6 +157544,9 @@
   "k.words/shards/frequency-w",
   "k.words/shards/wa"
  ],
+ "watery": [
+  "k.styles/shards/materials"
+ ],
  "watson": [
   "k.words/shards/frequency-w",
   "k.words/shards/wa"
@@ -157422,7 +157610,8 @@
   "k.kinds/shards/part_of",
   "k.parts/shards/names",
   "k.parts/shards/psys2",
-  "k.shapes/shards/shapes"
+  "k.shapes/shards/shapes",
+  "k.styles/shards/materials"
  ],
  "waving": [
   "k.faces/shards/figure-poses",
@@ -158075,6 +158264,7 @@
  ],
  "wet": [
   "k.actions/shards/actions-make-change",
+  "k.styles/shards/materials",
   "k.words/shards/frequency-w",
   "k.words/shards/we"
  ],
@@ -159175,6 +159365,9 @@
   "k.words/shards/frequency-w",
   "k.words/shards/wi"
  ],
+ "willow tree": [
+  "k.objects/shards/stand-ins-variants"
+ ],
  "willpower": [
   "k.words/shards/frequency-w",
   "k.words/shards/wi"
@@ -160168,6 +160361,7 @@
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-w",
+  "k.styles/shards/materials",
   "k.words/shards/frequency-w",
   "k.words/shards/wo",
   "k.objects/shards/noto-plant-other-03",
@@ -160186,6 +160380,12 @@
  ],
  "woodchuck": [
   "k.animals/shards/mammals"
+ ],
+ "wooden": [
+  "k.styles/shards/materials"
+ ],
+ "wooden house": [
+  "k.objects/shards/stand-ins-variants"
  ],
  "wooden spoon": [
   "k.attributes/shards/drawn-mulberry",

@@ -1,4 +1,4 @@
-# k.units/shards/core: 8 quantities and 50 units with their factor to the base unit (length, mass, time, volume, area,
+# k.units/shards/core: 8 quantities and 52 units with their factor to the base unit (length, mass, time, volume, area,
 # temperature, speed, angle), and words for their plural and other spellings.
 # sources: hand-core 1 (hand-written in this repository)
 # license: CC0-1.0
@@ -20,6 +20,8 @@
 @k.units.unit.kilometre k.units.unit name=kilometre symbol=km quantity=length factor=1000 system=metric core.source="hand-core 1"
 @k.units.unit.inch k.units.unit name=inch symbol=in quantity=length factor=0.0254 system=imperial core.source="hand-core 1"
 @k.units.unit.foot k.units.unit name=foot symbol=ft quantity=length factor=0.3048 system=imperial core.source="hand-core 1"
+@k.units.unit.hand k.units.unit name=hand quantity=length factor=0.1016 system=imperial core.source="hand-core 1"
+@k.units.unit.finger k.units.unit name=finger quantity=length factor=0.0191 system=imperial core.source="hand-core 1"
 @k.units.unit.yard k.units.unit name=yard symbol=yd quantity=length factor=0.9144 system=imperial core.source="hand-core 1"
 @k.units.unit.mile k.units.unit name=mile symbol=mi quantity=length factor=1609.344 system=imperial core.source="hand-core 1"
 @k.units.unit.light_year k.units.unit name="light year" symbol=ly quantity=length factor=9460730472580800 system=other core.source="hand-core 1"
@@ -72,6 +74,8 @@
 @k.units.word.metre core.word text=metres text=meter text=meters means=metre of=k.units.unit.name core.source="hand-core 1"
 @k.units.word.kilometre core.word text=kilometres text=kilometer text=kilometers text=km means=kilometre of=k.units.unit.name core.source="hand-core 1"
 @k.units.word.inch core.word text=inches means=inch of=k.units.unit.name core.source="hand-core 1"
+@k.units.word.hand core.word text=hands text=hand-width text=hand-widths text="hand width" text="hand widths" text=handbreadth means=hand of=k.units.unit.name core.source="hand-core 1"
+@k.units.word.finger core.word text=fingers text=finger-width text=finger-widths text="finger width" text="finger widths" text=finger-breadth text=digit means=finger of=k.units.unit.name core.source="hand-core 1"
 @k.units.word.foot core.word text=feet text=ft means=foot of=k.units.unit.name core.source="hand-core 1"
 @k.units.word.yard core.word text=yards text=yd means=yard of=k.units.unit.name core.source="hand-core 1"
 @k.units.word.mile core.word text=miles text=mi means=mile of=k.units.unit.name core.source="hand-core 1"

@@ -56,6 +56,12 @@
 # The join of a stand-in to its drawing is declared (`type=` / `by=`, Q61): since sopworld 0.70 a join stays open until
 # an object with that name is loaded, so a shard still loads alone; tests/k.objects.names.test.mjs checks it as well.
 @k.objects.stand_in.drawing core.slot of=k.objects.stand_in key=drawing required=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
+# A variant of a kind (a storm cloud, a sports car, an oak tree) is a stand-in with the look that tells it from its
+# kind: `colour` (a k.colours colour name the drawing is painted in), `scale` (its usual size against its kind's: a
+# hummingbird 0.5, a storm cloud 1.3) and `material` (a k.styles material it is made of: a brick house).
+@k.objects.stand_in.colour core.slot of=k.objects.stand_in key=colour kind=atom kind=string core.source="hand-core 1"
+@k.objects.stand_in.scale core.slot of=k.objects.stand_in key=scale kind=number min=0.2 max=3 core.source="hand-core 1"
+@k.objects.stand_in.material core.slot of=k.objects.stand_in key=material kind=atom kind=string core.source="hand-core 1"
 
 # A keyword of an object: a search word an image library files the drawing under (CLDR's emoji keywords, OpenMoji's and
 # Mulberry's tags), not a name of the object nor a word for it: "ship" is a keyword of the anchor, "kitty" of the money

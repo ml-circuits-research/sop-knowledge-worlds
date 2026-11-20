@@ -9,9 +9,9 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **283** in 45 worlds; distinct values 11508, meeting a target 11448 (99.5 %), open 60
+- declared joins: **284** in 45 worlds; distinct values 11523, meeting a target 11463 (99.5 %), open 60
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **69**; left undeclared on purpose: 5; keys with an enum, never suggested: 56
+- undeclared keys whose values the value share joins to a type: **73**; left undeclared on purpose: 5; keys with an enum, never suggested: 56
 
 ## Declared joins
 
@@ -175,7 +175,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.objects | `k.objects.keyword.of` | `k.objects.object` | name | 1509 | 1509 |  |
 | k.objects | `k.objects.part.of` | `k.objects.object` | name | 2216 | 2216 |  |
 | k.objects | `k.objects.skeleton.of` | `k.objects.object` | name | 0 | 0 |  |
-| k.objects | `k.objects.stand_in.drawing` | `k.objects.object` | name | 170 | 170 |  |
+| k.objects | `k.objects.stand_in.drawing` | `k.objects.object` | name | 176 | 176 |  |
 | k.parts | `k.parts.name.slot` | `k.faces.slot` | name | 19 | 19 |  |
 | k.people | `k.people.kind.drawing` | `k.objects.object` | name | 1 | 1 |  |
 | k.people | `k.people.kind.face` | `k.faces.preset` | name | 8 | 8 |  |
@@ -222,6 +222,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.story | `k.story.obstacle.overcome_by` | `k.actions.action` | name | 6 | 6 |  |
 | k.story | `k.story.obstacle.thing` | `k.objects.object` | name | 7 | 7 |  |
 | k.story | `k.story.obstacle.tried_by` | `k.actions.action` | name | 9 | 9 |  |
+| k.styles | `k.styles.material.fill` | `k.styles.fill` | name | 9 | 9 |  |
 | k.styles | `k.styles.role.theme` | `k.styles.theme` | name | 1 | 1 |  |
 | k.styles | `k.styles.swatch.theme` | `k.styles.theme` | name | 11 | 11 |  |
 | k.time | `k.time.before.cycle` | `k.time.cycle` | name | 9 | 9 |  |
@@ -361,6 +362,8 @@ whose slot has an enum is never suggested here (see the last section).
 | k.layouts | `k.layouts.terrain_part.colour` | value | `k.colours.colour` | name | 8 | 8 |
 | k.motion | `k.motion.rule.during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
 | k.motion | `k.motion.rule.not_during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
+| k.objects | `k.objects.stand_in.colour` | value | `k.colours.colour` | name | 8 | 8 |
+| k.objects | `k.objects.stand_in.material` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 3 | 3 |
 | k.parts | `k.parts.called.part` | thing | `k.parts.name` | name | 66 | 66 |
 | k.parts | `k.parts.name.of` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 23 | 22 |
 | k.people | `k.people.kind.is_a` | kind | `k.faces.preset` | name | 4 | 3 |
@@ -382,6 +385,8 @@ whose slot has an enum is never suggested here (see the last section).
 | k.space | `k.space.kind.material` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 11 | 2 |
 | k.space | `k.space.kind.orbits` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 2 | 2 |
 | k.space | `k.space.kind.has` | thing | `k.parts.name` | name | 1 | 1 |
+| k.styles | `k.styles.material.colour` | value | `k.colours.colour` | name | 10 | 10 |
+| k.styles | `k.styles.material.gradient` | value | `k.colours.basic`, `k.colours.colour`, `k.geo.river` | name | 1 | 1 |
 | k.time | `k.time.stage.name` | thing | `k.attributes.thing` | name | 15 | 8 |
 | k.time | `k.time.stage.is` | thing | `k.attributes.thing` | name | 15 | 8 |
 | k.wearables | `k.wearables.wearable.face` | thing | `k.scenes.thing` | name | 36 | 18 |
@@ -447,7 +452,7 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.scenes | `k.scenes.thing.size` | 5 | 5 | 3 | `k.expect.scale` |
 | k.space | `k.space.body.size` | 4 | 4 | 2 | `k.expect.scale` |
 | k.styles | `k.styles.effect.kind` | 4 | 4 | 4 | `k.styles.effect` |
-| k.styles | `k.styles.fill.pattern` | 8 | 8 | 5 | `k.styles.fill` |
+| k.styles | `k.styles.fill.pattern` | 9 | 9 | 6 | `k.styles.fill` |
 | k.styles | `k.styles.frame.shape` | 3 | 3 | 2 | `k.layouts.outline`, `k.shapes.shape` |
 | k.time | `k.time.during.hemisphere` | 2 | 2 | 2 | `k.values.direction` |
 | k.time | `k.time.season.next` | 4 | 4 | 4 | `k.time.season` |

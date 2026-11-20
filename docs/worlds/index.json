@@ -1,5 +1,5 @@
 {
- "version": "515727e7f221",
+ "version": "3cfdff3d847f",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -4706,8 +4706,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1477,
-     "bytes": 286530,
+     "wires": 1487,
+     "bytes": 288447,
      "keys": [
       "a",
       "about",
@@ -4836,6 +4836,7 @@
       "drawings",
       "drawn_colour",
       "drawn_shade",
+      "drop",
       "during",
       "dx",
       "dy",
@@ -4907,6 +4908,7 @@
       "glasses",
       "gloss",
       "goal",
+      "gradient",
       "grammar",
       "grayscale",
       "ground",
@@ -5139,6 +5141,7 @@
       "k.styles.filter",
       "k.styles.font",
       "k.styles.frame",
+      "k.styles.material",
       "k.styles.role",
       "k.styles.swatch",
       "k.styles.theme",
@@ -5275,6 +5278,7 @@
       "only",
       "onset_max",
       "onset_min",
+      "opacity",
       "opens",
       "opposite",
       "optional",
@@ -15575,8 +15579,8 @@
     {
      "id": "k.faces/shards/figure-coat",
      "path": "k.faces/shards/figure-coat.sop",
-     "wires": 123,
-     "bytes": 20991,
+     "wires": 133,
+     "bytes": 22618,
      "keys": [
       "coat",
       "jacket",
@@ -15585,11 +15589,13 @@
       "left_lapel",
       "left_side",
       "left_sleeve",
+      "left_tail",
       "right_cuff",
       "right_elbow",
       "right_lapel",
       "right_side",
       "right_sleeve",
+      "right_tail",
       "suit jacket",
       "tie"
      ],
@@ -15646,7 +15652,7 @@
      "id": "k.faces/shards/figure-poses",
      "path": "k.faces/shards/figure-poses.sop",
      "wires": 101,
-     "bytes": 15560,
+     "bytes": 15587,
      "keys": [
       "arms up",
       "clapping",
@@ -17013,8 +17019,8 @@
     {
      "id": "k.faces/shards/plain-mouth",
      "path": "k.faces/shards/plain-mouth.sop",
-     "wires": 133,
-     "bytes": 20179,
+     "wires": 129,
+     "bytes": 19595,
      "keys": [
       "big smile",
       "bite",
@@ -34941,8 +34947,8 @@
     {
      "id": "k.kinds/shards/relations-faces",
      "path": "k.kinds/shards/relations-faces.sop",
-     "wires": 124,
-     "bytes": 22013,
+     "wires": 125,
+     "bytes": 22159,
      "keys": [
       "about",
       "age",
@@ -34957,6 +34963,7 @@
       "coat",
       "colour",
       "drawing",
+      "drop",
       "earrings",
       "ears",
       "expression",
@@ -35464,8 +35471,8 @@
     {
      "id": "k.kinds/shards/relations-objects",
      "path": "k.kinds/shards/relations-objects.sop",
-     "wires": 37,
-     "bytes": 6675,
+     "wires": 40,
+     "bytes": 7302,
      "keys": [
       "above",
       "below",
@@ -35482,6 +35489,7 @@
       "k.objects.stand_in",
       "kind",
       "left_of",
+      "material",
       "n",
       "name",
       "named",
@@ -35492,6 +35500,7 @@
       "pointing",
       "rgb",
       "right_of",
+      "scale",
       "shape",
       "spread",
       "text",
@@ -35870,8 +35879,8 @@
     {
      "id": "k.kinds/shards/relations-styles",
      "path": "k.kinds/shards/relations-styles.sop",
-     "wires": 50,
-     "bytes": 8358,
+     "wires": 55,
+     "bytes": 9383,
      "keys": [
       "about",
       "angle",
@@ -35888,6 +35897,7 @@
       "fill",
       "gap",
       "generic",
+      "gradient",
       "grayscale",
       "group",
       "hue",
@@ -35897,12 +35907,14 @@
       "k.styles.filter",
       "k.styles.font",
       "k.styles.frame",
+      "k.styles.material",
       "k.styles.role",
       "k.styles.swatch",
       "k.styles.theme",
       "k.styles.turn",
       "kind",
       "n",
+      "opacity",
       "outline",
       "pattern",
       "radius",
@@ -52608,6 +52620,45 @@
      "warnings": []
     },
     {
+     "id": "k.objects/shards/stand-ins-variants",
+     "path": "k.objects/shards/stand-ins-variants.sop",
+     "wires": 26,
+     "bytes": 3509,
+     "keys": [
+      "apple tree",
+      "birch tree",
+      "brick house",
+      "cherry tree",
+      "dragon kite",
+      "electric car",
+      "fishing boat",
+      "ginger cat",
+      "luxury sedan",
+      "maple tree",
+      "motorboat",
+      "oak tree",
+      "puppy dog",
+      "race car",
+      "rain cloud",
+      "sailing boat",
+      "setting sun",
+      "siamese cat",
+      "sports car",
+      "stone house",
+      "storm cloud",
+      "stunt kite",
+      "tabby cat",
+      "thundercloud",
+      "willow tree",
+      "wooden house"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "k.objects/shards/stand-ins-wordnet",
      "path": "k.objects/shards/stand-ins-wordnet.sop",
      "wires": 183,
@@ -64073,6 +64124,7 @@
     "k.styles.filter",
     "k.styles.font",
     "k.styles.frame",
+    "k.styles.material",
     "k.styles.role",
     "k.styles.swatch",
     "k.styles.theme",
@@ -64093,6 +64145,9 @@
      "name"
     ],
     "k.styles.frame": [
+     "name"
+    ],
+    "k.styles.material": [
      "name"
     ],
     "k.styles.role": [
@@ -64159,6 +64214,35 @@
       "upside_down",
       "vintage",
       "zigzag"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.styles/shards/materials",
+     "path": "k.styles/shards/materials.sop",
+     "wires": 30,
+     "bytes": 4696,
+     "keys": [
+      "brick",
+      "bricks",
+      "cobbles",
+      "glass",
+      "gold",
+      "grass",
+      "ice",
+      "metal",
+      "paper",
+      "planks",
+      "stone",
+      "thatch",
+      "tiles",
+      "water",
+      "waves",
+      "wood"
      ],
      "sources": [
       "hand-core-1"
@@ -65022,8 +65106,8 @@
     {
      "id": "k.units/shards/core",
      "path": "k.units/shards/core.sop",
-     "wires": 108,
-     "bytes": 14244,
+     "wires": 112,
+     "bytes": 14874,
      "keys": [
       "acre",
       "angle",
@@ -65039,10 +65123,12 @@
       "degree",
       "degree celsius",
       "degree fahrenheit",
+      "finger",
       "foot",
       "full turn",
       "gallon",
       "gram",
+      "hand",
       "hectare",
       "hour",
       "inch",
@@ -65313,8 +65399,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 382,
-     "bytes": 54394,
+     "wires": 385,
+     "bytes": 54816,
      "keys": [
       "after",
       "age_years_about",
@@ -65494,6 +65580,7 @@
       "low",
       "make",
       "match",
+      "material",
       "max",
       "max_factor",
       "max_words",
@@ -65527,6 +65614,7 @@
       "offset_july",
       "onset_max",
       "onset_min",
+      "opacity",
       "orbit_days_about",
       "orbit_years",
       "order",
@@ -65596,6 +65684,7 @@
       "speed_about",
       "spread",
       "stage",
+      "stand_in",
       "start_at",
       "starts_about",
       "step",
@@ -98455,7 +98544,8 @@
       "eye_colour",
       "clothes",
       "expression",
-      "pose"
+      "pose",
+      "cause"
      ],
      "words": [
       "face",
@@ -99101,8 +99191,8 @@
      ]
     }
    ],
-   "wires": 134,
-   "bytes": 19277,
+   "wires": 135,
+   "bytes": 19577,
    "sources": [
     "hand-core-1"
    ],

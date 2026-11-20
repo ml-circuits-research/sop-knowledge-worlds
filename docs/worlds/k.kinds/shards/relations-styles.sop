@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-styles: the keys of the types of k.styles read as relations: 50 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-styles: the keys of the types of k.styles read as relations: 55 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -33,6 +33,11 @@
 @k.kinds.relation.k.styles.frame.tail k.kinds.relation type=k.styles.frame key=tail subject=frame object=boolean found=schema core.source="hand-core 1"
 @k.kinds.relation.k.styles.frame.fill k.kinds.relation type=k.styles.frame key=fill subject=frame object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.styles.frame.outline k.kinds.relation type=k.styles.frame key=outline subject=frame object=text found=schema core.source="hand-core 1"
+@k.kinds.relation.k.styles.material.about k.kinds.relation type=k.styles.material key=about subject=material object=text found=schema core.source="hand-core 1"
+@k.kinds.relation.k.styles.material.colour k.kinds.relation type=k.styles.material key=colour subject=material object=value object_type=k.colours.colour object_sense=colour found=value core.source="hand-core 1"
+@k.kinds.relation.k.styles.material.fill k.kinds.relation type=k.styles.material key=fill subject=material object=thing object_type=k.styles.fill found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.styles.material.opacity k.kinds.relation type=k.styles.material key=opacity subject=material object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.styles.material.gradient k.kinds.relation type=k.styles.material key=gradient subject=material object=value object_type=k.colours.basic object_type=k.colours.colour object_type=k.geo.river object_sense=colour object_sense=place found=value core.source="hand-core 1"
 @k.kinds.relation.k.styles.role.theme k.kinds.relation type=k.styles.role key=theme subject=role object=thing object_type=k.styles.theme found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.styles.role.role k.kinds.relation type=k.styles.role key=role subject=role object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.styles.role.fill k.kinds.relation type=k.styles.role key=fill subject=role object=text found=schema core.source="hand-core 1"

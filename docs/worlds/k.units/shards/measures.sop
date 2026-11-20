@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (w.reader.en, k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.composition2d, k.layouts, k.spatial2d, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.expect, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.charts, k.styles, k.diagrams, k.story, k.procedures): 382 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (w.reader.en, k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.composition2d, k.layouts, k.spatial2d, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.expect, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.charts, k.styles, k.diagrams, k.story, k.procedures): 385 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -99,6 +99,7 @@
 @k.units.measure.k.objects.skeleton.h k.units.measure world=k.objects type=skeleton key=h frame=object core.source="hand-core 1"
 @k.units.measure.k.objects.skeleton.drawings k.units.measure world=k.objects type=skeleton key=drawings counts=drawing core.source="hand-core 1"
 @k.units.measure.k.objects.skeleton.spread k.units.measure world=k.objects type=skeleton key=spread frame=object core.source="hand-core 1"
+@k.units.measure.k.objects.stand_in.scale k.units.measure world=k.objects type=stand_in key=scale counts="size of the object of its kind" core.source="hand-core 1"
 @k.units.measure.k.faces.slot.x k.units.measure world=k.faces type=slot key=x frame=face core.source="hand-core 1"
 @k.units.measure.k.faces.slot.y k.units.measure world=k.faces type=slot key=y frame=face core.source="hand-core 1"
 @k.units.measure.k.faces.slot.w k.units.measure world=k.faces type=slot key=w frame=face core.source="hand-core 1"
@@ -115,6 +116,7 @@
 @k.units.measure.k.faces.bone.level k.units.measure world=k.faces type=bone key=level counts="bone between it and the body" core.source="hand-core 1"
 @k.units.measure.k.faces.pose.hold_x k.units.measure world=k.faces type=pose key=hold_x frame=face core.source="hand-core 1"
 @k.units.measure.k.faces.pose.hold_y k.units.measure world=k.faces type=pose key=hold_y frame=face core.source="hand-core 1"
+@k.units.measure.k.faces.pose.drop k.units.measure world=k.faces type=pose key=drop frame=face core.source="hand-core 1"
 @k.units.measure.k.faces.turn.angle k.units.measure world=k.faces type=turn key=angle unit=degree core.source="hand-core 1"
 @k.units.measure.k.drawing.part.x k.units.measure world=k.drawing type=part key=x frame=drawing core.source="hand-core 1"
 @k.units.measure.k.drawing.part.y k.units.measure world=k.drawing type=part key=y frame=drawing core.source="hand-core 1"
@@ -365,6 +367,7 @@
 @k.units.measure.k.styles.filter.tint_amount k.units.measure world=k.styles type=filter key=tint_amount plain=true core.source="hand-core 1"
 @k.units.measure.k.styles.turn.by k.units.measure world=k.styles type=turn key=by unit=degree core.source="hand-core 1"
 @k.units.measure.k.styles.turn.to k.units.measure world=k.styles type=turn key=to unit=degree core.source="hand-core 1"
+@k.units.measure.k.styles.material.opacity k.units.measure world=k.styles type=material key=opacity plain=true core.source="hand-core 1"
 @k.units.measure.k.diagrams.source.year k.units.measure world=k.diagrams type=source key=year ordinal=true core.source="hand-core 1"
 @k.units.measure.k.diagrams.topic.nodes k.units.measure world=k.diagrams type=topic key=nodes counts="node of the largest diagram of the topic" core.source="hand-core 1"
 @k.units.measure.k.story.source.year k.units.measure world=k.story type=source key=year ordinal=true core.source="hand-core 1"

@@ -79,6 +79,18 @@ export function posed(point, bone, turns) {
   return p.map(r1);
 }
 
+// The lowest point of the bare body in shoes in a pose (its feet, or its seat and knees when it sits on the ground): a
+// pose whose lowest point is higher than the standing figure's drops the whole person by the difference (k.faces.pose
+// drop), so it stands, sits or kicks on the ground line.
+function lowest(turns) {
+  let y = 0;
+  for (const [, , g, , , o = {}] of [...VARIANTS.body[0][2], ...VARIANTS.shoes[0][2]]) {
+    if (!o.bone) continue;
+    const pts = Array.isArray(g[0]) ? g : g.length === 3 ? [[g[0] + g[2] / 2, g[1] + g[2]]] : [[g[0], g[1] + g[3]], [g[0] + g[2], g[1] + g[3]]];
+    for (const p of pts) y = Math.max(y, posed(p, o.bone, turns)[1]);
+  }
+  return y;
+}
 const skin = { tint: 'skin' }, clothes = { tint: 'clothes' }, clothesShade = { tint: 'clothes_shade' };
 // Colours an untinted garment offers (basic colour names; its rgb is how it is drawn unless one of them is chosen).
 const TROUSERS = 'blue black brown grey green red white';
@@ -170,7 +182,8 @@ export const VARIANTS = {
   coat: [
     ['jacket', { length: 'short', kind: 'jacket' }, [...pair([['left_side', 'poly', [[39, 30], [49, 30], [49, 64], [39, 64], [38.6, 36]], 1, COAT, { rgb: '#7A5230' }]]),
       ...sleeves('long', COAT, { rgb: '#7A5230' }, 3.4)]],
-    ['coat', { length: 'long', feel: ['thick'], kind: 'coat' }, [...pair([['left_side', 'poly', [[39, 30], [49, 30], [49, 80], [36, 80], [38.6, 36]], 1, COAT, { rgb: '#5B4636' }]]),
+    ['coat', { length: 'long', feel: ['thick'], kind: 'coat' }, [...pair([['left_side', 'poly', [[39, 30], [49, 30], [49, 62.5], [39, 62.5], [38.6, 36]], 1, COAT, { rgb: '#5B4636' }],
+      ['left_tail', 'poly', [[39, 61.5], [49, 61.5], [49, 80], [36.5, 80]], 1, COAT, { rgb: '#5B4636', bone: 'left_thigh' }]]),
       ...sleeves('long', COAT, { rgb: '#5B4636' }, 3.6)]],
     ['suit jacket', { length: 'short', kind: 'suit' }, [...pair([['left_side', 'poly', [[39, 30], [48, 30], [50, 46], [49.6, 64], [39, 64], [38.6, 36]], 1, 'black grey blue brown', { rgb: '#2B2F3A' }],
       ['left_lapel', 'poly', [[44, 30], [48, 30], [50, 46], [45, 38]], 2, 'black grey blue brown', { rgb: '#1E2129' }]]),
@@ -237,8 +250,8 @@ export function figureShards() {
       ...SLOTS.map(([s]) => [s, slots[s]]), ['skin', 'light'], ['hair_colour', 'brown'], ['eye_colour', 'brown'], ['clothes', colour]], SRC)).join('\n')}\n`;
   files['figure-poses.sop'] = `${head('figure-poses', `the skeleton of the style \`${STYLE}\` (the joints its limbs turn about, in the frame of the figure, and the bone each hangs from) and its poses: how far each bone turns from the standing figure (degrees clockwise on the page), and where the holding hand is in that pose (a figure looks to the right of the page).`)}\n${
     BONES.map(([name, parent, [x, y], level]) => wire(`k.faces.${STYLE}.bone.${name}`, 'k.faces.bone', [['style', STYLE], ['name', name], ['parent', parent], ['x', x], ['y', y], ['level', level]], SRC)).join('\n')}\n${
-    POSES.map(([name, about, turns]) => { const [hx, hy] = posed(HANDS.right, 'right_forearm', turns);
-      return [wire(`k.faces.${STYLE}.pose.${seg(name)}`, 'k.faces.pose', [['name', name], ['style', STYLE], ['about', { string: about }], ['holds', 'right_hand'], ['hold_x', hx], ['hold_y', hy]], SRC),
+    POSES.map(([name, about, turns]) => { const [hx, hy] = posed(HANDS.right, 'right_forearm', turns), drop = r1(Math.max(0, lowest({}) - lowest(turns)));
+      return [wire(`k.faces.${STYLE}.pose.${seg(name)}`, 'k.faces.pose', [['name', name], ['style', STYLE], ['about', { string: about }], ['holds', 'right_hand'], ['hold_x', hx], ['hold_y', hy], ['drop', drop || undefined]], SRC),
         ...Object.entries(turns).map(([bone, angle]) => wire(`k.faces.${STYLE}.pose.${seg(name)}.${bone}`, 'k.faces.turn', [['pose', name], ['style', STYLE], ['bone', bone], ['angle', angle]], SRC))].join('\n'); }).join('\n')}\n${
     POSES.map(([name]) => wire(`k.faces.word.pose.${seg(name)}`, 'core.word', [['text', name], ...(POSE_WORDS[name] ?? '').split(',').map((w) => w.trim()).filter(Boolean).map((w) => ['text', w]), ['means', name], ['of', 'k.faces.pose.name']], SRC)).join('\n')}\n`;
   for (const [slot, box] of SLOTS) {

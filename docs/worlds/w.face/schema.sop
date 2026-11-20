@@ -32,6 +32,9 @@
 # `pose` is a mode of a face of a style with a skeleton (the figure of a person): the name of a k.faces pose (sitting,
 # waving, arms up) whose turns move the parts with their bones while it is set; no pose: standing as drawn.
 @w.face.face.pose core.slot of=w.face.face key=pose kind=atom kind=string type=k.faces.pose by=name core.source="hand-core 1"
+# `cause`: what the expression is about, as the host names it (the code of a thing in the picture: "happy because the
+# dog is there"); a face with no cause has its expression for no stated reason.
+@w.face.face.cause core.slot of=w.face.face key=cause kind=atom kind=string core.source="hand-core 1"
 
 # A part of a face, the parent of every kind of part. `face` refers to the face it belongs to (a host with one face
 # may leave it out); `variant` names a k.faces variant of the part's slot in the face's style (`k.faces.variant`,

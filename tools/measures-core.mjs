@@ -38,12 +38,12 @@ export const MEASURES = {
   'k.space': { body: { order: { ordinal: true }, size_rank: { ordinal: true }, moons: { counts: 'moon' }, moons_about: { counts: 'moon' }, orbit_years: { unit: 'year' }, orbit_days_about: { unit: 'day' },
     day_hours_about: { unit: 'hour' }, diameter_about: { unit: 'kilometre' }, distance_about: { unit: 'kilometre' }, temperature_about: { unit: 'degree Celsius' }, age_years_about: { unit: 'year' }, light_years_about: { unit: 'light year' } } },
   // Q31: the other worlds. Boxes and points of drawings are in the frame of the drawing; `z` and `n` are orders.
-  'k.objects': { '*': { ...box('object'), z: ord, n: ord }, skeleton: { drawings: { counts: 'drawing' }, spread: { frame: 'object' } } },
+  'k.objects': { '*': { ...box('object'), z: ord, n: ord }, skeleton: { drawings: { counts: 'drawing' }, spread: { frame: 'object' } }, stand_in: { scale: { counts: 'size of the object of its kind' } } },
   'k.faces': { '*': { ...box('face'), z: ord, n: ord },
     canon: { eye_line: { counts: 'height of the head box, from its top' }, nose_line: { counts: 'height of the head box, from its top' }, mouth_line: { counts: 'height of the head box, from its top' },
       eye_width: { counts: 'width of the head box' }, eye_gap: { counts: 'eye width' }, brow_above: { counts: 'eye width' } },
     // A bone's level counts the bones between it and the body; a pose's hand is a point of the frame; a turn is in degrees.
-    bone: { level: { counts: 'bone between it and the body' } }, pose: { hold_x: { frame: 'face' }, hold_y: { frame: 'face' } }, turn: { angle: deg } },
+    bone: { level: { counts: 'bone between it and the body' } }, pose: { hold_x: { frame: 'face' }, hold_y: { frame: 'face' }, drop: { frame: 'face' } }, turn: { angle: deg } },
   'k.drawing': { '*': { ...box('drawing'), z: ord, n: ord } }, // Q34 item 1: the frame of the drawing that extends it (an object, a face)
   'k.composition2d': { slot: box('arrangement'), anchor: box('object') },
   'k.layouts': { slot: box('arrangement'), anchor: box('object'), outline: { points: { counts: 'point of the path' }, tolerance: { frame: 'outline' } }, outline_point: { n: ord, x: { frame: 'outline' }, y: { frame: 'outline' } },
@@ -111,7 +111,7 @@ export const MEASURES = {
   'k.styles': { theme: { width: { plain: true } }, swatch: { n: ord }, fill: { gap: { plain: true }, angle: deg },
     effect: { radius: { plain: true }, dx: { plain: true }, dy: { plain: true }, strength: { plain: true } },
     filter: { sepia: { plain: true }, grayscale: { plain: true }, invert: { plain: true }, brightness: { plain: true }, contrast: { plain: true }, saturate: { plain: true }, hue: deg, blur: { plain: true }, tint_amount: { plain: true } },
-    turn: { by: deg, to: deg } },
+    turn: { by: deg, to: deg }, material: { opacity: { plain: true } } },
   'k.diagrams': { source: { year: ord }, topic: { nodes: { counts: 'node of the largest diagram of the topic' } } },
   'k.story': { source: { year: ord }, element: { n: ord, min: { counts: 'element of that name in one story' }, max: { counts: 'element of that name in one story' } } },
   'k.procedures': { method: { rank: ord }, goal: { default: { plain: true } }, binding: { step: ord, choose: { counts: 'value chosen' }, choose_min: { counts: 'value chosen' } }, match: { n: ord }, step: { n: ord, after: ord }, howto_step: { n: ord, after: ord }, arg: { step: ord, value: { plain: true } }, condition: { n: ord, step: ord } },
