@@ -116,6 +116,18 @@ export const FILLS = [
   ['comparison table', 'k.attributes.number', 'name', 'values', null, 'things in rows, their numbers (legs, size, weight, speed) in columns'],
 ];
 
+// The named ports of a node: the side of a node a link of a flowchart leaves or enters by that name (drawn top to
+// bottom). [shape or null (every shape), name, side, about, sources]
+export const PORTS = [
+  [null, 'in', 'top', 'where the flow comes in: the top of any node', ['iso5807']],
+  [null, 'out', 'bottom', 'where the flow goes on: the bottom of any node', ['iso5807']],
+  ['diamond', 'yes', 'bottom', 'a decision\'s yes branch, straight on down', ['iso5807']],
+  ['diamond', 'no', 'right', 'a decision\'s no branch, out of its right corner', ['iso5807']],
+  ['diamond', 'else', 'left', 'a decision\'s other branch, out of its left corner', ['iso5807']],
+  ['cylinder', 'lid', 'top', 'the lid of a stored-data cylinder (a database), where data is written', ['iso5807']],
+  ['cylinder', 'base', 'bottom', 'the base of a stored-data cylinder', ['iso5807']],
+];
+
 export function shardText() {
   const lines = [];
   for (const [name, cite, year] of SOURCES) lines.push(wire(`k.diagrams.source.${name}`, 'k.diagrams.source', [['name', name], ['cite', text(cite)], ['year', year]], SRC));
@@ -123,8 +135,9 @@ export function shardText() {
     ['name', name], ['form', form], ['about', text(about)], ...structures.map((s) => ['structure', s]), ...layouts.map((l) => ['layout', l]), ...arranged.map((a) => ['arranged', a]),
     ['edges', edges], ...roles.map((r) => ['role', r]), ['groups', groups], ...usual.map((u) => ['usual_for', text(u)]), ...sources.map((s) => ['source', s])], SRC));
   for (const [kind, role, shape, about, sources] of SHAPES) lines.push(wire(`k.diagrams.shape.${seg(kind)}.${role}`, 'k.diagrams.shape', [['kind', kind], ['role', role], ['shape', shape], ['about', text(about)], ...sources.map((s) => ['source', s])], SRC));
+  for (const [shape, name, side, about, sources] of PORTS) lines.push(wire(`k.diagrams.port.${shape ?? 'every'}.${name}`, 'k.diagrams.port', [...(shape ? [['shape', shape]] : [['every', 'true']]), ['name', name], ['side', side], ['about', text(about)], ...sources.map((s) => ['source', s])], SRC));
   for (const [kind, type, key, gives, topic, about, by] of FILLS) lines.push(wire(`k.diagrams.fill.${seg(kind)}.${seg(type)}.${key}`, 'k.diagrams.fill', [['kind', kind], ['type', type], ['key', key], ['gives', gives], ['topic', topic], ['about', text(about)], ['by', by]], SRC));
-  return `${header({ id: 'k.diagrams/shards/diagrams', about: `${KINDS.length} kinds of diagram (structure, layout, arrangement, edges, roles, uses), ${SHAPES.length} shape conventions, ${FILLS.length} ways the catalog's knowledge fills them, and the ${SOURCES.length} works they rest on.`,
+  return `${header({ id: 'k.diagrams/shards/diagrams', about: `${KINDS.length} kinds of diagram (structure, layout, arrangement, edges, roles, uses), ${SHAPES.length} shape conventions, ${PORTS.length} named ports, ${FILLS.length} ways the catalog's knowledge fills them, and the ${SOURCES.length} works they rest on.`,
     sources: ['hand-core 1 (hand-written in this repository: tools/diagrams-core.mjs; the works cited are the k.diagrams.source facts)'], license: 'CC0-1.0', script: 'tools/diagrams-core.mjs' })}\n${lines.join('\n')}\n`;
 }
 
