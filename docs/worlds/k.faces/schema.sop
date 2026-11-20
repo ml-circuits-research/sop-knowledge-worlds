@@ -188,6 +188,10 @@
 # `drop`: how far the whole person moves down in the pose (in the frame of the style) so its lowest point stays on the
 # ground line where the standing figure's feet are (sitting: the feet; on the ground, cross-legged: the seat and knees).
 @k.faces.pose.drop core.slot of=k.faces.pose key=drop kind=number min=0 max=100 core.source="hand-core 1"
+# `seat_x`, `seat_y`: a pose that sits on a seat (seated: on a chair, a bench) rests this point of the figure (its hips)
+# on the seat; such a pose is not lowered (no drop): with no seat under it, a host draws the person sitting on the ground.
+@k.faces.pose.seat_x core.slot of=k.faces.pose key=seat_x kind=number min=0 max=100 core.source="hand-core 1"
+@k.faces.pose.seat_y core.slot of=k.faces.pose key=seat_y kind=number min=0 max=100 core.source="hand-core 1"
 # How far one bone turns in a pose: `angle` in degrees, clockwise on the page (the frame's y goes down).
 @k.faces.turn core.type of=k.faces.turn shared=true closed=true core.source="hand-core 1"
 @k.faces.turn.pose core.slot of=k.faces.turn key=pose id=true required=true kind=atom kind=string type=k.faces.pose by=name core.source="hand-core 1"

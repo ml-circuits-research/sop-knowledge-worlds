@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (w.reader.en, k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.composition2d, k.layouts, k.spatial2d, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.expect, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.charts, k.styles, k.diagrams, k.story, k.procedures): 385 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (w.reader.en, k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.composition2d, k.layouts, k.spatial2d, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.expect, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.charts, k.styles, k.diagrams, k.story, k.procedures): 387 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -117,6 +117,8 @@
 @k.units.measure.k.faces.pose.hold_x k.units.measure world=k.faces type=pose key=hold_x frame=face core.source="hand-core 1"
 @k.units.measure.k.faces.pose.hold_y k.units.measure world=k.faces type=pose key=hold_y frame=face core.source="hand-core 1"
 @k.units.measure.k.faces.pose.drop k.units.measure world=k.faces type=pose key=drop frame=face core.source="hand-core 1"
+@k.units.measure.k.faces.pose.seat_x k.units.measure world=k.faces type=pose key=seat_x frame=face core.source="hand-core 1"
+@k.units.measure.k.faces.pose.seat_y k.units.measure world=k.faces type=pose key=seat_y frame=face core.source="hand-core 1"
 @k.units.measure.k.faces.turn.angle k.units.measure world=k.faces type=turn key=angle unit=degree core.source="hand-core 1"
 @k.units.measure.k.drawing.part.x k.units.measure world=k.drawing type=part key=x frame=drawing core.source="hand-core 1"
 @k.units.measure.k.drawing.part.y k.units.measure world=k.drawing type=part key=y frame=drawing core.source="hand-core 1"

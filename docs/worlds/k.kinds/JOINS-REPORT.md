@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **284** in 45 worlds; distinct values 11523, meeting a target 11463 (99.5 %), open 60
+- declared joins: **286** in 46 worlds; distinct values 11532, meeting a target 11472 (99.5 %), open 60
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **73**; left undeclared on purpose: 5; keys with an enum, never suggested: 56
 
@@ -102,7 +102,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.faces | `k.faces.trait.part.slot` | `k.faces.slot` | name | 6 | 6 |  |
 | k.faces | `k.faces.trait.part.trait` | `k.faces.trait` | name | 11 | 11 |  |
 | k.faces | `k.faces.turn.bone` | `k.faces.bone` | name | 8 | 8 |  |
-| k.faces | `k.faces.turn.pose` | `k.faces.pose` | name | 14 | 14 |  |
+| k.faces | `k.faces.turn.pose` | `k.faces.pose` | name | 15 | 15 |  |
 | k.faces | `k.faces.variant.slot` | `k.faces.slot` | name | 26 | 26 |  |
 | k.feelings | `k.feelings.feeling.expression` | `k.faces.expression` | name | 5 | 5 |  |
 | k.feelings | `k.feelings.feeling.opposite` | `k.feelings.feeling` | name | 11 | 11 |  |
@@ -173,7 +173,8 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.music | `k.music.scale.note` | `k.music.note` | name | 24 | 24 |  |
 | k.music | `k.music.scale.tonic` | `k.music.note` | name | 18 | 18 |  |
 | k.objects | `k.objects.keyword.of` | `k.objects.object` | name | 1509 | 1509 |  |
-| k.objects | `k.objects.part.of` | `k.objects.object` | name | 2216 | 2216 |  |
+| k.objects | `k.objects.object.variant_of` | `k.objects.object` | name | 3 | 3 |  |
+| k.objects | `k.objects.part.of` | `k.objects.object` | name | 2221 | 2221 |  |
 | k.objects | `k.objects.skeleton.of` | `k.objects.object` | name | 0 | 0 |  |
 | k.objects | `k.objects.stand_in.drawing` | `k.objects.object` | name | 176 | 176 |  |
 | k.parts | `k.parts.name.slot` | `k.faces.slot` | name | 19 | 19 |  |
@@ -261,6 +262,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | w.document | `w.document.document.genre` | `k.genres.genre` | name | 0 | 0 |  |
 | w.document | `w.document.document.register` | `k.genres.register` | name | 0 | 0 |  |
 | w.document | `w.document.sentence.move` | `k.genres.move` | name | 0 | 0 |  |
+| w.drawing | `w.drawing.object.material` | `k.styles.material` | name | 0 | 0 |  |
 | w.face | `w.face.face.expression` | `k.faces.expression` | name | 0 | 0 |  |
 | w.face | `w.face.face.pose` | `k.faces.pose` | name | 0 | 0 |  |
 | w.face | `w.face.face.preset` | `k.faces.preset` | name | 0 | 0 |  |
@@ -322,7 +324,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.actions | `k.actions.action.object` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 272 | 154 |
 | k.animals | `k.animals.animal.eats` | thing | `k.scenes.thing`, `k.attributes.drawn`, `k.objects.object` | name | 89 | 22 |
 | k.attributes | `k.attributes.range.kind` | kind | `k.attributes.kind` | name | 24 | 14 |
-| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3553 | 2346 |
+| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3558 | 2346 |
 | k.attributes | `k.attributes.typical.of` | thing | `k.attributes.kind` | name | 36 | 18 |
 | k.commonsense | `k.commonsense.lives.at` | place | `k.objects.object`, `k.scenes.support` | name | 3 | 2 |
 | k.commonsense | `k.commonsense.thing.at` | place | `k.commonsense.lives`, `k.attributes.thing` | in | 42 | 32 |
@@ -362,7 +364,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.layouts | `k.layouts.terrain_part.colour` | value | `k.colours.colour` | name | 8 | 8 |
 | k.motion | `k.motion.rule.during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
 | k.motion | `k.motion.rule.not_during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
-| k.objects | `k.objects.stand_in.colour` | value | `k.colours.colour` | name | 8 | 8 |
+| k.objects | `k.objects.stand_in.colour` | value | `k.colours.colour` | name | 6 | 6 |
 | k.objects | `k.objects.stand_in.material` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 3 | 3 |
 | k.parts | `k.parts.called.part` | thing | `k.parts.name` | name | 66 | 66 |
 | k.parts | `k.parts.name.of` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 23 | 22 |

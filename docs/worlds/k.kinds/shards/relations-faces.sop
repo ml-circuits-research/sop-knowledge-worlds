@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-faces: the keys of the types of k.faces read as relations: 125 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-faces: the keys of the types of k.faces read as relations: 127 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -65,6 +65,8 @@
 @k.kinds.relation.k.faces.pose.hold_x k.kinds.relation type=k.faces.pose key=hold_x subject=pose object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.faces.pose.hold_y k.kinds.relation type=k.faces.pose key=hold_y subject=pose object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.faces.pose.drop k.kinds.relation type=k.faces.pose key=drop subject=pose object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.faces.pose.seat_x k.kinds.relation type=k.faces.pose key=seat_x subject=pose object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.faces.pose.seat_y k.kinds.relation type=k.faces.pose key=seat_y subject=pose object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.faces.preset.style k.kinds.relation type=k.faces.preset key=style subject=preset object=thing object_type=k.faces.canon found=declared object_by=style core.source="hand-core 1"
 @k.kinds.relation.k.faces.preset.kind k.kinds.relation type=k.faces.preset key=kind subject=preset object=kind object_type=k.faces.preset found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.preset.head k.kinds.relation type=k.faces.preset key=head subject=preset object=word object_type=k.words.sense found=value core.source="hand-core 1"

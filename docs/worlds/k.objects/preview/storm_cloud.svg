@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>storm cloud</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <ellipse cx="25" cy="45" rx="17" ry="17" fill="#4F5763"><title>left_puff</title></ellipse>
+  <ellipse cx="74" cy="46" rx="18" ry="18" fill="#4F5763"><title>right_puff</title></ellipse>
+  <ellipse cx="50" cy="34" rx="22" ry="22" fill="#4F5763"><title>middle_puff</title></ellipse>
+  <ellipse cx="50" cy="52" rx="40" ry="12" fill="#4F5763"><title>base</title></ellipse>
+  <polygon points="55,58 45,78 52,78 44,97 64,72 56,72 63,58" fill="yellow" stroke="#333" stroke-width="0.8"><title>lightning</title></polygon>
+  <polyline points="24,66 20,82" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rain_1</title></polyline>
+  <polyline points="33,68 29,86" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rain_2</title></polyline>
+  <polyline points="74,66 70,84" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rain_3</title></polyline>
+</svg>

@@ -1,9 +1,10 @@
-# k.attributes/shards/same-o: one name, one thing: for 59 names that start with "o" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (7 facts of such names here).
+# k.attributes/shards/same-o: one name, one thing: for 60 names that start with "o" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (7 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
 
 @k.attributes.same.oak_leaf.plant k.attributes.same name="oak leaf" sense=plant only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.oak_tree.thing k.attributes.same name="oak tree" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.oar.thing k.attributes.same name=oar sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.oatmeal.thing k.attributes.same name=oatmeal sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.observatory.thing k.attributes.same name=observatory sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"

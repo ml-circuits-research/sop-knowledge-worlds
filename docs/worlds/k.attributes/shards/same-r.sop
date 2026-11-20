@@ -1,4 +1,4 @@
-# k.attributes/shards/same-r: one name, one thing: for 138 names that start with "r" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-r: one name, one thing: for 139 names that start with "r" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -18,6 +18,7 @@
 @k.attributes.same.railway.thing k.attributes.same name=railway sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.railway_car.thing k.attributes.same name="railway car" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.railway_track.thing k.attributes.same name="railway track" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.rain_cloud.thing k.attributes.same name="rain cloud" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.rainbow.thing k.attributes.same name=rainbow sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.parts.called by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.raincoat.clothing k.attributes.same name=raincoat sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.raisin.food k.attributes.same name=raisin sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"

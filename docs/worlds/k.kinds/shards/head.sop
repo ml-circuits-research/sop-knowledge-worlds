@@ -1,4 +1,4 @@
-# k.kinds/shards/head: 479 up edges: what a thing of a name of several words is by the head of its name (a Christmas cake is a cake, a cloud with rain a cloud, a DVD player a player).
+# k.kinds/shards/head: 484 up edges: what a thing of a name of several words is by the head of its name (a Christmas cake is a cake, a cloud with rain a cloud, a DVD player a player).
 # sources: hand-core 1 (read from the catalog's own facts by tools/kinds-core.mjs)
 # license: CC0-1.0
 # script: tools/kinds-core.mjs
@@ -19,6 +19,7 @@
 @k.kinds.parent.charging_station.station k.kinds.parent name="charging station" is_a=station dimension=kind from=k.objects.object key=name value="charging station" core.source="hand-core 1"
 @k.kinds.parent.chef_hat.hat k.kinds.parent name="chef hat" is_a=hat dimension=kind from=k.wearables.wearable key=name value="chef hat" core.source="hand-core 1"
 @k.kinds.parent.cherry_blossom.blossom k.kinds.parent name="cherry blossom" is_a=blossom dimension=kind from=k.attributes.thing key=name value="cherry blossom" core.source="hand-core 1"
+@k.kinds.parent.cherry_tree.tree k.kinds.parent name="cherry tree" is_a=tree dimension=kind from=k.objects.object key=name value="cherry tree" core.source="hand-core 1"
 @k.kinds.parent.chess_pawn.pawn k.kinds.parent name="chess pawn" is_a=pawn dimension=kind from=k.objects.object key=name value="chess pawn" core.source="hand-core 1"
 @k.kinds.parent.chicken_soup.soup k.kinds.parent name="chicken soup" is_a=soup dimension=kind from=k.food.food key=name value="chicken soup" core.source="hand-core 1"
 @k.kinds.parent.chilli_pepper.pepper k.kinds.parent name="chilli pepper" is_a=pepper dimension=kind from=k.food.food key=name value="chilli pepper" core.source="hand-core 1"
@@ -315,6 +316,7 @@
 @k.kinds.parent.net_with_handle.net k.kinds.parent name="net with handle" is_a=net dimension=kind from=k.objects.object key=name value="net with handle" core.source="hand-core 1"
 @k.kinds.parent.new_moon.moon k.kinds.parent name="new moon" is_a=moon dimension=kind from=k.objects.object key=name value="new moon" core.source="hand-core 1"
 @k.kinds.parent.notebook_with_decorative_cover.notebook k.kinds.parent name="notebook with decorative cover" is_a=notebook dimension=kind from=k.objects.object key=name value="notebook with decorative cover" core.source="hand-core 1"
+@k.kinds.parent.oak_tree.tree k.kinds.parent name="oak tree" is_a=tree dimension=kind from=k.objects.object key=name value="oak tree" core.source="hand-core 1"
 @k.kinds.parent.oil_drum.drum k.kinds.parent name="oil drum" is_a=drum dimension=kind from=k.objects.object key=name value="oil drum" core.source="hand-core 1"
 @k.kinds.parent.old_key.key k.kinds.parent name="old key" is_a=key dimension=kind from=k.objects.object key=name value="old key" core.source="hand-core 1"
 @k.kinds.parent.oncoming_automobile.automobile k.kinds.parent name="oncoming automobile" is_a=automobile dimension=kind from=k.objects.object key=name value="oncoming automobile" core.source="hand-core 1"
@@ -370,6 +372,7 @@
 @k.kinds.parent.racing_car.car k.kinds.parent name="racing car" is_a=car dimension=kind from=k.attributes.thing key=name value="racing car" core.source="hand-core 1"
 @k.kinds.parent.railway_car.car k.kinds.parent name="railway car" is_a=car dimension=kind from=k.objects.object key=name value="railway car" core.source="hand-core 1"
 @k.kinds.parent.railway_track.track k.kinds.parent name="railway track" is_a=track dimension=kind from=k.objects.object key=name value="railway track" core.source="hand-core 1"
+@k.kinds.parent.rain_cloud.cloud k.kinds.parent name="rain cloud" is_a=cloud dimension=kind from=k.objects.object key=name value="rain cloud" core.source="hand-core 1"
 @k.kinds.parent.red_apple.apple k.kinds.parent name="red apple" is_a=apple dimension=kind from=k.objects.object key=name value="red apple" core.source="hand-core 1"
 @k.kinds.parent.red_envelope.envelope k.kinds.parent name="red envelope" is_a=envelope dimension=kind from=k.objects.object key=name value="red envelope" core.source="hand-core 1"
 @k.kinds.parent.red_panda.panda k.kinds.parent name="red panda" is_a=panda dimension=kind from=k.animals.animal key=name value="red panda" core.source="hand-core 1"
@@ -433,10 +436,12 @@
 @k.kinds.parent.spiral_notepad.notepad k.kinds.parent name="spiral notepad" is_a=notepad dimension=kind from=k.objects.object key=name value="spiral notepad" core.source="hand-core 1"
 @k.kinds.parent.spiral_shell.shell k.kinds.parent name="spiral shell" is_a=shell dimension=kind from=k.objects.object key=name value="spiral shell" core.source="hand-core 1"
 @k.kinds.parent.sport_utility_vehicle.vehicle k.kinds.parent name="sport utility vehicle" is_a=vehicle dimension=kind from=k.objects.object key=name value="sport utility vehicle" core.source="hand-core 1"
+@k.kinds.parent.sports_car.car k.kinds.parent name="sports car" is_a=car dimension=kind from=k.objects.object key=name value="sports car" core.source="hand-core 1"
 @k.kinds.parent.sports_medal.medal k.kinds.parent name="sports medal" is_a=medal dimension=kind from=k.objects.object key=name value="sports medal" core.source="hand-core 1"
 @k.kinds.parent.spouting_whale.whale k.kinds.parent name="spouting whale" is_a=whale dimension=kind from=k.objects.object key=name value="spouting whale" core.source="hand-core 1"
 @k.kinds.parent.stag_beetle.beetle k.kinds.parent name="stag beetle" is_a=beetle dimension=kind from=k.animals.animal key=name value="stag beetle" core.source="hand-core 1"
 @k.kinds.parent.steaming_bowl.bowl k.kinds.parent name="steaming bowl" is_a=bowl dimension=kind from=k.objects.object key=name value="steaming bowl" core.source="hand-core 1"
+@k.kinds.parent.storm_cloud.cloud k.kinds.parent name="storm cloud" is_a=cloud dimension=kind from=k.objects.object key=name value="storm cloud" core.source="hand-core 1"
 @k.kinds.parent.straight_ruler.ruler k.kinds.parent name="straight ruler" is_a=ruler dimension=kind from=k.objects.object key=name value="straight ruler" core.source="hand-core 1"
 @k.kinds.parent.studio_microphone.microphone k.kinds.parent name="studio microphone" is_a=microphone dimension=kind from=k.objects.object key=name value="studio microphone" core.source="hand-core 1"
 @k.kinds.parent.stuffed_flatbread.flatbread k.kinds.parent name="stuffed flatbread" is_a=flatbread dimension=kind from=k.objects.object key=name value="stuffed flatbread" core.source="hand-core 1"

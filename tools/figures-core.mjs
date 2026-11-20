@@ -53,7 +53,8 @@ export const POSES = [
   ['reaching up', 'one arm stretched straight up', { right_upper_arm: -150 }],
   ['hands on hips', 'both hands on the hips, elbows out', { left_upper_arm: 40, left_forearm: -100, right_upper_arm: -40, right_forearm: 100 }],
   ['clapping', 'both hands together in front of the chest', { left_upper_arm: -15, left_forearm: -100, right_upper_arm: 15, right_forearm: 100 }],
-  ['sitting', 'sitting, the thighs forward and the shins down', { left_thigh: -80, left_shin: 80, right_thigh: -80, right_shin: 80, left_upper_arm: -10, left_forearm: -45, right_upper_arm: -10, right_forearm: -18 }],
+  ['sitting', 'sitting on the ground, the legs stretched forward', { left_thigh: -84, left_shin: -4, right_thigh: -84, right_shin: -4, left_upper_arm: -15, left_forearm: -40, right_upper_arm: -20, right_forearm: -25 }],
+  ['seated', 'sitting on a seat (a chair, a bench): the thighs forward on it, the shins down', { left_thigh: -80, left_shin: 80, right_thigh: -80, right_shin: 80, left_upper_arm: -10, left_forearm: -45, right_upper_arm: -10, right_forearm: -18 }, { seat: [50, 62] }],
   ['cross legged', 'sitting on the ground with the legs crossed', { left_thigh: 65, left_shin: -128, right_thigh: -65, right_shin: 128, left_upper_arm: 15, left_forearm: -50, right_upper_arm: -15, right_forearm: 50 }],
   ['kicking', 'one leg swung forward in a kick, the arms out for balance', { right_thigh: -65, right_shin: -5, left_upper_arm: 35, right_upper_arm: -25 }],
   ['running', 'running: one knee up, the arms swinging', { right_thigh: -45, right_shin: 70, left_thigh: 20, left_shin: 35, right_upper_arm: -45, right_forearm: -60, left_upper_arm: 30, left_forearm: -25 }],
@@ -65,7 +66,7 @@ const POSE_WORDS = {
   standing: 'stand, stands, standing up, standing still, upright', 'arms up': 'arms raised, hands up, raising arms, arms in the air, hands in the air, raised arms',
   waving: 'wave, waves, waving hello, waving goodbye', pointing: 'point, points', holding: 'hold, holds, carrying, carry, carries',
   'reaching up': 'reach up, reaching', 'hands on hips': 'hands on her hips, hands on his hips, arms akimbo', clapping: 'clap, claps, clapping hands',
-  sitting: 'sit, sits, sat, seated, sitting down, sat down', 'cross legged': 'cross-legged, sitting cross legged, sitting cross-legged, legs crossed',
+  sitting: 'sit, sits, sat, sitting down, sat down, sitting on the ground, sat on the ground', seated: 'sitting on a chair, sitting on a bench, on a chair, on a bench, sat on the bench, seat', 'cross legged': 'cross-legged, sitting cross legged, sitting cross-legged, legs crossed',
   kicking: 'kick, kicks, kicking a ball', running: 'run, runs', walking: 'walk, walks', jumping: 'jump, jumps, leaping, leap', dancing: 'dance, dances',
 };
 // The figure's point p carried by the turns of a pose along the bone it moves with (its parents first).
@@ -250,8 +251,9 @@ export function figureShards() {
       ...SLOTS.map(([s]) => [s, slots[s]]), ['skin', 'light'], ['hair_colour', 'brown'], ['eye_colour', 'brown'], ['clothes', colour]], SRC)).join('\n')}\n`;
   files['figure-poses.sop'] = `${head('figure-poses', `the skeleton of the style \`${STYLE}\` (the joints its limbs turn about, in the frame of the figure, and the bone each hangs from) and its poses: how far each bone turns from the standing figure (degrees clockwise on the page), and where the holding hand is in that pose (a figure looks to the right of the page).`)}\n${
     BONES.map(([name, parent, [x, y], level]) => wire(`k.faces.${STYLE}.bone.${name}`, 'k.faces.bone', [['style', STYLE], ['name', name], ['parent', parent], ['x', x], ['y', y], ['level', level]], SRC)).join('\n')}\n${
-    POSES.map(([name, about, turns]) => { const [hx, hy] = posed(HANDS.right, 'right_forearm', turns), drop = r1(Math.max(0, lowest({}) - lowest(turns)));
-      return [wire(`k.faces.${STYLE}.pose.${seg(name)}`, 'k.faces.pose', [['name', name], ['style', STYLE], ['about', { string: about }], ['holds', 'right_hand'], ['hold_x', hx], ['hold_y', hy], ['drop', drop || undefined]], SRC),
+    POSES.map(([name, about, turns, o = {}]) => { const [hx, hy] = posed(HANDS.right, 'right_forearm', turns), drop = o.seat ? 0 : r1(Math.max(0, lowest({}) - lowest(turns)));
+      return [wire(`k.faces.${STYLE}.pose.${seg(name)}`, 'k.faces.pose', [['name', name], ['style', STYLE], ['about', { string: about }], ['holds', 'right_hand'], ['hold_x', hx], ['hold_y', hy], ['drop', drop || undefined],
+        ['seat_x', o.seat?.[0]], ['seat_y', o.seat?.[1]]], SRC),
         ...Object.entries(turns).map(([bone, angle]) => wire(`k.faces.${STYLE}.pose.${seg(name)}.${bone}`, 'k.faces.turn', [['pose', name], ['style', STYLE], ['bone', bone], ['angle', angle]], SRC))].join('\n'); }).join('\n')}\n${
     POSES.map(([name]) => wire(`k.faces.word.pose.${seg(name)}`, 'core.word', [['text', name], ...(POSE_WORDS[name] ?? '').split(',').map((w) => w.trim()).filter(Boolean).map((w) => ['text', w]), ['means', name], ['of', 'k.faces.pose.name']], SRC)).join('\n')}\n`;
   for (const [slot, box] of SLOTS) {

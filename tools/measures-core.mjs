@@ -43,7 +43,7 @@ export const MEASURES = {
     canon: { eye_line: { counts: 'height of the head box, from its top' }, nose_line: { counts: 'height of the head box, from its top' }, mouth_line: { counts: 'height of the head box, from its top' },
       eye_width: { counts: 'width of the head box' }, eye_gap: { counts: 'eye width' }, brow_above: { counts: 'eye width' } },
     // A bone's level counts the bones between it and the body; a pose's hand is a point of the frame; a turn is in degrees.
-    bone: { level: { counts: 'bone between it and the body' } }, pose: { hold_x: { frame: 'face' }, hold_y: { frame: 'face' }, drop: { frame: 'face' } }, turn: { angle: deg } },
+    bone: { level: { counts: 'bone between it and the body' } }, pose: { hold_x: { frame: 'face' }, hold_y: { frame: 'face' }, drop: { frame: 'face' }, seat_x: { frame: 'face' }, seat_y: { frame: 'face' } }, turn: { angle: deg } },
   'k.drawing': { '*': { ...box('drawing'), z: ord, n: ord } }, // Q34 item 1: the frame of the drawing that extends it (an object, a face)
   'k.composition2d': { slot: box('arrangement'), anchor: box('object') },
   'k.layouts': { slot: box('arrangement'), anchor: box('object'), outline: { points: { counts: 'point of the path' }, tolerance: { frame: 'outline' } }, outline_point: { n: ord, x: { frame: 'outline' }, y: { frame: 'outline' } },

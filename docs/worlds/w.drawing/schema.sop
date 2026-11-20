@@ -28,6 +28,11 @@
 @w.drawing.object.z core.slot of=w.drawing.object key=z kind=integer core.source="hand-core 1"
 @w.drawing.object.look core.slot of=w.drawing.object key=look type=w.face.face many=true core.source="hand-core 1"
 @w.drawing.object.seed core.slot of=w.drawing.object key=seed kind=integer core.source="hand-core 1"
+# `holder`: the code of the person whose hand holds the object (a kite, an umbrella): it is attached there and moves,
+# turns and goes with the holder. `material`: the k.styles material it is made of (wood, glass, brick), shown on the
+# part that carries it (its walls, its body), not on its windows or doors.
+@w.drawing.object.holder core.slot of=w.drawing.object key=holder kind=atom kind=string core.source="hand-core 1"
+@w.drawing.object.material core.slot of=w.drawing.object key=material kind=atom kind=string type=k.styles.material by=name core.source="hand-core 1"
 # How an object is posed and styled. `rotation`: degrees clockwise about its centre (0 upright, 180 upside down);
 # `mirror`: horizontal (its left and right swapped: it faces the other way), vertical (top and bottom swapped), both,
 # or none; `skew`: degrees its top leans to the right (negative: to the left); `opacity`: 0 (invisible) to 1 (solid);

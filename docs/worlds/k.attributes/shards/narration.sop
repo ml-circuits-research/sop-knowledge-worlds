@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (463 of 1487 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (463 of 1490 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -437,6 +437,8 @@
 @k.attributes.narration.k.faces.pose.hold_x k.attributes.narration type=k.faces.pose key=hold_x narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.pose.hold_y k.attributes.narration type=k.faces.pose key=hold_y narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.pose.drop k.attributes.narration type=k.faces.pose key=drop narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.pose.seat_x k.attributes.narration type=k.faces.pose key=seat_x narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.pose.seat_y k.attributes.narration type=k.faces.pose key=seat_y narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.turn.pose k.attributes.narration type=k.faces.turn key=pose narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.turn.style k.attributes.narration type=k.faces.turn key=style narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.turn.bone k.attributes.narration type=k.faces.turn key=bone narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
@@ -879,6 +881,7 @@
 @k.attributes.narration.k.music.chord.note k.attributes.narration type=k.music.chord key=note narrate=yes salience=0.7 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.named.labelled.named k.attributes.narration type=k.named.labelled key=named narrate=no salience=0 why="machinery: a helper type of names" core.source="hand-core 1"
 @k.attributes.narration.k.objects.object.name k.attributes.narration type=k.objects.object key=name narrate=no salience=0 why="machinery: drawings and their parts" core.source="hand-core 1"
+@k.attributes.narration.k.objects.object.variant_of k.attributes.narration type=k.objects.object key=variant_of narrate=no salience=0 why="machinery: drawings and their parts" core.source="hand-core 1"
 @k.attributes.narration.k.objects.part.of k.attributes.narration type=k.objects.part key=of narrate=no salience=0 why="machinery: drawings and their parts" core.source="hand-core 1"
 @k.attributes.narration.k.objects.part.name k.attributes.narration type=k.objects.part key=name narrate=no salience=0 why="machinery: drawings and their parts" core.source="hand-core 1"
 @k.attributes.narration.k.objects.part.kind k.attributes.narration type=k.objects.part key=kind narrate=no salience=0 why="machinery: drawings and their parts" core.source="hand-core 1"

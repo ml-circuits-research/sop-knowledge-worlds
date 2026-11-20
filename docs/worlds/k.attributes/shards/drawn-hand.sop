@@ -1,4 +1,4 @@
-# k.attributes/shards/drawn-hand: the main colours in which 332 things are drawn (hand-written drawings of k.objects), the largest first: how the thing is drawn, not its usual colour.
+# k.attributes/shards/drawn-hand: the main colours in which 337 things are drawn (hand-written drawings of k.objects), the largest first: how the thing is drawn, not its usual colour.
 # sources: hand-core 1 (computed from the parts of the drawings in k.objects)
 # license: CC0-1.0
 # script: tools/drawn-colour.mjs
@@ -63,6 +63,7 @@
 @k.attributes.drawn.chapel k.attributes.drawn name=chapel drawn_colour=white drawn_colour=red drawn_shade=white drawn_shade=red core.source="hand-core 1"
 @k.attributes.drawn.chariot k.attributes.drawn name=chariot drawn_colour=red drawn_colour=brown drawn_shade=red drawn_shade=brown core.source="hand-core 1"
 @k.attributes.drawn.cheesecake k.attributes.drawn name=cheesecake drawn_colour=white drawn_colour=red drawn_colour=brown drawn_shade=white drawn_shade=red drawn_shade=brown core.source="hand-core 1"
+@k.attributes.drawn.cherry_tree k.attributes.drawn name="cherry tree" drawn_colour=pink drawn_shade=pink core.source="hand-core 1"
 @k.attributes.drawn.chime k.attributes.drawn name=chime drawn_colour=yellow drawn_colour=brown drawn_shade=yellow drawn_shade=brown core.source="hand-core 1"
 @k.attributes.drawn.cider k.attributes.drawn name=cider drawn_colour=yellow drawn_shade=yellow core.source="hand-core 1"
 @k.attributes.drawn.cinnamon k.attributes.drawn name=cinnamon drawn_colour=brown drawn_shade=brown core.source="hand-core 1"
@@ -195,6 +196,7 @@
 @k.attributes.drawn.newt k.attributes.drawn name=newt drawn_colour=brown drawn_shade=brown core.source="hand-core 1"
 @k.attributes.drawn.nightclub k.attributes.drawn name=nightclub drawn_colour=black drawn_shade=black core.source="hand-core 1"
 @k.attributes.drawn.nut k.attributes.drawn name=nut drawn_colour=brown drawn_colour=yellow drawn_shade=brown drawn_shade=yellow core.source="hand-core 1"
+@k.attributes.drawn.oak_tree k.attributes.drawn name="oak tree" drawn_colour=green drawn_shade=green core.source="hand-core 1"
 @k.attributes.drawn.observatory k.attributes.drawn name=observatory drawn_colour=white drawn_colour=green drawn_shade=white drawn_shade=green core.source="hand-core 1"
 @k.attributes.drawn.orange k.attributes.drawn name=orange drawn_colour=orange drawn_shade=orange core.source="hand-core 1"
 @k.attributes.drawn.oven k.attributes.drawn name=oven drawn_colour=white drawn_colour=grey drawn_colour=black drawn_shade=white drawn_shade=grey drawn_shade=black core.source="hand-core 1"
@@ -232,6 +234,7 @@
 @k.attributes.drawn.raft k.attributes.drawn name=raft drawn_colour=brown drawn_colour=blue drawn_colour=white drawn_shade=brown drawn_shade=blue drawn_shade=white core.source="hand-core 1"
 @k.attributes.drawn.rag k.attributes.drawn name=rag drawn_colour=grey drawn_shade=grey core.source="hand-core 1"
 @k.attributes.drawn.railway k.attributes.drawn name=railway drawn_colour=green drawn_colour=grey drawn_shade=green drawn_shade=grey core.source="hand-core 1"
+@k.attributes.drawn.rain_cloud k.attributes.drawn name="rain cloud" drawn_colour=grey drawn_shade=grey core.source="hand-core 1"
 @k.attributes.drawn.raspberry k.attributes.drawn name=raspberry drawn_colour=red drawn_colour=green drawn_shade=red drawn_shade=green core.source="hand-core 1"
 @k.attributes.drawn.raven k.attributes.drawn name=raven drawn_colour=black drawn_colour=green drawn_shade=black drawn_shade=green core.source="hand-core 1"
 @k.attributes.drawn.reel k.attributes.drawn name=reel drawn_colour=grey drawn_colour=white drawn_shade=grey drawn_shade=white core.source="hand-core 1"
@@ -279,10 +282,12 @@
 @k.attributes.drawn.sock k.attributes.drawn name=sock drawn_colour=red drawn_colour=white drawn_shade=red drawn_shade=white core.source="hand-core 1"
 @k.attributes.drawn.sofa k.attributes.drawn name=sofa drawn_colour=blue drawn_shade=blue core.source="hand-core 1"
 @k.attributes.drawn.sphere k.attributes.drawn name=sphere drawn_colour=blue drawn_shade=blue core.source="hand-core 1"
+@k.attributes.drawn.sports_car k.attributes.drawn name="sports car" drawn_colour=red drawn_colour=black drawn_shade=red drawn_shade=black core.source="hand-core 1"
 @k.attributes.drawn.squirrel k.attributes.drawn name=squirrel drawn_colour=brown drawn_shade=brown core.source="hand-core 1"
 @k.attributes.drawn.star k.attributes.drawn name=star drawn_colour=yellow drawn_shade=yellow core.source="hand-core 1"
 @k.attributes.drawn.statue k.attributes.drawn name=statue drawn_colour=grey drawn_shade=grey core.source="hand-core 1"
 @k.attributes.drawn.stocking k.attributes.drawn name=stocking drawn_colour=pink drawn_shade=pink core.source="hand-core 1"
+@k.attributes.drawn.storm_cloud k.attributes.drawn name="storm cloud" drawn_colour=grey drawn_shade=charcoal core.source="hand-core 1"
 @k.attributes.drawn.stove k.attributes.drawn name=stove drawn_colour=white drawn_colour=black drawn_colour=grey drawn_shade=white drawn_shade=black drawn_shade=grey core.source="hand-core 1"
 @k.attributes.drawn.street k.attributes.drawn name=street drawn_colour=grey drawn_colour=yellow drawn_shade=grey drawn_shade=yellow core.source="hand-core 1"
 @k.attributes.drawn.string k.attributes.drawn name=string drawn_colour=yellow drawn_shade=yellow core.source="hand-core 1"

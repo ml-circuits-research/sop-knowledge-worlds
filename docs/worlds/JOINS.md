@@ -15,8 +15,8 @@ and the meat).
 
 ## Numbers
 
-- names carried by facts of more than one world: 3553
-- one thing everywhere: 3481
+- names carried by facts of more than one world: 3558
+- one thing everywhere: 3486
 - clashes of sense: 72
 
 | sense of the one thing | names |
@@ -32,7 +32,7 @@ and the meat).
 | place | 300 |
 | time | 44 |
 | body in space | 35 |
-| thing | 1781 |
+| thing | 1786 |
 
 ## Clashes of sense
 
@@ -117,7 +117,7 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 
 | worlds | names |
 |---|---:|
-| `k.attributes` and `k.objects` | 2359 |
+| `k.attributes` and `k.objects` | 2364 |
 | `k.objects` and `k.scenes` | 2196 |
 | `k.attributes` and `k.scenes` | 2154 |
 | `k.commonsense` and `k.scenes` | 318 |

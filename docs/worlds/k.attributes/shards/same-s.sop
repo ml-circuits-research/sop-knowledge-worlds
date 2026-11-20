@@ -1,4 +1,4 @@
-# k.attributes/shards/same-s: one name, one thing: for 431 names that start with "s" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (20 facts of such names here).
+# k.attributes/shards/same-s: one name, one thing: for 433 names that start with "s" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (20 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -301,6 +301,7 @@
 @k.attributes.same.sponge.thing k.attributes.same name=sponge sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.spoon.thing k.attributes.same name=spoon sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.sport_utility_vehicle.thing k.attributes.same name="sport utility vehicle" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.sports_car.thing k.attributes.same name="sports car" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.sports_medal.thing k.attributes.same name="sports medal" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.spot_light.thing k.attributes.same name="spot light" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.spotlight.thing k.attributes.same name=spotlight sense=thing only=true in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -364,6 +365,7 @@
 @k.attributes.same.stopwatch.thing k.attributes.same name=stopwatch sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.store.thing k.attributes.same name=store sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.stork.animal k.attributes.same name=stork sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.attributes.thing in=k.commonsense.thing in=k.objects.stand_in in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.storm_cloud.thing k.attributes.same name="storm cloud" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.stove.thing k.attributes.same name=stove sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.straight_ruler.thing k.attributes.same name="straight ruler" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.straw.thing k.attributes.same name=straw sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
