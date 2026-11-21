@@ -22,7 +22,7 @@ of its own; two denies keep one code per thing of a kind and one membership per 
 - For an editor's page and style: on the diagram `arrange` (tree, layered, row, column, grid, circle, radial, free),
   `direction` (down, right, up, left), `spacing` (compact, normal, loose), `route` (orthogonal, straight, curved),
   `theme` (a `k.styles` theme), `background`, `numbered`, `code`; on nodes `outline`, `text_colour`, `font_size`,
-  `font_weight` (normal, bold), the roles database, actor, note, external and the shapes cylinder, cloud, actor,
+  `font_weight` (normal, bold), `font_style` (normal, italic), the roles database, actor, note, external and the shapes cylinder, cloud, actor,
   note; on edges the direction `back` and `route`; group layouts circle, pie and doughnut.
 - For an editor's charts (a group laid out as bar, line, area, pie or doughnut): `x_label`, `y_label`,
   `value_labels`, `gridlines`, `legend`, `y_max`; how it is drawn: `font_size`, `title_weight`, `title_colour`,

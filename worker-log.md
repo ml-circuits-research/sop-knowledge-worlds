@@ -6937,3 +6937,7 @@ npm run test:changed: 491 tests, 0 failing.
 ## 2026-11-21 k.charts.measure: plausible ranges for invented chart values
 - 22 measures (kind, unit, min, max, step, dimensions, about) in `k.charts/shards/measures.sop` (22 wires, 6354 bytes) from `tools/charts-core.mjs`; units declared in `tools/measures-core.mjs`; PSys2 draws random/"plausible" chart values from them and says they are invented.
 - Checks: `npm run test:changed` 367 pass / 1 fail (stale COVERAGE.md) -> `npm run reports`, then coverage-report + k.charts tests 9/0.
+
+## 2026-11-21 w.diagram.node.font_style (italic)
+- `w.diagram.node.font_style` (normal, italic) beside `font_weight`; words for the key (font style, italic, italics, slanted, slanting) and the value word italic (also oblique) `of=w.diagram.node.font_style`. 2 wires added, 1 slot; regenerated index, vocab, vocab-kinds.
+- Checks: `npm run test:changed` 13 files, 89 pass / 0 fail.
