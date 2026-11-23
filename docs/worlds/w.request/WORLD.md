@@ -55,6 +55,10 @@ the request as a goal and its planner fills what was not said from `k.expect`.
   "make it shorter", `@l w.request.lookup request=$r1 target=$r1.t key=thing` becomes `ask('@x <thing type of the
   area>')` over the page (the selection or the last thing made first); one match completes the target, several or none
   make the host ask the person.
+- Evidence: every wire keeps the words of the message it was read from: a request its `predicate` (and `words`), a
+  target `name`, `description`, `sort_words`, `count_words`, `code_words`, `ids` and `family_words` ("the chart" when
+  no kind is said), a constraint `words` (its value's words) and `key_words` ("the colour", "facing"), an unread wire
+  its `text`. A wire with no evidence is not read from the message.
 - `w.request.filler`: words of the message that carry no part of a request (`text` present): greetings, politeness,
   hedges, thanks, wrappers ("could you"). With them, every word of a message is evidence of a wire or filler.
 

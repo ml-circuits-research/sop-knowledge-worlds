@@ -88,6 +88,8 @@
 @w.request.target.ids core.slot of=w.request.target key=ids many=true kind=atom kind=string core.source="hand-core 1"
 # `thing` the object of the page (a w.request.context wire of the same request graph) the target is, when the message names it.
 @w.request.target.thing core.slot of=w.request.target key=thing many=true type=w.request.context core.source="hand-core 1"
+# `family_words` the words of the message that name the target's family ("the chart", "my face") when no kind is said.
+@w.request.target.family_words core.slot of=w.request.target key=family_words many=true kind=string core.source="hand-core 1"
 
 # A constraint of a request: one thing the person said (or the planner assumed) about the result. `on` says what it
 # constrains:
@@ -144,6 +146,8 @@
 @w.request.constraint.open_value core.slot of=w.request.constraint key=open_value kind=boolean core.source="hand-core 1"
 # `thing` the object of the page the constraint names (the anchor of a relation, the node a link goes to), when the message names it.
 @w.request.constraint.thing core.slot of=w.request.constraint key=thing many=true type=w.request.context core.source="hand-core 1"
+# `key_words` the words of the message that name the key ("the colour", "the x axis", "facing"), beside `words` (the value's words).
+@w.request.constraint.key_words core.slot of=w.request.constraint key=key_words many=true kind=string core.source="hand-core 1"
 
 # A content word of the message that no constraint took (P5: the reply names it). `text` the word or words, `n` its
 # place in the message (from 1), `note` what the reader guessed, if anything: a meaning with no key yet (the frame:

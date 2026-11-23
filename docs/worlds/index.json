@@ -1,5 +1,5 @@
 {
- "version": "15c9e3afdcf6",
+ "version": "1d49380b05c1",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -100020,7 +100020,8 @@
       "ordinal",
       "code_words",
       "ids",
-      "thing"
+      "thing",
+      "family_words"
      ],
      "words": [
       "target",
@@ -100060,7 +100061,8 @@
       "measure",
       "measure_words",
       "open_value",
-      "thing"
+      "thing",
+      "key_words"
      ],
      "words": [
       "constraint",
@@ -100178,8 +100180,8 @@
      ]
     }
    ],
-   "wires": 102,
-   "bytes": 23593,
+   "wires": 104,
+   "bytes": 24099,
    "sources": [
     "hand-core-1"
    ],
