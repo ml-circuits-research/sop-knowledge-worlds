@@ -1,5 +1,5 @@
 {
- "version": "60cd47617073",
+ "version": "ed692dd28243",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -98681,7 +98681,8 @@
       "weight",
       "slant",
       "align",
-      "frame"
+      "frame",
+      "action"
      ],
      "words": [
       "object",
@@ -98704,7 +98705,8 @@
       "member",
       "label",
       "rotation",
-      "mirror"
+      "mirror",
+      "arrangement"
      ],
      "words": [
       "group",
@@ -98750,7 +98752,11 @@
      ],
      "attributes": [
       "code",
-      "filter"
+      "filter",
+      "scene",
+      "time",
+      "weather",
+      "style"
      ],
      "words": [
       "page",
@@ -98759,8 +98765,8 @@
      ]
     }
    ],
-   "wires": 72,
-   "bytes": 12037,
+   "wires": 78,
+   "bytes": 13682,
    "sources": [
     "hand-core-1"
    ],

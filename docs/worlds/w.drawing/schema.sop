@@ -61,6 +61,9 @@
 @w.drawing.object.slant core.slot of=w.drawing.object key=slant enum=normal enum=italic core.source="hand-core 1"
 @w.drawing.object.align core.slot of=w.drawing.object key=align enum=start enum=middle enum=end core.source="hand-core 1"
 @w.drawing.object.frame core.slot of=w.drawing.object key=frame kind=atom kind=string core.source="hand-core 1"
+# `action`: what a drawn figure is doing, in the words asked ("chase the cat", "ride the boat"); its `pose` is how the
+# host shows it.
+@w.drawing.object.action core.slot of=w.drawing.object key=action kind=string core.source="hand-core 1"
 
 # A group keeps objects together under one code.
 @w.drawing.group core.type of=w.drawing.group extends=std.schema.thing closed=true core.source="hand-core 1"
@@ -70,6 +73,8 @@
 # A group turned or mirrored as a whole, about the middle of the box its members fill (as an object is).
 @w.drawing.group.rotation core.slot of=w.drawing.group key=rotation kind=number min=-360 max=360 core.source="hand-core 1"
 @w.drawing.group.mirror core.slot of=w.drawing.group key=mirror enum=none enum=horizontal enum=vertical enum=both core.source="hand-core 1"
+# `arrangement`: how the members stand together (in a row, in a line, in a column, in a circle, in a grid, side by side).
+@w.drawing.group.arrangement core.slot of=w.drawing.group key=arrangement enum=row enum=line enum=column enum=circle enum=grid enum=side_by_side core.source="hand-core 1"
 
 # An edited part of an object: the part at `index` (in the order its kind draws them) recoloured, moved,
 # resized, reshaped or removed. `shape` draws the part with another outline in its box: a basic shape of k.shapes
@@ -99,6 +104,14 @@
 @w.drawing.page core.type of=w.drawing.page extends=std.schema.thing closed=true core.source="hand-core 1"
 @w.drawing.page.code core.slot of=w.drawing.page key=code required=true kind=atom kind=string core.source="hand-core 1"
 @w.drawing.page.filter core.slot of=w.drawing.page key=filter kind=atom kind=string core.source="hand-core 1"
+# What the picture shows as a whole (read from requests such as "a harbour at dusk in the fog, as a pencil sketch"):
+# `scene` the k.scenes scene it shows; `time` the time of day; `weather` the weather; `style` the art style the whole
+# picture is drawn in. A host that does not draw them yet keeps them as asked (a night `time` may be shown through the
+# night filter); they are not invented when a request does not say them.
+@w.drawing.page.scene core.slot of=w.drawing.page key=scene kind=atom kind=string type=k.scenes.scene by=name core.source="hand-core 1"
+@w.drawing.page.time core.slot of=w.drawing.page key=time enum=dawn enum=early_morning enum=morning enum=noon enum=afternoon enum=evening enum=sunset enum=dusk enum=night enum=golden_hour core.source="hand-core 1"
+@w.drawing.page.weather core.slot of=w.drawing.page key=weather enum=sun enum=clear enum=cloud enum=overcast enum=mist enum=fog enum=haze enum=rain enum=snow enum=frost enum=ice enum=breeze enum=wind enum=storm core.source="hand-core 1"
+@w.drawing.page.style core.slot of=w.drawing.page key=style kind=string core.source="hand-core 1"
 
 # One thing of each kind per code; one edit per part of an object.
 @w.drawing.code.first std.schema.thing kind=?kind code=?code

@@ -2527,6 +2527,7 @@
   "k.kinds/shards/relations-actions",
   "k.words/shards/ac",
   "k.words/shards/frequency-a",
+  "w.drawing/schema.sop",
   "w.request/schema.sop",
   "k.objects/shards/noto-light-video-01"
  ],
@@ -8230,6 +8231,7 @@
   "k.words/shards/ar",
   "k.words/shards/frequency-a",
   "w.diagram/schema.sop",
+  "w.drawing/schema.sop",
   "w.lang.en/schema.sop"
  ],
  "arrangements": [
@@ -8333,6 +8335,9 @@
  ],
  "art gallery": [
   "k.scenes/shards/scenes-indoors"
+ ],
+ "art style": [
+  "w.drawing/schema.sop"
  ],
  "art supply": [
   "k.kinds/shards/classes",
@@ -43668,7 +43673,8 @@
   "k.geo/shards/asia"
  ],
  "doing": [
-  "k.actions/schema.sop"
+  "k.actions/schema.sop",
+  "w.drawing/schema.sop"
  ],
  "doing laundry": [
   "k.procedures/shards/everyday"
@@ -87508,6 +87514,7 @@
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
+  "w.drawing/schema.sop",
   "k.people/shards/given-names-l"
  ],
  "line chart": [
@@ -111807,6 +111814,7 @@
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
+  "w.drawing/schema.sop",
   "w.face/schema.sop",
   "w.list/schema.sop",
   "w.map/schema.sop",
@@ -123937,7 +123945,8 @@
   "k.words/shards/frequency-r",
   "k.words/shards/ro",
   "w.diagram/schema.sop",
-  "w.document/schema.sop"
+  "w.document/schema.sop",
+  "w.drawing/schema.sop"
  ],
  "row_line_1": [
   "k.objects/shards/places"
@@ -127816,6 +127825,7 @@
   "k.scenes/schema.sop",
   "k.words/shards/frequency-s",
   "k.words/shards/sc",
+  "w.drawing/schema.sop",
   "w.picture/schema.sop"
  ],
  "scene thing": [
@@ -129953,6 +129963,7 @@
   "k.story/shards/structure",
   "k.words/shards/frequency-s",
   "k.words/shards/se",
+  "w.drawing/schema.sop",
   "w.preferences/schema.sop"
  ],
  "setting has the obstacle": [
@@ -139918,6 +139929,7 @@
   "k.words/shards/st",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
+  "w.drawing/schema.sop",
   "w.face/schema.sop"
  ],
  "styles": [
@@ -147983,6 +147995,7 @@
   "k.units/shards/core",
   "k.words/shards/frequency-t",
   "k.words/shards/ti",
+  "w.drawing/schema.sop",
   "w.timeline/schema.sop",
   "k.objects/shards/noto-time-01"
  ],
@@ -147992,7 +148005,8 @@
  ],
  "time of day": [
   "k.attributes/schema.sop",
-  "k.time/schema.sop"
+  "k.time/schema.sop",
+  "w.drawing/schema.sop"
  ],
  "time on the clock": [
   "k.time/schema.sop"
@@ -158394,6 +158408,7 @@
   "k.scenes/schema.sop",
   "k.words/shards/frequency-w",
   "k.words/shards/we",
+  "w.drawing/schema.sop",
   "k.objects/shards/noto-sky-weather-02",
   "k.objects/shards/noto-sky-weather-03",
   "k.objects/shards/noto-sky-weather-04",
