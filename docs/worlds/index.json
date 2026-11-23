@@ -1,5 +1,5 @@
 {
- "version": "043678bb42d0",
+ "version": "ac8cfdb2db59",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -100019,7 +100019,8 @@
       "quantity",
       "ordinal",
       "code_words",
-      "ids"
+      "ids",
+      "thing"
      ],
      "words": [
       "target",
@@ -100058,7 +100059,8 @@
       "step",
       "measure",
       "measure_words",
-      "open_value"
+      "open_value",
+      "thing"
      ],
      "words": [
       "constraint",
@@ -100139,8 +100141,8 @@
      ]
     }
    ],
-   "wires": 90,
-   "bytes": 20576,
+   "wires": 92,
+   "bytes": 21092,
    "sources": [
     "hand-core-1"
    ],

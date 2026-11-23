@@ -33,7 +33,7 @@ the request as a goal and its planner fills what was not said from `k.expect`.
   journal_step), `sort` and `sort_words` (the canonical kind and the words that said it; `kind` is the thing's own type
   in std.schema), `name`, `description`, `count_words`, `count` (integer), `quantifier` (as written: all, every, both,
   "one by one"), `quantity` (the amount word it was normalised to: one, two, some), `ordinal` (first, last,
-  second_last, "first two"), `code_words`, `ids` (many: n1, e2).
+  second_last, "first two"), `code_words`, `ids` (many: n1, e2). `thing` (many) links the target to the `w.request.context` wire of the object it is, when the message names that object; a constraint has `thing` too (the anchor of a relation, the node a link goes to). A context wire exists only for an object the message names, and some wire links to it.
 - On `w.request.constraint`, what a reader reads: `attribute` may be a key of the tab's family (drawn.colour,
   chart.labels, meeting.time); `value` is one value or several (many: a chart's values 30, 25, 20); `operator` (eq |
   degree | delta | factor | relation | region | less.equal | greater.equal), `phase` (selector: it picks the target;
