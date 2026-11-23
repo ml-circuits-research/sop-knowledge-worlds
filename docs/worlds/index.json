@@ -1,5 +1,5 @@
 {
- "version": "1d49380b05c1",
+ "version": "60cd47617073",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -99986,7 +99986,8 @@
       "words_origin",
       "predicate",
       "question",
-      "asked"
+      "asked",
+      "asked_words"
      ],
      "words": [
       "request",
@@ -100021,7 +100022,8 @@
       "code_words",
       "ids",
       "thing",
-      "family_words"
+      "family_words",
+      "name_words"
      ],
      "words": [
       "target",
@@ -100180,8 +100182,8 @@
      ]
     }
    ],
-   "wires": 104,
-   "bytes": 24099,
+   "wires": 106,
+   "bytes": 24557,
    "sources": [
     "hand-core-1"
    ],

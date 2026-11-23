@@ -62,6 +62,8 @@
 @w.request.word.target.ids core.word text=ids text=codes text=id means=w.request.target.ids core.source="hand-core 1"
 @w.request.word.target.thing core.word text="the object" text="object on the page" means=w.request.target.thing core.source="hand-core 1"
 @w.request.word.target.family_words core.word text="family words" text="words naming its family" means=w.request.target.family_words core.source="hand-core 1"
+@w.request.word.target.name_words core.word text="name words" text="words introducing the name" means=w.request.target.name_words core.source="hand-core 1"
+@w.request.word.asked_words core.word text="asked words" text="words naming what is asked" means=w.request.request.asked_words core.source="hand-core 1"
 @w.request.word.operator core.word text=operator text=comparison text="how it compares" means=w.request.constraint.operator core.source="hand-core 1"
 @w.request.word.phase core.word text=phase text=selector text=result means=w.request.constraint.phase core.source="hand-core 1"
 @w.request.word.character core.word text=character text=requirement text=preference means=w.request.constraint.character core.source="hand-core 1"

@@ -54,6 +54,8 @@
 @w.request.request.predicate core.slot of=w.request.request key=predicate kind=string core.source="hand-core 1"
 @w.request.request.question core.slot of=w.request.request key=question enum=count enum=exists enum=list enum=what enum=which enum=where enum=when enum=who enum=describe enum=why enum=how enum=how_much enum=compare enum=total enum=average enum=max enum=min enum=difference enum=percent core.source="hand-core 1"
 @w.request.request.asked core.slot of=w.request.request key=asked kind=atom kind=string core.source="hand-core 1"
+# `asked_words` the words of the message that name the key asked about ("what colour is it").
+@w.request.request.asked_words core.slot of=w.request.request key=asked_words many=true kind=string core.source="hand-core 1"
 
 # The target of a request as the reader read it (std.request.target): one fact per request. `family` the family of
 # things of the open tab it is (drawn, node, link, chart, meeting, part, face, text, page ...); `mode` new (made by the
@@ -90,6 +92,8 @@
 @w.request.target.thing core.slot of=w.request.target key=thing many=true type=w.request.context core.source="hand-core 1"
 # `family_words` the words of the message that name the target's family ("the chart", "my face") when no kind is said.
 @w.request.target.family_words core.slot of=w.request.target key=family_words many=true kind=string core.source="hand-core 1"
+# `name_words` the words of the message that introduce the target's name ("a box called Start", "labelled Review").
+@w.request.target.name_words core.slot of=w.request.target key=name_words many=true kind=string core.source="hand-core 1"
 
 # A constraint of a request: one thing the person said (or the planner assumed) about the result. `on` says what it
 # constrains:
