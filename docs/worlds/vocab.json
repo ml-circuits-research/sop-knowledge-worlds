@@ -33711,6 +33711,9 @@
   "w.dialogue/schema.sop",
   "w.request/schema.sop"
  ],
+ "constraint it completes": [
+  "w.request/schema.sop"
+ ],
  "constraints": [
   "k.story/schema.sop",
   "w.request/schema.sop"
@@ -54636,7 +54639,11 @@
  ],
  "filler": [
   "k.attributes/shards/narration",
-  "k.kinds/schema.sop"
+  "k.kinds/schema.sop",
+  "w.request/schema.sop"
+ ],
+ "filler words": [
+  "w.request/schema.sop"
  ],
  "fillet": [
   "k.words/shards/fi",
@@ -54835,6 +54842,9 @@
  ],
  "find a thing": [
   "k.story/shards/goals-obstacles"
+ ],
+ "find in the context": [
+  "w.request/schema.sop"
  ],
  "find out": [
   "k.actions/shards/actions-mind-talk",
@@ -88712,8 +88722,12 @@
   "k.actions/shards/actions-mind-talk",
   "k.actions/shards/verbs-ask"
  ],
+ "look in": [
+  "w.request/schema.sop"
+ ],
  "look up": [
-  "k.actions/shards/verbs-ask"
+  "k.actions/shards/verbs-ask",
+  "w.request/schema.sop"
  ],
  "looking": [
   "k.words/shards/frequency-l",
@@ -88743,6 +88757,9 @@
  "looks_like": [
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-feelings"
+ ],
+ "lookup": [
+  "w.request/schema.sop"
  ],
  "loon": [
   "k.animals/shards/birds",
@@ -95768,7 +95785,11 @@
  ],
  "missing": [
   "k.words/shards/frequency-m",
-  "k.words/shards/mi"
+  "k.words/shards/mi",
+  "w.request/schema.sop"
+ ],
+ "missing key": [
+  "w.request/schema.sop"
  ],
  "mission": [
   "k.words/shards/frequency-m",
@@ -113072,6 +113093,9 @@
   "k.words/shards/frequency-p",
   "k.words/shards/po"
  ],
+ "politeness": [
+  "w.request/schema.sop"
+ ],
  "political": [
   "k.words/shards/frequency-p",
   "k.words/shards/po"
@@ -120238,6 +120262,9 @@
  ],
  "request cue": [
   "w.lang.en/schema.sop"
+ ],
+ "request it belongs to": [
+  "w.request/schema.sop"
  ],
  "requests": [
   "w.request/schema.sop"
@@ -143256,6 +143283,9 @@
  "target in the setting": [
   "k.story/shards/structure"
  ],
+ "target it completes": [
+  "w.request/schema.sop"
+ ],
  "target of": [
   "w.request/schema.sop"
  ],
@@ -158956,6 +158986,9 @@
  "what is asked": [
   "w.request/schema.sop"
  ],
+ "what is missing": [
+  "w.request/schema.sop"
+ ],
  "what is the capital of france": [
   "w.lang.en/shards/alternations"
  ],
@@ -159250,6 +159283,9 @@
  ],
  "where it sits": [
   "w.drawing/schema.sop"
+ ],
+ "where to look": [
+  "w.request/schema.sop"
  ],
  "where's": [
   "w.lang.en/shards/morphology"

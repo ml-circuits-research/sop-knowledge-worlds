@@ -12,7 +12,7 @@
 # script: none (hand-written)
 # needs: sopworld with std.schema and std.acts (tools/sopworld/VERSION)
 
-@w.request core.module name=w.request version=1 exports=request exports=target exports=constraint exports=unread exports=context exports=previous exports=clock core.source="hand-core 1"
+@w.request core.module name=w.request version=1 exports=request exports=target exports=constraint exports=unread exports=context exports=previous exports=clock exports=lookup exports=filler core.source="hand-core 1"
 @w.request.world std.schema.world name=w.request doc="the meaning of one request: an act, a target and constraints" core.source="hand-core 1"
 
 # A request. `act` the k.actions act (make, change, remove, place, group, connect, ...); `mode` the frame's mode where
@@ -172,6 +172,26 @@
 @w.request.clock.now core.slot of=w.request.clock key=now required=true present=true kind=time.datetime core.source="hand-core 1"
 @w.request.clock.timezone core.slot of=w.request.clock key=timezone required=true present=true kind=atom kind=string core.source="hand-core 1"
 
+# A lookup: something the request needs that the message does not say, to be found in the context. A fact cannot hold a
+# variable, so the request says what is missing with this wire, and the host turns it into a question on its context
+# (the page, the previous turns, the preferences): e.g. `key=thing` on a target becomes ask('@x <the area's thing type>')
+# over the things of the page, and a single match (or the selection, or the last thing made) completes the target.
+# `target` or `constraint` names the wire it completes; `key` what is missing: thing (which existing thing "it", "that
+# one" is), family (what sort of thing the target is), sort (its kind), value (the value of the constraint), name;
+# `from` where to look first: page, previous (the previous turns), preference, or any (the default).
+@w.request.lookup core.type of=w.request.lookup extends=std.schema.thing closed=true core.source="hand-core 1"
+@w.request.lookup.request core.slot of=w.request.lookup key=request required=true present=true type=w.request.request core.source="hand-core 1"
+@w.request.lookup.target core.slot of=w.request.lookup key=target type=w.request.target core.source="hand-core 1"
+@w.request.lookup.constraint core.slot of=w.request.lookup key=constraint type=w.request.constraint core.source="hand-core 1"
+@w.request.lookup.key core.slot of=w.request.lookup key=key required=true present=true enum=thing enum=family enum=sort enum=value enum=name core.source="hand-core 1"
+@w.request.lookup.from core.slot of=w.request.lookup key=from enum=page enum=previous enum=preference enum=any default=any core.source="hand-core 1"
+
+# Filler: words of the message that carry no part of a request (a greeting, politeness, a hedge, thanks, a wrapper such
+# as "could you"). Every word of the message is evidence of a wire (a request's predicate or words, a target's words, a
+# constraint's words, an unread text) or filler: no word is dropped silently. `text` the words as written.
+@w.request.filler core.type of=w.request.filler extends=std.schema.thing closed=true core.source="hand-core 1"
+@w.request.filler.text core.slot of=w.request.filler key=text required=true present=true kind=string core.source="hand-core 1"
+
 # The kinds and the acts that apply to them. A session holds at most 500 requests (and their 500 targets) and 2,000
 # things of context.
 @w.request.kind.request std.schema.kind of=w.request.request world=w.request acts=make acts=remove acts=change acts=ask acts=copy core.source="hand-core 1"
@@ -181,6 +201,8 @@
 @w.request.kind.context std.schema.kind of=w.request.context world=w.request acts=make acts=remove acts=change acts=ask core.source="hand-core 1"
 @w.request.kind.previous std.schema.kind of=w.request.previous world=w.request acts=make acts=ask core.source="hand-core 1"
 @w.request.kind.clock std.schema.kind of=w.request.clock world=w.request acts=make acts=ask core.source="hand-core 1"
+@w.request.kind.lookup std.schema.kind of=w.request.lookup world=w.request acts=make acts=remove acts=ask core.source="hand-core 1"
+@w.request.kind.filler std.schema.kind of=w.request.filler world=w.request acts=make acts=remove acts=ask core.source="hand-core 1"
 @w.request.limit.request std.schema.limit of=w.request.request max=500 core.source="hand-core 1"
 @w.request.limit.constraint std.schema.limit of=w.request.constraint max=5000 core.source="hand-core 1"
 @w.request.limit.unread std.schema.limit of=w.request.unread max=2000 core.source="hand-core 1"

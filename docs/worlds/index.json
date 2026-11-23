@@ -1,5 +1,5 @@
 {
- "version": "ac8cfdb2db59",
+ "version": "15c9e3afdcf6",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -100139,10 +100139,47 @@
       "clock",
       "when it was said"
      ]
+    },
+    {
+     "type": "w.request.lookup",
+     "acts": [
+      "make",
+      "remove",
+      "ask"
+     ],
+     "attributes": [
+      "request",
+      "target",
+      "constraint",
+      "key",
+      "from"
+     ],
+     "words": [
+      "lookup",
+      "look up",
+      "find in the context",
+      "missing"
+     ]
+    },
+    {
+     "type": "w.request.filler",
+     "acts": [
+      "make",
+      "remove",
+      "ask"
+     ],
+     "attributes": [
+      "text"
+     ],
+     "words": [
+      "filler",
+      "filler words",
+      "politeness"
+     ]
     }
    ],
-   "wires": 92,
-   "bytes": 21092,
+   "wires": 102,
+   "bytes": 23593,
    "sources": [
     "hand-core-1"
    ],

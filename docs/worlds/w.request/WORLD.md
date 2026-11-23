@@ -48,6 +48,15 @@ the request as a goal and its planner fills what was not said from `k.expect`.
   ask; context make, remove, change, ask; previous and clock make, ask.
   Limits: 500 requests, 500 targets, 5,000 constraints, 2,000 unread facts, 2,000 things of context.
 - `present=true` keys are refused when missing at a tell; `required` keys are ones a host may still ask for.
+- `w.request.lookup`: what a request needs and the message does not say. `request` (present), `target` or
+  `constraint` (the wire it completes), `key` (present: thing | family | sort | value | name), `from` (page | previous |
+  preference | any, default any). A fact cannot hold a variable (`?x` exists only in queries and in the patterns of a
+  rule), so the request says what is missing with this fact, and the host turns it into a query on its context: for
+  "make it shorter", `@l w.request.lookup request=$r1 target=$r1.t key=thing` becomes `ask('@x <thing type of the
+  area>')` over the page (the selection or the last thing made first); one match completes the target, several or none
+  make the host ask the person.
+- `w.request.filler`: words of the message that carry no part of a request (`text` present): greetings, politeness,
+  hedges, thanks, wrappers ("could you"). With them, every word of a message is evidence of a wire or filler.
 
 ## Finer acts and `mode`
 
