@@ -1,5 +1,5 @@
 {
- "version": "530ea91da078",
+ "version": "043678bb42d0",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -99980,13 +99980,51 @@
       "said",
       "n",
       "revises",
-      "status"
+      "status",
+      "mood",
+      "words",
+      "words_origin",
+      "predicate",
+      "question",
+      "asked"
      ],
      "words": [
       "request",
       "requests",
       "ask",
       "order"
+     ]
+    },
+    {
+     "type": "w.request.target",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "ask"
+     ],
+     "attributes": [
+      "request",
+      "family",
+      "mode",
+      "determiner",
+      "fill",
+      "sort",
+      "sort_words",
+      "name",
+      "description",
+      "count_words",
+      "count",
+      "quantifier",
+      "quantity",
+      "ordinal",
+      "code_words",
+      "ids"
+     ],
+     "words": [
+      "target",
+      "targets",
+      "what it acts on"
      ]
     },
     {
@@ -100013,7 +100051,14 @@
       "words",
       "origin",
       "honoured",
-      "why"
+      "why",
+      "operator",
+      "phase",
+      "character",
+      "step",
+      "measure",
+      "measure_words",
+      "open_value"
      ],
      "words": [
       "constraint",
@@ -100033,17 +100078,69 @@
       "request",
       "text",
       "n",
-      "note"
+      "note",
+      "value"
      ],
      "words": [
       "unread",
       "not understood",
       "words left"
      ]
+    },
+    {
+     "type": "w.request.context",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "ask"
+     ],
+     "attributes": [
+      "sort",
+      "name",
+      "code",
+      "size",
+      "y",
+      "text"
+     ],
+     "words": [
+      "context",
+      "things on the page"
+     ]
+    },
+    {
+     "type": "w.request.previous",
+     "acts": [
+      "make",
+      "ask"
+     ],
+     "attributes": [
+      "text"
+     ],
+     "words": [
+      "previous",
+      "previous message",
+      "last message"
+     ]
+    },
+    {
+     "type": "w.request.clock",
+     "acts": [
+      "make",
+      "ask"
+     ],
+     "attributes": [
+      "now",
+      "timezone"
+     ],
+     "words": [
+      "clock",
+      "when it was said"
+     ]
     }
    ],
-   "wires": 41,
-   "bytes": 9557,
+   "wires": 90,
+   "bytes": 20576,
    "sources": [
     "hand-core-1"
    ],
