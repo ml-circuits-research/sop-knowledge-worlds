@@ -440,3 +440,4 @@
 @w.request.key.calendar.room.location w.request.key tab=calendar family=room name=room.location head=span about="calendar.room.add/change location" core.source="hand-core 1"
 @w.request.key.calendar.room.name w.request.key tab=calendar family=room name=room.name head=span about="room name" core.source="hand-core 1"
 @w.request.key.calendar.room.seats w.request.key tab=calendar family=room name=room.seats head=number about="s.room.seats counts=w.person" core.source="hand-core 1"
+@w.request.key.calendar.calendar.kind w.request.key tab=calendar family=calendar name=calendar.kind head=class value=personal value=work value=family value=team value=shared about="what kind of calendar it is (\"a personal calendar named Work 3\": personal; the name stays calendar.name)" core.source="hand-core 1"
