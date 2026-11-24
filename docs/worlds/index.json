@@ -1,5 +1,5 @@
 {
- "version": "e50d84529377",
+ "version": "04e2700531bf",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -100162,7 +100162,9 @@
       "target",
       "constraint",
       "key",
-      "from"
+      "from",
+      "antecedent",
+      "words"
      ],
      "words": [
       "lookup",
@@ -100208,8 +100210,8 @@
      ]
     }
    ],
-   "wires": 115,
-   "bytes": 26355,
+   "wires": 117,
+   "bytes": 26985,
    "sources": [
     "hand-core-1"
    ],

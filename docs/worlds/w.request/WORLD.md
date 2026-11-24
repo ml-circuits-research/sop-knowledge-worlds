@@ -55,6 +55,11 @@ the request as a goal and its planner fills what was not said from `k.expect`.
   "make it shorter", `@l w.request.lookup request=$r1 target=$r1.t key=thing` becomes `ask('@x <thing type of the
   area>')` over the page (the selection or the last thing made first); one match completes the target, several or none
   make the host ask the person.
+- An answer dependency uses `@l w.request.lookup request=$r2 key=answer from=request antecedent=$r1 words=them`.
+  The antecedent is an earlier ask in the same message. Its answer is an input of the dependent request. The
+  request can also have a separate lookup that identifies its target. An answer from a previous message uses
+  `key=answer from=previous` with evidence words and no local antecedent. These wires describe the input that
+  a consumer needs. The consumer must obtain the answer before using it.
 - Evidence: every wire keeps the words of the message it was read from: a request its `predicate` (and `words`), a
   request `asked_words` ("what colour"), a target `name`, `name_words` ("called"), `description`, `sort_words`,
   `count_words`, `code_words`, `ids` and `family_words` ("the chart" when no kind is said), a constraint `words` (its value's words) and `key_words` ("the colour", "facing"), an unread wire

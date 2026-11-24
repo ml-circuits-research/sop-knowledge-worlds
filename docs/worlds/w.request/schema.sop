@@ -187,12 +187,18 @@
 # `target` or `constraint` names the wire it completes; `key` what is missing: thing (which existing thing "it", "that
 # one" is), family (what sort of thing the target is), sort (its kind), value (the value of the constraint), name;
 # `from` where to look first: page, previous (the previous turns), preference, or any (the default).
+# `key=answer from=request` declares a dependency on the answer to an earlier ask in the same message.
+# `antecedent` names that ask and `words` preserves the answer reference as written. An answer from a
+# previous message uses `key=answer from=previous` and has no local antecedent. The answer is an input to
+# the request, independent of any lookup that identifies its target.
 @w.request.lookup core.type of=w.request.lookup extends=std.schema.thing closed=true core.source="hand-core 1"
 @w.request.lookup.request core.slot of=w.request.lookup key=request required=true present=true type=w.request.request core.source="hand-core 1"
 @w.request.lookup.target core.slot of=w.request.lookup key=target type=w.request.target core.source="hand-core 1"
 @w.request.lookup.constraint core.slot of=w.request.lookup key=constraint type=w.request.constraint core.source="hand-core 1"
-@w.request.lookup.key core.slot of=w.request.lookup key=key required=true present=true enum=thing enum=family enum=sort enum=value enum=name core.source="hand-core 1"
-@w.request.lookup.from core.slot of=w.request.lookup key=from enum=page enum=previous enum=preference enum=any default=any core.source="hand-core 1"
+@w.request.lookup.key core.slot of=w.request.lookup key=key required=true present=true enum=thing enum=family enum=sort enum=value enum=name enum=answer core.source="hand-core 1"
+@w.request.lookup.from core.slot of=w.request.lookup key=from enum=page enum=previous enum=preference enum=any enum=request default=any core.source="hand-core 1"
+@w.request.lookup.antecedent core.slot of=w.request.lookup key=antecedent type=w.request.request core.source="hand-core 1"
+@w.request.lookup.words core.slot of=w.request.lookup key=words kind=string core.source="hand-core 1"
 
 # Filler: words of the message that carry no part of a request (a greeting, politeness, a hedge, thanks, a wrapper such
 # as "could you"). Every word of the message is evidence of a wire (a request's predicate or words, a target's words, a

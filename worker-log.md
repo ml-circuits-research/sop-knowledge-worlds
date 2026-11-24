@@ -6947,3 +6947,6 @@ npm run test:changed: 491 tests, 0 failing.
 
 - 2026-11-24 — Clearance and ranking: added 1 key wire, extended drawn.relation with clear_of, and corrected the chart.top description (keys shard 113473 bytes). Dataset checker passed on 3 source-row probes with zero warnings.
 - Checks: catalog and check-generated passed (43 worlds, 1275 shards); npm test 3258 pass, 18 skipped, and the same 2 baseline failures.
+
+- 2026-11-24 — Declared answer lookups with an explicit local antecedent and evidence words: two new schema slots, two word wires in one shard (13,507 bytes). Five source circuits conformed.
+- Checks: catalog and check-generated passed (43 worlds, 1,275 shards). npm test: 3,258 pass, 18 skipped, and the two existing k.charts vocabulary and coverage-report failures.

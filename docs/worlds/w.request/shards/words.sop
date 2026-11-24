@@ -89,6 +89,8 @@
 @w.request.word.lookup.target core.word text="target it completes" means=w.request.lookup.target core.source="hand-core 1"
 @w.request.word.lookup.constraint core.word text="constraint it completes" means=w.request.lookup.constraint core.source="hand-core 1"
 @w.request.word.lookup.request core.word text="request it belongs to" means=w.request.lookup.request core.source="hand-core 1"
+@w.request.word.lookup.antecedent core.word text=antecedent text="earlier ask" means=w.request.lookup.antecedent core.source="hand-core 1"
+@w.request.word.lookup.words core.word text="reference words" text="words referring to the answer" means=w.request.lookup.words core.source="hand-core 1"
 @w.request.word.filler core.word text=filler text="filler words" text=politeness means=w.request.filler core.source="hand-core 1"
 @w.request.word.filler.text core.word text=words text=text means=w.request.filler.text core.source="hand-core 1"
 @w.request.word.clock core.word text=clock text="when it was said" means=w.request.clock core.source="hand-core 1"
