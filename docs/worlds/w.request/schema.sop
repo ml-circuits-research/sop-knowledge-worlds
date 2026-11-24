@@ -200,6 +200,22 @@
 @w.request.filler core.type of=w.request.filler extends=std.schema.thing closed=true core.source="hand-core 1"
 @w.request.filler.text core.slot of=w.request.filler key=text required=true present=true kind=string core.source="hand-core 1"
 
+# A reader key: what a constraint's `attribute=` may name, per tab. `tab` the area whose reader writes it (drawing,
+# diagram, document, calendar); `family` the target family it belongs to (page, drawn, chart, node …); `name` the key as
+# written in a constraint (family.key: "page.time"); `head` how its value is read (class: a closed list in `value`;
+# candidate: a list a value may leave with open_value=true; span: the words; number; joined with + when several apply,
+# "class+step"); `value` the values of its list; `about` what it means, with an example; `means` the domain slot it
+# fills when one exists (w.drawing.page.time). The keys are in shards/keys.sop; a constraint with an attribute that is
+# no key of its tab is refused by the dataset checker.
+@w.request.key core.type of=w.request.key extends=std.schema.thing closed=true core.source="hand-core 1"
+@w.request.key.tab core.slot of=w.request.key key=tab required=true enum=drawing enum=diagram enum=document enum=calendar core.source="hand-core 1"
+@w.request.key.family core.slot of=w.request.key key=family required=true kind=atom kind=string core.source="hand-core 1"
+@w.request.key.name core.slot of=w.request.key key=name required=true kind=atom kind=string core.source="hand-core 1"
+@w.request.key.head core.slot of=w.request.key key=head required=true kind=atom kind=string core.source="hand-core 1"
+@w.request.key.value core.slot of=w.request.key key=value many=true kind=atom kind=string core.source="hand-core 1"
+@w.request.key.about core.slot of=w.request.key key=about kind=string core.source="hand-core 1"
+@w.request.key.means core.slot of=w.request.key key=means kind=atom kind=string core.source="hand-core 1"
+
 # The kinds and the acts that apply to them. A session holds at most 500 requests (and their 500 targets) and 2,000
 # things of context.
 @w.request.kind.request std.schema.kind of=w.request.request world=w.request acts=make acts=remove acts=change acts=ask acts=copy core.source="hand-core 1"
@@ -211,6 +227,7 @@
 @w.request.kind.clock std.schema.kind of=w.request.clock world=w.request acts=make acts=ask core.source="hand-core 1"
 @w.request.kind.lookup std.schema.kind of=w.request.lookup world=w.request acts=make acts=remove acts=ask core.source="hand-core 1"
 @w.request.kind.filler std.schema.kind of=w.request.filler world=w.request acts=make acts=remove acts=ask core.source="hand-core 1"
+@w.request.kind.key std.schema.kind of=w.request.key world=w.request acts=ask core.source="hand-core 1"
 @w.request.limit.request std.schema.limit of=w.request.request max=500 core.source="hand-core 1"
 @w.request.limit.constraint std.schema.limit of=w.request.constraint max=5000 core.source="hand-core 1"
 @w.request.limit.unread std.schema.limit of=w.request.unread max=2000 core.source="hand-core 1"

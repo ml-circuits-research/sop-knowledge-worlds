@@ -1,5 +1,5 @@
 {
- "version": "ed692dd28243",
+ "version": "caa5bdebc5e7",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -100186,10 +100186,30 @@
       "filler words",
       "politeness"
      ]
+    },
+    {
+     "type": "w.request.key",
+     "acts": [
+      "ask"
+     ],
+     "attributes": [
+      "tab",
+      "family",
+      "name",
+      "head",
+      "value",
+      "about",
+      "means"
+     ],
+     "words": [
+      "reader key",
+      "key",
+      "attribute"
+     ]
     }
    ],
-   "wires": 106,
-   "bytes": 24557,
+   "wires": 115,
+   "bytes": 26355,
    "sources": [
     "hand-core-1"
    ],
