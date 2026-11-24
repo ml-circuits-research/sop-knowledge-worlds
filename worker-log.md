@@ -6941,3 +6941,6 @@ npm run test:changed: 491 tests, 0 failing.
 ## 2026-11-21 w.diagram.node.font_style (italic)
 - `w.diagram.node.font_style` (normal, italic) beside `font_weight`; words for the key (font style, italic, italics, slanted, slanting) and the value word italic (also oblique) `of=w.diagram.node.font_style`. 2 wires added, 1 slot; regenerated index, vocab, vocab-kinds.
 - Checks: `npm run test:changed` 13 files, 89 pass / 0 fail.
+
+- 2026-11-24 — Chart shares: 2 reader key wires in the keys shard (113182 bytes), for plotted or annotated shares and a stated denominator. Four source-row probes conformed, with one word-coverage warning.
+- Checks: catalog and check-generated passed; request tests 7/7; npm test 3258 pass, 18 skipped, 2 known baseline failures (k.charts key words and stale coverage reports).
