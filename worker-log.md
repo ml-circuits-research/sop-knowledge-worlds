@@ -6944,3 +6944,6 @@ npm run test:changed: 491 tests, 0 failing.
 
 - 2026-11-24 — Chart shares: 2 reader key wires in the keys shard (113182 bytes), for plotted or annotated shares and a stated denominator. Four source-row probes conformed, with one word-coverage warning.
 - Checks: catalog and check-generated passed; request tests 7/7; npm test 3258 pass, 18 skipped, 2 known baseline failures (k.charts key words and stale coverage reports).
+
+- 2026-11-24 — Clearance and ranking: added 1 key wire, extended drawn.relation with clear_of, and corrected the chart.top description (keys shard 113473 bytes). Dataset checker passed on 3 source-row probes with zero warnings.
+- Checks: catalog and check-generated passed (43 worlds, 1275 shards); npm test 3258 pass, 18 skipped, and the same 2 baseline failures.
