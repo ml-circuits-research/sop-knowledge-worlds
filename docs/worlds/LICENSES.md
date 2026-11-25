@@ -161,7 +161,16 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 
 ## pro-formaliser-4fdfc00
 
-- What: eight property aliases scoped to existing domain slots and two generic English owner/property frames.
+- What: reusable SOP declarations imported from this source in two batches: eight property aliases and two generic English owner/property frames (4fdfc00), plus two context-property frames with their eleven ordered parts and twelve weather value words (b5e5bd7).
+- Origin: this project’s pro-formaliser repository, https://github.com/ml-circuits-research/pro-formaliser.
+- License: CC0-1.0 for these original project-authored SOP declarations, with the owner’s authorization recorded below.
+- Attribution: the project authors; original declaration provenance is retained in core.source.
+- Shard terms: CC0-1.0
+- Used by: `w.lang.en` (1 shards)
+
+## pro-formaliser-b5e5bd7
+
+- What: reusable SOP declarations imported from this source in two batches: eight property aliases and two generic English owner/property frames (4fdfc00), plus two context-property frames with their eleven ordered parts and twelve weather value words (b5e5bd7).
 - Origin: this project’s pro-formaliser repository, https://github.com/ml-circuits-research/pro-formaliser.
 - License: CC0-1.0 for these original project-authored SOP declarations, with the owner’s authorization recorded below.
 - Attribution: the project authors; original declaration provenance is retained in core.source.

@@ -1,5 +1,5 @@
 {
- "version": "1aafbc6da373",
+ "version": "2aa487c1a325",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -95401,6 +95401,18 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/context-property-frames",
+     "path": "w.lang.en/shards/context-property-frames.sop",
+     "wires": 13,
+     "bytes": 3623,
+     "keys": [],
+     "sources": [
+      "pro-formaliser-b5e5bd7"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/core-plurals",
      "path": "w.lang.en/shards/core-plurals.sop",
      "wires": 185,
@@ -96916,7 +96928,7 @@
      "id": "w.lang.en/shards/variants",
      "path": "w.lang.en/shards/variants.sop",
      "wires": 55,
-     "bytes": 36418,
+     "bytes": 36922,
      "keys": [],
      "sources": [
       "hand-core-1"
@@ -96942,6 +96954,7 @@
     "cldr-48",
     "hand-core-1",
     "pro-formaliser-4fdfc00",
+    "pro-formaliser-b5e5bd7",
     "psys2-447a5f9a",
     "psys2-78f45863",
     "wordnet-3.1"

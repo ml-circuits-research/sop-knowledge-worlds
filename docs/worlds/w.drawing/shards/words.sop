@@ -1,5 +1,6 @@
 # w.drawing/shards/words: the owned English vocabulary, separate from the schema.
-# sources: hand-core 1 (hand-written declarations)
+# sources: hand-core 1 (hand-written declarations); pro-formaliser b5e5bd7 (the twelve
+# sop-worlds/pro.reader/grouped-effects.sop weather value words, INTEGRATE-4, owner-authorized)
 # license: CC0-1.0
 # script: none (hand-written)
 @w.drawing.word.world core.word text=drawing text=picture text=canvas text=sketch means=w.drawing of=std.schema.world.name core.source="hand-core 1"
@@ -66,3 +67,19 @@
 @w.drawing.word.part.opacity core.word text=opacity text=transparency means=w.drawing.part.opacity core.source="hand-core 1"
 @w.drawing.word.part.effect core.word text=effect means=w.drawing.part.effect core.source="hand-core 1"
 @w.drawing.word.page.code core.word text=code means=w.drawing.page.code core.source="hand-core 1"
+
+# The weather the whole scene shows (INTEGRATE-4, from pro-formaliser b5e5bd7 sop-worlds/pro.reader/grouped-effects.sop):
+# an adjective names one value of the existing w.drawing.page.weather slot, which declares every one of them. The slot's
+# word (weather, above) names the property; these name its values, so "the scene is sunny" is weather=sun, not a style.
+@w.drawing.word.page.weather.sunny core.word of=w.drawing.page.weather text=sunny means=sun core.source="pro-formaliser b5e5bd7"
+@w.drawing.word.page.weather.cloudy core.word of=w.drawing.page.weather text=cloudy means=cloud core.source="pro-formaliser b5e5bd7"
+@w.drawing.word.page.weather.misty core.word of=w.drawing.page.weather text=misty means=mist core.source="pro-formaliser b5e5bd7"
+@w.drawing.word.page.weather.foggy core.word of=w.drawing.page.weather text=foggy means=fog core.source="pro-formaliser b5e5bd7"
+@w.drawing.word.page.weather.hazy core.word of=w.drawing.page.weather text=hazy means=haze core.source="pro-formaliser b5e5bd7"
+@w.drawing.word.page.weather.rainy core.word of=w.drawing.page.weather text=rainy means=rain core.source="pro-formaliser b5e5bd7"
+@w.drawing.word.page.weather.snowy core.word of=w.drawing.page.weather text=snowy means=snow core.source="pro-formaliser b5e5bd7"
+@w.drawing.word.page.weather.frosty core.word of=w.drawing.page.weather text=frosty means=frost core.source="pro-formaliser b5e5bd7"
+@w.drawing.word.page.weather.icy core.word of=w.drawing.page.weather text=icy means=ice core.source="pro-formaliser b5e5bd7"
+@w.drawing.word.page.weather.breezy core.word of=w.drawing.page.weather text=breezy means=breeze core.source="pro-formaliser b5e5bd7"
+@w.drawing.word.page.weather.windy core.word of=w.drawing.page.weather text=windy means=wind core.source="pro-formaliser b5e5bd7"
+@w.drawing.word.page.weather.stormy core.word of=w.drawing.page.weather text=stormy means=storm core.source="pro-formaliser b5e5bd7"

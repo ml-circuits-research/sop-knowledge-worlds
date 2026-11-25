@@ -1,0 +1,30 @@
+# w.lang.en/shards/context-property-frames: the two context-property frames of INTEGRATE-4 (from pro-formaliser b5e5bd7,
+# sop-worlds/pro.reader/implicit-property-frames.sop), written with the existing frame and part types and domain-neutral
+# roles. They set a property whose owner the text does not name: the owner is resolved on the active page within each
+# compatible catalog family, so the frame carries the key and the value, and never invents an owner.
+# "Set the width to 15" states the property and its value after an explicit connector; "Make the width medium" has no
+# connector, so the written operand has to select a finite value declared for that same property (needs=values).
+# Both keep the same change act and set mode as the owner-naming frames of INTEGRATE-1; an unqualified property word is
+# not a page-wide setting, and a value that no declaration gives for the property stays unresolved rather than guessed.
+# sources: pro-formaliser b5e5bd7 (project-authored context-property frames; owner authorized integration on 2026-11-25)
+# license: CC0-1.0
+# script: none (hand-written)
+
+# "Set <property> to <value>": the polite lead is optional, the determiner before the property is optional, and `to`
+# introduces the value (not an endpoint).
+@w.lang.en.frame.context.set.property w.lang.en.frame name=context.set.property act=change mode=set set=acts priority=12 needs=attrs role=attribute role=value example="Set the width to 15" core.source="pro-formaliser b5e5bd7"
+@w.lang.en.part.context.set.property.1 w.lang.en.part frame=context.set.property at=1 is=lead phrase=lead.polite optional=yes core.source="pro-formaliser b5e5bd7"
+@w.lang.en.part.context.set.property.2 w.lang.en.part frame=context.set.property at=2 is=word word=set word=change core.source="pro-formaliser b5e5bd7"
+@w.lang.en.part.context.set.property.3 w.lang.en.part frame=context.set.property at=3 is=det optional=yes core.source="pro-formaliser b5e5bd7"
+@w.lang.en.part.context.set.property.4 w.lang.en.part frame=context.set.property at=4 is=role role=attribute takes=lexicon lexicon=attribute core.source="pro-formaliser b5e5bd7"
+@w.lang.en.part.context.set.property.5 w.lang.en.part frame=context.set.property at=5 is=word word=to core.source="pro-formaliser b5e5bd7"
+@w.lang.en.part.context.set.property.6 w.lang.en.part frame=context.set.property at=6 is=role role=value takes=words core.source="pro-formaliser b5e5bd7"
+
+# "Make <property> <value>": no value connector, so the operand must name a finite value the property declares
+# (needs=values); a free value with no such declaration stays unresolved.
+@w.lang.en.frame.context.make.property w.lang.en.frame name=context.make.property act=change mode=set set=acts priority=12 needs=values role=attribute role=value example="Make the width medium" core.source="pro-formaliser b5e5bd7"
+@w.lang.en.part.context.make.property.1 w.lang.en.part frame=context.make.property at=1 is=lead phrase=lead.polite optional=yes core.source="pro-formaliser b5e5bd7"
+@w.lang.en.part.context.make.property.2 w.lang.en.part frame=context.make.property at=2 is=word word=make core.source="pro-formaliser b5e5bd7"
+@w.lang.en.part.context.make.property.3 w.lang.en.part frame=context.make.property at=3 is=det optional=yes core.source="pro-formaliser b5e5bd7"
+@w.lang.en.part.context.make.property.4 w.lang.en.part frame=context.make.property at=4 is=role role=attribute takes=lexicon lexicon=attribute core.source="pro-formaliser b5e5bd7"
+@w.lang.en.part.context.make.property.5 w.lang.en.part frame=context.make.property at=5 is=role role=value takes=words core.source="pro-formaliser b5e5bd7"
