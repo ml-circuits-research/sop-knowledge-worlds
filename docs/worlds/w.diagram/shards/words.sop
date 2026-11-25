@@ -1,5 +1,5 @@
 # w.diagram/shards/words: the owned English vocabulary, separate from the schema.
-# sources: hand-core 1 (hand-written declarations and deterministic key vocabulary)
+# sources: hand-core 1 (hand-written declarations and deterministic key vocabulary); pro-formaliser 4fdfc00 (project-authored property aliases; owner authorized canonical integration on 2026-11-25)
 # license: CC0-1.0
 # script: none (hand-written; generated key block maintained by tools/key-words.mjs)
 
@@ -139,3 +139,11 @@
 @w.diagram.word.value.shape.table core.word text=table text=tables text="data table" means=table of=w.diagram.node.shape core.source="hand-core 1"
 @w.diagram.word.value.layout.treemap core.word text=treemap text=treemaps text="tree map" text="tree-map" means=treemap of=w.diagram.group.layout core.source="hand-core 1"
 @w.diagram.word.value.font_style.italic core.word text=italic text=italics text=slanted text=slanting text=oblique means=italic of=w.diagram.node.font_style core.source="hand-core 1"
+# Property aliases, scoped to the existing value slots (INTEGRATE-1 from pro-formaliser 4fdfc00,
+# vocabulary/visual-properties.sop). A diagram's route policy stays w.diagram.diagram.route ("the diagram's links are
+# curved"); these name one link's route, w.diagram.edge.route ("this line is curved"). No new key or value.
+@w.diagram.word.value.edge.route.curved core.word text=curvy means=curved of=w.diagram.edge.route core.source="pro-formaliser 4fdfc00"
+@w.diagram.word.value.edge.route.orthogonal core.word text="right-angled" means=orthogonal of=w.diagram.edge.route core.source="pro-formaliser 4fdfc00"
+@w.diagram.word.value.edge.route.straight core.word text="straight-line" means=straight of=w.diagram.edge.route core.source="pro-formaliser 4fdfc00"
+@w.diagram.word.value.edge.style.dashed core.word text="dash pattern" means=dashed of=w.diagram.edge.style core.source="pro-formaliser 4fdfc00"
+@w.diagram.word.value.edge.style.dotted core.word text="dot pattern" means=dotted of=w.diagram.edge.style core.source="pro-formaliser 4fdfc00"

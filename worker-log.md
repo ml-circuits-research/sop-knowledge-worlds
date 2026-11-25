@@ -6950,3 +6950,6 @@ npm run test:changed: 491 tests, 0 failing.
 
 - 2026-11-24 — Declared answer lookups with an explicit local antecedent and evidence words: two new schema slots, two word wires in one shard (13,507 bytes). Five source circuits conformed.
 - Checks: catalog and check-generated passed (43 worlds, 1,275 shards). npm test: 3,258 pass, 18 skipped, and the two existing k.charts vocabulary and coverage-report failures.
+
+- 2026-11-25 — INTEGRATE-1: published 8 property-scoped aliases and 2 generic owner/property frames (24 wires across 3 SOP shards; new grammar shard 3,837 bytes, 0 warnings), with owner-authorized project provenance and regenerated catalog/vocabulary.
+- Checks: test:changed 70 files, 412 pass, 0 fail, 6 skipped (88 s); public reader with canonical candidate shards passed 12 positive probes and the source-dependent legend negative. Formaliser pin update and local duplicate retirement are the next handover step.

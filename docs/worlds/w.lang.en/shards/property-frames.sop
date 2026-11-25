@@ -1,0 +1,30 @@
+# w.lang.en/shards/property-frames: the two generic property frames of INTEGRATE-1 (from pro-formaliser 4fdfc00,
+# language/property-frames.sop), written with the existing frame and part types and domain-neutral roles. They ask for
+# a property of an explicitly named owner ("What width does the node have?") and set one ("Set the width on the node to
+# 15"). The attribute is a word of the host world's `attribute` lexicon; the owner and the value are ordinary words.
+# A diagram-wide route policy, an individual link's route, a document block's alignment and a diagram node's edge stay
+# different owners: these frames carry the owner and the key, they do not choose a scope.
+# sources: pro-formaliser 4fdfc00 (project-authored property frames; owner authorized canonical integration on 2026-11-25)
+# license: CC0-1.0
+# script: none (hand-written)
+
+# "What <property> does/do <owner> have?" The owner comes after the auxiliary; the property is the attribute.
+@w.lang.en.frame.acts.ask.property.have w.lang.en.frame name=acts.ask.property.have act=ask mode=what set=acts priority=12 needs=attrs role=attribute role=thing example="What width does the node have?" core.source="pro-formaliser 4fdfc00"
+@w.lang.en.part.acts.ask.property.have.1 w.lang.en.part frame=acts.ask.property.have at=1 is=word word="what" word="which" core.source="pro-formaliser 4fdfc00"
+@w.lang.en.part.acts.ask.property.have.2 w.lang.en.part frame=acts.ask.property.have at=2 is=role role=attribute takes=lexicon lexicon=attribute core.source="pro-formaliser 4fdfc00"
+@w.lang.en.part.acts.ask.property.have.3 w.lang.en.part frame=acts.ask.property.have at=3 is=word word="does" word="do" core.source="pro-formaliser 4fdfc00"
+@w.lang.en.part.acts.ask.property.have.4 w.lang.en.part frame=acts.ask.property.have at=4 is=det optional=yes core.source="pro-formaliser 4fdfc00"
+@w.lang.en.part.acts.ask.property.have.5 w.lang.en.part frame=acts.ask.property.have at=5 is=role role=thing takes=words core.source="pro-formaliser 4fdfc00"
+@w.lang.en.part.acts.ask.property.have.6 w.lang.en.part frame=acts.ask.property.have at=6 is=word word="have" core.source="pro-formaliser 4fdfc00"
+
+# "Set <property> on <owner> to <value>" (the verb is the change act's verb: set). The preposition after the property
+# introduces the owner; "to" introduces the value, not an endpoint.
+@w.lang.en.frame.acts.change.property.on w.lang.en.frame name=acts.change.property.on act=change mode=set set=acts priority=12 needs=attrs role=attribute role=thing role=value example="Set the width on the node to 15" core.source="pro-formaliser 4fdfc00"
+@w.lang.en.part.acts.change.property.on.1 w.lang.en.part frame=acts.change.property.on at=1 is=verb act=change core.source="pro-formaliser 4fdfc00"
+@w.lang.en.part.acts.change.property.on.2 w.lang.en.part frame=acts.change.property.on at=2 is=det optional=yes core.source="pro-formaliser 4fdfc00"
+@w.lang.en.part.acts.change.property.on.3 w.lang.en.part frame=acts.change.property.on at=3 is=role role=attribute takes=lexicon lexicon=attribute core.source="pro-formaliser 4fdfc00"
+@w.lang.en.part.acts.change.property.on.4 w.lang.en.part frame=acts.change.property.on at=4 is=word word="on" core.source="pro-formaliser 4fdfc00"
+@w.lang.en.part.acts.change.property.on.5 w.lang.en.part frame=acts.change.property.on at=5 is=det optional=yes core.source="pro-formaliser 4fdfc00"
+@w.lang.en.part.acts.change.property.on.6 w.lang.en.part frame=acts.change.property.on at=6 is=role role=thing takes=words core.source="pro-formaliser 4fdfc00"
+@w.lang.en.part.acts.change.property.on.7 w.lang.en.part frame=acts.change.property.on at=7 is=word word="to" core.source="pro-formaliser 4fdfc00"
+@w.lang.en.part.acts.change.property.on.8 w.lang.en.part frame=acts.change.property.on at=8 is=role role=value takes=words core.source="pro-formaliser 4fdfc00"

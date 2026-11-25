@@ -1,5 +1,5 @@
 # w.document/shards/words: the owned English vocabulary, separate from the schema.
-# sources: hand-core 1 (hand-written declarations and deterministic key vocabulary)
+# sources: hand-core 1 (hand-written declarations and deterministic key vocabulary); pro-formaliser 4fdfc00 (project-authored property aliases; owner authorized canonical integration on 2026-11-25)
 # license: CC0-1.0
 # script: none (hand-written; generated key block maintained by tools/key-words.mjs)
 
@@ -76,3 +76,9 @@
 @w.document.word.form.mark core.word text=bold text=italic text=underline text=strike text=highlight text=link means=w.document.mark.form core.source="hand-core 1"
 @w.document.word.href.mark core.word text=link text=url text=address means=w.document.mark.href core.source="hand-core 1"
 @w.document.word.colour.mark core.word text=colour text=color means=w.document.mark.colour core.source="hand-core 1"
+# Property aliases, scoped to the existing value slot (INTEGRATE-1 from pro-formaliser 4fdfc00,
+# vocabulary/visual-properties.sop): text alignment in a document block, w.document.block.align. This is not
+# w.diagram.node.edge (which edge of a node other nodes line up with: "the boxes flush left" in a diagram).
+@w.document.word.value.block.align.left core.word text="flush left" means=left of=w.document.block.align core.source="pro-formaliser 4fdfc00"
+@w.document.word.value.block.align.right core.word text="flush right" means=right of=w.document.block.align core.source="pro-formaliser 4fdfc00"
+@w.document.word.value.block.align.justify core.word text="fully justified" means=justify of=w.document.block.align core.source="pro-formaliser 4fdfc00"

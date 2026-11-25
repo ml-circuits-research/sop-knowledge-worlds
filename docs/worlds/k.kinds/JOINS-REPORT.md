@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **287** in 46 worlds; distinct values 11535, meeting a target 11475 (99.5 %), open 60
+- declared joins: **288** in 46 worlds; distinct values 11535, meeting a target 11475 (99.5 %), open 60
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **74**; left undeclared on purpose: 5; keys with an enum, never suggested: 57
 
@@ -264,6 +264,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | w.document | `w.document.document.register` | `k.genres.register` | name | 0 | 0 |  |
 | w.document | `w.document.sentence.move` | `k.genres.move` | name | 0 | 0 |  |
 | w.drawing | `w.drawing.object.material` | `k.styles.material` | name | 0 | 0 |  |
+| w.drawing | `w.drawing.page.scene` | `k.scenes.scene` | name | 0 | 0 |  |
 | w.face | `w.face.face.expression` | `k.faces.expression` | name | 0 | 0 |  |
 | w.face | `w.face.face.pose` | `k.faces.pose` | name | 0 | 0 |  |
 | w.face | `w.face.face.preset` | `k.faces.preset` | name | 0 | 0 |  |

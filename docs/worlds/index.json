@@ -1,5 +1,5 @@
 {
- "version": "04e2700531bf",
+ "version": "7c6a6fdbe153",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -96778,6 +96778,18 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/property-frames",
+     "path": "w.lang.en/shards/property-frames.sop",
+     "wires": 16,
+     "bytes": 3837,
+     "keys": [],
+     "sources": [
+      "pro-formaliser-4fdfc00"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/question-frames",
      "path": "w.lang.en/shards/question-frames.sop",
      "wires": 47,
@@ -96904,7 +96916,7 @@
      "id": "w.lang.en/shards/variants",
      "path": "w.lang.en/shards/variants.sop",
      "wires": 55,
-     "bytes": 35775,
+     "bytes": 36418,
      "keys": [],
      "sources": [
       "hand-core-1"
@@ -96929,6 +96941,7 @@
    "sources": [
     "cldr-48",
     "hand-core-1",
+    "pro-formaliser-4fdfc00",
     "psys2-447a5f9a",
     "psys2-78f45863",
     "wordnet-3.1"
