@@ -117,3 +117,83 @@ test('chart source fields: three reader keys resolve to their domain slots, apar
   assert.equal(w.act({ action: 'ask', args: { thing: group.result.thing, attr: 'x_field' } }).result.value, 'tenure');
   assert.equal(w.act({ action: 'ask', args: { thing: group.result.thing, attr: 'series_field' } }).result.value, 'department');
 });
+
+// An intent is a fact of its request (INTEGRATE-3): what the result is for (purpose) or where it goes (destination),
+// with the exact words it was read from. It is attached by the typed request reference, never by a name or proximity,
+// and it never replaces the target or a constraint. Two requests in one message (a chart creation and a non-chart
+// analytical result, a table) may each carry intents; intent wires come in any order, even before their request.
+const INTENTS = `@r1 w.request.request act=make mood=do text="Make a bar chart of revenue by region for the board and for the annual review, put it in the quarterly report, not for social media. Give me the average margin by product as a table in the appendix, to compare the regions." words="Make a bar chart of revenue by region for the board and for the annual review, put it in the quarterly report, not for social media" predicate=Make
+@r1.t w.request.target request=$r1 family=chart mode=new
+@r1.c1 w.request.constraint request=$r1 on=kind value=bar words="bar chart"
+@r1.c2 w.request.constraint request=$r1 on=attribute attribute=chart.dimension value=region words="by region"
+@r1.i1 w.request.intent role=purpose value="for the board" words="for the board" request=$r1
+@r2.i1 w.request.intent request=$r2 role=purpose value="to compare the regions" words="to compare the regions"
+@r2 w.request.request act=ask mood=ask text="Make a bar chart of revenue by region for the board and for the annual review, put it in the quarterly report, not for social media. Give me the average margin by product as a table in the appendix, to compare the regions." words="Give me the average margin by product as a table in the appendix, to compare the regions" predicate=Give question=what
+@r2.t w.request.target request=$r2 family=table mode=new
+@r2.c1 w.request.constraint request=$r2 on=attribute attribute=chart.aggregate value=avg words=average
+@r1.i2 w.request.intent request=$r1 role=purpose value="for the annual review" words="for the annual review"
+@r2.i2 w.request.intent request=$r2 role=destination value="the appendix" words="in the appendix"
+@r1.i3 w.request.intent request=$r1 role=destination value="the quarterly report" words="in the quarterly report"
+@r1.i4 w.request.intent request=$r1 role=purpose value="social media" words="for social media" want=no`;
+
+test('the intent contract is exported: a closed type, typed owner, two roles, value and evidence required, want defaulting to yes', () => {
+  const schema = read('w.request', 'schema.sop');
+  const module = schema.find((w) => w.type === 'core.module');
+  assert.ok(module.attrs.exports.includes('intent'), 'the module exports the intent type');
+  assert.deepEqual(schema.find((w) => w.id === 'w.request.intent').attrs.closed, ['true']);
+  assert.deepEqual(enumOf(schema, 'w.request.intent.role'), ['purpose', 'destination']);
+  assert.deepEqual(enumOf(schema, 'w.request.intent.want'), ['yes', 'no']);
+  const slot = (key) => schema.find((w) => w.id === `w.request.intent.${key}`).attrs;
+  assert.deepEqual([slot('request').type, slot('request').required, slot('request').present], [['w.request.request'], ['true'], ['true']]);
+  for (const key of ['role', 'value', 'words']) assert.deepEqual([slot(key).required, slot(key).present], [['true'], ['true']], key);
+  assert.deepEqual(slot('want').default, ['yes']);
+});
+
+test('intents are typed facts of their own request: both roles, repeated roles, want=no, any order, two owners', () => {
+  const w = actsWorld(['w.request']);
+  const told = w.tell(INTENTS);
+  assert.equal(told.ok, true, JSON.stringify(told.violations));
+  const intents = w.ofType('w.request.intent');
+  const of = (owner, role) => intents.filter((i) => one(i, 'request') === `$${owner}` && one(i, 'role') === role);
+  // The chart request: three purposes (one of them not wanted) and one destination, interleaved with the other request.
+  assert.equal(of('r1', 'purpose').length, 3);
+  assert.deepEqual(of('r1', 'purpose').map((i) => one(i, 'value')), ['for the board', 'for the annual review', 'social media']);
+  assert.deepEqual(of('r1', 'destination').map((i) => one(i, 'value')), ['the quarterly report']);
+  assert.equal(of('r1', 'purpose').filter((i) => one(i, 'want') === 'no').length, 1);
+  assert.equal(one(of('r1', 'purpose').find((i) => one(i, 'want') === 'no'), 'words'), 'for social media');
+  // The non-chart analytical result: its own purpose and destination, on its own owner.
+  assert.deepEqual(of('r2', 'purpose').map((i) => [one(i, 'value'), one(i, 'words')]), [['to compare the regions', 'to compare the regions']]);
+  assert.deepEqual(of('r2', 'destination').map((i) => [one(i, 'value'), one(i, 'words')]), [['the appendix', 'in the appendix']]);
+  // Every intent names its request; want defaults to yes when it is not written.
+  for (const i of intents) assert.match(one(i, 'request'), /^\$r[12]$/, i.id);
+  assert.equal(of('r2', 'purpose')[0].attrs.want, undefined);
+  // An intent does not replace the target or the constraints: the chart is still a chart and the result still counts two.
+  assert.equal(w.ofType('w.request.target').length, 2);
+  assert.equal(one(w.get('r1.t'), 'family'), 'chart');
+  assert.equal(one(w.get('r2.t'), 'family'), 'table');
+  assert.equal(w.ofType('w.request.constraint').length, 3);
+  assert.ok(!w.ofType('w.request.target').some((t) => one(t, 'family') === 'request'));
+  const keys = read('w.request', 'shards', 'keys.sop').filter((x) => x.type === 'w.request.key');
+  assert.equal(keys.find((k) => one(k, 'name') === 'chart.intendedUse'), undefined);
+});
+
+test('a malformed intent is refused with a diagnostic: no owner, an owner that is not a request, a bad role, no evidence', () => {
+  const head = '@r1 w.request.request act=make mood=do\n@r1.t w.request.target request=$r1 family=chart mode=new\n';
+  const refusal = (wire) => { const w = actsWorld(['w.request']); const r = w.tell(head + wire); assert.equal(r.ok, false, wire); return r.violations; };
+  const violation = (violations, kind, key) => violations.find((v) => v.kind === kind && (!key || v.key === key));
+  const missing = refusal('@r1.i1 w.request.intent role=purpose value="for the board" words="for the board"');
+  assert.deepEqual([violation(missing, 'missing-key', 'request').id, violation(missing, 'missing-key', 'request').why], ['r1.i1', 'w.request.intent.request must be present']);
+  const foreign = refusal('@r1.i1 w.request.intent request=$r1.t role=purpose value="for the board" words="for the board"');
+  assert.equal(violation(foreign, 'domain', 'request').why, 'must refer to a w.request.request wire');
+  const dangling = refusal('@r1.i1 w.request.intent request=$rX role=purpose value="for the board" words="for the board"');
+  assert.equal(violation(dangling, 'domain', 'request').why, 'must refer to a w.request.request wire');
+  assert.ok(violation(dangling, 'dangling-ref', 'request'), 'a dangling owner is named as such');
+  const role = refusal('@r1.i1 w.request.intent request=$r1 role=reason value="for the board" words="for the board"');
+  assert.deepEqual(violation(role, 'domain', 'role').allowed, ['purpose', 'destination']);
+  const evidence = refusal('@r1.i1 w.request.intent request=$r1 role=purpose value="for the board"');
+  assert.equal(violation(evidence, 'missing-key', 'words').why, 'w.request.intent.words must be present');
+  const value = refusal('@r1.i1 w.request.intent request=$r1 role=purpose words="for the board"');
+  assert.equal(violation(value, 'missing-key', 'value').why, 'w.request.intent.value must be present');
+  const want = refusal('@r1.i1 w.request.intent request=$r1 role=purpose value="for the board" words="for the board" want=maybe');
+  assert.deepEqual(violation(want, 'domain', 'want').allowed, ['yes', 'no']);
+});

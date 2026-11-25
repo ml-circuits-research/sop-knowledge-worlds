@@ -41739,7 +41739,8 @@
  ],
  "destination": [
   "k.words/shards/de",
-  "k.words/shards/frequency-d"
+  "k.words/shards/frequency-d",
+  "w.request/schema.sop"
  ],
  "destiny": [
   "k.words/shards/de",
@@ -75024,11 +75025,21 @@
  ],
  "intent": [
   "k.words/shards/frequency-i",
-  "k.words/shards/in"
+  "k.words/shards/in",
+  "w.request/schema.sop"
+ ],
+ "intent of": [
+  "w.request/schema.sop"
+ ],
+ "intent words": [
+  "w.request/schema.sop"
  ],
  "intention": [
   "k.words/shards/frequency-i",
   "k.words/shards/in"
+ ],
+ "intents": [
+  "w.request/schema.sop"
  ],
  "interact": [
   "k.words/shards/frequency-i",
@@ -116322,7 +116333,8 @@
  ],
  "purpose": [
   "k.words/shards/frequency-p",
-  "k.words/shards/pu"
+  "k.words/shards/pu",
+  "w.request/schema.sop"
  ],
  "purr": [
   "k.words/shards/frequency-p",
@@ -123173,7 +123185,8 @@
   "k.words/shards/frequency-r",
   "k.words/shards/ro",
   "w.diagram/schema.sop",
-  "w.document/schema.sop"
+  "w.document/schema.sop",
+  "w.request/schema.sop"
  ],
  "role colours": [
   "k.styles/schema.sop"
@@ -159067,7 +159080,8 @@
   "k.diagrams/schema.sop"
  ],
  "what for": [
-  "k.body/schema.sop"
+  "k.body/schema.sop",
+  "w.request/schema.sop"
  ],
  "what i asked": [
   "w.dialogue/schema.sop"
@@ -159082,6 +159096,9 @@
   "w.lang.en/shards/alternations"
  ],
  "what it acts on": [
+  "w.request/schema.sop"
+ ],
+ "what it is for": [
   "w.request/schema.sop"
  ],
  "what of": [
@@ -159367,11 +159384,17 @@
   "k.objects/shards/noto-place-building-02",
   "k.objects/shards/openmoji-technology-01"
  ],
+ "where it goes": [
+  "w.request/schema.sop"
+ ],
  "where it lives": [
   "k.commonsense/schema.sop"
  ],
  "where it sits": [
   "w.drawing/schema.sop"
+ ],
+ "where to": [
+  "w.request/schema.sop"
  ],
  "where to look": [
   "w.request/schema.sop"
@@ -159404,6 +159427,9 @@
  ],
  "which chart": [
   "k.charts/schema.sop"
+ ],
+ "which request": [
+  "w.request/schema.sop"
  ],
  "whichever": [
   "k.values/shards/sets"
@@ -161246,6 +161272,9 @@
   "w.request/schema.sop"
  ],
  "words of the code": [
+  "w.request/schema.sop"
+ ],
+ "words of the intent": [
   "w.request/schema.sop"
  ],
  "words of the kind": [

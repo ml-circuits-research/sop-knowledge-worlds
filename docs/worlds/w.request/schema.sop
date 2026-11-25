@@ -12,7 +12,7 @@
 # script: none (hand-written)
 # needs: sopworld with std.schema and std.acts (tools/sopworld/VERSION)
 
-@w.request core.module name=w.request version=1 exports=request exports=target exports=constraint exports=unread exports=context exports=previous exports=clock exports=lookup exports=filler core.source="hand-core 1"
+@w.request core.module name=w.request version=1 exports=request exports=target exports=constraint exports=intent exports=unread exports=context exports=previous exports=clock exports=lookup exports=filler core.source="hand-core 1"
 @w.request.world std.schema.world name=w.request doc="the meaning of one request: an act, a target and constraints" core.source="hand-core 1"
 
 # A request. `act` the k.actions act (make, change, remove, place, group, connect, ...); `mode` the frame's mode where
@@ -152,6 +152,21 @@
 @w.request.constraint.thing core.slot of=w.request.constraint key=thing many=true type=w.request.context core.source="hand-core 1"
 # `key_words` the words of the message that name the key ("the colour", "the x axis", "facing"), beside `words` (the value's words).
 @w.request.constraint.key_words core.slot of=w.request.constraint key=key_words many=true kind=string core.source="hand-core 1"
+
+# What the result of a request is for and where it goes, as repeated facts owned by the request (the coordinator's
+# INTEGRATE-3 contract): an intent is not a target and not a constraint, so it never replaces either. `request` the
+# request it belongs to (the owner, a typed reference); `role` purpose (why the result is wanted: "for the board", "to
+# compare the regions") or destination (where it goes: "in the quarterly report", "to the appendix"); `value` the value
+# of the role in words; `words` the exact words of the message the intent was read from; `want` yes (wanted, the
+# default) or no (not wanted: "not for social media"). A request has any number of intents, in any order; the same role
+# may repeat. A wire with no owner, or with an owner that is not a request, is refused by the schema and by the dataset
+# codec, never silently attached by proximity or by a name.
+@w.request.intent core.type of=w.request.intent extends=std.schema.thing closed=true core.source="hand-core 1"
+@w.request.intent.request core.slot of=w.request.intent key=request type=w.request.request required=true present=true core.source="hand-core 1"
+@w.request.intent.role core.slot of=w.request.intent key=role enum=purpose enum=destination required=true present=true core.source="hand-core 1"
+@w.request.intent.value core.slot of=w.request.intent key=value kind=string required=true present=true core.source="hand-core 1"
+@w.request.intent.words core.slot of=w.request.intent key=words kind=string required=true present=true core.source="hand-core 1"
+@w.request.intent.want core.slot of=w.request.intent key=want enum=yes enum=no default=yes core.source="hand-core 1"
 
 # A content word of the message that no constraint took (P5: the reply names it). `text` the word or words, `n` its
 # place in the message (from 1), `note` what the reader guessed, if anything: a meaning with no key yet (the frame:
