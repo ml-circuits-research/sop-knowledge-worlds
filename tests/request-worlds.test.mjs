@@ -72,3 +72,48 @@ test('k.expect: the scale grows from tiny to huge; every make has parts and typi
   assert.ok(pond.some((p) => one(p, 'part') === 'water' && one(p, 'needed') === 'yes'));
   assert.deepEqual([...new Set(pond.map((p) => one(p, 'group')))].sort(), ['animal', 'ground', 'plant', 'water']);
 });
+
+test('chart source fields: three reader keys resolve to their domain slots, apart from titles, page coordinates, the primary dimension and concrete series', () => {
+  const keys = read('w.request', 'shards', 'keys.sop').filter((w) => w.type === 'w.request.key');
+  const key = (name) => keys.find((w) => one(w, 'name') === name);
+  const wanted = { 'chart.xField': 'w.diagram.group.x_field', 'chart.yField': 'w.diagram.group.y_field', 'chart.seriesDimension': 'w.diagram.group.series_field' };
+  for (const [name, id] of Object.entries(wanted)) {
+    const k = key(name);
+    assert.ok(k, `${name} is not a reader key`);
+    assert.equal(one(k, 'head'), 'span', name);
+    assert.equal(one(k, 'means'), id, name);
+  }
+  const schema = read('w.diagram', 'schema.sop');
+  const slot = (id) => schema.find((w) => w.id === id);
+  for (const id of Object.values(wanted)) {
+    assert.equal(one(slot(id), 'of'), 'w.diagram.group', id);
+    assert.deepEqual(slot(id).attrs.kind.map(tok), ['atom', 'string'], id);
+  }
+  // The existing owners stay distinct: the primary grouping, the axis titles, the page coordinates and the concrete series.
+  assert.equal(one(key('chart.dimension'), 'means'), 'w.diagram.group.dimension');
+  assert.equal(one(key('chart.xLabel'), 'means'), 'w.diagram.group.x_label');
+  assert.equal(one(key('chart.yLabel'), 'means'), 'w.diagram.group.y_label');
+  assert.equal(one(key('chart.x'), 'means'), 'w.diagram.group.x');
+  assert.equal(one(key('chart.y'), 'means'), 'w.diagram.group.y');
+  assert.equal(one(key('chart.series'), 'means'), undefined);
+  assert.equal(one(key('chart.colourBy'), 'means'), undefined);
+  // The deferred fourth property is not published.
+  assert.equal(key('chart.intendedUse'), undefined);
+  assert.equal(slot('w.diagram.group.intended_use'), undefined);
+  // Domain-owned direct property labels, not the reader's constructions.
+  const words = read('w.diagram', 'shards', 'words.sop').filter((w) => w.type === 'core.word');
+  const texts = (means) => new Set(words.filter((w) => one(w, 'means') === means).flatMap((w) => (w.attrs.text ?? []).map(tok)));
+  assert.ok(texts('w.diagram.group.x_field').has('x field'));
+  assert.ok(texts('w.diagram.group.y_field').has('y field'));
+  assert.ok(texts('w.diagram.group.series_field').has('series field'));
+  const fieldWords = new Set([...Object.keys(wanted).map((n) => one(key(n), 'means')).flatMap((m) => [...texts(m)])]);
+  for (const phrase of ['against', 'split by']) assert.ok(!fieldWords.has(phrase), phrase);
+  // The native schema accepts the three fields beside dimension, measure and the axis titles.
+  const w = actsWorld(['w.diagram']);
+  const chart = w.act({ action: 'make', args: { kind: 'w.diagram.diagram', title: 'scatter' } });
+  assert.equal(chart.ok, true);
+  const group = w.act({ action: 'make', args: { kind: 'w.diagram.group', label: 'scatter', diagram: `$${chart.result.thing}`, layout: 'scatter', dimension: 'month', x_field: 'tenure', y_field: 'salary', series_field: 'department', x_label: 'Tenure', y_label: 'Salary' } });
+  assert.equal(group.ok, true, JSON.stringify(group.violations));
+  assert.equal(w.act({ action: 'ask', args: { thing: group.result.thing, attr: 'x_field' } }).result.value, 'tenure');
+  assert.equal(w.act({ action: 'ask', args: { thing: group.result.thing, attr: 'series_field' } }).result.value, 'department');
+});

@@ -179,6 +179,13 @@
 @w.diagram.group.measure core.slot of=w.diagram.group key=measure kind=atom kind=string core.source="hand-core 1"
 @w.diagram.group.aggregate core.slot of=w.diagram.group key=aggregate enum=count enum=sum enum=avg enum=min enum=max core.source="hand-core 1"
 @w.diagram.group.sample core.slot of=w.diagram.group key=sample kind=boolean core.source="hand-core 1"
+# The data fields a chart group's marks come from, when the request names them: `x_field` and `y_field` a scatter's
+# source fields along its two axes, `series_field` the categorical field that defines its series (the second grouping
+# beside `dimension`). They name data, not the axes' titles (`x_label`, `y_label`), the chart's place on the page
+# (`x`, `y`) or the concrete series of `w.diagram.series`.
+@w.diagram.group.x_field core.slot of=w.diagram.group key=x_field kind=atom kind=string core.source="hand-core 1"
+@w.diagram.group.y_field core.slot of=w.diagram.group key=y_field kind=atom kind=string core.source="hand-core 1"
+@w.diagram.group.series_field core.slot of=w.diagram.group key=series_field kind=atom kind=string core.source="hand-core 1"
 # `error_bars` true to draw the members' errors as error bars, `error_cap` the half width of their caps (0: none).
 @w.diagram.group.error_bars core.slot of=w.diagram.group key=error_bars kind=boolean core.source="hand-core 1"
 @w.diagram.group.error_cap core.slot of=w.diagram.group key=error_cap kind=number min=0 max=30 core.source="hand-core 1"

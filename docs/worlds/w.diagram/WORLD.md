@@ -29,7 +29,11 @@ of its own; two denies keep one code per thing of a kind and one membership per 
   `title_position`, `y_axis` (left, right), `x_axis` (bottom, top), `invert` (none, x, y), `axis_scale` (linear, log),
   `tick_format` (plain, magnitude, power), `precision`, `line_style`, `line_width`, `marker_size`, `marker_edge`,
   `bar_width`, `pie_radius`, `grid_style`; what it was asked to show: `dimension`, `measure`, `aggregate` (count,
-  sum, avg, min, max) and `sample`; error bars: `error` on a member, `error_bars` and `error_cap` on the chart (its values are a sample drawn for a chart asked for without data).
+  sum, avg, min, max) and `sample`; the source data fields when the request names them: `x_field` and `y_field` (a
+  scatter's two data fields, one per axis), `series_field` (the categorical field that defines the series, the second
+  grouping beside `dimension`). These fields are data, not `x_label`/`y_label` (the axes' titles), `x`/`y` (the chart's
+  place on the page) or `w.diagram.series` (the concrete series names); error bars: `error` on a member, `error_bars`
+  and `error_cap` on the chart (its values are a sample drawn for a chart asked for without data).
 - A chart's shape: `y_min` (the bottom of the value axis), `orientation` (vertical, horizontal), `stacking` (none,
   stacked, percent), `width` and `height` (its plot in pixels), `effect` (none, shadow, glow); group layouts scatter
   (each member at its `x_value` and value) and radar (each member a spoke) and treemap (each member a rectangle as large as its share of the whole);

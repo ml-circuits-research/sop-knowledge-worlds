@@ -6953,3 +6953,6 @@ npm run test:changed: 491 tests, 0 failing.
 
 - 2026-11-25 — INTEGRATE-1: published 8 property-scoped aliases and 2 generic owner/property frames (24 wires across 3 SOP shards; new grammar shard 3,837 bytes, 0 warnings), with owner-authorized project provenance and regenerated catalog/vocabulary.
 - Checks: test:changed 70 files, 412 pass, 0 fail, 6 skipped (88 s); public reader with canonical candidate shards passed 12 positive probes and the source-dependent legend negative. Formaliser pin update and local duplicate retirement are the next handover step.
+
+- 2026-11-25 — INTEGRATE-2: added 3 source-field slots, 3 span-key means mappings and 3 owned vocabulary wires; preserved axis titles, page position, grouping and concrete series. Completed x/y axis-label vocabulary after a public-reader coverage failure. All additions are in existing shards.
+- Checks: changed-path gate 17 files, 121 pass / 0 fail (32 s); native request-worlds 5/5; independent raw conversion round trips retain new fields/evidence; public canonical-candidate replay recognizes xField, yField, seriesDimension and both axis titles (5/5). Field resolution and rendering remain separate.

@@ -23,6 +23,11 @@ alternative next to the list of counts in `w.list` (questions.md Q45).
 What it does not say: that a pie chart has one series and no negative values, or that the categories of the series
 of one chart are the same; each needs a rule over several things (a library function), not data.
 
+The fields a chart's numbers come from are not part of this small chart record: an editor's chart group in
+`w.diagram` carries `dimension` (the primary grouping), `x_field`, `y_field` (the source fields along the two axes of a
+scatter) and `series_field` (the categorical field that defines the series). Here `series.name` stays the concrete name
+of a series ("sales 2025", "costs"), and `point.category` stays the value on the other axis.
+
 ## How to use it
 
 ```js

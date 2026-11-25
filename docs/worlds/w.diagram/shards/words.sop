@@ -71,8 +71,8 @@
 @w.diagram.word.node.effect core.word text=effect text=shadow text=glow text="drop shadow" means=w.diagram.node.effect core.source="hand-core 1"
 @w.diagram.word.node.opacity core.word text=opacity text=transparent text=transparency text=faded text=faint means=w.diagram.node.opacity core.source="hand-core 1"
 @w.diagram.word.node.corner core.word text=corner text=corners text="rounded corners" text=radius means=w.diagram.node.corner core.source="hand-core 1"
-@w.diagram.word.group.x_label core.word text="x axis" text="horizontal axis" text="x label" text="axis label" means=w.diagram.group.x_label core.source="hand-core 1"
-@w.diagram.word.group.y_label core.word text="y axis" text="vertical axis" text="y label" means=w.diagram.group.y_label core.source="hand-core 1"
+@w.diagram.word.group.x_label core.word text="x axis label" text="x-axis label" text="x axis" text="horizontal axis" text="x label" text="axis label" means=w.diagram.group.x_label core.source="hand-core 1"
+@w.diagram.word.group.y_label core.word text="y axis label" text="y-axis label" text="y axis" text="vertical axis" text="y label" means=w.diagram.group.y_label core.source="hand-core 1"
 @w.diagram.word.group.value_labels core.word text="value labels" text="data labels" text=values text=numbers means=w.diagram.group.value_labels core.source="hand-core 1"
 @w.diagram.word.group.gridlines core.word text=gridlines text=grid text="grid lines" means=w.diagram.group.gridlines core.source="hand-core 1"
 @w.diagram.word.group.legend core.word text=legend text=key means=w.diagram.group.legend core.source="hand-core 1"
@@ -97,6 +97,12 @@
 @w.diagram.word.group.grid_style core.word text="grid style" text="gridline style" means=w.diagram.group.grid_style core.source="hand-core 1"
 @w.diagram.word.group.dimension core.word text=dimension text="broken down by" text=categories means=w.diagram.group.dimension core.source="hand-core 1"
 @w.diagram.word.group.measure core.word text=measure text=metric means=w.diagram.group.measure core.source="hand-core 1"
+# The source data fields of a chart group (INTEGRATE-2): direct property labels of their slots only. The words that
+# introduce them in a message ("on the x axis", "against", "split by") are reader grammar, and an axis title
+# (`x_label`, `y_label`), the page coordinate (`x`, `y`) or the concrete series (`w.diagram.series`) keeps its own key.
+@w.diagram.word.group.x_field core.word text="x field" text="x source field" text="x-axis field" means=w.diagram.group.x_field core.source="hand-core 1"
+@w.diagram.word.group.y_field core.word text="y field" text="y source field" text="y-axis field" means=w.diagram.group.y_field core.source="hand-core 1"
+@w.diagram.word.group.series_field core.word text="series field" text="series source field" means=w.diagram.group.series_field core.source="hand-core 1"
 @w.diagram.word.group.aggregate core.word text=aggregate text=aggregation text=count text=sum text=total text=average text=mean means=w.diagram.group.aggregate core.source="hand-core 1"
 @w.diagram.word.group.sample core.word text=sample text="sample data" text=placeholder means=w.diagram.group.sample core.source="hand-core 1"
 @w.diagram.word.series core.word text=series text="data series" text=dataset text=datasets text="data set" means=w.diagram.series core.source="hand-core 1"

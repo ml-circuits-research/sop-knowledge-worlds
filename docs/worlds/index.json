@@ -1,5 +1,5 @@
 {
- "version": "7c6a6fdbe153",
+ "version": "93af9c4176c2",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -98098,6 +98098,9 @@
       "measure",
       "aggregate",
       "sample",
+      "x_field",
+      "y_field",
+      "series_field",
       "error_bars",
       "error_cap",
       "y_min",
@@ -98203,8 +98206,8 @@
      ]
     }
    ],
-   "wires": 164,
-   "bytes": 29625,
+   "wires": 167,
+   "bytes": 30384,
    "sources": [
     "hand-core-1"
    ],
